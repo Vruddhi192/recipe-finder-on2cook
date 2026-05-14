@@ -1,0 +1,186 @@
+  {
+    "Recipe Name": "CHI LOLLIPOP FRY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/CHI LOLLIPOP FRY.jpg",
+    "PopupImage": "test_popup_images/CHI LOLLIPOP FRY.pdf",
+    "Ingredients": [
+      "Heat Pre-Heated Oil 1 liter",
+      "Mix Batter Mix 362 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
+    "Total Output": "200",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "10 mins",
+    "hidden": true
+  },
+    {
+    "Recipe Name": "CHICKPEA BOILED",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 14,
+    "Image": "test_images/CHICKPEA BOILED.jpg",
+    "PopupImage": "test_popup_images/CHICKPEA BOILED.pdf",
+    "Ingredients": [
+      "Soaked  Chickpea 400 g, Water 600 g 1000 gm"
+    ],
+    "Accessories": "Pressure Cooker",
+    "Total Output": "BOILED CHICKPEA 700 G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "",
+    "hidden": true
+  },
+   {
+    "Recipe Name": "CHINESE GOBI FRY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 3,
+    "Image": "test_images/CHINESE GOBI FRY.jpg",
+    "PopupImage": "test_popup_images/CHINESE GOBI FRY.pdf",
+    "Ingredients": [
+      "Heat Pre-Heated Oil 1 liter",
+      "Mix Batter Coated Cauliflower  322 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "180 G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "10 mins",
+    "hidden": true
+  },
+   {
+    "Recipe Name": "CRISPY CHI FRY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/CRISPY CHI FRY.jpg",
+    "PopupImage": "test_popup_images/CRISPY CHI FRY.pdf",
+    "Ingredients": [
+      "Fry  Thick Batter & Vegetables  725 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "25 mins",
+    "hidden":true
+  },
+  {
+    "Recipe Name": "CRISPY VEG FRY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 3,
+    "Image": "test_images/CRISPY VEG FRY.jpg",
+    "PopupImage": "test_popup_images/CRISPY VEG FRY.pdf",
+    "Ingredients": [
+      "Fry  Thick Batter & Vegetables  825 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "25 mins",
+    "hidden":true
+  },
+  {
+    "Recipe Name": "FRIED KOFTA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/FRIED KOFTA.jpg",
+    "PopupImage": "test_popup_images/FRIED KOFTA.pdf",
+    "Ingredients": [
+      "Mix Kofta Mix 285 gm",
+      "Pre Heat Oil At 160 Degree 1 liter"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "16 PCS",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "20 mins",
+    "hidden": true
+  },
+    {
+    "Recipe Name": "FRY PANEER",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/FRY PANEER.jpg",
+    "PopupImage": "test_popup_images/FRY PANEER.pdf",
+    "Ingredients": [
+      "Heat Pre-Heated Oil  1 liter",
+      "Mix Coated Paneer  253 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "180 G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "10 mins",
+    "hidden": true
+  },
+   {
+    "Recipe Name": "MANCHURIAN FRY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/MANCHURIAN FRY.jpg",
+    "PopupImage": "test_popup_images/MANCHURIAN FRY.pdf",
+    "Ingredients": [
+      "Heat Pre-Heated Oil  1000 gm",
+      "Mix Vegetables for Manchurian  252 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "10 mins",
+    "hidden": true
+  },
+  {
+    "Recipe Name": "THECHA PASTE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/THECHA PASTE.jpg",
+    "PopupImage": "test_popup_images/THECHA PASTE.pdf",
+    "Ingredients": [
+      "Roast All Ingredients  300 gm",
+      "Grind  Grind 120 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "5 mins",
+    "hidden": true
+  },
+   {
+    "Recipe Name": "URAD DAL",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 10,
+    "Image": "test_images/URAD DAL.jpg",
+    "PopupImage": "test_popup_images/URAD DAL.pdf",
+    "Ingredients": [
+      "Soaked  Soaked Urad Dal 400 g, Water 800 g 1200 gm"
+    ],
+    "Accessories": "Pressure Cooker",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "10",
+    "Normal Cooking Time": "",
+    "hidden": true
+  },

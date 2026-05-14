@@ -1,0 +1,6 @@
+So, I want a way where I link certain recipes clubbed together:
+1. So, there are few recipes which I dont want to be showcased separately
+I want boiled chole clubeed with chole masala so even while the pdf popup is shown the boiled chole should be shown first and then an right arrow which shows chole masala
+Also, while downloading both recipes to be downloaded together
+
+You only have to make changes in json and js files.

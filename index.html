@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="on2cook favicon.png" type="image/png">
+  <meta property="og:title" content="On2Cook Recipe Finder"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://on2cook-recipe-finder.vercel.app/"/>
+    <meta property="og:image" content="https://kanfhqlbtgdhisjbpbtn.supabase.co/storage/v1/object/public/videos/OG.jpg"/>
+    <meta property="og:site_name" content="On2Cook"/>
+    <meta property="og:description"
+          content="A Recipe Finder which helps you discover delicious recipes."/>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-left">
+        <img src="fork-knife.png" alt="Fork and Knife Icon" />
+        <div class="nav-text">
+          <h3>Recipe Finder</h3>
+          <p>Discover your next favorite meal!</p>
+        </div>
+      </div>
+      <div class="nav-right">
+        <img src="on2cook logo_White 1.png" alt="Company Logo" class="logo" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Don't Know What to Cook Bar -->
+ <div class="promo-bar">
+  <div class="promo-content">
+    <span class="promo-title">Add Your Ingredients</span>
+    <span class="promo-text">
+      Type the ingredients you have in your kitchen
+    </span>
+  </div>
+
+  <button class="cta-button"
+          onclick="location.href='ingredient_input.html'">
+    Click Here
+  </button>
+</div>
+
+
+  <!-- Recipe count -->
+  <span id="recipeCount" class="recipe-count-bar"></span>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- DESKTOP FILTERS (glassy) -->
+    <aside class="filters" id="desktopFilters">
+      <div class="filter-header">Filters</div>
+
+      <!-- Add this right after the Diet Type filter-group in #desktopFilters -->
+        <div class="filter-group">
+          <label>Search Recipes</label>
+          <input type="text" id="searchBarDesktop" placeholder="Search by recipe name..." />
+        </div>
+
+        <div class="filter-group">
+          <label>Sort By</label>
+          <div class="sort-controls">
+            <button id="sortTimeAsc" class="sort-btn active" data-sort="time-asc">
+              ⏱ Time (Fastest)
+            </button>
+            <button id="sortTimeDesc" class="sort-btn" data-sort="time-desc">
+              ⏱ Time (Slowest)
+            </button>
+          </div>
+        </div>
+
+      <!-- Diet chips (built dynamically) -->
+      <div class="filter-group">
+        <label>Diet Type</label>
+        <div id="dietTypeChipGroup"></div>
+      </div>
+
+      <!-- Max Cooking Time -->
+      <div class="filter-group">
+        <label>Max Cooking Time</label>
+        <div class="time-row">
+          <span>Any</span>
+          <input type="range" id="cookingTime" min="0" max="35" value="35" />
+          <span id="cookingTimeLabel">35 min</span>
+        </div>
+      </div>
+
+      <!-- Cooking Mode radios -->
+      <div class="filter-group">
+        <label>Cooking Mode</label>
+        <div class="radio-grid" id="cookingModeRadioGroup"></div>
+      </div>
+
+      <!-- Cuisine radios -->
+      <div class="filter-group">
+        <label>Cuisine</label>
+        <div class="radio-grid" id="cuisineRadioGroup"></div>
+      </div>
+
+      <!-- Category radios -->
+      <div class="filter-group">
+        <label>Category</label>
+        <div class="radio-grid" id="categoryRadioGroup"></div>
+      </div>
+
+      <!-- Accessory radios -->
+      <div class="filter-group">
+        <label>Accessory</label>
+        <div class="radio-grid" id="accessoryRadioGroup"></div>
+      </div>
+
+
+      <button id="clearBtn">Clear Filters</button>
+    </aside>
+
+    <!-- RECIPES GRID -->
+    <section id="recipesGrid"></section>
+  </div>
+
+  <!-- Mobile Filter Button -->
+  <button id="mobileFilterBtn" class="mobile-filter-btn" aria-label="Show filters">
+    <img src="filter.svg" alt="Filter" style="width:34px;height:34px;">
+  </button>
+
+  <!-- Mobile Filter Modal -->
+  <div id="mobileFilterModal" class="mobile-filter-modal">
+    <div class="mobile-filter-content">
+      <button id="closeMobileFilter" class="close-filter-btn">&times;</button>
+      <aside class="filters" id="mobileFilters">
+        <div class="filter-header">Filters</div>
+
+        <div class="filter-group">
+          <label for="searchBarMobile">Search Recipes</label>
+          <input type="text" id="searchBarMobile" placeholder="Search by recipe name..." />
+        </div>
+
+        <!-- Add this right after the cookingTimeMobile filter-group in #mobileFilters -->
+        <!-- <div class="filter-group">
+          <label for="sortMobile">Sort By</label>
+          <div class="sort-controls">
+            <button id="sortTimeAscMobile" class="sort-btn active" data-sort="time-asc">
+              ⏱ Fastest
+            </button>
+            <button id="sortTimeDescMobile" class="sort-btn" data-sort="time-desc">
+              ⏱ Slowest
+            </button>
+          </div>
+        </div> -->
+        <div class="filter-group">
+          <label for="sortMobile">Sort By</label>
+          <div class="sort-controls-mobile">
+            <button id="sortTimeAscMobile" class="sort-btn active" data-sort="time-asc">
+              ⏱ Fastest
+            </button>
+            <button id="sortTimeDescMobile" class="sort-btn" data-sort="time-desc">
+              ⏱ Slowest
+            </button>
+          </div>
+        </div>
+
+
+        <div class="filter-group">
+          <label for="dietTypeMobile">Diet Type</label>
+          <select id="dietTypeMobile">
+            <option value="All">All</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="cookingModeMobile">Cooking Mode</label>
+          <select id="cookingModeMobile">
+            <option value="All">All</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="cuisineMobile">Cuisine</label>
+          <select id="cuisineMobile">
+            <option value="All">All</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="categoryMobile">Category</label>
+          <select id="categoryMobile">
+            <option value="All">All</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="cookingTimeMobile">Max Cooking Time (min)</label>
+          <input type="range" id="cookingTimeMobile" min="0" max="35" value="35" />
+          <span id="cookingTimeLabelMobile">35</span>
+        </div>
+
+        <div class="filter-group">
+          <label for="accessoryMobile">Accessory</label>
+          <select id="accessoryMobile">
+            <option value="All">All</option>
+          </select>
+        </div>
+
+        <!-- <button id="clearBtnMobile">Clear Filters</button> -->
+        <div class="filter-actions">
+          <button id="clearBtnMobile">Clear Filters</button>
+          <button id="applyBtnMobile">Apply</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Popup modal for recipe image -->
+<!-- Popup modal for recipe image with zoom -->
+<div id="popupModal" style="display:none; position: fixed; top:0; left:0; width:100vw; height:100vh; z-index: 10000; background: rgba(0, 0, 0, 0.85); justify-content: center; align-items: center;">
+  <div class="popup-container">
+    <button id="popupCloseBtn" class="popup-close-btn">&times;</button>
+    <div class="popup-image-wrapper">
+      <img id="popupImage" src="" alt="Recipe Image" class="popup-image" />
+      <iframe id="popupPDF" style="display:none;"></iframe>
+      <div class="zoom-controls">
+        <button class="zoom-btn zoom-in" title="Zoom In">+</button>
+        <button class="zoom-btn zoom-out" title="Zoom Out">-</button>
+        <button class="zoom-btn zoom-reset" title="Reset Zoom">↻</button>
+      </div>
+    </div>
+    <div class="zoom-info">
+      <span>Click and drag to pan • Mouse wheel to zoom • Double-click to reset</span>
+    </div>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

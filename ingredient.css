@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Page background – match index gradient vibe */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #fdfdfd 0%, #e5edf7 60%, #d9e2ec 100%);
+  color: #0f172a;
+}
+
+/* Outer container */
+.page-bg {
+  min-height: 100vh;
+  padding: 32px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top hero (keeps orange band feeling) */
+.top-hero {
+  width: 100%;
+  max-width: 1120px;
+  color: #111827;
+  margin-bottom: 18px;
+  padding: 10px 12px 0;
+}
+.top-hero h1 {
+  margin: 18px 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #231f20;   /* was #0f172a */
+}
+.top-hero p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #6b7280;
+}
+
+
+/* Back button – glassy pill */
+#backBtn {
+  background: rgba(15, 23, 42, 0.06);
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: #0f172a;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 7px 14px;
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.1s ease;
+}
+#backBtn::before {
+  content: '←';
+  font-size: 1.1rem;
+}
+#backBtn:hover {
+  background: rgba(248, 250, 252, 0.92);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.25);
+  transform: translateY(-1px);
+}
+
+.top-hero h1 {
+  margin: 18px 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.top-hero p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #6b7280;
+}
+
+/* Main glass card – match filters style */
+.main-card {
+  width: 100%;
+  max-width: 1120px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.9));
+  border: 1px solid rgba(237, 28, 36, 0.12); /* #ed1c24 tint */
+  border-radius: 24px;
+  box-shadow:
+    0 26px 70px rgba(15, 23, 42, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+  padding: 26px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+/* Input header row */
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.input-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fed7d7, #ed1c24 78%);
+  box-shadow: 0 10px 22px rgba(237, 28, 36, 0.5);
+}
+
+.input-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.input-title h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111827;
+}
+.input-title p {
+  margin: 2px 0 0;
+  font-size: 0.86rem;
+  color: #6b7280;
+}
+
+/* Search row */
+.ingredient-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.search-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.search-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(248, 250, 252, 0.96);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+.search-icon {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+#ingredientInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  width: 100%;
+  color: #111827;
+}
+#ingredientInput::placeholder {
+  color: #9ca3af;
+}
+
+/* Add button – matches primary CTAs */
+#addIngredientBtn {
+  border: none;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  /* ...same as before, but change background + shadow: */
+  background: linear-gradient(135deg, #ed1c24, #f97373);
+  box-shadow: 0 10px 26px rgba(237, 28, 36, 0.55);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+#addIngredientBtn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(248, 113, 113, 0.7);
+}
+#ingredientTags span {
+  background: #ffe6e6;
+  color: #ed1c24;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #f5b7b7;
+  box-shadow: 0 4px 10px rgba(237, 28, 36, 0.18);
+}
+
+/* Big dashed box */
+.empty-box {
+  margin-top: 10px;
+  border-radius: 18px;
+  border: 2px dashed rgba(203, 213, 225, 0.9);
+  background: rgba(248, 250, 252, 0.95);
+  padding: 22px 20px 18px;
+  position: relative;
+  min-height: 70px;
+}
+.empty-inner {
+  text-align: center;
+  margin-top: 20px;
+}
+.empty-main {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+.empty-sub {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Selected ingredients */
+.selected-ingredients {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  right: 18px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+.selected-ingredients b {
+  font-weight: 600;
+}
+#selectedIngredientsBox {
+  display: none;
+}
+#ingredientTags {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#ingredientTags span {
+  background: #fff5e9;
+  color: #f97316;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 4px 10px rgba(248, 113, 113, 0.15);
+}
+#ingredientTags span button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Results */
+.recipe-results-section {
+  margin-top: 10px;
+}
+#recipesCount {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #231f20; /* darker brand text */
+  margin-bottom: 10px;
+}
+
+
+/* Result cards grid – match recipe grid feel */
+#recipeResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Modern recipe card */
+#recipeResults > div {
+ background: radial-gradient(circle at top left, #fff0f0, #ffffff 50%, #f0f4ff 110%);  border-radius: 18px;
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(148, 163, 184, 0.18);
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+#recipeResults > div:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 55px rgba(15, 23, 42, 0.22),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+}
+#recipeResults > div img {
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Name */
+#recipeResults > div > div:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #231f20;
+}
+
+
+/* Veg/Non-veg + time chips */
+#recipeResults > div > div:nth-child(3) {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+#recipeResults > div > div:nth-child(3) span:first-child {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+#recipeResults > div > div:nth-child(3) span:first-child {
+  background: #ffe6e6;
+  color: #ed1c24;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+/* Meta + ingredients text */
+#recipeResults > div > div:nth-child(4) {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+#recipeResults > div > div:nth-child(5) {
+  color: #9ca3af;
+  font-size: 0.78rem;
+}
+
+/* Popup */
+#popupModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#popupModal.show {
+  display: flex;
+}#popupModal > div {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.4);
+  align-items: center;          /* center image horizontally */
+  justify-content: center;      /* center image vertically */
+}
+
+#popupImage {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 16px;
+  margin-top: 26px;
+  object-fit: contain;          /* keep aspect ratio, no crop/stretch */
+}
+#popupCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 26px;
+  background: transparent;   /* no background */
+  border: none;              /* no border */
+  color: #ed1c24;            /* your brand red */
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  transition: transform 0.12s ease, color 0.18s ease;
+}
+
+#popupCloseBtn:hover {
+  transform: scale(1.1);
+  color: #b11117;            /* slightly darker red on hover */
+}
+
+/* ── Diet Filter Row ── */
+.diet-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.diet-filter-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+.diet-filter-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.diet-chip {
+  border: 1.5px solid rgba(148, 163, 184, 0.55);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: #4b5563;
+  background: rgba(248, 250, 252, 0.9);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease,
+              color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.diet-chip:hover {
+  background: rgba(237, 28, 36, 0.06);
+  border-color: rgba(237, 28, 36, 0.4);
+  color: #ed1c24;
+  transform: translateY(-1px);
+}
+
+.diet-chip.active {
+  background: linear-gradient(135deg, #ed1c24, #f97373);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(237, 28, 36, 0.4);
+}
+
+.diet-chip.active:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: #fff;
+}

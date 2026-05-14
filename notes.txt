@@ -1,0 +1,152 @@
+Changes that need to be made in "On2Cook Kitchen Master" Smartsheet:
+
+1. Cooking Mode:
+    1. Baking
+    2. Boiling
+    3. Boiling & Sauteing (remove)
+    4. Boiling & Steaming -> Boiling + Steaming
+    5. Boiling + Mashing
+    6. Boiling + Sauteing
+    7. Frying
+    8. Frying + Sauteing
+    9. Grilling
+    10. Grilling + Sauteing _> reverse 
+    11. Sauteing
+    12. Sauteing & Boiling (remove)
+    13. Sauteing & Grilling (remove)
+    14. Sauteing + Boiling (remove)
+    15. Sauteing + Frying (remove)
+    16. Sauteing + Steaming 
+    17. Steaming 
+    18. Steaming + Sauteing (remove)
+
+2. Cuisine: Some recipes are tagged in wrong cuisine
+    1. American
+    2. Andhra
+    3. Asian
+    4. Awadhi
+    5. Bakery
+    6. Bengali
+    7. Brazilian
+    8. Chinese
+    9. Continental
+    10. Fast Food
+    11. French
+    12. Gujarati (we have 2 variations of Gujrati & Gujarati)
+    13. Indian
+    14. Italian
+    15. Maharashtrian
+    16. Mexican
+    17. North Indian
+    18. Pan Asian
+    19. South Indian
+    20. Thai
+    21. Vietnamese  
+
+3. Category
+    1. Base Gravy
+    2. Base Sauce
+    3. Beverages (remove)
+    4. Breakfast
+    5. Desserts
+    6. Main Course
+    7. Salad
+    8. Side Dish (remove)
+    9. Snacks (remove)
+    10. Soup 
+    11. Starters
+
+4. Accessory:
+    1. 1 Grill Mesh
+    2. 1 Large Non-Stick Mat
+    3. 2 Grill Mesh
+    4. Cake Mold
+    5. Cake Mold and Cake Mold Stirrer
+    6. Coated Pan
+    7. Frying Basket & Stirrer
+    8. Gravy Stirrer
+    9. Grill Pan
+    10. Idli Mold & Stirrer
+    11. Momo Basket & Stirrer
+    12. Non Coated Pan
+    13. Non-Coated Pan
+    14. Noodle Stirrer
+    15. Pizza Basket & Stirrer
+    16. Rice Stirrer
+    17. Silicone Stirrer
+    18. Silicone Stirrer With Hood
+    19. Small Non-Stick Mat
+    20. Small Teflon Sheet
+    21. Stirrer
+    22. Tea Stirrer
+
+
+
+
+List in Smartsheet:
+MAIN COURSE
+DESSERT
+STARTER (Merge with Starters)
+BREAKFAST
+BASE
+BAKERY
+MAIN COUSRE (merge with Main Course)
+SOUP
+BASE SAUCE
+INDIAN SWEETS (merge wuth Desserts)
+BEVERAGES (remove)
+MAIN COURE (merge with Main Course)
+DESSERTS
+STARTERS 
+BASE GRAVY
+SIDE DISH (remove)
+SALAD
+SNACKS (remove)
+
+
+
+Key Changes:
+  {
+    "Recipe Name": "BOILED CHOLE GN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 13,
+    "Image": "test_images/BOILED CHOLE GN.jpg",
+    "PopupImage": "test_popup_images/BOILED CHOLE GN.pdf",
+    "Ingredients": [
+      "Boiling  Soaked Chole 1000g, Water 1300g, Tea Bag 30g 2330 gm"
+    ],
+    "Accessories": "Pressure Cooker",
+    "Total Output": "CHOLE 1250G",
+    "On2Cook Cooking Time": "13",
+    "Normal Cooking Time": "45 mins",
+    "hidden": true
+  },
+
+
+  {
+    "Recipe Name": "CHOLE MASALA 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 12,
+    "Image": "test_images/CHOLE MASALA.jpg",
+    "PopupImage": "test_popup_images/CHOLE MASALA.pdf",
+    "Ingredients": [
+      "Take Ghee & Whole Spices  207 gm",
+      "Chop Mix Vegetables  315 gm",
+      "Mix Indian Spices  35 gm",
+      "Puree Tomato puree  200 gm",
+      "Boiled  Boiled Chole 600g, Chole Stock 200g 600 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "1KG",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "40 mins",
+    "clubbedWith": "BOILED CHOLE GN"
+  },
+
+  I would like you to make changes in the ingredient page, where so currently if i enter any ingredient it will show me the recipes which uses that. But I would like that you also put a diet type filter where if i select veg/non veg/egg than from the filtered recipes I would only get recipes for that particular diet type instead of all recipes showing up. Also, if no diet type is selected than all recipes should be shown
