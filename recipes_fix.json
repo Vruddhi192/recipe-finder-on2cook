@@ -842,7 +842,7 @@
       "Take Breaded Paneer Strips  6 number",
       "Take Barbecue Sauce  60 gm"
     ],
-    "Accessories": "Non Coated Pan, Frying Basket And Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "240 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "12 mins"
@@ -2886,7 +2886,7 @@
       "Take Marinated Chicken Thigh 360 gm",
       "Mix Peanut Butter Sauce  90 gm"
     ],
-    "Accessories": "Grill Pan, Brush Oil Or Butter",
+    "Accessories": "Grill Pan",
     "Total Output": "350G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins"
@@ -3899,7 +3899,7 @@
       "Marinate Filling  525 gm",
       "Tikki Dahi Ke Kebab 13 number"
     ],
-    "Accessories": ":, Pan Non Coated Ss, Frying Kit",
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "450G (13NOS 30G EACH)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins"
@@ -5661,6 +5661,25 @@
     "Normal Cooking Time": "6 mins"
   },
   {
+    "Recipe Name": "KOREAN RAMEN (NISSIN PKT)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 6,
+    "Image": "test_images/KOREAN RAMEN.jpg",
+    "PopupImage": "test_popup_images/KOREAN RAMEN.pdf",
+    "Ingredients": [
+      "Pkt Nissin Korean Ramen Spicy Kimchi 1 number",
+      "Auto Water (Auto) 500 ml",
+      "Chopped  Garnish  5 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "600 G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "15 mins"
+  },
+  {
     "Recipe Name": "KORI GASSI 2200 G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -5919,6 +5938,24 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "15 mins"
+  },
+  {
+    "Recipe Name": "MACARONI PASTA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 5,
+    "Image": "test_images/MACARONI PASTA.jpg",
+    "PopupImage": "test_popup_images/MACARONI PASTA.pdf",
+    "Ingredients": [
+      "Add All Ingredients  230 gm",
+      "Auto Water 350 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "5",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "MAKHANA KHEER",
@@ -7091,6 +7128,28 @@
     "Normal Cooking Time": ""
   },
   {
+    "Recipe Name": "ONION TOMATO GRAVY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Cooking Time": 18,
+    "Image": "test_images/ONION TOMATO.jpg",
+    "PopupImage": "test_popup_images/ONION TOMATO.pdf",
+    "Ingredients": [
+      "Take Oil 500 gm",
+      "Take Whole Spices  35 number",
+      "Masala  Indian Masala 280 gm",
+      "Paste Gravy Paste 2100 gm",
+      "Paste Nuts Paste  650 gm",
+      "Powder Garnish 10 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "3200 G",
+    "On2Cook Cooking Time": "18",
+    "Normal Cooking Time": "60 mins"
+  },
+  {
     "Recipe Name": "PAAL PAYASAM",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -7642,6 +7701,25 @@
     "Total Output": "600 GM",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "40 mins"
+  },
+  {
+    "Recipe Name": "PENNE PASTA (ALFREDO SAUCE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 16,
+    "Image": "test_images/PENNE PASTA 300G.jpg",
+    "PopupImage": "test_popup_images/PENNE PASTA 300G.pdf",
+    "Ingredients": [
+      "Raw Raw Penne Pasta  50 gm",
+      "Add Vegetables  171 gm",
+      "Auto Water (Auto) 900 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "16",
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "PENNE PASTA",
@@ -8248,6 +8326,25 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
+    "Cooking Time": 5,
+    "Image": "test_images/RAJMA MASALA 300.jpg",
+    "PopupImage": "test_popup_images/RAJMA MASALA 300.pdf",
+    "Ingredients": [
+      "Add Chopped Onion 50 g, Oil 30 g, Cumin Seeds 1 g, Bay Leaf 1Nos 81 gm",
+      "Mix Tomato Puree & Boiled Rajma 333 gm",
+      "Auto Water (Auto) 100 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "5",
+    "Normal Cooking Time": "20 mins"
+  },
+  {
+    "Recipe Name": "RAJMA MASALA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
     "Cooking Time": 20,
     "Image": "test_images/RAJMA MASALA GN.jpg",
     "PopupImage": "test_popup_images/RAJMA MASALA GN.pdf",
@@ -8320,6 +8417,25 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "15 mins"
+  },
+  {
+    "Recipe Name": "RED SAUCE PASTA (PENNE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 16,
+    "Image": "test_images/RED SAUCE PASTA.jpg",
+    "PopupImage": "test_popup_images/RED SAUCE PASTA.pdf",
+    "Ingredients": [
+      "Raw Pasta  50 gm",
+      "Add Vegetables 268 gm",
+      "Auto Water  750 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "400 G",
+    "On2Cook Cooking Time": "16",
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "RICE KHEER",
@@ -9627,7 +9743,7 @@
       "Mix Curry Mix 380 gm",
       "Auto Water (Auto) 350 ml"
     ],
-    "Accessories": "Honeycomb Pan, Silicone Stirrer",
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "750 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
