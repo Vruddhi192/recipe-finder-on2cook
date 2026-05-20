@@ -51,20 +51,118 @@ const filterState = {
   maxCookingTime: 35
 };
 
+// ─── URL STATE ────────────────────────────────────────────────────────────────
+
+/**
+ * Reads current URL search params and returns a filterState-shaped object.
+ * Only keys that exist in the URL are returned; the rest stay as defaults.
+ */
+function readFiltersFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const result = {};
+  if (params.has('q'))         result.searchTerm     = params.get('q');
+  if (params.has('sort'))      result.sortBy          = params.get('sort');
+  if (params.has('diet'))      result.dietVal         = params.get('diet');
+  if (params.has('mode'))      result.cookingModeVal  = params.get('mode');
+  if (params.has('cuisine'))   result.cuisineVal      = params.get('cuisine');
+  if (params.has('category'))  result.categoryVal     = params.get('category');
+  if (params.has('accessory')) result.accessoryVal    = params.get('accessory');
+  if (params.has('time'))      result.maxCookingTime  = parseInt(params.get('time'), 10);
+  return result;
+}
+
+/**
+ * Pushes the current filterState into the URL as search params.
+ * Params that are at their default value are omitted to keep URLs clean.
+ */
+function writeFiltersToURL() {
+  const params = new URLSearchParams();
+  if (filterState.searchTerm)                    params.set('q',         filterState.searchTerm);
+  if (filterState.sortBy !== 'time-asc')         params.set('sort',      filterState.sortBy);
+  if (filterState.dietVal !== 'All')             params.set('diet',      filterState.dietVal);
+  if (filterState.cookingModeVal !== 'All')      params.set('mode',      filterState.cookingModeVal);
+  if (filterState.cuisineVal !== 'All')          params.set('cuisine',   filterState.cuisineVal);
+  if (filterState.categoryVal !== 'All')         params.set('category',  filterState.categoryVal);
+  if (filterState.accessoryVal !== 'All')        params.set('accessory', filterState.accessoryVal);
+  if (filterState.maxCookingTime !== 35)         params.set('time',      filterState.maxCookingTime);
+
+  const newSearch = params.toString();
+  const newURL = newSearch
+    ? `${window.location.pathname}?${newSearch}`
+    : window.location.pathname;
+
+  // Use replaceState so every filter tweak doesn't pollute browser history
+  window.history.replaceState(null, '', newURL);
+}
+
+/**
+ * Applies URL params to filterState and then syncs all UI controls to match.
+ * Call this once after recipes are loaded (controls must exist in the DOM).
+ */
+function applyURLFiltersToUI() {
+  const fromURL = readFiltersFromURL();
+  Object.assign(filterState, fromURL);
+
+  // ── Desktop search bar ──
+  if (searchBarDesktop) searchBarDesktop.value = filterState.searchTerm;
+
+  // ── Sort buttons ──
+  updateSortButtons();
+  updateMobileSortButtons();
+
+  // ── Cooking time slider ──
+  cookingTime.value = filterState.maxCookingTime;
+  cookingTimeLabel.textContent = `${filterState.maxCookingTime} min`;
+  cookingTimeMobile.value = filterState.maxCookingTime;
+  cookingTimeLabelMobile.textContent = `${filterState.maxCookingTime}`;
+
+  // ── Diet chips (desktop) ──
+  document.querySelectorAll('.diet-chip').forEach(c => {
+    c.classList.toggle('active', c.dataset.value === filterState.dietVal);
+  });
+
+  // ── Radio groups (desktop) ──
+  syncRadioGroup('cookingMode', filterState.cookingModeVal);
+  syncRadioGroup('cuisine',     filterState.cuisineVal);
+  syncRadioGroup('category',    filterState.categoryVal);
+  syncRadioGroup('accessory',   filterState.accessoryVal);
+
+  // ── Mobile selects ──
+  if (searchBarMobile)    searchBarMobile.value    = filterState.searchTerm;
+  dietTypeMobile.value     = filterState.dietVal;
+  cookingModeMobile.value  = filterState.cookingModeVal;
+  cuisineMobile.value      = filterState.cuisineVal;
+  categoryMobile.value     = filterState.categoryVal;
+  accessoryMobile.value    = filterState.accessoryVal;
+}
+
+/** Checks the correct radio for a given filter group name. */
+function syncRadioGroup(name, value) {
+  const inputs = document.querySelectorAll(`input[name="${name}"]`);
+  inputs.forEach(input => {
+    if (input.value === value) input.checked = true;
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 searchBarDesktop?.addEventListener('input', debounce((e) => {
   filterState.searchTerm = e.target.value.toLowerCase().trim();
+  writeFiltersToURL();
   showRecipes();
 }, 250));
 
 sortTimeAscMobile?.addEventListener('click', () => {
   filterState.sortBy = 'time-asc';
   updateMobileSortButtons();
+  writeFiltersToURL();
   applyMobileFilters();
 });
 
 sortTimeDescMobile?.addEventListener('click', () => {
   filterState.sortBy = 'time-desc';
   updateMobileSortButtons();
+  writeFiltersToURL();
   applyMobileFilters();
 });
 
@@ -87,12 +185,14 @@ function setupSortButtons() {
   sortTimeAsc?.addEventListener('click', () => {
     filterState.sortBy = 'time-asc';
     updateSortButtons();
+    writeFiltersToURL();
     showRecipes();
   });
   
   sortTimeDesc?.addEventListener('click', () => {
     filterState.sortBy = 'time-desc';
     updateSortButtons();
+    writeFiltersToURL();
     showRecipes();
   });
 }
@@ -106,13 +206,14 @@ function updateMobileSortButtons() {
   sortTimeAscMobile?.classList.toggle('active', filterState.sortBy === 'time-asc');
   sortTimeDescMobile?.classList.toggle('active', filterState.sortBy === 'time-desc');
 }
+
 // Build chips/radios
 function buildDietChips(values) {
   dietTypeChipGroup.innerHTML = '';
   const allValues = ['All', ...values];
   allValues.forEach(val => {
     const btn = document.createElement('button');
-    btn.className = 'diet-chip' + (val === 'All' ? ' active' : '');
+    btn.className = 'diet-chip' + (val === filterState.dietVal ? ' active' : '');
     btn.dataset.value = val;
     btn.innerHTML =
       val === 'All'
@@ -126,6 +227,7 @@ function buildDietChips(values) {
       document.querySelectorAll('.diet-chip').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
       filterState.dietVal = val;
+      writeFiltersToURL();
       showRecipes();
     });
     dietTypeChipGroup.appendChild(btn);
@@ -138,13 +240,15 @@ function buildRadioGroup(container, values, name) {
   allValues.forEach(val => {
     const label = document.createElement('label');
     label.className = 'radio-pill';
+    const currentVal = filterState[`${name}Val`];
     label.innerHTML = `
-      <input type="radio" name="${name}" value="${val}" ${val === 'All' ? 'checked' : ''}>
+      <input type="radio" name="${name}" value="${val}" ${val === currentVal ? 'checked' : ''}>
       <span>${val}</span>
     `;
     const input = label.querySelector('input');
     input.addEventListener('change', () => {
       filterState[`${name}Val`] = val;
+      writeFiltersToURL();
       showRecipes();
     });
     container.appendChild(label);
@@ -175,12 +279,18 @@ function loadRecipes() {
     .then(r => r.json())
     .then(data => {
       recipes = data;
+
+      // Build UI controls
       buildDietChips(getUniqueValues('Veg/Non Veg'));
       buildRadioGroup(cookingModeRadioGroup, getUniqueValues('Cooking Mode'), 'cookingMode');
       buildRadioGroup(cuisineRadioGroup, getUniqueValues('Cuisine'), 'cuisine');
       buildRadioGroup(categoryRadioGroup, getUniqueValues('Category'), 'category');
       buildRadioGroup(accessoryRadioGroup, getUniqueAccessories(), 'accessory');
       populateMobileFilters();
+
+      // ← Apply any filters baked into the shared URL
+      applyURLFiltersToUI();
+
       showRecipes();
       setupSortButtons();
       updateSortButtons();
@@ -190,6 +300,7 @@ function loadRecipes() {
       recipesGrid.innerHTML = '<p class="error-text">Failed to load recipes.</p>';
     });
 }
+
 // Add this function before downloadRecipe
 function showDownloadToast(message) {
   // Remove existing toasts
@@ -432,6 +543,7 @@ function showRecipes() {
 cookingTime.addEventListener('input', () => {
   filterState.maxCookingTime = parseInt(cookingTime.value, 10);
   cookingTimeLabel.textContent = `${cookingTime.value} min`;
+  writeFiltersToURL();
   showRecipes();
 });
 
@@ -463,7 +575,12 @@ clearBtn.addEventListener('click', () => {
   cookingTimeMobile.value = 35;
   cookingTimeLabelMobile.textContent = '35';
 
+  if (searchBarDesktop) searchBarDesktop.value = '';
+  if (searchBarMobile)  searchBarMobile.value  = '';
+
   updateSortButtons();
+  updateMobileSortButtons();
+  writeFiltersToURL();
   showRecipes();
 });
 
@@ -490,6 +607,7 @@ function applyMobileFilters() {
   filterState.accessoryVal = accessoryMobile.value;
   filterState.maxCookingTime = parseInt(cookingTimeMobile.value, 10);
   cookingTimeLabelMobile.textContent = cookingTimeMobile.value;
+  writeFiltersToURL();
   showRecipes();
 }
 
@@ -519,12 +637,14 @@ document.getElementById('applyBtnMobile').addEventListener('click', () => {
 sortTimeAscMobile?.addEventListener('click', () => {
   filterState.sortBy = 'time-asc';
   updateMobileSortButtons();
+  writeFiltersToURL();
   applyMobileFilters();
 });
 
 sortTimeDescMobile?.addEventListener('click', () => {
   filterState.sortBy = 'time-desc';
   updateMobileSortButtons();
+  writeFiltersToURL();
   applyMobileFilters();
 });
 
@@ -539,6 +659,7 @@ clearBtnMobile.addEventListener('click', () => {
   cookingTimeLabelMobile.textContent = '35';
   filterState.sortBy = 'time-asc';
   updateMobileSortButtons();
+  writeFiltersToURL();
   applyMobileFilters();
 });
 
