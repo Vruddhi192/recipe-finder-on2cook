@@ -675,27 +675,6 @@
     "Normal Cooking Time": "30 mins"
   },
   {
-    "Recipe Name": "BAIGAN BHARTA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 13,
-    "Image": "test_images/BAIGAN BHARTA.jpg",
-    "PopupImage": "test_popup_images/BAIGAN BHARTA.pdf",
-    "Ingredients": [
-      "Chop Eggplant Mix 701 gm",
-      "Mash Powdered Spice Mix  68 gm",
-      "Auto  Water (Auto) 200 ml",
-      "Butter & Sugar 45 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "750 GM",
-    "On2Cook Cooking Time": "13",
-    "Normal Cooking Time": "25 mins",
-    "hidden": "true"
-  },
-  {
     "Recipe Name": "BAINGAN BHAJA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "GRILLING",
@@ -965,14 +944,14 @@
     "Image": "test_images/BESAN TURAI.jpg",
     "PopupImage": "test_popup_images/BESAN TURAI.pdf",
     "Ingredients": [
-      "Take Oil & Tempering 413 gm",
-      "Auto Water (Auto) 60 ml",
-      "Take Besan & Spices 21 gm"
+      "Take Oil & Tempering 408 gm",
+      "Water (Auto) 30 ml",
+      "Besan & Spices 23 gm"
     ],
-    "Accessories": "Silicone Stirrer, Pan Honeycomb (Non-Stick)",
-    "Total Output": "400 G",
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "350G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "10 mins"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "BHAPA DOI",
@@ -1869,26 +1848,6 @@
     "Normal Cooking Time": "45 mins"
   },
   {
-    "Recipe Name": "CHI BIRYANI BULK",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 17,
-    "Image": "test_images/CHI BIRYANI BULK.jpg",
-    "PopupImage": "test_popup_images/CHI BIRYANI BULK.pdf",
-    "Ingredients": [
-      "Take Ghee & Spices   78 gm",
-      "Take Marinated Chicken & Soaked Rice 2304 gm",
-      "Auto Water (Auto) 1420 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "3000 G",
-    "On2Cook Cooking Time": "17",
-    "Normal Cooking Time": "40 mins",
-    "hidden": "TRUE"
-  },
-  {
     "Recipe Name": "CHICKEN STIR FRY WITH BROWN SAUCE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -2156,30 +2115,6 @@
     "hidden": true
   },
   {
-    "Recipe Name": "CHICKEN MANCHURIAN DRY",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "STARTERS",
-    "Cooking Time": 4,
-    "Image": "test_images/CHI MANCHURIAN D.jpg",
-    "PopupImage": "test_popup_images/CHI MANCHURIAN D.pdf",
-    "Ingredients": [
-      "Take Oil 20 gm",
-      "Chop Chopped Vegetables 1 15 gm",
-      "Chop Chopped Vegetables 2 123 gm",
-      "Mix Mix Sauce 48 gm",
-      "Bottle  Water 60 ml",
-      "Mix Corn Starch Sulrry  25 gm",
-      "Take Chinese Fried Chicken  180 gm",
-      "Chop Garnish  7 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "350 G",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "12 mins"
-  },
-  {
     "Recipe Name": "CHICKEN MANCHURIAN GRAVY",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING + SAUTEING",
@@ -2394,15 +2329,13 @@
     "Image": "test_images/CHICKEN 65.jpg",
     "PopupImage": "test_popup_images/CHICKEN 65.pdf",
     "Ingredients": [
-      "Take Oil 15 gm",
-      "Cut Tampering 28 gm",
-      "Mix Mix Sauce 64 gm",
-      "Take Chicken 65 Fry 500 gm"
+      "Tempering  65 Tempering  163 gm",
+      "Fried  Fried Chicken 65 300 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "500G",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "350G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "12 mins"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "CHICKEN 65 FRY",
@@ -2414,36 +2347,12 @@
     "Image": "test_images/CHICKEN 65 FRY.jpg",
     "PopupImage": "test_popup_images/CHICKEN 65 FRY.pdf",
     "Ingredients": [
-      "Heat Pre-Heated Oil at 200° C 1 liter",
-      "Mix Batter Battered Chicken 709 gm"
+      "Marinated Chicken Marinade  313 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
-    "Total Output": "500G",
+    "Total Output": "300G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins"
-  },
-  {
-    "Recipe Name": "CHICKEN BIRYANI",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 13,
-    "Image": "test_images/CHICKEN BIRYANI.jpg",
-    "PopupImage": "test_popup_images/CHICKEN BIRYANI.pdf",
-    "Ingredients": [
-      "Take Ghee 50 gm",
-      "Take Whole Spices 26 number",
-      "Mix Liquid  293 gm",
-      "Marinated Chicken  588 gm",
-      "Soaked Rice+Mix Leaves  530 gm",
-      "Water 460 gm",
-      "Brown Onion  20 gm"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Mesh Mats, Mesh Mats",
-    "Total Output": "1800 GM",
-    "On2Cook Cooking Time": "13",
-    "Normal Cooking Time": "50 mins"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "CHICKEN BIRYANI 3200G",
@@ -2592,6 +2501,25 @@
     "Normal Cooking Time": "20 mins"
   },
   {
+    "Recipe Name": "CHICKEN GOSHTABA (KASHMIRI CUISINE)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 4,
+    "Image": "test_images/CHICKEN GOSHTABA.jpg",
+    "PopupImage": "test_popup_images/CHICKEN GOSHTABA.pdf",
+    "Ingredients": [
+      "Take  Whole Spices & Gravy Paste 198 gm",
+      "Auto Water (Auto) 150 ml",
+      "Balls (30g) Chicken Balls  5 number"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "15 mins"
+  },
+  {
     "Recipe Name": "CHICKEN HANDI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -2692,20 +2620,16 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Cooking Time": 8,
+    "Cooking Time": 9,
     "Image": "test_images/CHICKEN KORMA.jpg",
     "PopupImage": "test_popup_images/CHICKEN KORMA.pdf",
     "Ingredients": [
-      "Take Oil 20 g, Ghee 40 g 60 gm",
-      "Take Whole Spice 7 number",
-      "Curry Cut Chicken  500 gm",
-      "Take Gravy Paste 348 gm",
-      "Auto Water (Auto) 200 ml",
-      "Mix Cream 60 g, Sugar 5 g 65 gm"
+      "Take Chicken & Gravy Paste  1020 gm",
+      "Auto Water (Auto) 200 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "800 G",
-    "On2Cook Cooking Time": "8",
+    "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "30 mins"
   },
   {
@@ -3974,9 +3898,9 @@
     "Image": "test_images/DAL MAKHANI BULK.jpg",
     "PopupImage": "test_popup_images/DAL MAKHANI BULK.pdf",
     "Ingredients": [
-      "Take All Ingredients  270 gm",
-      "Add Tomato Puree & Spices  3525 gm",
-      "Auto Water 500 ml"
+      "Take Ghee & Tempering  541 gm",
+      "Add Tomato Puree & Spices  2995 gm",
+      "Auto Water (Auto) 500 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2800 G",
@@ -4143,6 +4067,26 @@
     "Normal Cooking Time": ""
   },
   {
+    "Recipe Name": "EGG DEVIL",
+    "Veg/Non Veg": "EGG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "BENGALI",
+    "Category": "SIDE DISH",
+    "Cooking Time": 3,
+    "Image": "test_images/EGG DEVIL.jpg",
+    "PopupImage": "test_popup_images/EGG DEVIL.pdf",
+    "Ingredients": [
+      "Heat Pre-Heated Oil 180° C 1500 gm",
+      "Take Coating To Apply On Hard-Boiled Eggs  326 gm",
+      "Batter  Egg Batter 130 gm",
+      "Coating  Breadcrumb  100 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "4 NOS (300 G)",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "30 mins"
+  },
+  {
     "Recipe Name": "EGG FRIED RICE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
@@ -4221,26 +4165,6 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Noodles Stirrer",
     "Total Output": "700 G",
     "On2Cook Cooking Time": "5",
-    "Normal Cooking Time": "12 mins"
-  },
-  {
-    "Recipe Name": "EGG SCHEZWAN FRIED RICE",
-    "Veg/Non Veg": "EGG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 4,
-    "Image": "test_images/EGG SCHZ RICE.jpg",
-    "PopupImage": "test_popup_images/EGG SCHZ RICE.pdf",
-    "Ingredients": [
-      "Take Oil 20 gm",
-      "Take Egg 80 gm",
-      "Chopped  Vegetables 95 gm",
-      "Tak  Rice & Mix Sauce  358 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "450 G",
-    "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins"
   },
   {
@@ -4578,6 +4502,24 @@
     "Total Output": "4 PCS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins"
+  },
+  {
+    "Recipe Name": "FRY MOMO",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 2,
+    "Image": "test_images/FRY MOMO.jpg",
+    "PopupImage": "test_popup_images/FRY MOMO.pdf",
+    "Ingredients": [
+      "Mix  Batter  240 gm",
+      "Steamed Steamed Momo 8 number"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "8 NOS",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "FRY PANEER",
@@ -5271,20 +5213,18 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Cooking Time": 5,
+    "Cooking Time": 6,
     "Image": "test_images/JEERA ALOO.jpg",
     "PopupImage": "test_popup_images/JEERA ALOO.pdf",
     "Ingredients": [
-      "Take Oil 30 gm",
-      "Take Cumin Seeds 6 gm",
-      "Mix Salt & Turmeric Powder  6 gm",
-      "Cut Potatoes 250 gm",
-      "Chop Coriander Leaves 2 gm"
+      "Take Oil 30g, Cumin Seeds 4g 34 gm",
+      "Raw Diced Potatoes 600 gm",
+      "Take  Salt 5g, Turmeric Powder 2g 7 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "200 GM",
-    "On2Cook Cooking Time": "5",
-    "Normal Cooking Time": "20 mins"
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "35 mins"
   },
   {
     "Recipe Name": "JEERA ALOO 1000G",
@@ -5311,18 +5251,18 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Cooking Time": 12,
+    "Cooking Time": 11,
     "Image": "test_images/JEERA RICE.jpg",
     "PopupImage": "test_popup_images/JEERA RICE.pdf",
     "Ingredients": [
-      "Oil 60 ml",
-      "Whole Spices 20 gm",
-      "Take Soaked Rice & Salt 825 gm",
-      "Take Water 1120 ml"
+      "Add Ghee 20g, Cumin Seeds 5g 25 gm",
+      "Add Soaked Rice 400g, Salt 8g 408 gm",
+      "Auto  Water (Auto) 940 ml",
+      "Add Garnish  5 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "1900GM",
-    "On2Cook Cooking Time": "12",
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "11",
     "Normal Cooking Time": "25 mins"
   },
   {
@@ -6284,26 +6224,6 @@
     "Normal Cooking Time": "8 mins"
   },
   {
-    "Recipe Name": "MASHED POTATO",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 12,
-    "Image": "test_images/MASHED POTATO.jpg",
-    "PopupImage": "test_popup_images/MASHED POTATO.pdf",
-    "Ingredients": [
-      "Potato & Salt 1010 gm",
-      "Take Water 450 gm",
-      "Mix Cream Mix 210 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "1200 GM",
-    "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": "35 mins",
-    "hidden": true
-  },
-  {
     "Recipe Name": "MASHED POTATOES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -6594,19 +6514,17 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
-    "Cooking Time": 8,
+    "Cooking Time": 11,
     "Image": "test_images/MOONG DAL HALWA.jpg",
     "PopupImage": "test_popup_images/MOONG DAL HALWA.pdf",
     "Ingredients": [
-      "Take Ghee 200 gm",
-      "Powder Moong Dal Mix  200 gm",
-      "Take  Water  400 ml",
-      "Take Sugar Mix 255 gm"
+      "Grind Moongdal Mix  1500 gm",
+      "Water Auto 1000 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "1000 G",
-    "On2Cook Cooking Time": "8",
-    "Normal Cooking Time": "40 mins"
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "2000 G",
+    "On2Cook Cooking Time": "11",
+    "Normal Cooking Time": "145 mins"
   },
   {
     "Recipe Name": "MOONG DAL SOAKED",
@@ -6625,26 +6543,6 @@
     "Total Output": "900 G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "20 mins"
-  },
-  {
-    "Recipe Name": "MOONG DAL HALWA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "DESSERTS",
-    "Cooking Time": 14,
-    "Image": "test_images/MOONGDAL HALWA 2.jpg",
-    "PopupImage": "test_popup_images/MOONGDAL HALWA 2.pdf",
-    "Ingredients": [
-      "Ghee 500 gm",
-      "Moong Dal Powder Mix 500 gm",
-      "Sugar Mix  515 gm",
-      "Water 1000 ml"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "2000 G",
-    "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": "60 mins"
   },
   {
     "Recipe Name": "MOR KUZHUMBU",
@@ -6847,8 +6745,8 @@
       "Heat Pre-Heated Oil  1000 gm",
       "Mix Fresh Mushroom  290 gm"
     ],
-    "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
-    "Total Output": "200 G",
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "200G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins"
   },
@@ -7110,29 +7008,11 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "BROWN ONION RICE",
+    "Recipe Name": "ONION TOMATO",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "BOILING + STEAMING",
-    "Cuisine": "INDIAN",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Cooking Time": 14,
-    "Image": "test_images/ONION RICE GN.jpg",
-    "PopupImage": "test_popup_images/ONION RICE GN.pdf",
-    "Ingredients": [
-      "Take Soaked Rice 1200g, Oil 50g, Salt 30g, Kashmiri Chilli Powder 10g, Bayleaf 5Nos, Fried Onion 100g 1390 gm",
-      "Auto Water (Auto) 1640 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "2700G",
-    "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": ""
-  },
-  {
-    "Recipe Name": "ONION TOMATO GRAVY",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
     "Cooking Time": 18,
     "Image": "test_images/ONION TOMATO.jpg",
     "PopupImage": "test_popup_images/ONION TOMATO.pdf",
@@ -7703,9 +7583,9 @@
     "Normal Cooking Time": "40 mins"
   },
   {
-    "Recipe Name": "PENNE PASTA (ALFREDO SAUCE)",
+    "Recipe Name": "PENNE PASTA 300G",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
+    "Cooking Mode": "AUTO",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
     "Cooking Time": 16,
@@ -8717,6 +8597,25 @@
     "Normal Cooking Time": "15 mins"
   },
   {
+    "Recipe Name": "SCHEZWAN MOMO",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Cooking Time": 3,
+    "Image": "test_images/SCHEZWAN MOMO.jpg",
+    "PopupImage": "test_popup_images/SCHEZWAN MOMO.pdf",
+    "Ingredients": [
+      "Chopped  Oil & Vegetables  160 gm",
+      "Auto Water (Auto) 80 ml",
+      "Fried  Fried Momo & Sauce  52 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "8 NOS",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": ""
+  },
+  {
     "Recipe Name": "SCHEZWAN PULAO",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -9122,18 +9021,17 @@
     "Cooking Mode": "BOILING + STEAMING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Cooking Time": 12,
+    "Cooking Time": 10,
     "Image": "test_images/STEAM RICE.jpg",
     "PopupImage": "test_popup_images/STEAM RICE.pdf",
     "Ingredients": [
-      "Take Oil 50 gm",
-      "Soak Soaked Rice + Salt 1025 gm",
-      "Take Water Spray  1340 ml"
+      "Add Oil 20g, Soaked Rice 400g, Salt 8g 428 gm",
+      "Auto  Water (Auto) 940 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "1800 G",
-    "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": ""
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "10",
+    "Normal Cooking Time": "45 mins"
   },
   {
     "Recipe Name": "STEAM RICE 2000G",
@@ -9586,20 +9484,18 @@
     "Normal Cooking Time": "30 mins"
   },
   {
-    "Recipe Name": "THAI GREEN CURRY CHICKEN",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "PAN ASIAN",
+    "Recipe Name": "THAI CHI CURRY G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
     "Cooking Time": 4,
     "Image": "test_images/THAI CHI CURRY G.jpg",
     "PopupImage": "test_popup_images/THAI CHI CURRY G.pdf",
     "Ingredients": [
-      "Take Oil 20 gm",
-      "Diced  Chicken & Exotic Vegetables  281 gm",
-      "Paste Fresh Thai Green Curry Paste   105 gm",
-      "Bottle  Water 350 ml",
-      "Mix Coconut Milk Powder Mix 110 gm"
+      "Take Vegetables & Chicken  500 gm",
+      "Auto  Water (Auto) 350 ml",
+      "Take Coconut Milk Powder  200 gm"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "750 G",
@@ -9616,11 +9512,9 @@
     "Image": "test_images/THAI CHI CURRY R.jpg",
     "PopupImage": "test_popup_images/THAI CHI CURRY R.pdf",
     "Ingredients": [
-      "Take Oil 20 gm",
-      "Diced  Chicken & Exotic Vegetables  281 gm",
-      "Paste Fresh Thai Red Curry Paste   75 gm",
-      "Bottle  Water 350 ml",
-      "Take Coconut Milk Powder Mix 130 gm"
+      "Take Vegetables & Chicken  480 gm",
+      "Auto  Water (Auto) 350 ml",
+      "Take Coconut Milk Powder 200 gm"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "750 G",
@@ -9637,14 +9531,12 @@
     "Image": "test_images/THAI GREEN CURRY.jpg",
     "PopupImage": "test_popup_images/THAI GREEN CURRY.pdf",
     "Ingredients": [
-      "Take Oil 20 gm",
-      "Diced  Exotic Vegetables  201 gm",
-      "Paste Fresh Thai Green Curry Paste   96 gm",
-      "Bottle  Water 300 ml",
-      "Mix Coconut Milk Powder Mix 110 gm"
+      "Take Oil & Vegetables  330 gm",
+      "Paste Curry Mix 360 gm",
+      "Auto Water (Auto) 350 ml"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "500GM",
+    "Total Output": "750 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins"
   },
@@ -9747,28 +9639,6 @@
     "Total Output": "750 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "hidden": true
-  },
-  {
-    "Recipe Name": "THAI RED CURRY V",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 4,
-    "Image": "test_images/THAI RED CURRY V.jpg",
-    "PopupImage": "test_popup_images/THAI RED CURRY V.pdf",
-    "Ingredients": [
-      "Take Oil 20 gm",
-      "Diced  Exotic Vegetables  201 gm",
-      "Paste Fresh Thai Green Curry Paste   96 gm",
-      "Bottle  Water 300 ml",
-      "Mix Coconut Milk Powder Mix 110 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "600 G",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "25 mins",
     "hidden": true
   },
   {
@@ -10210,31 +10080,6 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "VEG BIRYANI",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 13,
-    "Image": "test_images/VEG BIRYANI.jpg",
-    "PopupImage": "test_popup_images/VEG BIRYANI.pdf",
-    "Ingredients": [
-      "Water + 1 Grill Mesh + 1 Large Non-Stick Mat 120 ml",
-      "Ghee 40 gm",
-      "Marinated Vegetables 335 gm",
-      "Mix Liquid  72 ml",
-      "Finely Chop Mix Greens 25 gm",
-      "Soaked Rice  300 gm",
-      "Water 540 ml",
-      "Garnish  Brown Onion  10 gm"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Mesh Mats, Mp Mats Big",
-    "Total Output": "1000 G",
-    "On2Cook Cooking Time": "13",
-    "Normal Cooking Time": "60 mins",
-    "hidden": true
-  },
-  {
     "Recipe Name": "VEG BIRYANI 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -10614,49 +10459,6 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "12 mins"
-  },
-  {
-    "Recipe Name": "VEG THAI CURRY G",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 3,
-    "Image": "test_images/VEG THAI CURRY G.jpg",
-    "PopupImage": "test_popup_images/VEG THAI CURRY G.pdf",
-    "Ingredients": [
-      "Take  Oil 30 ml",
-      "Finely Chop Chopped Vegetables  50 gm",
-      "Mix Curry Mix 270 gm",
-      "Take  Water 100 ml",
-      "Cut Diced Vegetables  180 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "450 G",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "20 mins",
-    "hidden": true
-  },
-  {
-    "Recipe Name": "VEG THAI RED CURRY",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "BOILING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 3,
-    "Image": "test_images/VEG THAI CURRY R.jpg",
-    "PopupImage": "test_popup_images/VEG THAI CURRY R.pdf",
-    "Ingredients": [
-      "Take  Oil 30 ml",
-      "Finely Chop Chopped Vegetables  50 gm",
-      "Mix Curry Mix 250 gm",
-      "Take  Water 100 ml",
-      "Cut Diced Vegetables  180 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "450 G",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "VEGETABLE KORMA",

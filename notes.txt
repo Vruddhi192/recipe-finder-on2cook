@@ -149,4 +149,4 @@ Key Changes:
     "clubbedWith": "BOILED CHOLE GN"
   },
 
-  I would like you to make changes in the ingredient page, where so currently if i enter any ingredient it will show me the recipes which uses that. But I would like that you also put a diet type filter where if i select veg/non veg/egg than from the filtered recipes I would only get recipes for that particular diet type instead of all recipes showing up. Also, if no diet type is selected than all recipes should be shown
+  I would like to make few changes where if i filter smtg that also gets reflected in the url and if i share that url with someone they can see the filtered version. they should see what im trying to showcase.

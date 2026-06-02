@@ -15,6 +15,7 @@ def extract_all_zips():
     Path(IMAGE_DIR).mkdir(exist_ok=True)
 
     total = 0
+    failures = []
 
     for root, dirs, files in os.walk(ZIP_ROOT):
         for file in files:
@@ -32,8 +33,13 @@ def extract_all_zips():
             os.makedirs(recipe_extract_dir)
 
             print(f"📦 Extracting: {file}")
-            with zipfile.ZipFile(zip_path, 'r') as z:
-                z.extractall(recipe_extract_dir)
+
+            try:
+                with zipfile.ZipFile(zip_path, "r") as z:
+                    z.extractall(recipe_extract_dir)
+            except Exception as e:
+                failures.append((recipe_key, f"ZIP extraction failed: {e}"))
+                continue
 
             # Find JPG and TXT recursively
             jpg = None
@@ -42,6 +48,7 @@ def extract_all_zips():
             for root2, dirs2, files2 in os.walk(recipe_extract_dir):
                 for f in files2:
                     full_path = os.path.join(root2, f)
+
                     if f.lower().endswith(".jpg") and jpg is None:
                         jpg = full_path
                     elif f.lower().endswith(".txt") and txt is None:
@@ -49,6 +56,7 @@ def extract_all_zips():
 
             if not txt:
                 print(f"⚠ No TXT found in {recipe_key}")
+                failures.append((recipe_key, "Missing TXT file"))
                 continue
 
             if jpg:
@@ -57,10 +65,17 @@ def extract_all_zips():
                 print(f"🖼 Image saved: {IMAGE_DIR}/{final_img_name}")
             else:
                 print(f"⚠ No JPG found in {recipe_key}")
+                failures.append((recipe_key, "Missing JPG file"))
 
             total += 1
 
-    print(f"\n Extraction complete: {total} recipes processed")
+    print(f"\n✅ Extraction complete: {total} recipes processed")
+
+    print(f"\n❌ Failed recipes: {len(failures)}")
+    if failures:
+        for recipe, reason in failures:
+            print(f"   - {recipe}: {reason}")
+
     return total
 
 
