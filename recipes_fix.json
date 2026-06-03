@@ -3647,6 +3647,27 @@
     "Normal Cooking Time": "45 mins"
   },
   {
+    "Recipe Name": "CHOPPED MASALA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 13,
+    "Image": "test_images/CHOPPED MASALA.jpg",
+    "PopupImage": "test_popup_images/CHOPPED MASALA.pdf",
+    "Ingredients": [
+      "Add Oil & Tadka 707 gm",
+      "Mix Powder Spices & Tomatoes  358 gm",
+      "Auto Water (Auto) 100 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "700 G",
+    "On2Cook Cooking Time": "13",
+    "Normal Cooking Time": "35 mins"
+  },
+  {
     "Recipe Name": "CHINESE CLEAR STIR FRY SAUCE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -10479,6 +10500,29 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
+  },
+  {
+    "Recipe Name": "TANDOORI MARINADE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "test_images/TANDOORI MARINADE.jpg",
+    "PopupImage": "test_popup_images/TANDOORI MARINADE.pdf",
+    "Ingredients": [
+      "Take Mustard Oil  500 gm",
+      "Paste  Ginger, Garlic & Chilli Paste 40 gm",
+      "Roasted Roasted Chana Powder  100 gm",
+      "Take Indian Masala 290 gm",
+      "Take Chat Masala 72 g, Kasuri Methi 8 g 80 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "TARIWALA KUKKAD",
