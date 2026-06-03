@@ -7908,6 +7908,27 @@
     "Normal Cooking Time": "20 mins"
   },
   {
+    "Recipe Name": "PANEER BIRYANI",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 10,
+    "Image": "test_images/PANEER BIRYANI.jpg",
+    "PopupImage": "test_popup_images/PANEER BIRYANI.pdf",
+    "Ingredients": [
+      "Soaked  India Gate Basmati Soaked Rice 150 g, Salt 3g 153 gm",
+      "Marinade  Marination  210 gm",
+      "Auto Water (Auto) 400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "600 G",
+    "On2Cook Cooking Time": "10",
+    "Normal Cooking Time": "5060 mins"
+  },
+  {
     "Recipe Name": "PANEER CHILI DRY",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -9247,7 +9268,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Flavor Profile": "Sweet",
-    "Consistency": "Semi-Dry",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 15,
     "Image": "test_images/RICE KHEER.jpg",
     "PopupImage": "test_popup_images/RICE KHEER.pdf",
@@ -9338,7 +9359,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Flavor Profile": "Sweet",
-    "Consistency": "Semi-Dry",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 10,
     "Image": "test_images/SABUDANA KHEER.jpg",
     "PopupImage": "test_popup_images/SABUDANA KHEER.pdf",

@@ -592,7 +592,9 @@ function showRecipes() {
         <div class="badge-row">
           <div class="badge on2cook">
             <span class="badge-icon">⚡</span>
-            <span class="badge-text">On2Cook  ${r['On2Cook Cooking Time']} mins</span>
+              <span class="badge-text">
+                On2Cook ${r['On2Cook Cooking Time']} ${parseInt(r['On2Cook Cooking Time'], 10) === 1 ? 'min' : 'mins'}
+              </span>
           </div>
           <div class="badge normal">
             <span class="badge-icon">⏱</span>
