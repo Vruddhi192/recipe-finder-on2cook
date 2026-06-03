@@ -564,6 +564,83 @@ input[type="range"]::-moz-range-thumb {
   font-size: 0.9rem;
 }
 
+
+
+/* ========== MINI CHIP FILTERS (Flavor Profile & Consistency) ========== */
+.filter-group--mini label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.mini-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.mini-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  line-height: 1.4;
+}
+
+.mini-chip:hover {
+  border-color: #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.mini-chip.active {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+}
+
+/* ========== FLAVOUR PROFILE STRIP ========== */
+.profile-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.profile-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.profile-divider {
+  margin: 0 8px;
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
 /* ========== MOBILE FILTERS ONLY ON MOBILE ========== */
 .mobile-filter-btn,
 .mobile-filter-modal {

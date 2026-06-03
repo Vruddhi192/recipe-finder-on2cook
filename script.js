@@ -48,6 +48,8 @@ const filterState = {
   cuisineVal: 'All',
   categoryVal: 'All',
   accessoryVal: 'All',
+  flavorVal: 'All',
+  consistencyVal: 'All',
   maxCookingTime: 35
 };
 
@@ -255,6 +257,29 @@ function buildRadioGroup(container, values, name) {
   });
 }
 
+// Build mini flavor/consistency chip filters
+function buildMiniChips(containerId, values, stateKey, configMap) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+  const allValues = ['All', ...values];
+  allValues.forEach(val => {
+    const btn = document.createElement('button');
+    btn.className = 'mini-chip' + (val === filterState[stateKey] ? ' active' : '');
+    btn.dataset.value = val;
+    const cfg = configMap[val];
+    btn.innerHTML = val === 'All' ? 'All' : `${cfg ? cfg.emoji + ' ' : ''}${val}`;
+    btn.addEventListener('click', () => {
+      container.querySelectorAll('.mini-chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      filterState[stateKey] = val;
+      writeFiltersToURL();
+      showRecipes();
+    });
+    container.appendChild(btn);
+  });
+}
+
 // Populate mobile selects
 function populateMobileFilters() {
   const setOptions = (select, values) => {
@@ -271,6 +296,10 @@ function populateMobileFilters() {
   setOptions(cuisineMobile, getUniqueValues('Cuisine'));
   setOptions(categoryMobile, getUniqueValues('Category'));
   setOptions(accessoryMobile, getUniqueAccessories());
+  const flavorMobile = document.getElementById('flavorMobile');
+  const consistencyMobile = document.getElementById('consistencyMobile');
+  if (flavorMobile) setOptions(flavorMobile, getUniqueValues('Flavor Profile'));
+  if (consistencyMobile) setOptions(consistencyMobile, getUniqueValues('Consistency'));
 }
 
 // Load recipes
@@ -286,6 +315,8 @@ function loadRecipes() {
       buildRadioGroup(cuisineRadioGroup, getUniqueValues('Cuisine'), 'cuisine');
       buildRadioGroup(categoryRadioGroup, getUniqueValues('Category'), 'category');
       buildRadioGroup(accessoryRadioGroup, getUniqueAccessories(), 'accessory');
+      buildMiniChips('flavorChipGroup', getUniqueValues('Flavor Profile'), 'flavorVal', FLAVOUR_CONFIG);
+      buildMiniChips('consistencyChipGroup', getUniqueValues('Consistency'), 'consistencyVal', CONSISTENCY_CONFIG);
       populateMobileFilters();
 
       // ← Apply any filters baked into the shared URL
@@ -433,11 +464,59 @@ function filterRecipes() {
       r['On2Cook Cooking Time'] &&
       parseInt(r['On2Cook Cooking Time'], 10) <= filterState.maxCookingTime;
 
-    return searchOk && dietOk && modeOk && cuisineOk && catOk && accOk && timeOk;
+    const flavorOk =
+      filterState.flavorVal === 'All' || r['Flavor Profile'] === filterState.flavorVal;
+
+    const consistencyOk =
+      filterState.consistencyVal === 'All' || r['Consistency'] === filterState.consistencyVal;
+
+    return searchOk && dietOk && modeOk && cuisineOk && catOk && accOk && timeOk && flavorOk && consistencyOk;
   });
 }
 
 // Render recipes
+
+// ===============================
+// FLAVOUR PROFILE & CONSISTENCY HELPERS
+// ===============================
+
+const FLAVOUR_CONFIG = {
+  'Sweet':        { emoji: '🍬', color: '#f9a8d4', text: '#9d174d' },
+  'Sour':         { emoji: '🍋', color: '#fef08a', text: '#713f12' },
+  'Medium Spicy': { emoji: '🌶️', color: '#fca5a5', text: '#991b1b' },
+  'Less Spicy':   { emoji: '🫑', color: '#bbf7d0', text: '#14532d' },
+  'Extra Spicy':  { emoji: '🔥', color: '#fb923c', text: '#7c2d12' },
+};
+
+const CONSISTENCY_CONFIG = {
+  'Dry':          { emoji: '🍢', color: '#e5e7eb', text: '#374151' },
+  'Semi-Dry':     { emoji: '🍛', color: '#dbeafe', text: '#1e3a8a' },
+  'Semi - Gravy': { emoji: '🍛', color: '#fed7aa', text: '#7c2d12' },
+  'Gravy':        { emoji: '🍲', color: '#fde68a', text: '#78350f' },
+  'Base Gravy':   { emoji: '🥘', color: '#d1fae5', text: '#065f46' },
+  'Base Sauce':   { emoji: '🥫', color: '#fecdd3', text: '#881337' },
+  'Liquid':       { emoji: '🍵', color: '#bfdbfe', text: '#1e40af' },
+};
+
+function buildProfileStrip(flavour, consistency) {
+  const fp = flavour ? FLAVOUR_CONFIG[flavour] : null;
+  const con = consistency ? CONSISTENCY_CONFIG[consistency] : null;
+
+  if (!fp && !con) return '';
+
+  const parts = [];
+  if (fp) {
+    parts.push(`<span class="profile-item">${fp.emoji} ${flavour}</span>`);
+  }
+  if (fp && con) {
+    parts.push(`<span class="profile-divider">|</span>`);
+  }
+  if (con) {
+    parts.push(`<span class="profile-item">${con.emoji} ${consistency}</span>`);
+  }
+  return `<div class="profile-strip">${parts.join('')}</div>`;
+}
+
 function showRecipes() {
   let filtered = filterRecipes();
   
@@ -509,6 +588,7 @@ function showRecipes() {
         </span>
         </div>
         <p class="recipe-meta">${r['Cuisine']} • ${r['Cooking Mode']} • ${r['Category']}</p>
+        ${buildProfileStrip(r['Flavor Profile'] || '', r['Consistency'] || '')}
         <div class="badge-row">
           <div class="badge on2cook">
             <span class="badge-icon">⚡</span>
@@ -562,6 +642,15 @@ clearBtn.addEventListener('click', () => {
   document.querySelectorAll('.diet-chip').forEach(c => {
     c.classList.toggle('active', c.dataset.value === 'All');
   });
+  filterState.flavorVal = 'All';
+  filterState.consistencyVal = 'All';
+  document.querySelectorAll('.mini-chip').forEach(c => {
+    c.classList.toggle('active', c.dataset.value === 'All');
+  });
+  const flavorMobile = document.getElementById('flavorMobile');
+  const consistencyMobile = document.getElementById('consistencyMobile');
+  if (flavorMobile) flavorMobile.value = 'All';
+  if (consistencyMobile) consistencyMobile.value = 'All';
   ['cookingMode', 'cuisine', 'category','accessory'].forEach(name => {
     const allInput = document.querySelector(`input[name="${name}"][value="All"]`);
     if (allInput) allInput.checked = true;
@@ -606,6 +695,10 @@ function applyMobileFilters() {
   filterState.categoryVal = categoryMobile.value;
   filterState.accessoryVal = accessoryMobile.value;
   filterState.maxCookingTime = parseInt(cookingTimeMobile.value, 10);
+  const flavorMobile = document.getElementById('flavorMobile');
+  const consistencyMobile = document.getElementById('consistencyMobile');
+  if (flavorMobile) filterState.flavorVal = flavorMobile.value;
+  if (consistencyMobile) filterState.consistencyVal = consistencyMobile.value;
   cookingTimeLabelMobile.textContent = cookingTimeMobile.value;
   writeFiltersToURL();
   showRecipes();
