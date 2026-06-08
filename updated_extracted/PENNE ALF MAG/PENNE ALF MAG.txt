@@ -1,1 +1,133 @@
-{"Ingredients": [{"app_audio": " Butter 30 gm", "audio": "", "audioI": "Butter", "audioP": "", "audioQ": "30", "audioU": "gm", "id": 1, "image": "", "pan_type": "SS", "text": "", "title": "Butter", "weight": "30 gm"}, {"app_audio": "Raw Penne Pasta  100 gm", "audio": "Raw", "audioI": "Penne Pasta ", "audioP": "Raw", "audioQ": "100", "audioU": "gm", "id": 2, "image": "", "pan_type": "SS", "text": "", "title": "Penne Pasta", "weight": "100 gm"}, {"app_audio": "Auto Water 700 ml", "audio": "Auto", "audioI": "Water", "audioP": "Auto", "audioQ": "700", "audioU": "ml", "id": 3, "image": "", "pan_type": "SS", "text": "", "title": "Water", "weight": "700 ml"}, {"app_audio": "Mix Maggi White Sauce Pre Mix  300 gm", "audio": "Mix", "audioI": "Maggi White Sauce Pre Mix ", "audioP": "Mix", "audioQ": "300", "audioU": "gm", "id": 4, "image": "", "pan_type": "SS", "text": "Milk 250g, Maggi White Sauce 50g", "title": "Maggi White Sauce Pre Mix", "weight": "300 gm"}], "Instruction": [{"Audio": "", "Indtime_lid_con": "", "Induction_on_time": "660", "Induction_power": "100", "Magnetron_on_time": "660", "Magnetron_power": "100", "Text": "Butter & Pasta ", "Weight": "130 gm", "app_audio": " Butter & Pasta ", "audioI": "Butter & Pasta ", "audioP": "", "audioQ": "130", "audioU": "11Minute", "durationInSec": 660, "id": 1, "image": "", "lid": "close", "mag_severity": "high", "pump_on": "70", "purge_on": "", "skip": "", "stirrer_on": "4", "threshold": "0", "wait_time": "", "warm_time": ""}, {"Audio": "", "Indtime_lid_con": "", "Induction_on_time": "120", "Induction_power": "70", "Magnetron_on_time": "120", "Magnetron_power": "100", "Text": "Maggi White Sauce Pre Mix ", "Weight": "300 gm", "app_audio": " Maggi White Sauce Pre Mix  300 gm", "audioI": "Maggi White Sauce Pre Mix ", "audioP": "", "audioQ": "300", "audioU": "2Minute", "durationInSec": 120, "id": 2, "image": "", "lid": "close", "mag_severity": "high", "pump_on": "", "purge_on": "", "skip": "", "stirrer_on": "4", "threshold": "0", "wait_time": "", "warm_time": ""}], "audio1": ["PENNE ALF MAG"], "audio2": ["preparation"], "category": "0", "description": "PENNE ALFREDO (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES \nPan Non-Coated (SS)\nSilicone Stirrer", "difficulty": "Easy", "id": 276, "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20ALFREDO%20MAGGI%20PREMIX-1/PENNE%20ALFREDO%20MAGGI%20PREMIX.jpg", "isSelected": false, "name": ["PENNE ALF MAG"], "subCategories": "", "tags": ""}
+{
+  "Ingredients": [
+    {
+      "app_audio": " Butter 30 gm",
+      "audio": "",
+      "audioI": "Butter",
+      "audioP": "",
+      "audioQ": "30",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Butter",
+      "weight": "30 gm"
+    },
+    {
+      "app_audio": "Raw Penne Pasta  100 gm",
+      "audio": "Raw",
+      "audioI": "Penne Pasta ",
+      "audioP": "Raw",
+      "audioQ": "100",
+      "audioU": "gm",
+      "id": 2,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Penne Pasta",
+      "weight": "100 gm"
+    },
+    {
+      "app_audio": "Auto Water (Auto) 800 ml",
+      "audio": "Auto",
+      "audioI": "Water (Auto)",
+      "audioP": "Auto",
+      "audioQ": "800",
+      "audioU": "ml",
+      "id": 3,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Water (Auto)",
+      "weight": "800 ml"
+    },
+    {
+      "app_audio": "Mix Maggi White Sauce Pre Mix  300 gm",
+      "audio": "Mix",
+      "audioI": "Maggi White Sauce Pre Mix ",
+      "audioP": "Mix",
+      "audioQ": "300",
+      "audioU": "gm",
+      "id": 4,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Milk 250g, Maggi White Sauce 50g",
+      "title": "Maggi White Sauce Pre Mix",
+      "weight": "300 gm"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "660",
+      "Induction_power": "100",
+      "Magnetron_on_time": "660",
+      "Magnetron_power": "100",
+      "Text": "Butter & Pasta ",
+      "Weight": "130 gm",
+      "app_audio": " Butter & Pasta ",
+      "audioI": "Butter & Pasta ",
+      "audioP": "",
+      "audioQ": "130",
+      "audioU": "11Minute",
+      "durationInSec": 660,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "80",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    },
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "240",
+      "Induction_power": "60",
+      "Magnetron_on_time": "240",
+      "Magnetron_power": "100",
+      "Text": "Maggi White Sauce Pre Mix ",
+      "Weight": "300 gm",
+      "app_audio": " Maggi White Sauce Pre Mix ",
+      "audioI": "Maggi White Sauce Pre Mix ",
+      "audioP": "",
+      "audioQ": "300",
+      "audioU": "4Minute",
+      "durationInSec": 240,
+      "id": 2,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "PENNE ALF MAG"
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "PENNE ALFREDO (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "difficulty": "Easy",
+  "id": 693,
+  "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20ALF%20MAG/PENNE%20ALF%20MAG.jpg",
+  "isSelected": false,
+  "name": [
+    "PENNE ALF MAG"
+  ],
+  "subCategories": "",
+  "tags": ""
+}

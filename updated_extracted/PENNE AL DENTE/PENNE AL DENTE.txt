@@ -1,0 +1,105 @@
+{
+  "Ingredients": [
+    {
+      "app_audio": "Take All Ingredients 460 gm",
+      "audio": "Take",
+      "audioI": "All Ingredients",
+      "audioP": "Take",
+      "audioQ": "460",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Butter 30g, Refined Flour 25g, Raw Penne Pasta 400g, Dried Mixed Italian Seasoning 5g",
+      "title": "All Ingredients",
+      "weight": "460 gm"
+    },
+    {
+      "app_audio": "Auto Water (Auto) 1300 ml",
+      "audio": "Auto",
+      "audioI": "Water (Auto)",
+      "audioP": "Auto",
+      "audioQ": "1300",
+      "audioU": "ml",
+      "id": 2,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Water (Auto)",
+      "weight": "1300 ml"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "360",
+      "Induction_power": "100",
+      "Magnetron_on_time": "360",
+      "Magnetron_power": "100",
+      "Text": "All Ingredients",
+      "Weight": "460 gm",
+      "app_audio": " All Ingredients",
+      "audioI": "All Ingredients",
+      "audioP": "",
+      "audioQ": "460",
+      "audioU": "6Minute",
+      "durationInSec": 360,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "65",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    },
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "360",
+      "Induction_power": "100",
+      "Magnetron_on_time": "360",
+      "Magnetron_power": "100",
+      "Text": "All Ingredients",
+      "Weight": "460 gm",
+      "app_audio": " All Ingredients",
+      "audioI": "All Ingredients",
+      "audioP": "",
+      "audioQ": "460",
+      "audioU": "6Minute",
+      "durationInSec": 360,
+      "id": 2,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "65",
+      "purge_on": "",
+      "skip": "true",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "PENNE AL DENTE"
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "PENNE AL DENTE (PASTA ANTUNE)\nNORMAL COOKING TIME 50 MINUTES \nFINAL OUTPUT 1000 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer\n",
+  "difficulty": "Easy",
+  "id": 581,
+  "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20ANTUNE%20F/PENNE%20ANTUNE%20F.jpg",
+  "isSelected": false,
+  "name": [
+    "PENNE AL DENTE"
+  ],
+  "subCategories": "",
+  "tags": ""
+}

@@ -44,35 +44,6 @@
     "Normal Cooking Time": "40 mins"
   },
   {
-    "Recipe Name": "ALFREDO PASTA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 12,
-    "Image": "test_images/ALFREDO PASTA.jpg",
-    "PopupImage": "test_popup_images/ALFREDO PASTA.pdf",
-    "Ingredients": [
-      "Butter 30 gm",
-      "Finely Chop Garlic 10 gm",
-      "All Purpose Flour 20 gm",
-      "Seasoning 7 gm",
-      "Raw Pasta Penne 100 gm",
-      "Take Milk 200 ml",
-      "Take Water 550 ml",
-      "Cut Vegetables 150 gm",
-      "Take Cream 70 gm",
-      "Cheese  70 gm",
-      "Chili Flakes  3 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "750 GM",
-    "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": "35 mins"
-  },
-  {
     "Recipe Name": "ALMOND KHEER",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -388,25 +359,6 @@
     "Total Output": "6 NOS (FROZEN PCS 125 G)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": ""
-  },
-  {
-    "Recipe Name": "AMUL DAHI TIKKA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING",
-    "Cuisine": "INDIAN",
-    "Category": "SIDE DISH",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Dry",
-    "Cooking Time": 2,
-    "Image": "test_images/AMUL DAHI TIKKA.jpg",
-    "PopupImage": "test_popup_images/AMUL DAHI TIKKA.pdf",
-    "Ingredients": [
-      "Take MASTI DAHI TIKKA 12 number"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
-    "Total Output": "12 NOS ( FROZEN 350 G )",
-    "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "8 mins"
   },
   {
     "Recipe Name": "AMUL FRENCH FRIES",
@@ -828,30 +780,6 @@
     "Normal Cooking Time": "50 mins"
   },
   {
-    "Recipe Name": "BASIL PENNE PESTO PASTA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "ITALIAN",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Semi-Dry",
-    "Cooking Time": 13,
-    "Image": "test_images/BASIL PESTO.jpg",
-    "PopupImage": "test_popup_images/BASIL PESTO.pdf",
-    "Ingredients": [
-      "Mix Butter 30g, Garlic 15g 45 gm",
-      "Take Maida 20 gm",
-      "Mix Raw Pasta 100g, Milk 200g 300 gm",
-      "Diced Cut Vegetables  100 gm",
-      "Mix Mix Sauce & Cheese  156 gm",
-      "Auto Water (Auto) 650 ml"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "850 G",
-    "On2Cook Cooking Time": "13",
-    "Normal Cooking Time": "35 mins"
-  },
-  {
     "Recipe Name": "BATHUA SUBZI",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -1200,7 +1128,7 @@
     "Normal Cooking Time": "60 mins"
   },
   {
-    "Recipe Name": "BOILED PENNE PASTA",
+    "Recipe Name": "BOILED PASTA (PENNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -1211,7 +1139,7 @@
     "Image": "test_images/BOILED PASTA.jpg",
     "PopupImage": "test_popup_images/BOILED PASTA.pdf",
     "Ingredients": [
-      "Take RAW PASTA  400 gm",
+      "Raw Raw Pasta 400 gm",
       "Auto Water (Auto) 1350 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
@@ -1325,7 +1253,7 @@
     "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "SAUTE BROCCOLI",
+    "Recipe Name": "SAUTE BROCCOLI (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -2288,30 +2216,6 @@
     "Normal Cooking Time": "12 mins"
   },
   {
-    "Recipe Name": "CHI LEMON COR SP",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 4,
-    "Image": "test_images/CHI LEMON COR SP.jpg",
-    "PopupImage": "test_popup_images/CHI LEMON COR SP.pdf",
-    "Ingredients": [
-      "Take Oil & Turmeric  21 gm",
-      "Chop Chopped Vegetables 1 15 gm",
-      "Chop Chopped Vegetables & Chicken 50 gm",
-      "Mix Mix Liquid  525 gm",
-      "Mix Corn Starch Slurry 60 gm",
-      "Chop Lemon Juice & Coriander  13 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "700 G",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins"
-  },
-  {
     "Recipe Name": "CHI LOLLIPOP FRY",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "AUTO",
@@ -2331,32 +2235,6 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
     "hidden": true
-  },
-  {
-    "Recipe Name": "CHICKEN MANCHURIAN DRY",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "STARTERS",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Semi-Dry",
-    "Cooking Time": 4,
-    "Image": "test_images/CHI MANCHURIAN D.jpg",
-    "PopupImage": "test_popup_images/CHI MANCHURIAN D.pdf",
-    "Ingredients": [
-      "Take Oil 20 gm",
-      "Chop Chopped Vegetables 1 15 gm",
-      "Chop Chopped Vegetables 2 123 gm",
-      "Mix Mix Sauce 48 gm",
-      "Bottle  Water 60 ml",
-      "Mix Corn Starch Sulrry  25 gm",
-      "Take Chinese Fried Chicken  180 gm",
-      "Chop Garnish  7 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "350 G",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN GRAVY",
@@ -4260,7 +4138,7 @@
       "Marinate Filling  525 gm",
       "Tikki Dahi Ke Kebab 13 number"
     ],
-    "Accessories": "",
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "450G (13NOS 30G EACH)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins"
@@ -4371,6 +4249,28 @@
     "Total Output": "200 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins"
+  },
+  {
+    "Recipe Name": "DALMA (WITH SOAKED TOOR DAL)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "ODIA (ODISHA)",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 22,
+    "Image": "test_images/DALMA.jpg",
+    "PopupImage": "test_popup_images/DALMA.pdf",
+    "Ingredients": [
+      "Take Tadka  77 gm",
+      "Take Soaked Toor Dal & Masala  240 gm",
+      "Take Vegetables  300 gm",
+      "Auto Water (Auto) 1400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1500 G",
+    "On2Cook Cooking Time": "22",
+    "Normal Cooking Time": "40 mins"
   },
   {
     "Recipe Name": "DHABA MUTTON",
@@ -4636,6 +4536,28 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Noodles Stirrer",
     "Total Output": "700 G",
     "On2Cook Cooking Time": "5",
+    "Normal Cooking Time": "12 mins"
+  },
+  {
+    "Recipe Name": "EGG SCHEZWAN FRIED RICE",
+    "Veg/Non Veg": "EGG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 4,
+    "Image": "test_images/EGG SCHZ RICE.jpg",
+    "PopupImage": "test_popup_images/EGG SCHZ RICE.pdf",
+    "Ingredients": [
+      "Take Oil 20 gm",
+      "Take Egg 80 gm",
+      "Chopped  Vegetables 95 gm",
+      "Tak  Rice & Mix Sauce  358 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "450 G",
+    "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins"
   },
   {
@@ -5011,13 +4933,13 @@
     "Normal Cooking Time": "10 mins"
   },
   {
-    "Recipe Name": "FRY MOMO",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "FRY MOMO (BATTER FRY CHICKEN MOMO)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "test_images/FRY MOMO.jpg",
     "PopupImage": "test_popup_images/FRY MOMO.pdf",
@@ -5255,6 +5177,27 @@
     "Normal Cooking Time": "25 mins"
   },
   {
+    "Recipe Name": "GOBI ALOO",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 22,
+    "Image": "test_images/GOBI ALOO.jpg",
+    "PopupImage": "test_popup_images/GOBI ALOO.pdf",
+    "Ingredients": [
+      "Take  Tadka 720 gm",
+      "Aloo & Vegetables  1865 gm",
+      "Auto Water (Auto) 1350 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "3000 G",
+    "On2Cook Cooking Time": "22",
+    "Normal Cooking Time": "40 mins"
+  },
+  {
     "Recipe Name": "GOBI MANCHURIAN DRY",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING + SAUTEING",
@@ -5347,47 +5290,46 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
   },
+  
   {
-    "Recipe Name": "GRILL CHEESE SW",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Recipe Name": "GRILL CHICKEN (NEW GRILL PAN)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "GRILLING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 3,
-    "Image": "test_images/GRILL CHEESE SW.jpg",
-    "PopupImage": "test_popup_images/GRILL CHEESE SW.pdf",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 5,
+    "Image": "test_images/GRILL CHICKEN.jpg",
+    "PopupImage": "test_popup_images/GRILL CHICKEN.pdf",
     "Ingredients": [
-      "Spread  Bread 2 Sliced, Cheese Spread 50 g 50 gm",
-      "Mix Stuffing  60 gm"
+      "Marinated  Chicken Breast Marinated 338 gm",
+      "Pre-Heated  Grill Pan Pre-Heated  1 number"
     ],
     "Accessories": "Grill Pan",
-    "Total Output": "1 PORTION",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "20 mins"
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "5",
+    "Normal Cooking Time": "30 mins"
   },
   {
-    "Recipe Name": "GRL CHI BREAST",
+    "Recipe Name": "GRILL SANDWICH (NEW GRILL PAN)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
-    "Image": "test_images/GRL CHI BREAST.jpg",
-    "PopupImage": "test_popup_images/GRL CHI BREAST.pdf",
+    "Image": "test_images/GRILL SANDWICH.jpg",
+    "PopupImage": "test_popup_images/GRILL SANDWICH.pdf",
     "Ingredients": [
-      "Take Marinated Chicken Breast Boneless  195 gm",
-      "Take Water 1 gm",
-      "Take Turn 0 gm",
-      "Take Done 0 gm"
+      "Take Butter Brush 5 gm",
+      "Take Sandwich Bread  101 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "170 G",
+    "Accessories": "Grill Pan",
+    "Total Output": "1 NOS",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "8 mins"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "GUJARATI DAL",
@@ -5410,6 +5352,27 @@
     "Total Output": "600 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins"
+  },
+  {
+    "Recipe Name": "GUJARATI DAL 3KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GUJARATI",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Liquid",
+    "Cooking Time": 12,
+    "Image": "test_images/GUJARATI DAL 3KG.jpg",
+    "PopupImage": "test_popup_images/GUJARATI DAL 3KG.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka  85 gm",
+      "Take Boiled Dal & Spices 2150 gm",
+      "Auto Water (Auto) 900 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "3000 G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "45 mins"
   },
   {
     "Recipe Name": "GUJARATI DAL",
@@ -5916,6 +5879,26 @@
     "Normal Cooking Time": "40 mins"
   },
   {
+    "Recipe Name": "KADAI PANEER 600",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 6,
+    "Image": "test_images/KADAI PANEER 600.jpg",
+    "PopupImage": "test_popup_images/KADAI PANEER 600.pdf",
+    "Ingredients": [
+      "Take All Ingredients  710 gm",
+      "Auto Water (Auto) 120 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "600 G (GIFT CITY)",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "30 mins"
+  },
+  {
     "Recipe Name": "KADDU KI SUBZI",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -5934,30 +5917,6 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "30 mins"
-  },
-  {
-    "Recipe Name": "KADHAI PANEER",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Gravy",
-    "Cooking Time": 8,
-    "Image": "test_images/KADHAI PANEER.jpg",
-    "PopupImage": "test_popup_images/KADHAI PANEER.pdf",
-    "Ingredients": [
-      "Take Oil, Ghee & Whole Spices 72 gm",
-      "Puree Raw Gravy Paste 345 gm",
-      "Take Cream Mix 61 gm",
-      "Take Diced Paneer 150 gm",
-      "Cut  Vegetable Mix 110 gm",
-      "Finely Chop Coriander Leaves  2 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "620 GM",
-    "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins"
   },
   {
@@ -6439,6 +6398,28 @@
     "Normal Cooking Time": "15 mins"
   },
   {
+    "Recipe Name": "LEMON CORIANDER ( CHICKEN SOUP)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "SOUP",
+    "Flavor Profile": "Sour",
+    "Consistency": "Liquid",
+    "Cooking Time": 3,
+    "Image": "test_images/LEMON CORIANDER.jpg",
+    "PopupImage": "test_popup_images/LEMON CORIANDER.pdf",
+    "Ingredients": [
+      "Chopped  Oil & Vegetables  64 gm",
+      "Auto Water (Auto) 300 ml",
+      "Mix Mix Liquid Sauce  10 gm",
+      "Mix Corn Starch 5 g, Water 20 g, Lemon Juice 4 g, Chopped Coriander Leaves 2 g 31 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "20 mins"
+  },
+  {
     "Recipe Name": "LEMON RICE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING + STEAMING",
@@ -6545,6 +6526,27 @@
     "Normal Cooking Time": "20 mins"
   },
   {
+    "Recipe Name": "MAGGI PREMIX (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 15,
+    "Image": "test_images/MAGGI PREMIX.jpg",
+    "PopupImage": "test_popup_images/MAGGI PREMIX.pdf",
+    "Ingredients": [
+      "Take Butter 30 g, Penne Pasta 100 g 130 gm",
+      "Auto Water (Auto) 700 ml",
+      "Premix Maggi White Sauce Premix 300 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": "20 mins"
+  },
+  {
     "Recipe Name": "MAKHANA KHEER",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -6581,6 +6583,29 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1500 G",
     "On2Cook Cooking Time": "21",
+    "Normal Cooking Time": "60 mins"
+  },
+  {
+    "Recipe Name": "MALABAR BIRYANI (CHICKEN JEERAKASAL RICE BIRYANI)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "SOUTH INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 17,
+    "Image": "test_images/MALABAR BIRYANI.jpg",
+    "PopupImage": "test_popup_images/MALABAR BIRYANI.pdf",
+    "Ingredients": [
+      "Heat Ghee & Whole Spices 30 gm",
+      "Marinate Marinated Chicken 1124 gm",
+      "Mix Soaked Jeerakasala Rice 500 g, Ghee 10 g, Aromat Powder 10 g 520 gm",
+      "Serve Garnish 33 gm",
+      "Auto Water (Auto) 1000 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "2000 G",
+    "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "60 mins"
   },
   {
@@ -6860,6 +6885,26 @@
     "Total Output": "720 GM",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "50 mins"
+  },
+  {
+    "Recipe Name": "MASALA MAC PASTA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 6,
+    "Image": "test_images/MASALA MAC PASTA.jpg",
+    "PopupImage": "test_popup_images/MASALA MAC PASTA.pdf",
+    "Ingredients": [
+      "Take All Ingredients  290 gm",
+      "Auto Water (Auto) 390 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "25 mins"
   },
   {
     "Recipe Name": "MASALA MAGGI",
@@ -7771,26 +7816,26 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "ONION TOMATO",
+    "Recipe Name": "ONION TOMATO 3KG (GRAVY)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 18,
-    "Image": "test_images/ONION TOMATO.jpg",
-    "PopupImage": "test_popup_images/ONION TOMATO.pdf",
+    "Image": "test_images/ONION TOMATO 3KG.jpg",
+    "PopupImage": "test_popup_images/ONION TOMATO 3KG.pdf",
     "Ingredients": [
-      "Take Oil 500 gm",
+      "Take Oil 400 gm",
       "Take Whole Spices  35 number",
       "Masala  Indian Masala 280 gm",
       "Paste Gravy Paste 2100 gm",
-      "Paste Nuts Paste  650 gm",
+      "Paste Nuts Paste  550 gm",
       "Powder Garnish 10 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "3200 G",
+    "Total Output": "3000 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins"
   },
@@ -8184,26 +8229,27 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins"
   },
+
   {
-    "Recipe Name": "PANEER TIKKA",
+    "Recipe Name": "PANEER TIKKA DRY (NEW GRILL PAN)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 3,
-    "Image": "test_images/PANEER TIKKA.jpg",
-    "PopupImage": "test_popup_images/PANEER TIKKA.pdf",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "test_images/PANEER TIKKA DRY.jpg",
+    "PopupImage": "test_popup_images/PANEER TIKKA DRY.pdf",
     "Ingredients": [
-      "Take Oil For Brushing 20 ml",
-      "Take Marineted Paneer 415 gm",
-      "Petals Vegetable Mix 30 gm"
+      "Take Butter Brush 5 gm",
+      "Marinated  Marinated Paneer  425 gm",
+      "Petals Diced Onion 4 Nos, Diced Tomatoes 4 Nos, Diced Capsicum 4 Nos 12 number"
     ],
-    "Accessories": "Pan Non-Coated (Ss), Mp Mats Small",
-    "Total Output": "350 GM",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "15 mins"
+    "Accessories": "Grill Pan",
+    "Total Output": "8 NOS (2 SKEWERS)",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "PAO BHAJI MASALA",
@@ -8334,6 +8380,26 @@
     "Normal Cooking Time": "25 mins"
   },
   {
+    "Recipe Name": "PENNE AL DENTE (PASTA ANTUNE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "BOILING + SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 12,
+    "Image": "test_images/PENNE AL DENTE.jpg",
+    "PopupImage": "test_popup_images/PENNE AL DENTE.pdf",
+    "Ingredients": [
+      "Take All Ingredients 460 gm",
+      "Auto Water (Auto) 1300 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "50 mins"
+  },
+  {
     "Recipe Name": "PENNE ALFREDO (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
@@ -8341,49 +8407,49 @@
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
-    "Cooking Time": 13,
+    "Cooking Time": 15,
     "Image": "test_images/PENNE ALF MAG.jpg",
     "PopupImage": "test_popup_images/PENNE ALF MAG.pdf",
     "Ingredients": [
       "Butter 30 gm",
       "Raw Penne Pasta  100 gm",
-      "Auto Water 700 ml",
+      "Auto Water (Auto) 800 ml",
       "Mix Maggi White Sauce Pre Mix  300 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500 G",
-    "On2Cook Cooking Time": "13",
+    "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "20 mins"
   },
   {
-    "Recipe Name": "PENNE ALFREDO",
+    "Recipe Name": "PENNE ALFREDO (ALFREDO SAUCE - WHITE SAUCE PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi - Gravy",
-    "Cooking Time": 14,
+    "Cooking Time": 15,
     "Image": "test_images/PENNE ALFREDO.jpg",
     "PopupImage": "test_popup_images/PENNE ALFREDO.pdf",
     "Ingredients": [
-      "Take Butter 30g, Chopped Garlic 10g, Maida 20g 60 gm",
-      "Mix Pasta & Seasoning  600 gm",
-      "Auto Water (Auto) 700 ml"
+      "Chopped  All Ingredients  437 gm",
+      "Take Diced Exotic Vegetables 150 g, Grated Cheese 70 g, Chilli Flakes 2 g 222 gm",
+      "Auto Water (Auto) 800 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "700 G",
-    "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": ""
+    "Total Output": "800 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": "35 mins"
   },
   {
-    "Recipe Name": "PENNE ARR MAG",
+    "Recipe Name": "PENNE ARRABIATA (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BOILING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 13,
     "Image": "test_images/PENNE ARR MAG.jpg",
     "PopupImage": "test_popup_images/PENNE ARR MAG.pdf",
@@ -8399,7 +8465,7 @@
     "Normal Cooking Time": "20 mins"
   },
   {
-    "Recipe Name": "PENNE ARRABIATA",
+    "Recipe Name": "PENNE ARRABIATA (WITH FRESH ARRABIATA SAUCE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "ITALIAN",
@@ -8410,27 +8476,24 @@
     "Image": "test_images/PENNE ARRABIATA.jpg",
     "PopupImage": "test_popup_images/PENNE ARRABIATA.pdf",
     "Ingredients": [
-      "Oil 30 gm",
-      "Add Chopped Garlic  10 gm",
-      "Take Chilli Flakes & Oregano 6 gm",
-      "Take Arrabiata Sauce  200 gm",
-      "Cut Vegetables  100 gm",
-      "Take Penne Pasta & Salt 105 gm"
+      "Add  Oil & Pasta 165 gm",
+      "Take Mix Sauce 435 gm",
+      "Auto  Water (Auto) 870 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "600 GM",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "700 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "40 mins"
+    "Normal Cooking Time": "45 mins"
   },
   {
-    "Recipe Name": "PENNE PASTA 300G",
+    "Recipe Name": "PENNE PASTA 300G (ALFREDO SAUCE - WHITE SAUCE PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi - Gravy",
-    "Cooking Time": 16,
+    "Cooking Time": 15,
     "Image": "test_images/PENNE PASTA 300G.jpg",
     "PopupImage": "test_popup_images/PENNE PASTA 300G.pdf",
     "Ingredients": [
@@ -8440,31 +8503,76 @@
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
-    "On2Cook Cooking Time": "16",
+    "On2Cook Cooking Time": "15",
     "Normal Cooking Time": ""
   },
   {
-    "Recipe Name": "PENNE PASTA",
+    "Recipe Name": "PENNE PESTO  (WITH FRESH BASIL PESTO)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 15,
+    "Image": "test_images/PENNE PESTO.jpg",
+    "PopupImage": "test_popup_images/PENNE PESTO.pdf",
+    "Ingredients": [
+      "Mix Maida 20 g, Butter 30 g, Chopped Garlic 15 g, Milk 200 g, Raw Penne Pasta 100 g 365 gm",
+      "Diced Cut Vegetables & Mix Sauce  256 gm",
+      "Auto Water (Auto) 900 ml",
+      "Blender  Pesto Recipe (Blender) 200 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "600 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": "35 mins"
+  },
+  {
+    "Recipe Name": "PENNE PESTO  (WITH FRESH BASIL PESTO)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 15,
+    "Image": "test_images/PENNE PESTO 300G.jpg",
+    "PopupImage": "test_popup_images/PENNE PESTO 300G.pdf",
+    "Ingredients": [
+      "Raw Penne Pasta & Milk  175 gm",
+      "Diced  Vegetables & Mix Sauce  123 gm",
+      "Grind  Pesto Sauce (Grind) 85 gm",
+      "Auto Water (Auto) 950 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": "25 mins"
+  },
+  {
+    "Recipe Name": "PENNE PINK SAUCE (PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi - Gravy",
-    "Cooking Time": 12,
-    "Image": "test_images/PENNE PASTA A.jpg",
-    "PopupImage": "test_popup_images/PENNE PASTA A.pdf",
+    "Cooking Time": 15,
+    "Image": "test_images/PENNE PINK SAUCE.jpg",
+    "PopupImage": "test_popup_images/PENNE PINK SAUCE.pdf",
     "Ingredients": [
-      "Take All Ingredients 460 gm",
-      "Auto Water (Auto) 1300 ml"
+      "Add  Oil & Pasta 165 gm",
+      "Take Mix Sauce 455 gm",
+      "Auto  Water (Auto) 870 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "1000G",
-    "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": "50 mins"
+    "Total Output": "700 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": "45 mins"
   },
   {
-    "Recipe Name": "PENNE RED SAUCE PASTA",
+    "Recipe Name": "PENNE RED (RED SAUCE PASTA ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -8482,6 +8590,48 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "50 mins"
+  },
+  {
+    "Recipe Name": "PENNE RED SAUCE (WITH FRESH ARRABIATA SAUCE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 15,
+    "Image": "test_images/PENNE RED SAUCE.jpg",
+    "PopupImage": "test_popup_images/PENNE RED SAUCE.pdf",
+    "Ingredients": [
+      "Raw Raw Penne Pasta  80 gm",
+      "Add Vegetables & Mix Sauce 189 gm",
+      "Auto Water (Auto) 750 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": "35 mins"
+  },
+  {
+    "Recipe Name": "PENNE WHITE (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 15,
+    "Image": "test_images/PENNE WHITE.jpg",
+    "PopupImage": "test_popup_images/PENNE WHITE.pdf",
+    "Ingredients": [
+      "Raw Raw Penne Pasta 50 g, Butter 15 g 65 gm",
+      "Premix  Maggi Premix White Sauce  130 gm",
+      "Auto Water (Auto) 700 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "PEPPER CHICKEN",
@@ -8822,6 +8972,26 @@
     "Total Output": "140 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins"
+  },
+  {
+    "Recipe Name": "PRASUMA CHI MOMO (FROZEN CHICKEN MOMO 20PCS)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 7,
+    "Image": "test_images/PRASUMA CHI MOMO.jpg",
+    "PopupImage": "test_popup_images/PRASUMA CHI MOMO.pdf",
+    "Ingredients": [
+      "Frozen  Frozen Chicken Momo 20 number",
+      "Auto Water (Auto) 320 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Teflon Plate, Momo Kit",
+    "Total Output": "20 PCS",
+    "On2Cook Cooking Time": "7",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "PRAWN DIM SUM",
@@ -9191,34 +9361,6 @@
     "Normal Cooking Time": "20 mins"
   },
   {
-    "Recipe Name": "RAVA UPMA 2500GM",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "SOUTH INDIAN",
-    "Category": "BREAKFAST",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Semi-Dry",
-    "Cooking Time": 16,
-    "Image": "test_images/RAVA UPMA 2500GM.jpg",
-    "PopupImage": "test_popup_images/RAVA UPMA 2500GM.pdf",
-    "Ingredients": [
-      "Take Ghee 150 gm",
-      "Take Whole Spices 40 gm",
-      "Finely Chop Chopped Vegetables 1 30 gm",
-      "Finely Chop Chopped Vegetables 2 300 gm",
-      "Finely Chop Chopped Vegetables 3 200 gm",
-      "Take Green Peas 100 gm",
-      "Take Rava 500 gm",
-      "Take Powder Spices  8 gm",
-      "Take Salt & Lemon Juice  55 gm",
-      "Take Coriander & Roasted Peanuts 120 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "2500GM",
-    "On2Cook Cooking Time": "16",
-    "Normal Cooking Time": "45 mins"
-  },
-  {
     "Recipe Name": "RED MACRONI PASTA (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
@@ -9241,24 +9383,45 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "RED SAUCE PASTA (PENNE)",
+    "Recipe Name": "RED SAUCE 300G (PENNE PASTA WITH FRESH TOMATO PUREE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi - Gravy",
-    "Cooking Time": 16,
-    "Image": "test_images/RED SAUCE PASTA.jpg",
-    "PopupImage": "test_popup_images/RED SAUCE PASTA.pdf",
+    "Cooking Time": 15,
+    "Image": "test_images/RED SAUCE 300G.jpg",
+    "PopupImage": "test_popup_images/RED SAUCE 300G.pdf",
     "Ingredients": [
-      "Raw Pasta  50 gm",
-      "Add Vegetables 268 gm",
-      "Auto Water  750 ml"
+      "Raw Raw Penne Pasta  50 gm",
+      "Add Vegetables & Puree 273 gm",
+      "Auto Water (Auto) 650 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "400 G",
-    "On2Cook Cooking Time": "16",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "15",
+    "Normal Cooking Time": ""
+  },
+  {
+    "Recipe Name": "RED SAUCE MAGGI (PENNE MAGGI RED SAUCE PREMIX PASTA)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 15,
+    "Image": "test_images/RED SAUCE MAGGI.jpg",
+    "PopupImage": "test_popup_images/RED SAUCE MAGGI.pdf",
+    "Ingredients": [
+      "Raw Raw Penne Pasta 50 g, Butter 15 g 65 gm",
+      "Auto Maggi Red Sauce Premix  130 gm",
+      "Auto Water (Auto) 700 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "15",
     "Normal Cooking Time": ""
   },
   {
@@ -9302,34 +9465,6 @@
     "Total Output": "2 PCS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
-  },
-  {
-    "Recipe Name": "ROSE SAUCE PASTA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "ITALIAN",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Semi - Gravy",
-    "Cooking Time": 14,
-    "Image": "test_images/ROSE SAUCE PASTA.jpg",
-    "PopupImage": "test_popup_images/ROSE SAUCE PASTA.pdf",
-    "Ingredients": [
-      "Butter 30 gm",
-      "Finely Chop Garlic 10 gm",
-      "All Purpose Flour 20 gm",
-      "Seasoning 7 gm",
-      "Raw Pasta Penne 100 gm",
-      "Take Milk 200 gm",
-      "Take Water  750 ml",
-      "Cut Vegetables 150 gm",
-      "Take Cream 70 gm",
-      "Arabiata Sauce Mix 224 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "700 G",
-    "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "SAARU",
@@ -9467,7 +9602,7 @@
     "Normal Cooking Time": "45 mins"
   },
   {
-    "Recipe Name": "SAUTE CARROT",
+    "Recipe Name": "SAUTE CARROT (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -9486,7 +9621,7 @@
     "Normal Cooking Time": "30 mins"
   },
   {
-    "Recipe Name": "SAUTE POTATOES",
+    "Recipe Name": "SAUTE POTATOES (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -10569,13 +10704,13 @@
     "Normal Cooking Time": "30 mins"
   },
   {
-    "Recipe Name": "THAI CHI CURRY G",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Recipe Name": "THAI GREEN CURRY CHICKEN",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 4,
     "Image": "test_images/THAI CHI CURRY G.jpg",
     "PopupImage": "test_popup_images/THAI CHI CURRY G.pdf",
@@ -11399,6 +11534,26 @@
     "Normal Cooking Time": "12 mins"
   },
   {
+    "Recipe Name": "VEG CLUB SANDWICH (WITH NEW GRILL PAN)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "test_images/VEG CLUB SANDWICH.jpg",
+    "PopupImage": "test_popup_images/VEG CLUB SANDWICH.pdf",
+    "Ingredients": [
+      "Take Butter Brush  6 gm",
+      "Filling  Sandwich (3 Layer Sandwich) 185 gm"
+    ],
+    "Accessories": "",
+    "Total Output": "1 NOS (3 LAYER S/W)",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "15 mins"
+  },
+  {
     "Recipe Name": "VEG DIWANI HANDI",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -11528,6 +11683,26 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "35 mins"
+  },
+  {
+    "Recipe Name": "VEG MAGGI 2KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 7,
+    "Image": "test_images/VEG MAGGI 2KG.jpg",
+    "PopupImage": "test_popup_images/VEG MAGGI 2KG.pdf",
+    "Ingredients": [
+      "Take All Ingredients  840 gm",
+      "Auto  Water (Auto) 1400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "2000 G",
+    "On2Cook Cooking Time": "7",
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "VEG MANCHOW SOUP",

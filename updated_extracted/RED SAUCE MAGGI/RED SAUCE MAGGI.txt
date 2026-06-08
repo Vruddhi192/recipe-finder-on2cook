@@ -1,0 +1,119 @@
+{
+  "Ingredients": [
+    {
+      "app_audio": "Raw Raw Penne Pasta 50 g, Butter 15 g 65 gm",
+      "audio": "Raw",
+      "audioI": "Raw Penne Pasta 50 g, Butter 15 g",
+      "audioP": "Raw",
+      "audioQ": "65",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Raw Penne Pasta 50 g, Butter 15 g",
+      "weight": "65 gm"
+    },
+    {
+      "app_audio": "Auto Maggi Red Sauce Premix  130 gm",
+      "audio": "Auto",
+      "audioI": "Maggi Red Sauce Premix ",
+      "audioP": "Auto",
+      "audioQ": "130",
+      "audioU": "gm",
+      "id": 2,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Maggi Red Sauce Premix 30 g, Water 100 g",
+      "title": "Maggi Red Sauce Premix ",
+      "weight": "130 gm"
+    },
+    {
+      "app_audio": "Auto Water (Auto) 700 ml",
+      "audio": "Auto",
+      "audioI": "Water (Auto)",
+      "audioP": "Auto",
+      "audioQ": "700",
+      "audioU": "ml",
+      "id": 3,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Water (Auto)",
+      "weight": "700 ml"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "660",
+      "Induction_power": "100",
+      "Magnetron_on_time": "660",
+      "Magnetron_power": "100",
+      "Text": "Raw Penne Pasta 50 g, Butter 15 g",
+      "Weight": "65 gm",
+      "app_audio": " Raw Penne Pasta 50 g, Butter 15 g",
+      "audioI": "Raw Penne Pasta 50 g, Butter 15 g",
+      "audioP": "",
+      "audioQ": "65",
+      "audioU": "11Minute",
+      "durationInSec": 660,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "55",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    },
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "240",
+      "Induction_power": "100",
+      "Magnetron_on_time": "240",
+      "Magnetron_power": "100",
+      "Text": "Maggi Red Sauce Premix ",
+      "Weight": "130 gm",
+      "app_audio": " Maggi Red Sauce Premix ",
+      "audioI": "Maggi Red Sauce Premix ",
+      "audioP": "",
+      "audioQ": "130",
+      "audioU": "4Minute",
+      "durationInSec": 240,
+      "id": 2,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "15",
+      "purge_on": "",
+      "skip": "false",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "RED SAUCE MAGGI"
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "RED SAUCE MAGGI (PENNE MAGGI RED SAUCE PREMIX PASTA)\nNORMAL COOK TIME 35 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "difficulty": "Easy",
+  "id": 347,
+  "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped1054434504213422455.png",
+  "isSelected": false,
+  "name": [
+    "RED SAUCE MAGGI"
+  ],
+  "subCategories": "",
+  "tags": ""
+}
