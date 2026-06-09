@@ -149,4 +149,28 @@ Key Changes:
     "clubbedWith": "BOILED CHOLE GN"
   },
 
-  I would like to make few changes where if i filter smtg that also gets reflected in the url and if i share that url with someone they can see the filtered version. they should see what im trying to showcase.
+❌ Failed recipes: 4
+   - AMUL DAHI TIKKA: Missing JPG file
+   - PNR MAKHANI 2KG: ZIP extraction failed: Bad CRC-32 for file 'PNR MAKHANI 2KG.jpg'
+   - STEAM RICE 2000G: ZIP extraction failed: Bad CRC-32 for file 'STEAM RICE 2000G.jpg'
+   - STEAM RICE 3000G: ZIP extraction failed: Bad CRC-32 for file 'STEAM RICE 3000G.jpg'
+
+
+Failed folders:
+  - AMUL DAHI TIKKA: [Errno 13] Permission denied: 'extracted\\AMUL DAHI TIKKA\\AMUL DAHI TIKKA'
+  - CHI MANCHURIAN D: [Errno 13] Permission denied: 'extracted\\CHI MANCHURIAN D\\CHI MANCHURIAN D'
+  - RAVA UPMA 2500GM: [Errno 13] Permission denied: 'extracted\\RAVA UPMA 2500GM\\RAVA UPMA 2500GM'
+Total txt files processed: 560
+Recipes with changes: 551
+
+
+I would like you to combine these files into 1. I would want the moment i run this file no human input is asked and it runs automatically, one file after the other.
+
+so i want to write a python code which calls one file after the other in a sequential order. 
+1) download_zips.py - checks what modifications are made and downloads the new file but its very slow. takes up 15-20 mins in order to scan all rows. 
+2)extract_zips.py takes "zips" folder as input
+3) accessory_list_mapping_regenerate_zips(txt).py  takes "extracted" folder as input
+4) generate_popup_images.py - in this I only want you to proceed with those files which were recently added/modified
+5) parse_txt_to_json.py
+6) sync_description.py
+7) parse_txt_to_json.py
