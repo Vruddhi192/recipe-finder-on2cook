@@ -5394,27 +5394,7 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins"
   },
-  {
-    "Recipe Name": "GUJARATI DAL",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "GUJARATI",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Sour",
-    "Consistency": "Gravy",
-    "Cooking Time": 12,
-    "Image": "../test_images/GUJARATI DAL GN.jpg",
-    "PopupImage": "../test_popup_images/GUJARATI DAL GN.pdf",
-    "Ingredients": [
-      "Take Oil & Tadka  85 gm",
-      "Take  Jaggery powder 70g, Tamarind Pulp 40g, Turmeric Powder 5g, Salt 35g, Boiled Dal 2000g 2150 gm",
-      "Auto Water (Auto) 900 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "3000G",
-    "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": "45 mins"
-  },
+ 
   {
     "Recipe Name": "GUJARATI KADHI",
     "Veg/Non Veg": "VEG",
