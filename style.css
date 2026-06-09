@@ -1412,7 +1412,13 @@ input[type="range"]::-moz-range-thumb {
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 12px 28px rgba(237, 28, 36, 0.6);
 }
-
+@media (hover: none) and (max-width: 800px) {
+  .download-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1) translateY(0) !important;
+  }
+}
 .download-btn:active {
   transform: scale(0.95) translateY(0);
   box-shadow: 0 6px 16px rgba(237, 28, 36, 0.5);
