@@ -4359,6 +4359,27 @@
     "Normal Cooking Time": "35 mins"
   },
   {
+    "Recipe Name": "DOODHI HALWA 400",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 8,
+    "Image": "../test_images/DOODHI HALWA 400.jpg",
+    "PopupImage": "../test_popup_images/DOODHI HALWA 400.pdf",
+    "Ingredients": [
+      "Add Grated Lauki 250 g, Ghee 60 g 310 gm",
+      "Take Milk & Nuts 241 gm",
+      "Auto Water (Auto) 150 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "400 G",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "35 mins"
+  },
+  {
     "Recipe Name": "EGG BHURJI",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
@@ -5354,10 +5375,10 @@
   {
     "Recipe Name": "GUJARATI DAL",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
+    "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "GUJARATI",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Sour",
+    "Flavor Profile": "Sweet",
     "Consistency": "Gravy",
     "Cooking Time": 5,
     "Image": "../test_images/GUJARATI DAL.jpg",
@@ -5394,7 +5415,6 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins"
   },
- 
   {
     "Recipe Name": "GUJARATI KADHI",
     "Veg/Non Veg": "VEG",

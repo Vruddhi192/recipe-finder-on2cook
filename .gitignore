@@ -4,3 +4,9 @@ __pycache__/
 .vscode/
 extracted
 Test Code
+logs
+Automation
+classic-outlook-smartsheet-watcher.ps1
+classic-outlook-smartsheet-pending-approval.json
+approve-classic-outlook-smartsheet-changes.ps1
+install-classic-outlook-smartsheet-task.ps1
