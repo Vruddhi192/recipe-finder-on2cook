@@ -857,7 +857,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1300G",
     "On2Cook Cooking Time": "18",
-    "Normal Cooking Time": "1 mins"
+    "Normal Cooking Time": "1 hour"
   },
   {
     "Recipe Name": "BEEF CHILLI BIG",
@@ -876,7 +876,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2500G",
     "On2Cook Cooking Time": "28",
-    "Normal Cooking Time": "1 mins"
+    "Normal Cooking Time": "1.5 hours"
   },
   {
     "Recipe Name": "BENGALI KHICHDI",
@@ -1424,7 +1424,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "33",
-    "Normal Cooking Time": "23 mins"
+    "Normal Cooking Time": "2-3 hours"
   },
   {
     "Recipe Name": "BRAZILIAN CHEESE BALLS",
@@ -4337,27 +4337,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins"
   },
-  {
-    "Recipe Name": "DOODHI HALWA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "DESSERTS",
-    "Flavor Profile": "Sweet",
-    "Consistency": "Semi-Dry",
-    "Cooking Time": 11,
-    "Image": "../test_images/DOODHI HALWA.jpg",
-    "PopupImage": "../test_popup_images/DOODHI HALWA.pdf",
-    "Ingredients": [
-      "Add Grated Lauki 300g, Ghee 200g  500 gm",
-      "All Mixed  Milk & Nuts 340 gm",
-      "Auto Water  150 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "700G",
-    "On2Cook Cooking Time": "11",
-    "Normal Cooking Time": "35 mins"
-  },
+  
   {
     "Recipe Name": "DOODHI HALWA 400",
     "Veg/Non Veg": "VEG",
@@ -4378,6 +4358,26 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "35 mins"
+  },
+  {
+    "Recipe Name": "DUDHI HALWA 1500",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 23,
+    "Image": "../test_images/DUDHI HALWA 1500.jpg",
+    "PopupImage": "../test_popup_images/DUDHI HALWA 1500.pdf",
+    "Ingredients": [
+      "Take Grated Dudhi 1700 g, Ghee 150 g 1850 gm",
+      "Milk & Sugar  910 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1500 G",
+    "On2Cook Cooking Time": "23",
+    "Normal Cooking Time": "55 mins"
   },
   {
     "Recipe Name": "EGG BHURJI",
@@ -5186,7 +5186,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "30",
-    "Normal Cooking Time": "3 mins"
+    "Normal Cooking Time": "4 hours"
   },
   {
     "Recipe Name": "GOAN ALOO BHAJI",
@@ -7345,26 +7345,7 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "20 mins"
   },
-  {
-    "Recipe Name": "MOONG-DAL HALWA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 4,
-    "Image": "../test_images/MOONG-DAL HALWA.jpg",
-    "PopupImage": "../test_popup_images/MOONG-DAL HALWA.pdf",
-    "Ingredients": [
-      "Grind  All Ingredients  333 gm",
-      "Auto Water (Auto) 200 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "500G",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "25 mins"
-  },
+  
   {
     "Recipe Name": "MOR KUZHUMBU",
     "Veg/Non Veg": "VEG",

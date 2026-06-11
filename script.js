@@ -557,8 +557,7 @@ function showRecipes() {
     const card = document.createElement('div');
     card.className = 'recipe-card';
 
-    const cleanTime =
-      r['Normal Cooking Time']?.replace(/[.,;!?'"()-]/g, '') || '';
+    const cleanTime = r['Normal Cooking Time']?.replace(/[,;!?'"]/g, '') || '';
 
     card.innerHTML = `
   <div class="recipe-card-image-wrap">
