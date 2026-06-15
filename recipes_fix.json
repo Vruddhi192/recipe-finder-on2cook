@@ -857,7 +857,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1300G",
     "On2Cook Cooking Time": "18",
-    "Normal Cooking Time": "1 mins"
+    "Normal Cooking Time": "1 hour"
   },
   {
     "Recipe Name": "BEEF CHILLI BIG",
@@ -876,7 +876,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2500G",
     "On2Cook Cooking Time": "28",
-    "Normal Cooking Time": "1 mins"
+    "Normal Cooking Time": "1.5 hours"
   },
   {
     "Recipe Name": "BENGALI KHICHDI",
@@ -1088,6 +1088,28 @@
     "Total Output": "2000G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins"
+  },
+  {
+    "Recipe Name": "BLACK BEANS (FROM SOAKED BLACK TURTLE BEAN)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 34,
+    "Image": "../test_images/BLACK BEANS.jpg",
+    "PopupImage": "../test_popup_images/BLACK BEANS.pdf",
+    "Ingredients": [
+      "Add Chopped Onion 50 g, Oil 30 g, Cumin Seeds 1 g, Bay Leaf 1Nos 81 gm",
+      "Mix Puree & Spices  85 gm",
+      "Auto Water (Auto) 1500 ml",
+      "Soaked  Soaked Black Bean 100 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "250 G",
+    "On2Cook Cooking Time": "34",
+    "Normal Cooking Time": "65 mins"
   },
   {
     "Recipe Name": "BOILED CHOLE",
@@ -1363,6 +1385,26 @@
     "Normal Cooking Time": "25 mins"
   },
   {
+    "Recipe Name": "BROWN RICE BOIL",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "Dry",
+    "Cooking Time": 12,
+    "Image": "../test_images/BROWN RICE BOIL.jpg",
+    "PopupImage": "../test_popup_images/BROWN RICE BOIL.pdf",
+    "Ingredients": [
+      "Soaked  Soaked Brown Rice 400 g, Salt 5 g, Oil 15 g 420 gm",
+      "Take Water (Auto) 1000 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "650 G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "45 mins"
+  },
+  {
     "Recipe Name": "VEGETABLE STIR FRIED BROWN SAUCE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -1424,7 +1466,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "33",
-    "Normal Cooking Time": "23 mins"
+    "Normal Cooking Time": "2-3 hours"
   },
   {
     "Recipe Name": "BRAZILIAN CHEESE BALLS",
@@ -2305,7 +2347,7 @@
     "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "CHICKEN POT BIRYANI",
+    "Recipe Name": "CHICKEN HANDI POT BIRYANI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -4160,7 +4202,7 @@
       "Tikki Dahi Ke Kebab 13 number"
     ],
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
-    "Total Output": "450G (13NOS 30G EACH)",
+    "Total Output": "450G (13NOS -30G EACH)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins"
   },
@@ -4337,27 +4379,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins"
   },
-  {
-    "Recipe Name": "DOODHI HALWA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 11,
-    "Image": "../test_images/DOODHI HALWA.jpg",
-    "PopupImage": "../test_popup_images/DOODHI HALWA.pdf",
-    "Ingredients": [
-      "Add Grated Lauki 300g, Ghee 200g  500 gm",
-      "All Mixed  Milk & Nuts 340 gm",
-      "Auto Water  150 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "700G",
-    "On2Cook Cooking Time": "11",
-    "Normal Cooking Time": "35 mins"
-  },
+ 
   {
     "Recipe Name": "DOODHI HALWA 400",
     "Veg/Non Veg": "VEG",
@@ -4723,7 +4745,7 @@
       "Marinated  Marinated Fish 4 Nos 374 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
-    "Total Output": "4 NOS (80100G PER PCS)",
+    "Total Output": "4 NOS (80-100G PER PCS)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": ""
   },
@@ -5206,7 +5228,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "30",
-    "Normal Cooking Time": "3 mins"
+    "Normal Cooking Time": "4 hours"
   },
   {
     "Recipe Name": "GOAN ALOO BHAJI",
@@ -7133,7 +7155,7 @@
       "Batter  Chilla Mix 595 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Pizza Kit",
-    "Total Output": "910 NOS (EACH PCS 60 G)",
+    "Total Output": "9-10 NOS (EACH PCS 60 G)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
   },
@@ -7365,26 +7387,7 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "20 mins"
   },
-  {
-    "Recipe Name": "MOONG-DAL HALWA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
-    "Cooking Time": 4,
-    "Image": "../test_images/MOONG-DAL HALWA.jpg",
-    "PopupImage": "../test_popup_images/MOONG-DAL HALWA.pdf",
-    "Ingredients": [
-      "Grind  All Ingredients  333 gm",
-      "Auto Water (Auto) 200 ml"
-    ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "500G",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "25 mins"
-  },
+
   {
     "Recipe Name": "MOR KUZHUMBU",
     "Veg/Non Veg": "VEG",
@@ -7669,7 +7672,7 @@
       "Auto Water (Auto) 700 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "800 G",
+    "Total Output": "- 800 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "50 mins"
   },
@@ -8052,7 +8055,7 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "600 G",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": "5060 mins"
+    "Normal Cooking Time": "50 mins"
   },
   {
     "Recipe Name": "PANEER CHILI DRY",
@@ -8393,7 +8396,7 @@
       "Take Jaggery power 120g, Elaichi powder 5g, Coconut milk 120g 245 gm"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "750GM",
+    "Total Output": "- 750GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins"
   },
@@ -11152,6 +11155,26 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins"
+  },
+  {
+    "Recipe Name": "TOMATO GRAVY 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Base Gravy",
+    "Cooking Time": 10,
+    "Image": "../test_images/TOMATO GRAVY 1KG.jpg",
+    "PopupImage": "../test_popup_images/TOMATO GRAVY 1KG.pdf",
+    "Ingredients": [
+      "Take Tomato Puree & Indian Masala  1075 gm",
+      "Paste Cashew Paste 60 g, Melon Seeds Paste 30 g 90 gm"
+    ],
+    "Accessories": "",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "10",
+    "Normal Cooking Time": "40 mins"
   },
   {
     "Recipe Name": "VIETNAMESE TOMATO NOODLE SOUP",
