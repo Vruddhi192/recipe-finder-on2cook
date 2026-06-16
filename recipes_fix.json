@@ -1426,27 +1426,6 @@
     "Normal Cooking Time": "10 mins"
   },
   {
-    "Recipe Name": "VEGETABLE STIR FRIED BROWN SAUCE",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Semi - Gravy",
-    "Cooking Time": 4,
-    "Image": "../test_images/BROWN STIR-FRY.jpg",
-    "PopupImage": "../test_popup_images/BROWN STIR-FRY.pdf",
-    "Ingredients": [
-      "Take Oil & Vegetables  148 gm",
-      "Mix Mix Sauce  293 gm",
-      "Auto Water (Auto) 100 ml"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "10 mins"
-  },
-  {
     "Recipe Name": "BROWN STOCK MUTTON",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "BOILING + SAUTEING",
@@ -2279,13 +2258,13 @@
     "Normal Cooking Time": "12 mins"
   },
   {
-    "Recipe Name": "CHI LOLLIPOP FRY",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "CHICKEN LOLLIPOP",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 2,
     "Image": "../test_images/CHI LOLLIPOP FRY.jpg",
     "PopupImage": "../test_popup_images/CHI LOLLIPOP FRY.pdf",
@@ -2296,8 +2275,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
     "Total Output": "200",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins",
-    "hidden": true
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN GRAVY",
@@ -2347,7 +2325,7 @@
     "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "CHICKEN HANDI POT BIRYANI",
+    "Recipe Name": "CHICKEN POT BIRYANI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -2914,8 +2892,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins",
-    "clubbedWith": "CHI LOLLIPOP FRY"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "CHICKEN MAGGI",
@@ -3262,13 +3239,13 @@
     "Normal Cooking Time": "40 mins"
   },
   {
-    "Recipe Name": "CHICKPEA BOILED",
+    "Recipe Name": "PINDI CHOLE",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 14,
     "Image": "../test_images/CHICKPEA BOILED.jpg",
     "PopupImage": "../test_popup_images/CHICKPEA BOILED.pdf",
@@ -3278,8 +3255,7 @@
     "Accessories": "Pressure Cooker",
     "Total Output": "BOILED CHICKPEA 700 G",
     "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": "",
-    "hidden": true
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "CHILLI CHEESE STEAM BUN",
@@ -3395,13 +3371,13 @@
     "Normal Cooking Time": "10 mins"
   },
   {
-    "Recipe Name": "CHINESE GOBI FRY",
+    "Recipe Name": "GOBI MANCHURIAN DRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/CHINESE GOBI FRY.jpg",
     "PopupImage": "../test_popup_images/CHINESE GOBI FRY.pdf",
@@ -3412,8 +3388,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "180 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "10 mins",
-    "hidden": true
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "CHINGRI MALAI",
@@ -3562,8 +3537,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "1KG",
     "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": "40 mins",
-    "clubbedWith": "CHICKPEA BOILED"
+    "Normal Cooking Time": "40 mins"
   },
   {
     "Recipe Name": "CHOLE MASALA BULK",
@@ -3993,13 +3967,13 @@
     "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "CRISPY CHI FRY",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "CRISPY CHICKEN",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "../test_images/CRISPY CHI FRY.jpg",
     "PopupImage": "../test_popup_images/CRISPY CHI FRY.pdf",
@@ -4009,8 +3983,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "25 mins",
-    "hidden": true
+    "Normal Cooking Time": "25 mins"
   },
   {
     "Recipe Name": "CRISPY CHICKEN",
@@ -4030,17 +4003,16 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "20 mins",
-    "clubbedWith": "CRISPY CHI FRY"
+    "Normal Cooking Time": "20 mins"
   },
   {
-    "Recipe Name": "CRISPY VEG FRY",
+    "Recipe Name": "CRISPY VEGETABLE",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/CRISPY VEG FRY.jpg",
     "PopupImage": "../test_popup_images/CRISPY VEG FRY.pdf",
@@ -4050,8 +4022,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "25 mins",
-    "hidden": true
+    "Normal Cooking Time": "25 mins"
   },
   {
     "Recipe Name": "CRISPY VEGETABLE",
@@ -4071,8 +4042,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "20 mins",
-    "clubbedWith": "CRISPY VEG FRY"
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "CREAM OF BROCCOLI SOUP",
@@ -4269,8 +4239,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "1500 G",
     "On2Cook Cooking Time": "13",
-    "Normal Cooking Time": "30 mins",
-    "clubbedWith": "URAD DAL"
+    "Normal Cooking Time": "30 mins"
   },
   {
     "Recipe Name": "DAL MAKHANI BULK",
@@ -4379,7 +4348,6 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins"
   },
- 
   {
     "Recipe Name": "DOODHI HALWA 400",
     "Veg/Non Veg": "VEG",
@@ -4895,13 +4863,13 @@
     "Normal Cooking Time": "6 mins"
   },
   {
-    "Recipe Name": "FRIED KOFTA",
+    "Recipe Name": "MALAI KOFTA",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED KOFTA.jpg",
     "PopupImage": "../test_popup_images/FRIED KOFTA.pdf",
@@ -4912,8 +4880,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "16 PCS",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "20 mins",
-    "hidden": true
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "FRIED MOMO",
@@ -4936,13 +4903,13 @@
     "Normal Cooking Time": "6 mins"
   },
   {
-    "Recipe Name": "FRIED MUSHROOM",
+    "Recipe Name": "MUSHROOM CHILLI DRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED MUSHROOM.jpg",
     "PopupImage": "../test_popup_images/FRIED MUSHROOM.pdf",
@@ -4953,8 +4920,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins",
-    "hidden": true
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "FRIED PANEER STRIPS",
@@ -5037,13 +5003,13 @@
     "Normal Cooking Time": "20 mins"
   },
   {
-    "Recipe Name": "FRY PANEER",
+    "Recipe Name": "PANEER CHILI DRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "../test_images/FRY PANEER.jpg",
     "PopupImage": "../test_popup_images/FRY PANEER.pdf",
@@ -5054,8 +5020,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins",
-    "hidden": true
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "FRY VEG BIRYANI",
@@ -5305,8 +5270,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "12 mins",
-    "clubbedWith": "CHINESE GOBI FRY"
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "GOBI MANCHURIAN GRAVY",
@@ -5332,8 +5296,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins",
-    "clubbedWith": "CHINESE GOBI FRY"
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "GOBI PAKODA",
@@ -5838,18 +5801,20 @@
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
-    "Cooking Time": 7,
+    "Cooking Time": 9,
     "Image": "../test_images/JEERA ALOO 1000G.jpg",
     "PopupImage": "../test_popup_images/JEERA ALOO 1000G.pdf",
     "Ingredients": [
       "Take Oil 40g, Cumin Seeds 10g 50 gm",
       "Raw Diced Potatoes  1100 gm",
-      "Take Salt 10g, Turmeric Powder 3g 13 gm"
+      "Take Salt 10g, Turmeric Powder 3g,  13 gm",
+      "Chop Coriander Leaves 10 gm",
+      "Auto Water (Auto) 50 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "1000G",
-    "On2Cook Cooking Time": "7",
-    "Normal Cooking Time": "35 mins"
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "9",
+    "Normal Cooking Time": "40 mins"
   },
   {
     "Recipe Name": "JEERA RICE",
@@ -6326,17 +6291,16 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "600G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins",
-    "clubbedWith": "KOTHMIR VADI FRY"
+    "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "KOTHMIR VADI FRY",
+    "Recipe Name": "KOTHMIR VADI",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/KOTHMIR VADI FRY.jpg",
     "PopupImage": "../test_popup_images/KOTHMIR VADI FRY.pdf",
@@ -6346,8 +6310,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "10NOS",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "15 mins",
-    "hidden": "true"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "KUNG PAO MUSHROOM",
@@ -6819,8 +6782,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "550 G",
     "On2Cook Cooking Time": "8",
-    "Normal Cooking Time": "40 mins",
-    "clubbedWith": "KOFTA FRY"
+    "Normal Cooking Time": "40 mins"
   },
   {
     "Recipe Name": "MALAI KULFI",
@@ -6882,13 +6844,13 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "MANCHURIAN FRY",
+    "Recipe Name": "VEG MANCHURIAN GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 2,
     "Image": "../test_images/MANCHURIAN FRY.jpg",
     "PopupImage": "../test_popup_images/MANCHURIAN FRY.pdf",
@@ -6899,8 +6861,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins",
-    "hidden": true
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "MUSHROOM MAPPAS",
@@ -7387,7 +7348,6 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "20 mins"
   },
-
   {
     "Recipe Name": "MOR KUZHUMBU",
     "Veg/Non Veg": "VEG",
@@ -7567,8 +7527,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins",
-    "clubbedWith": "FRIED MUSHROOOM"
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "MUSHROOM CHILLI GRAVY",
@@ -7964,8 +7923,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins",
-    "clubbedWith": "FRY PANEER"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "PANCHKUTIYU SHAK",
@@ -8081,8 +8039,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins",
-    "clubbedWith": "FRY PANEER"
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "PANEER CHILLI GRAVY",
@@ -8108,8 +8065,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "12 mins",
-    "clubbedWith": "FRY PANEER"
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "PANEER JALFREZI",
@@ -8177,8 +8133,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350GM",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins",
-    "clubbedWith": "FRY PANEER"
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "PANEER PAKODA",
@@ -8266,8 +8221,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "12 mins",
-    "clubbedWith": "FRY PANEER"
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "PANEER SUKKA MASALA",
@@ -9618,23 +9572,17 @@
     "Category": "BREAKFAST",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
-    "Cooking Time": 7,
+    "Cooking Time": 4,
     "Image": "../test_images/SABUDANA KHICHDI.jpg",
     "PopupImage": "../test_popup_images/SABUDANA KHICHDI.pdf",
     "Ingredients": [
-      "Take Ghee 30 gm",
-      "Take Cumin Seeds & Curry Leaves 7 gm",
-      "Take Chopped Vegetables 8 gm",
-      "Cut Diced Potatoes 50 gm",
-      "Take Roasted Peanuts 30 gm",
-      "Take Spice Mix 5 gm",
-      "Take Sago Soaked 225 gm",
-      "Take Çoriander Leaves 5 gm"
+      "All Ingredients  385 gm",
+      "All Ingredients  720 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "280 GM",
-    "On2Cook Cooking Time": "7",
-    "Normal Cooking Time": "15 mins"
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "25 mins"
   },
   {
     "Recipe Name": "SAFED MURGH",
@@ -10960,13 +10908,13 @@
     "Normal Cooking Time": "30 mins"
   },
   {
-    "Recipe Name": "THAI RED CURRY",
+    "Recipe Name": "VEG THAI RED CURRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 4,
     "Image": "../test_images/THAI RED CURRY.jpg",
     "PopupImage": "../test_popup_images/THAI RED CURRY.pdf",
@@ -10978,8 +10926,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "750 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "20 mins",
-    "hidden": true
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "THAI RED PASTE",
@@ -11022,17 +10969,16 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "400G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "25 mins",
-    "clubbedWith": "THECHA PASTE"
+    "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "THECHA PASTE",
+    "Recipe Name": "THECHA CHICKEN",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 2,
     "Image": "../test_images/THECHA PASTE.jpg",
     "PopupImage": "../test_popup_images/THECHA PASTE.pdf",
@@ -11043,8 +10989,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "5 mins",
-    "hidden": true
+    "Normal Cooking Time": "5 mins"
   },
   {
     "Recipe Name": "CHICKEN THUKPA SOUP",
@@ -11406,13 +11351,13 @@
     "Normal Cooking Time": ""
   },
   {
-    "Recipe Name": "URAD DAL",
+    "Recipe Name": "DAL MAKHANI",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "BOILING + SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 10,
     "Image": "../test_images/URAD DAL.jpg",
     "PopupImage": "../test_popup_images/URAD DAL.pdf",
@@ -11422,8 +11367,7 @@
     "Accessories": "Pressure Cooker",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": "",
-    "hidden": true
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "VADA FRY",
@@ -11898,8 +11842,7 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "10 mins",
-    "clubbedWith": "MANCHURIAN FRY"
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "VEGETABLE FAJITA QUESADILLA",
