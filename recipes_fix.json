@@ -361,6 +361,25 @@
     "Normal Cooking Time": ""
   },
   {
+    "Recipe Name": "AMUL DAHI TIKKA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 2,
+    "Image": "../test_images/AMUL DAHI TIKKA.jpg",
+    "PopupImage": "../test_popup_images/AMUL DAHI TIKKA.pdf",
+    "Ingredients": [
+      "Take MASTI DAHI TIKKA 12 number"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "12 NOS ( FROZEN 350 G )",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "8 mins"
+  },
+  {
     "Recipe Name": "AMUL FRENCH FRIES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
@@ -2276,6 +2295,32 @@
     "Total Output": "200",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins"
+  },
+  {
+    "Recipe Name": "CHICKEN MANCHURIAN DRY",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/CHI MANCHURIAN D.jpg",
+    "PopupImage": "../test_popup_images/CHI MANCHURIAN D.pdf",
+    "Ingredients": [
+      "Take Oil 20 gm",
+      "Chop Chopped Vegetables 1 15 gm",
+      "Chop Chopped Vegetables 2 123 gm",
+      "Mix Mix Sauce 48 gm",
+      "Bottle  Water 60 ml",
+      "Mix Corn Starch Sulrry  25 gm",
+      "Take Chinese Fried Chicken  180 gm",
+      "Chop Garnish  7 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "350 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN GRAVY",
@@ -7014,12 +7059,12 @@
     "Normal Cooking Time": "45 mins"
   },
   {
-    "Recipe Name": "MOONG DAL RAW",
+    "Recipe Name": "MASOOR DAL RAW",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi-Dry",
     "Cooking Time": 18,
     "Image": "../test_images/MASOOR DAL.jpg",
@@ -9396,6 +9441,34 @@
     "Total Output": "300 GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins"
+  },
+  {
+    "Recipe Name": "RAVA UPMA 2500GM",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "SOUTH INDIAN",
+    "Category": "BREAKFAST",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 16,
+    "Image": "../test_images/RAVA UPMA 2500GM.jpg",
+    "PopupImage": "../test_popup_images/RAVA UPMA 2500GM.pdf",
+    "Ingredients": [
+      "Take Ghee 150 gm",
+      "Take Whole Spices 40 gm",
+      "Finely Chop Chopped Vegetables 1 30 gm",
+      "Finely Chop Chopped Vegetables 2 300 gm",
+      "Finely Chop Chopped Vegetables 3 200 gm",
+      "Take Green Peas 100 gm",
+      "Take Rava 500 gm",
+      "Take Powder Spices  8 gm",
+      "Take Salt & Lemon Juice  55 gm",
+      "Take Coriander & Roasted Peanuts 120 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "2500GM",
+    "On2Cook Cooking Time": "16",
+    "Normal Cooking Time": "45 mins"
   },
   {
     "Recipe Name": "RED MACRONI PASTA (MAGGI PREMIX)",
