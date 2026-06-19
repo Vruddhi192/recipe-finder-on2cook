@@ -3244,7 +3244,7 @@
     "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "CHICKEN TIKKA",
+    "Recipe Name": "CHICKEN TIKKA (WITHOUT SKEWERS)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "GRILLING",
     "Cuisine": "INDIAN",
@@ -3259,7 +3259,7 @@
       "Add Oil for Brushing  20 ml"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "350 GM",
+    "Total Output": "",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
   },
@@ -3301,6 +3301,27 @@
     "Total Output": "BOILED CHICKPEA 700 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": ""
+  },
+  {
+    "Recipe Name": "CHILI POTATO DRY",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 2,
+    "Image": "../test_images/CHILI POTATO DRY.jpg",
+    "PopupImage": "../test_popup_images/CHILI POTATO DRY.pdf",
+    "Ingredients": [
+      "Mix Oil & Vegetables  160 gm",
+      "Mix Mix Sauce & Fried Potato  320 gm",
+      "Auto Water (Auto) 70 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "CHILLI CHEESE STEAM BUN",
@@ -4287,6 +4308,27 @@
     "Normal Cooking Time": "30 mins"
   },
   {
+    "Recipe Name": "DAL MAKHANI 1KG (FROM SOAKED URAD DAL)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 32,
+    "Image": "../test_images/DAL MAKHANI 1KG.jpg",
+    "PopupImage": "../test_popup_images/DAL MAKHANI 1KG.pdf",
+    "Ingredients": [
+      "Boiling  Soaked Urad Dal 315 gm",
+      "Paste Gravy Paste 845 gm",
+      "Auto Water (Auto) 1400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "32",
+    "Normal Cooking Time": ""
+  },
+  {
     "Recipe Name": "DAL MAKHANI BULK",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -4701,6 +4743,27 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
+  },
+  {
+    "Recipe Name": "EGGLESS BROWNIE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "BAKING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 7,
+    "Image": "../test_images/EGGLESS BROWNIE.jpg",
+    "PopupImage": "../test_popup_images/EGGLESS BROWNIE.pdf",
+    "Ingredients": [
+      "Mix Dry Ingredients 315 gm",
+      "Mix Wet Ingredients 400 gm",
+      "Mix Final Batter  715 gm"
+    ],
+    "Accessories": "Cake Kit, Pan Non-Coated (Ss)",
+    "Total Output": "700 G",
+    "On2Cook Cooking Time": "7",
+    "Normal Cooking Time": "45 mins"
   },
   {
     "Recipe Name": "ESPAGNOLE SAUCE",
@@ -5173,6 +5236,28 @@
     "Total Output": "2000 GM",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "30 mins"
+  },
+  {
+    "Recipe Name": "GHEE RICE 1000G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 12,
+    "Image": "../test_images/GHEE RICE 1000G.jpg",
+    "PopupImage": "../test_popup_images/GHEE RICE 1000G.pdf",
+    "Ingredients": [
+      "Take Ghee 20 g, Slit Green Chilli 5 g, Ginger Garlic Paste 10 g, Green Cardamom 2Nos, Cinnamon Stick 1Nos 35 gm",
+      "Add Soaked Rice 400g, Salt 8g 408 gm",
+      "Auto  Water (Auto) 940 ml",
+      "Add Garnish  5 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "25 mins"
   },
   {
     "Recipe Name": "GHEE RICE",
@@ -6056,6 +6141,46 @@
     "Normal Cooking Time": "90 mins"
   },
   {
+    "Recipe Name": "KALAKAND 1 KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 8,
+    "Image": "../test_images/KALAKAND 1 KG.jpg",
+    "PopupImage": "../test_popup_images/KALAKAND 1 KG.pdf",
+    "Ingredients": [
+      "Take Ghee 15 gm",
+      "Mix Kalakand Mix 755 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "90 mins"
+  },
+  {
+    "Recipe Name": "KALAKAND 250G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/KALAKAND 250 G.jpg",
+    "PopupImage": "../test_popup_images/KALAKAND 250 G.pdf",
+    "Ingredients": [
+      "Milk & Ghee 250 gm",
+      "Grated  Grated Paneer  100 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "250 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "25 mins"
+  },
+  {
     "Recipe Name": "KASHMIRI PULAO",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING + STEAMING",
@@ -6442,6 +6567,27 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": ""
+  },
+  {
+    "Recipe Name": "LCA TEA CAKE (LEMON CRANBERRY ALMOND CAKE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "BAKING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "../test_images/LCA TEA CAKE.jpg",
+    "PopupImage": "../test_popup_images/LCA TEA CAKE.pdf",
+    "Ingredients": [
+      "Mix Dry Ingredients 300 gm",
+      "Mix Wet Ingredients 320 gm",
+      "Mix Final Batter 620 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit",
+    "Total Output": "600G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "30 mins"
   },
   {
     "Recipe Name": "VEG LEMON CORIANDER SOUP",
@@ -7802,6 +7948,28 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins"
+  },
+  {
+    "Recipe Name": "MYSORE PAK 300G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/MYSORE PAK 300G.jpg",
+    "PopupImage": "../test_popup_images/MYSORE PAK 300G.pdf",
+    "Ingredients": [
+      "Mix  Sugar 120g, Green Cardamom Powder A Pinch  120 gm",
+      "Mix Besan 70g, Ghee 60g 130 gm",
+      "Auto  Water (Auto) 100 ml",
+      "Top-Up 30 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "NAGARJUNA CHICKEN",
@@ -9598,6 +9766,27 @@
     "Normal Cooking Time": "15 mins"
   },
   {
+    "Recipe Name": "ROSE PISTA CAKE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "BAKING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "../test_images/ROSE PISTA CAKE.jpg",
+    "PopupImage": "../test_popup_images/ROSE PISTA CAKE.pdf",
+    "Ingredients": [
+      "Mix Wet Ingredients 345 gm",
+      "Mix Dry Ingredients 200 gm",
+      "Mix Final Cake Batter 545 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit, Teflon Plate",
+    "Total Output": "500G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "35 mins"
+  },
+  {
     "Recipe Name": "SAARU",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -10409,6 +10598,27 @@
     "Normal Cooking Time": "60 mins"
   },
   {
+    "Recipe Name": "STICKY BDW CAKE (BANANA DATES WALNUT CAKE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "BAKING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "../test_images/STICKY BDW CAKE.jpg",
+    "PopupImage": "../test_popup_images/STICKY BDW CAKE.pdf",
+    "Ingredients": [
+      "Mix Dry Ingredients 230 gm",
+      "Mix Wet Ingredients 310 gm",
+      "Mix Final Batter 510 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit",
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "30 mins"
+  },
+  {
     "Recipe Name": "STIR FRY CABBAGE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -10625,6 +10835,27 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "30 mins"
+  },
+  {
+    "Recipe Name": "SUJI HALWA 300G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "../test_images/SUJI HALWA 300G.jpg",
+    "PopupImage": "../test_popup_images/SUJI HALWA 300G.pdf",
+    "Ingredients": [
+      "Take Rava 50g, Ghee 40g 90 gm",
+      "Add Sugar Mix  150 gm",
+      "Auto Water (Auto) 360 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "40 mins"
   },
   {
     "Recipe Name": "VEG SUKTO",
@@ -11609,7 +11840,7 @@
     "Normal Cooking Time": "4 mins"
   },
   {
-    "Recipe Name": "VEG CHILLI GARLIC FRIED RICE",
+    "Recipe Name": "VEG CHILI G RICE (VEG CHILLI GARLIC FRIED RICE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
