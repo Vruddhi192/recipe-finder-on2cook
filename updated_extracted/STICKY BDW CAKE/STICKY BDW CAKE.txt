@@ -1,0 +1,92 @@
+{
+  "Ingredients": [
+    {
+      "app_audio": "Mix Dry Ingredients 230 gm",
+      "audio": "Mix",
+      "audioI": "Dry Ingredients",
+      "audioP": "Mix",
+      "audioQ": "230",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Maida 150gm, Baking Powder 5gm, Baking Soda 2gm, Cinnamon Powder 2 gm, Walnuts 50gm",
+      "title": "Dry Ingredients",
+      "weight": "230 gm"
+    },
+    {
+      "app_audio": "Mix Wet Ingredients 310 gm",
+      "audio": "Mix",
+      "audioI": "Wet Ingredients",
+      "audioP": "Mix",
+      "audioQ": "310",
+      "audioU": "gm",
+      "id": 2,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Ripe Banana 40gm, Brown Sugar 80gm, Melted Butter 80gm, Egg 60gm, Chopped Dates 50gm",
+      "title": "Wet Ingredients",
+      "weight": "310 gm"
+    },
+    {
+      "app_audio": "Mix Final Batter 510 gm",
+      "audio": "Mix",
+      "audioI": "Final Batter",
+      "audioP": "Mix",
+      "audioQ": "510",
+      "audioU": "gm",
+      "id": 3,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Mix together both the batter and add to the Cake Mould",
+      "title": "Final Batter",
+      "weight": "510 gm"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "360",
+      "Induction_power": "50",
+      "Magnetron_on_time": "360",
+      "Magnetron_power": "100",
+      "Text": "Final Batter",
+      "Weight": "510 gm",
+      "app_audio": " Final Batter",
+      "audioI": "Final Batter",
+      "audioP": "",
+      "audioQ": "510",
+      "audioU": "6Minute",
+      "durationInSec": 360,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "2",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "STICKY BDW CAKE"
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "STICKY BDW CAKE (BANANA DATES WALNUT CAKE)\nNORMAL COOKING TIME 30 MINUTES\nFINAL OUTPUT 500 G\n\nACCESSORIES\nPan Non-Coated (SS)\nCAKE KIT\nMESH MAT\n",
+  "difficulty": "Easy",
+  "id": 759,
+  "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/STICKY%20BDW%20CAKE/STICKY%20BDW%20CAKE.jpg",
+  "isSelected": false,
+  "name": [
+    "STICKY BDW CAKE"
+  ],
+  "subCategories": "",
+  "tags": ""
+}
