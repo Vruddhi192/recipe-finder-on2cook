@@ -1279,7 +1279,7 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "DESSERTS",
-    "Flavor Profile": "Sweet",
+    "Flavor Profile": "Extra Spicy",
     "Consistency": "Dry",
     "Cooking Time": 5,
     "Image": "../test_images/BRIGADEIRO.jpg",
@@ -3260,6 +3260,28 @@
     ],
     "Accessories": "Pan Honeycomb (Non-Stick)",
     "Total Output": "",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "15 mins"
+  },
+  {
+    "Recipe Name": "CHICKEN TIKKA GP (WITH SKEWERS & NEW GRILL PAN)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/CHICKEN TIKKA GP.jpg",
+    "PopupImage": "../test_popup_images/CHICKEN TIKKA GP.pdf",
+    "Ingredients": [
+      "Take New Grill Pan Heat 1 number",
+      "Tikka Marinated Chicken  415 gm",
+      "Brush  Oil For Brushing  10 ml",
+      "Auto Water (Auto) 30 ml"
+    ],
+    "Accessories": "Grill Pan",
+    "Total Output": "400G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins"
   },
@@ -5744,57 +5766,28 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "HONEY CHILLI CHICKEN",
+    "Recipe Name": "HONEY CHILLI CHI (HONEY CHILLI CHICKEN)",
     "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "STARTERS",
-    "Flavor Profile": "Extra Spicy",
-    "Consistency": "Dry",
-    "Cooking Time": 3,
-    "Image": "../test_images/HONEY CHILLI CHI.jpg",
-    "PopupImage": "../test_popup_images/HONEY CHILLI CHI.pdf",
-    "Ingredients": [
-      "Take Oil & Whole Red Chilli 22 gm",
-      "Chopped  Chopped Vegetables 1 15 gm",
-      "Chop Chopped Vegetables 2 123 gm",
-      "Mix Mix Sauce 58 gm",
-      "Bottle  Water 60 ml",
-      "Mix Corn Starch Slurry  25 gm",
-      "Fried Chinese Fried Chicken  160 gm",
-      "Chop Garnish  7 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "350 G",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins"
-  },
-  {
-    "Recipe Name": "HONEY CHILLI POTATO",
-    "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING + SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
-    "Cooking Time": 3,
-    "Image": "../test_images/HONEY POTATO.jpg",
-    "PopupImage": "../test_popup_images/HONEY POTATO.pdf",
+    "Cooking Time": 2,
+    "Image": "../test_images/HONEY CHILLI CHI.jpg",
+    "PopupImage": "../test_popup_images/HONEY CHILLI CHI.pdf",
     "Ingredients": [
-      "Take Oil & Whole Red Chilli 20 gm",
-      "Chopped  Chopped Vegetables 1 15 gm",
-      "Chop Chopped Vegetables 2 123 gm",
-      "Mix Mix Sauce 58 gm",
-      "Bottle  Water 60 ml",
-      "Mix Corn Starch Slurry  25 gm",
-      "Fried Fried French Fries  160 gm",
-      "Chop Garnish  7 gm"
+      "Take Oil & Vegetables  160 gm",
+      "Mix Mix Sauce & Fried Chicken  250 gm",
+      "Auto  Water (Auto) 60 ml",
+      "Chopped  Garnish  7 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "350 G",
-    "On2Cook Cooking Time": "3",
+    "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins"
   },
+  
   {
     "Recipe Name": "HOT & SOUR SOUP",
     "Veg/Non Veg": "VEG",
@@ -7319,7 +7312,7 @@
     "Category": "DESSERTS",
     "Flavor Profile": "Sweet",
     "Consistency": "Semi - Gravy",
-    "Cooking Time": 10,
+    "Cooking Time": 12,
     "Image": "../test_images/MILLET KHEER.jpg",
     "PopupImage": "../test_popup_images/MILLET KHEER.pdf",
     "Ingredients": [
@@ -7327,9 +7320,9 @@
       "Soaked  Milk & Dry Fruits  331 gm",
       "Auto Water (Auto) 700 ml"
     ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Gravy Stirrer",
     "Total Output": "700G",
-    "On2Cook Cooking Time": "10",
+    "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "35 mins"
   },
   {
@@ -8500,6 +8493,26 @@
     "Total Output": "8 NOS (2 SKEWERS)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins"
+  },
+  {
+    "Recipe Name": "PANEER TIKKA OLD (WITH SKEWERS & MP MAT OLD RECIPE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 3,
+    "Image": "../test_images/PANEER TIKKA OLD.jpg",
+    "PopupImage": "../test_popup_images/PANEER TIKKA OLD.pdf",
+    "Ingredients": [
+      "Take Oil For Brushing 20 ml",
+      "Take Marinated Paneer & Vegetables  445 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "350 G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "15 mins"
   },
   {
     "Recipe Name": "PAO BHAJI MASALA",
