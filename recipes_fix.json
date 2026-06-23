@@ -1388,19 +1388,17 @@
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
-    "Cooking Time": 12,
+    "Cooking Time": 16,
     "Image": "../test_images/BROWN ONION RICE.jpg",
     "PopupImage": "../test_popup_images/BROWN ONION RICE.pdf",
     "Ingredients": [
-      "Oil 60 ml",
-      "Whole Spices 25 gm",
-      "Take Fried Onion & Powdered Spices 140 gm",
-      "Take Soaked Rice  800 gm",
-      "Take Water 1120 ml"
+      "Tadka Oil & Whole Spices  85 gm",
+      "Mix Fried Onion & Soaked Rice  1340 gm",
+      "Auto Water (Auto) 1480 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "1900GM",
-    "On2Cook Cooking Time": "12",
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "2700G",
+    "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "25 mins"
   },
   {
@@ -2091,32 +2089,6 @@
     "Normal Cooking Time": "25 mins"
   },
   {
-    "Recipe Name": "CHICKEN CHILLI DRY",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "PAN ASIAN",
-    "Category": "STARTERS",
-    "Flavor Profile": "Extra Spicy",
-    "Consistency": "Semi-Dry",
-    "Cooking Time": 3,
-    "Image": "../test_images/CHI CHILLI DRY.jpg",
-    "PopupImage": "../test_popup_images/CHI CHILLI DRY.pdf",
-    "Ingredients": [
-      "Take Oil 20 gm",
-      "Chop Chopped Vegetables  15 gm",
-      "Diced  Mix Vegetables  130 gm",
-      "Mix Mix Sauce 52 gm",
-      "Bottle  Water 60 ml",
-      "Mix Cornflour Slurry  25 gm",
-      "Fried Chinese Fried Chicken 180 gm",
-      "Chop Garnish  7 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "350 G",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins"
-  },
-  {
     "Recipe Name": "CHICKEN CHILLI GARLIC NOODLES",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -2204,7 +2176,7 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "CHICKEN FRIED RICE",
+    "Recipe Name": "CHI FRIED RICE (CHICKEN FRIED RICE)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
@@ -2454,12 +2426,12 @@
     "Normal Cooking Time": "12 mins"
   },
   {
-    "Recipe Name": "CHICKEN SCHEZWAN FRIED RICE",
+    "Recipe Name": "CHI SCHZ RICE (CHICKEN SCHEZWAN FRIED RICE)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi-Dry",
     "Cooking Time": 4,
     "Image": "../test_images/CHI SCHZ RICE.jpg",
@@ -2653,6 +2625,27 @@
     "Total Output": "500GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins"
+  },
+  {
+    "Recipe Name": "CHICKEN CHILLI (CHICKEN CHILLI DRY)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 2,
+    "Image": "../test_images/CHICKEN CHILLI.jpg",
+    "PopupImage": "../test_popup_images/CHICKEN CHILLI.pdf",
+    "Ingredients": [
+      "Mix Oil & Vegetables  160 gm",
+      "Mix Mix Sauce & Fried Paneer  320 gm",
+      "Auto Water (Auto) 70 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300 G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "12 mins"
   },
   {
     "Recipe Name": "CHICKEN CHILLI GRAVY",
@@ -5766,6 +5759,27 @@
     "Normal Cooking Time": "15 mins"
   },
   {
+    "Recipe Name": "HONEY CHILLI (HONEY CHILLI POTATO DRY)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 2,
+    "Image": "../test_images/HONEY CHILLI.jpg",
+    "PopupImage": "../test_popup_images/HONEY CHILLI.pdf",
+    "Ingredients": [
+      "Mix Oil & Vegetables  160 gm",
+      "Mix Mix Sauce & Fried Potato  345 gm",
+      "Auto Water (Auto) 70 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "400 G",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "15 mins"
+  },
+  {
     "Recipe Name": "HONEY CHILLI CHI (HONEY CHILLI CHICKEN)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING + SAUTEING",
@@ -5787,7 +5801,6 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins"
   },
-  
   {
     "Recipe Name": "HOT & SOUR SOUP",
     "Veg/Non Veg": "VEG",
@@ -6715,7 +6728,7 @@
     "Normal Cooking Time": "15 mins"
   },
   {
-    "Recipe Name": "MACARONI PASTA",
+    "Recipe Name": "MACRONI PASTA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -6723,8 +6736,8 @@
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi - Gravy",
     "Cooking Time": 5,
-    "Image": "../test_images/MACARONI PASTA.jpg",
-    "PopupImage": "../test_popup_images/MACARONI PASTA.pdf",
+    "Image": "../test_images/MACRONI PASTA.jpg",
+    "PopupImage": "../test_popup_images/MACRONI PASTA.pdf",
     "Ingredients": [
       "Add All Ingredients  230 gm",
       "Auto Water 350 ml"
@@ -7046,6 +7059,27 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins"
+  },
+  {
+    "Recipe Name": "MANCHURIAN SAUCE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 7,
+    "Image": "../test_images/MANCHURIAN SAUCE.jpg",
+    "PopupImage": "../test_popup_images/MANCHURIAN SAUCE.pdf",
+    "Ingredients": [
+      "Take Oil & Vegetables  635 gm",
+      "Take Mix Sauce  290 gm",
+      "Auto Water (Auto) 400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1500G",
+    "On2Cook Cooking Time": "7",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "MUSHROOM MAPPAS",
@@ -9352,7 +9386,7 @@
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
-    "Category": "BASE",
+    "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Cooking Time": 8,
@@ -9376,7 +9410,7 @@
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
-    "Category": "BASE",
+    "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Cooking Time": 15,
@@ -10093,6 +10127,29 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "7 mins"
+  },
+  {
+    "Recipe Name": "SCHEZWAN SAUCE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 17,
+    "Image": "../test_images/SCHEZWAN SAUCE.jpg",
+    "PopupImage": "../test_popup_images/SCHEZWAN SAUCE.pdf",
+    "Ingredients": [
+      "Whole  Oil & Whole Spices  665 gm",
+      "Paste Boiled Dry Chilli Paste 1350 gm",
+      "Mix Sauces Mix Sauce 460 gm",
+      "Auto Water  300 ml",
+      "Serve Sesame Oil 100 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "",
+    "On2Cook Cooking Time": "17",
+    "Normal Cooking Time": "45 mins"
   },
   {
     "Recipe Name": "SEEKH KEBAB",
@@ -11950,17 +12007,33 @@
     "Image": "../test_images/VEG DIWANI HANDI.jpg",
     "PopupImage": "../test_popup_images/VEG DIWANI HANDI.pdf",
     "Ingredients": [
-      "Take Oil 30 ml",
-      "Take Cumin Seeds    2 gm",
-      "Puree Raw Gravy Paste 315 gm",
-      "Take Cream Mix 38 gm",
-      "Finely Chop Chopped Vegetables 21 gm",
-      "Diamond Cut Cut Vegetables 200 gm"
+      "Take Gravy & Spices 606 ml",
+      "Auto Water (Auto) 250 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "550 GM",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "45 mins"
+  },
+  {
+    "Recipe Name": "VEG FRIED RICE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 3,
+    "Image": "../test_images/VEG FRIED RICE.jpg",
+    "PopupImage": "../test_popup_images/VEG FRIED RICE.pdf",
+    "Ingredients": [
+      "Take Oil & Vegetables 170 gm",
+      "Take Mix Sauce & Boiled Rice 325 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Rice Stirrer",
+    "Total Output": "500G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "10 mins"
   },
   {
     "Recipe Name": "VEG HAKKA NOODLES",
@@ -12049,6 +12122,27 @@
     "Normal Cooking Time": "40 mins"
   },
   {
+    "Recipe Name": "VEG KOLHAPURI",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 7,
+    "Image": "../test_images/VEG KOLHAPURI.jpg",
+    "PopupImage": "../test_popup_images/VEG KOLHAPURI.pdf",
+    "Ingredients": [
+      "Take All Ingredients  725 gm",
+      "Auto Water (Auto) 200 ml",
+      "Grind  Kolhapuri Masala  40 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "700 G",
+    "On2Cook Cooking Time": "7",
+    "Normal Cooking Time": "20 mins"
+  },
+  {
     "Recipe Name": "VEGGIE MAC & CHEESE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
@@ -12112,29 +12206,24 @@
     "Normal Cooking Time": "10 mins"
   },
   {
-    "Recipe Name": "VEG MANCHURIAN DRY",
+    "Recipe Name": "VEG MANCHURIAN D (VEG MANCHURIAN DRY)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING + SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
-    "Cooking Time": 4,
+    "Cooking Time": 3,
     "Image": "../test_images/VEG MANCHURIAN D.jpg",
     "PopupImage": "../test_popup_images/VEG MANCHURIAN D.pdf",
     "Ingredients": [
-      "Take Oil 20g, Garlic 10g, Ginger 5g 35 gm",
-      "Chop Ginger & Garlic  15 gm",
-      "Chopped  Mix Vegetables  123 gm",
-      "Mix Mix Sauce 43 gm",
-      "Auto Water (Auto) 80 ml",
-      "Mix Corn Starch Slurry  25 gm",
-      "Ball Veg Manchurian Balls 10 number",
-      "Chop Garnish  7 gm"
+      "Chopped  Oil & Vegetables  160 gm",
+      "Mix Mix Sauce 75 gm",
+      "Auto Water (Auto) 80 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "350 G",
-    "On2Cook Cooking Time": "4",
+    "On2Cook Cooking Time": "3",
     "Normal Cooking Time": ""
   },
   {
@@ -12160,6 +12249,45 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins"
+  },
+  {
+    "Recipe Name": "VEG HAKKA NOODLES",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/VEG NOODLES.jpg",
+    "PopupImage": "../test_popup_images/VEG NOODLES.pdf",
+    "Ingredients": [
+      "Mix  Oil & Vegetables  225 gm",
+      "Mix Sauce & Noodles  460 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Noodles Stirrer",
+    "Total Output": "450 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "7 mins"
+  },
+  {
+    "Recipe Name": "VEG POHA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BREAKFAST",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "../test_images/VEG POHA 1KG.jpg",
+    "PopupImage": "../test_popup_images/VEG POHA 1KG.pdf",
+    "Ingredients": [
+      "Take All Ingredients  685 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "VEGETABLE FAJITA QUESADILLA",
@@ -12273,28 +12401,6 @@
     "Normal Cooking Time": "8 mins"
   },
   {
-    "Recipe Name": "VEGETABLE POHA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BREAKFAST",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Dry",
-    "Cooking Time": 3,
-    "Image": "../test_images/VEGETABLE POHA.jpg",
-    "PopupImage": "../test_popup_images/VEGETABLE POHA.pdf",
-    "Ingredients": [
-      "Oil 50 ml",
-      "Finely Chop Vegetable Mix 160 gm",
-      "Finely Chop Tomato & Turmeric  82 gm",
-      "Poha Mix 545 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Rice Stirrer",
-    "Total Output": "650 G",
-    "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": ""
-  },
-  {
     "Recipe Name": "KERALA VEGETABLE STEW",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -12382,6 +12488,49 @@
     "Total Output": "2500 GM",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "120 mins"
+  },
+  {
+    "Recipe Name": "WHITE GRAVY GN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 20,
+    "Image": "../test_images/WHITE GRAVY GN.jpg",
+    "PopupImage": "../test_popup_images/WHITE GRAVY GN.pdf",
+    "Ingredients": [
+      "Take Oil & Spices  745 gm",
+      "Take Paste & Spices 2675 gm",
+      "Powder Garnish  10 gm",
+      "Auto Water (Auto) 200 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "3000G",
+    "On2Cook Cooking Time": "20",
+    "Normal Cooking Time": "60 mins"
+  },
+  {
+    "Recipe Name": "WHITE SAUCE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 7,
+    "Image": "../test_images/WHITE SAUCE.jpg",
+    "PopupImage": "../test_popup_images/WHITE SAUCE.pdf",
+    "Ingredients": [
+      "Take Butter 50g, Maida 50g 100 gm",
+      "Take Milk 1000 gm",
+      "Auto Water (Auto) 100 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "7",
+    "Normal Cooking Time": ""
   },
   {
     "Recipe Name": "XACUTI CHICKEN",
