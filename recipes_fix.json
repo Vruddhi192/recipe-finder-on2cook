@@ -7339,6 +7339,26 @@
     "Normal Cooking Time": "35 mins"
   },
   {
+    "Recipe Name": "MEXICAN RICE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/MEXICAN RICE.jpg",
+    "PopupImage": "../test_popup_images/MEXICAN RICE.pdf",
+    "Ingredients": [
+      "Take  Butter & Vegetables 200 gm",
+      "Take Rice & Sauce 323 gm"
+    ],
+    "Accessories": "",
+    "Total Output": "400 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "15 mins"
+  },
+  {
     "Recipe Name": "MILLET CHILLA (BAJRA/PEARL MILLET)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "ROASTING",
@@ -7993,7 +8013,9 @@
     "Accessories": "",
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
-    "Normal Cooking Time": "42 mins"
+    "Normal Cooking Time": "42 mins",
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MYSORE PAK 1KG",
