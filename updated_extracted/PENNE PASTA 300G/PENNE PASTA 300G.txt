@@ -106,7 +106,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PENNE PASTA 300G (ALFREDO SAUCE - WHITE SAUCE PASTA)\nNORMAL COOK TIME 35 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "description": "PENNE PASTA 300G (ALFREDO SAUCE - WHITE SAUCE PASTA)\nNORMAL COOK TIME 35 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPAN NON COATED SS \nSILICONE STIRRER",
   "difficulty": "Easy",
   "id": 680,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20PASTA%20300G/PENNE%20PASTA%20300G.jpg",

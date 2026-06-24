@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PANEER CHILI DRY\nNORMAL COOKING TIME 10MINUTES \nFINAL OUTPUT 180 G\n\nACCESSORIES\nPan Non-Coated (SS)\nFrying Kit\n\n",
+  "description": "PANEER CHILI DRY\nNORMAL COOKING TIME 10MINUTES \nFINAL OUTPUT 180 G\n\nACCESSORIES\nNON COATED PAN\nFRYING BASKET AND STIRRER \n\n",
   "difficulty": "Easy",
   "id": 402,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/CHINESE%20FRIED%20PANEER/CHINESE%20FRIED%20PANEER.jpg",

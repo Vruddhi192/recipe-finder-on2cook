@@ -146,7 +146,7 @@
     "preparation"
   ],
   "category": "",
-  "description": "PANEER TIKKA OLD (WITH SKEWERS & MP MAT OLD RECIPE)\nFINAL OUTPUT 350 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nMP MAT SMALL\nSKEWERS 2NOS",
+  "description": "PANEER TIKKA OLD (WITH SKEWERS & MP MAT OLD RECIPE)\nFINAL OUTPUT 350 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nPAN NON COATED SS\nMP MAT SMALL\nSKEWERS 2NOS",
   "difficulty": "Easy",
   "id": 102,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PANEER%20TIKKA/PANEER%20TIKKA.jpg",

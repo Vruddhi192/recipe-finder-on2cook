@@ -106,7 +106,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "VEG MANCHURIAN D (VEG MANCHURIAN DRY)\nNORMALCOOKING TIME 10 MINUTES\nFINAL OUTPUT 350 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "description": "VEG MANCHURIAN D (VEG MANCHURIAN DRY)\nNORMALCOOKING TIME 10 MINUTES\nFINAL OUTPUT 350 G\n\nACCESSORIES\nSS PAN \nSILICONE STIRRER ",
   "difficulty": "Easy",
   "id": 771,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/VEG%20MANCHURIAN%20D-1/VEG%20MANCHURIAN%20D.jpg",

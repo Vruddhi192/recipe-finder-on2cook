@@ -174,7 +174,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "LEMON CORIANDER ( CHICKEN SOUP)\nNORMAL COOKING TIME 20 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "description": "LEMON CORIANDER ( CHICKEN SOUP)\nNORMAL COOKING TIME 20 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPAN NON COATED SS\nSILICONE STIRRER ",
   "difficulty": "Easy",
   "id": 695,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/LEMON%20CORIANDER%20/LEMON%20CORIANDER%20.jpg",

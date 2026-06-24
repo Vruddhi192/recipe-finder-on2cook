@@ -362,7 +362,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PRASUMA CHI MOMO (FROZEN CHICKEN MOMO 20PCS)\nNORMAL COOKING TIME 20 MINUTES \nFINAL OUTPUT 20 PCS\n\nACCESSORIES\nPan Non-Coated (SS)\nTeflon Plate\nMOMO KIT\n",
+  "description": "PRASUMA CHI MOMO (FROZEN CHICKEN MOMO 20PCS)\nNORMAL COOKING TIME 20 MINUTES \nFINAL OUTPUT 20 PCS\n\nACCESSORIES\nPAN NON COATED SS \n2 TEFLON PLATE\nMOMO KIT\n",
   "difficulty": "Easy",
   "id": 731,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PARSUMA%20CK%20MOMOS%2020/PARSUMA%20CK%20MOMOS%2020.jpg",

@@ -539,7 +539,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "MALABAR BIRYANI (CHICKEN JEERAKASAL RICE BIRYANI)\nNORMAL COOKING TIME 60 MINUTES\nFINAL OUTPUT 2000 G\n\nACCESSORIES\nPan Non-Coated (SS)",
+  "description": "MALABAR BIRYANI (CHICKEN JEERAKASAL RICE BIRYANI)\nNORMAL COOKING TIME 60 MINUTES\nFINAL OUTPUT 2000 G\n\nACCESSORIES\nPAN NON COATED SS",
   "difficulty": "Easy",
   "id": 730,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/Malabar%20Biriyan3/Malabar%20Biriyan3.jpg",

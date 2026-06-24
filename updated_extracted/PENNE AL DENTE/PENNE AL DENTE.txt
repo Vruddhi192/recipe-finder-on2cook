@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PENNE AL DENTE (PASTA ANTUNE)\nNORMAL COOKING TIME 50 MINUTES \nFINAL OUTPUT 1000 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer\n",
+  "description": "PENNE AL DENTE (PASTA ANTUNE)\nNORMAL COOKING TIME 50 MINUTES \nFINAL OUTPUT 1000 G\n\nACCESSORIES\nPAN NON COATED SS \nSILICONE STIRRER \n",
   "difficulty": "Easy",
   "id": 581,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20ANTUNE%20F/PENNE%20ANTUNE%20F.jpg",

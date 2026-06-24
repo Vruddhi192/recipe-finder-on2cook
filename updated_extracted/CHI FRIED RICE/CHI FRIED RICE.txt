@@ -256,7 +256,7 @@
     "preparation"
   ],
   "category": "",
-  "description": "CHI FRIED RICE (CHICKEN FRIED RICE)\nFINAL OUTPUT 550 G\nCOOKING TIME 7 MINUTES\n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nRice Stirrer",
+  "description": "CHI FRIED RICE (CHICKEN FRIED RICE)\nFINAL OUTPUT 550 G\nCOOKING TIME 7 MINUTES\n\nACCESSORIES\nCOATED PAN \nRICE STIRRER ",
   "difficulty": "Easy",
   "id": 107,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/CHICKEN%20FRIED%20/CHICKEN%20FRIED%20.jpg",

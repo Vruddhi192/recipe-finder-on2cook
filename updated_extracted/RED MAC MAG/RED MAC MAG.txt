@@ -174,7 +174,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "RED MACRONI PASTA (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer\n\n\n",
+  "description": "RED MACRONI PASTA (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nCOATED PAN \nSILICONE STIRRER\n\n\n",
   "difficulty": "Easy",
   "id": 278,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/RED%20MACARONI%20PASTA%20WITH%20MAGGI-1/RED%20MACARONI%20PASTA%20WITH%20MAGGI.jpg",

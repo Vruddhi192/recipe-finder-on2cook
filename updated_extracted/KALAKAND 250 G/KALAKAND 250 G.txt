@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "KALAKAND 250G\nFINAL OUTPUT 250 G\nNORMAL COOKING TIME 25 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "description": "KALAKAND 250G\nFINAL OUTPUT 250 G\nNORMAL COOKING TIME 25 MINUTES \n\nACCESSORIES\nPAN NON COATED SS \nSILICONE STIRRER ",
   "difficulty": "Easy",
   "id": 754,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/KALAKAND%20250%20GM/KALAKAND%20250%20GM.jpg",

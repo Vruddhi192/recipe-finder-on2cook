@@ -174,7 +174,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "MAC AND CHEESE (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer\n\n\n",
+  "description": "MAC AND CHEESE (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nCOATED PAN \nSILICONE STIRRER\n\n\n",
   "difficulty": "Easy",
   "id": 267,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/MAC%20N%20CHEESE%20WITH%20MAGGI%20PREMIX%20/MAC%20N%20CHEESE%20WITH%20MAGGI%20PREMIX%20.jpg",

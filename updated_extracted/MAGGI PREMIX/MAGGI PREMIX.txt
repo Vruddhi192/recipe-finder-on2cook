@@ -106,7 +106,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "MAGGI PREMIX (PENNE MAGGI WHITE SAUCE PREMIX PASTA)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer\n",
+  "description": "MAGGI PREMIX (PENNE MAGGI WHITE SAUCE PREMIX PASTA)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPAN NON COATED SS \nSILICONE STIRRER\n",
   "difficulty": "Easy",
   "id": 345,
   "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped2533901186445442198.png",

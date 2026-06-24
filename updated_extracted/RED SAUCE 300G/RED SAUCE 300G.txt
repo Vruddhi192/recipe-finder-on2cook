@@ -106,7 +106,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "RED SAUCE 300G (PENNE PASTA WITH FRESH TOMATO PUREE)\nNORMAL COOK TIME 35 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "description": "RED SAUCE 300G (PENNE PASTA WITH FRESH TOMATO PUREE)\nNORMAL COOK TIME 35 MINUTES \nFINAL OUTPUT 300 G\n\nACCESSORIES\nPAN NON COATED SS \nSILICONE STIRRER",
   "difficulty": "Easy",
   "id": 728,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/RED%20SAUCE%20PASTA3/RED%20SAUCE%20PASTA3.jpg",

@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "GOBI MANCHURIAN DRY\nNORMAL COOKING TIME 10 MINUTES \nFINAL OUTPUT 180 G\n\nACCESSORIES\nPan Non-Coated (SS)\nFrying Kit\n\n",
+  "description": "GOBI MANCHURIAN DRY\nNORMAL COOKING TIME 10 MINUTES \nFINAL OUTPUT 180 G\n\nACCESSORIES\nNON COATED PAN\nFRYING BASKET AND STIRRER \n\n",
   "difficulty": "Easy",
   "id": 404,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/CHINESE%20GOBI%20FRIED%20/CHINESE%20GOBI%20FRIED%20.jpg",

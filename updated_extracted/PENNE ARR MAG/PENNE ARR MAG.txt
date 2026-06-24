@@ -174,7 +174,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PENNE ARRABIATA (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer\n",
+  "description": "PENNE ARRABIATA (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nCOATED PAN \nSILICONE STIRRER\n",
   "difficulty": "Easy",
   "id": 277,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20ARRABIATA%20WITH%20MAGGIE-1/PENNE%20ARRABIATA%20WITH%20MAGGIE.jpg",
