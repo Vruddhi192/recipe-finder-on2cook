@@ -120,7 +120,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PENNE ALFREDO (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPAN NON COATED SS\nSILICONE STIRRER",
+  "description": "PENNE ALFREDO (MAGGI PREMIX)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
   "difficulty": "Easy",
   "id": 693,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/PENNE%20ALF%20MAG/PENNE%20ALF%20MAG.jpg",

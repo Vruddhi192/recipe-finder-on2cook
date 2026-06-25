@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "VEG MANCHURIAN GRAVY\nNORMAL COOKING TIME 10 MINUTES \nFINAL OUTPUT 500 G\n\nACCESSORIES\nNON COATED PAN\nFRYING BASKET \nFRYING STIRRER \n\n",
+  "description": "VEG MANCHURIAN GRAVY\nNORMAL COOKING TIME 10 MINUTES \nFINAL OUTPUT 500 G\n\nACCESSORIES\nPan Non-Coated (SS)\nFrying Kit\nFrying Kit\n\n",
   "difficulty": "Easy",
   "id": 165,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/MANCHURIAN%20FRY/MANCHURIAN%20FRY.jpg",

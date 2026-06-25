@@ -256,7 +256,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "VEG LEMON CORIANDER SOUP\nFINAL OUTPUT 700 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nCOATED PAN \nSILICONE STIRRER",
+  "description": "VEG LEMON CORIANDER SOUP\nFINAL OUTPUT 700 G\nNORMAL COOKING TIME 15 MINUTES \n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer",
   "difficulty": "Easy",
   "id": 6,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/LE%20CORIANDER%20SP/LE%20CORIANDER%20SP.jpg",

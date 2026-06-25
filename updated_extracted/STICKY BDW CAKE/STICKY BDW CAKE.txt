@@ -79,7 +79,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "STICKY BDW CAKE (BANANA DATES WALNUT CAKE)\nNORMAL COOKING TIME 30 MINUTES\nFINAL OUTPUT 500 G\n\nACCESSORIES\nPAN NON COATED SS\nCAKE KIT\nMESH MAT\n",
+  "description": "STICKY BDW CAKE (BANANA DATES WALNUT CAKE)\nNORMAL COOKING TIME 30 MINUTES\nFINAL OUTPUT 500 G\n\nACCESSORIES\nPan Non-Coated (SS)\nCAKE KIT\nMESH MAT\n",
   "difficulty": "Easy",
   "id": 759,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/STICKY%20BDW%20CAKE/STICKY%20BDW%20CAKE.jpg",

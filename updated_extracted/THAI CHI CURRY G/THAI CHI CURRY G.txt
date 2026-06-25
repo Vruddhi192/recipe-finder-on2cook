@@ -106,7 +106,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "THAI GREEN CURRY CHICKEN\nFINAL OUTPUT 750 G\nNORMAL COOKING TIME 30 MINUTES\n\nACCESSORIES\nCOATED PAN\nSILICONE STIRRER\n\n ",
+  "description": "THAI GREEN CURRY CHICKEN\nFINAL OUTPUT 750 G\nNORMAL COOKING TIME 30 MINUTES\n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer\n\n ",
   "difficulty": "Easy",
   "id": 338,
   "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped7223419658770005183.png",

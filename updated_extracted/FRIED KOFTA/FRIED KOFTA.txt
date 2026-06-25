@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "MALAI KOFTA\n\nFINAL OUTPUT 16 PCS\nNORMAL COOKING TIME  20 MINUTES \n\nACCESSORIES\nNON COATED PAN\nFRYING BASKET AND STIRRER \n\n",
+  "description": "MALAI KOFTA\n\nFINAL OUTPUT 16 PCS\nNORMAL COOKING TIME  20 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nFrying Kit\n\n",
   "difficulty": "Easy",
   "id": 129,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/FRIED%20KOFTA/FRIED%20KOFTA.jpg",

@@ -106,7 +106,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "VEG THAI RED CURRY\nFINAL OUTPUT 750 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nHONEYCOMB PAN \nSILICONE STIRRER",
+  "description": "VEG THAI RED CURRY\nFINAL OUTPUT 750 G\nNORMAL COOKING TIME 20 MINUTES \n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer",
   "difficulty": "Easy",
   "id": 404,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/R%20THAI%20CURRY%20V2/R%20THAI%20CURRY%20V2.jpg",

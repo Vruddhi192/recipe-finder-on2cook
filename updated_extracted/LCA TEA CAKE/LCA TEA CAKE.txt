@@ -79,7 +79,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "LCA TEA CAKE (LEMON CRANBERRY ALMOND CAKE)\nNORMAL COOKING TIME 30 MINUTES\nFINAL OUTPUT 600G\n\nACCESSORIES\nPAN NON COATED SS\nCAKE KIT\nMESH MAT",
+  "description": "LCA TEA CAKE (LEMON CRANBERRY ALMOND CAKE)\nNORMAL COOKING TIME 30 MINUTES\nFINAL OUTPUT 600G\n\nACCESSORIES\nPan Non-Coated (SS)\nCAKE KIT\nMESH MAT",
   "difficulty": "Easy",
   "id": 758,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/LCA%20TEA%20CAKE/LCA%20TEA%20CAKE.jpg",

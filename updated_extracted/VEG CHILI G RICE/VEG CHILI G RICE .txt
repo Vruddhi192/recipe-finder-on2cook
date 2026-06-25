@@ -133,7 +133,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "VEG CHILI G RICE (VEG CHILLI GARLIC FRIED RICE)\nFINAL OUTPUT  450 G\nNORMAL COOKING TIME 12 MINUTES \n\nACCESSORIES\nCOATED PAN\nSILICONE STIRRER  ",
+  "description": "VEG CHILI G RICE (VEG CHILLI GARLIC FRIED RICE)\nFINAL OUTPUT  450 G\nNORMAL COOKING TIME 12 MINUTES \n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nSilicone Stirrer",
   "difficulty": "Easy",
   "id": 418,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/VEG%20CHILLI%20/VEG%20CHILLI%20.jpg",

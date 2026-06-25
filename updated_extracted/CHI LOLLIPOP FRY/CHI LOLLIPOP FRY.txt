@@ -92,7 +92,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "CHICKEN LOLLIPOP\nNORMAL COOKING TIME 10 MINUTES \nFINAL OUTPUT 200 \n\nACCESSORIES\nNON COATED PAN\nFRYING BASKET \nFRYING STIRRER \n\n\n",
+  "description": "CHICKEN LOLLIPOP\nNORMAL COOKING TIME 10 MINUTES \nFINAL OUTPUT 200 \n\nACCESSORIES\nPan Non-Coated (SS)\nFrying Kit\nFrying Kit\n\n\n",
   "difficulty": "Easy",
   "id": 168,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/FRIED%20CHICKEN%20LOLLIPOP%20/FRIED%20CHICKEN%20LOLLIPOP%20.jpg",

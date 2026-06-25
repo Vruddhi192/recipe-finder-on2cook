@@ -256,7 +256,7 @@
     "preparation"
   ],
   "category": "",
-  "description": "CHI SCHZ RICE (CHICKEN SCHEZWAN FRIED RICE)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 7 MINUTES\n\nACCESSORIES\nCOATED PAN \nRICE STIRRER ",
+  "description": "CHI SCHZ RICE (CHICKEN SCHEZWAN FRIED RICE)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 7 MINUTES\n\nACCESSORIES\nPan Honeycomb (Non-Stick)\nRice Stirrer",
   "difficulty": "Easy",
   "id": 232,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/CHICKEN%20SHEZWAN%20FRIED%20RICE-1/CHICKEN%20SHEZWAN%20FRIED%20RICE.jpg",

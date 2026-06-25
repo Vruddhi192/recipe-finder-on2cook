@@ -51,7 +51,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "KOTHMIR VADI\nNORMAL COOKING TIME 15 MINUTES \nFINAL OUTPUT 10NOS\n\nACCESSORIES\nPAN NON COATED SS\nFRYING KIT\n\nOTHER ESSENTIALS \n1.5L PRE-HEATED OIL 180° C\n",
+  "description": "KOTHMIR VADI\nNORMAL COOKING TIME 15 MINUTES \nFINAL OUTPUT 10NOS\n\nACCESSORIES\nPan Non-Coated (SS)\nFRYING KIT\n\nOTHER ESSENTIALS \n1.5L PRE-HEATED OIL 180° C\n",
   "difficulty": "Easy",
   "id": 664,
   "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped4217719341112614693.png",
