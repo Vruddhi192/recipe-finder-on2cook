@@ -7963,25 +7963,25 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "MOONG DAL HALWA 2000G",
+    "Recipe Name": "MOONG DAL HALWA (500G)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Flavor Profile": "Sweet",
     "Consistency": "Semi-Dry",
-    "Cooking Time": 11,
+    "Cooking Time": 5,
     "Image": "../test_images/MOONG DAL HALWA.jpg",
     "PopupImage": "../test_popup_images/MOONG DAL HALWA.pdf",
     "Ingredients": [
-      "Grind Moongdal Mix  1500 gm",
-      "Water Auto 1000 ml"
+      "Grind  All Ingredients  333 gm",
+      "Auto Water (Auto) 200 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "2000 G",
-    "On2Cook Cooking Time": "11",
-    "Normal Cooking Time": "145 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "5",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-06-26T09:56:47Z"
   },
   {
     "Recipe Name": "MOONG DAL HALWA1 (1KG)",
@@ -8003,6 +8003,27 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-26T07:39:08Z"
+  },
+  {
+    "Recipe Name": "MOONG DAL HALWA 2000G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 11,
+    "Image": "../test_images/MOONG DAL HALWA2.jpg",
+    "PopupImage": "../test_popup_images/MOONG DAL HALWA2.pdf",
+    "Ingredients": [
+      "Grind Moongdal Mix  1500 gm",
+      "Auto Water (Auto) 1000 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "2000G",
+    "On2Cook Cooking Time": "11",
+    "Normal Cooking Time": "145 mins",
+    "Modified": "2026-06-26T08:45:14Z"
   },
   {
     "Recipe Name": "MOONG DAL SOAKED",
@@ -8452,8 +8473,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MYSORE PAK 1KG",
@@ -9169,7 +9190,7 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PEAS PULAO",
+    "Recipe Name": "PEAS PULAO (3KG)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -9187,7 +9208,7 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-06-26T09:03:28Z"
   },
   {
     "Recipe Name": "PEAS PULAO 1000G",
@@ -9209,6 +9230,28 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-10T11:58:51Z"
+  },
+  {
+    "Recipe Name": "PEAS PULAO 2KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING + STEAMING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 12,
+    "Image": "../test_images/PEAS PULAO 2KG.jpg",
+    "PopupImage": "../test_popup_images/PEAS PULAO 2KG.pdf",
+    "Ingredients": [
+      "Take Oil & Cumin Seeds 15gm Whole Red Chilli 5gm Bay Leaves 5gm  85 gm",
+      "Soaked  Green Peas 150g, India Gate Basmati Super Soaked Rice 800g, Salt 25g 975 gm",
+      "Auto Water (Auto) 1120 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "2000 G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-06-26T09:03:28Z"
   },
   {
     "Recipe Name": "PENNE AL DENTE (PASTA ANTUNE)",
@@ -10042,7 +10085,7 @@
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
-    "Category": "SIDE DISH",
+    "Category": "BEVERAGES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Cooking Time": 2,
@@ -10058,7 +10101,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-06-26T10:19:58Z"
   },
   {
     "Recipe Name": "RAGI MILLET CAKE (FINGER MILLET CAKE)",
@@ -10212,6 +10255,29 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-05T09:04:53Z"
+  },
+  {
+    "Recipe Name": "RARA CHICKEN (600G)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 8,
+    "Image": "../test_images/RARA CHICKEN.jpg",
+    "PopupImage": "../test_popup_images/RARA CHICKEN.pdf",
+    "Ingredients": [
+      "Tadka Tadka  150 gm",
+      "Mix Puree & Seasoning  170 gm",
+      "Marinated  Marinated Chicken  315 gm",
+      "Auto Water (Auto)  200 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500 G",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "40 mins",
+    "Modified": "2026-06-26T09:56:47Z"
   },
   {
     "Recipe Name": "RAVA UPMA",
@@ -10617,6 +10683,27 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-05T09:04:53Z"
+  },
+  {
+    "Recipe Name": "SAUTE VEG 500G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 5,
+    "Image": "../test_images/SAUTE VEG 500G.jpg",
+    "PopupImage": "../test_popup_images/SAUTE VEG 500G.pdf",
+    "Ingredients": [
+      "Diced Vegetables  540 gm",
+      "Dried  Mix Seasoning  12 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500G",
+    "On2Cook Cooking Time": "5",
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-26T09:30:24Z"
   },
   {
     "Recipe Name": "SAUTE VEGETABLES",
@@ -11782,23 +11869,23 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Gravy",
     "Cooking Time": 12,
     "Image": "../test_images/TARIWALA KUKKAD.jpg",
     "PopupImage": "../test_popup_images/TARIWALA KUKKAD.pdf",
     "Ingredients": [
       "Take Oil & Khada Masala  333 gm",
-      "Take Chicken Marinade  1074 gm",
-      "Take Dry Special Masala Powder  7 gm",
-      "Take Water (Auto) 200 gm",
+      "Take Chicken Marinade  1075 gm",
+      "Take Dry Special Masala Powder  6 gm",
+      "Take Water (Auto) 200 ml",
       "Chopped  Garnish Fresh Coriander  10 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-06-26T09:36:21Z"
   },
   {
     "Recipe Name": "THAI GREEN CURRY CHICKEN",
