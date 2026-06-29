@@ -12092,6 +12092,29 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
+    "Recipe Name": "THAI RED PASTE1K",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 6,
+    "Image": "../test_images/THAI RED PASTE1K.jpg",
+    "PopupImage": "../test_popup_images/THAI RED PASTE1K.pdf",
+    "Ingredients": [
+      "Take Oil 110 gm",
+      "Paste All Ingredients Paste 800 gm",
+      "Mix  Sauce  95 gm",
+      "Auto Water (Auto) 200 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-29T11:21:55Z"
+  },
+  {
     "Recipe Name": "THECHA CHICKEN",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
