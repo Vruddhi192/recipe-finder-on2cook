@@ -39,6 +39,174 @@ const popupModal = document.getElementById('popupModal');
 const popupImage = document.getElementById('popupImage');
 const popupCloseBtn = document.getElementById('popupCloseBtn');
 
+// New recipes banner elements
+const newRecipesBanner = document.getElementById('newRecipesBanner');
+const newRecipesCloseBtn = document.getElementById('newRecipesCloseBtn');
+const newRecipesSub = document.getElementById('newRecipesSub');
+const exploreNewRecipesBtn = document.getElementById('exploreNewRecipesBtn');
+const backToAllBtn = document.getElementById('backToAllBtn');
+
+// ===============================
+// NEW RECIPES BANNER CONFIG
+// ===============================
+// How many of the most-recently-modified recipes count as "new".
+const NEW_RECIPES_COUNT = 20;
+// The field name written into recipes_fix.json by the pipeline that holds
+// the Smartsheet "modified" date for each recipe. Update this if the
+// pipeline writes a different key (e.g. "lastModified", "Modified Date").
+const MODIFIED_DATE_FIELD = 'Modified';
+// How many random photos to show in the banner's image stack.
+const NEW_RECIPES_BANNER_IMAGE_COUNT = 5;
+
+let newRecipeNames = new Set(); // Recipe Names currently flagged as "new", used by the grid filter
+
+/** Tries a handful of common date formats/shapes so the pipeline's exact
+ *  Smartsheet export format doesn't have to match exactly. Returns a Date
+ *  or null if unparseable. */
+function parseModifiedDate(value) {
+  if (!value) return null;
+  if (value instanceof Date) return isNaN(value) ? null : value;
+  const d = new Date(value);
+  if (!isNaN(d)) return d;
+  // Fallback: DD/MM/YYYY or DD-MM-YYYY style strings
+  const m = String(value).match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/);
+  if (m) {
+    const [, dd, mm, yyyy] = m;
+    const year = yyyy.length === 2 ? `20${yyyy}` : yyyy;
+    const alt = new Date(`${year}-${mm.padStart(2, '0')}-${dd.padStart(2, '0')}`);
+    if (!isNaN(alt)) return alt;
+  }
+  return null;
+}
+
+/** Returns the N most-recently-modified recipes (visible ones only),
+ *  sorted newest first. Recipes without a parseable date are excluded. */
+function getNewestRecipes(count) {
+  return recipes
+    .filter(r => !r.hidden)
+    .map(r => ({ recipe: r, date: parseModifiedDate(r[MODIFIED_DATE_FIELD]) }))
+    .filter(x => x.date)
+    .sort((a, b) => b.date - a.date)
+    .slice(0, count)
+    .map(x => x.recipe);
+}
+
+/** Returns `count` random visible recipes (used only for the banner's
+ *  decorative photo stack — has no bearing on which recipes are flagged
+ *  "new" for the grid filter). */
+// Put your own image paths/URLs here — as many as you like, 3 will be
+// picked at random on each page load. Local files just need to sit in
+// the same folder as index.html (or a subfolder), e.g. "banner/photo1.jpg".
+const NEW_RECIPES_BANNER_CUSTOM_IMAGES = [
+  './assets/banner-images/photo1.jpg',
+  './assets/banner-images/photo2.jpg',
+  './assets/banner-images/photo3.jpg',
+  './assets/banner-images/photo4.jpg',
+  './assets/banner-images/photo5.jpg',
+];
+
+function getRandomBannerImages(count) {
+  const pool = [...NEW_RECIPES_BANNER_CUSTOM_IMAGES];
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, count);
+}
+
+/** Builds and shows the "New Recipes" banner. This always runs on every
+ *  page load/visit — there's no dismissal memory, so closing the banner
+ *  only hides it for the current page view; it reappears on the next
+ *  visit or reload. */
+function initNewRecipesBanner() {
+  if (!newRecipesBanner) return;
+
+  const newest = getNewestRecipes(NEW_RECIPES_COUNT);
+  if (newest.length === 0) {
+    // No recipe has a Modified date yet (pipeline not updated) — stay
+    // hidden rather than show an empty/incorrect banner.
+    newRecipesBanner.style.display = 'none';
+    newRecipeNames = new Set();
+    return;
+  }
+
+  newRecipeNames = new Set(newest.map(r => r['Recipe Name']));
+
+  // Sub-line shows however many recipes actually qualified (could be
+  // fewer than NEW_RECIPES_COUNT if the catalogue itself is smaller).
+  const countEl = document.getElementById('newRecipesCount');
+  if (countEl) {
+    countEl.textContent = newest.length;
+  }
+  if (newRecipesSub) {
+    newRecipesSub.textContent = 'Transform simple ingredients into extraordinary meals.';
+  }
+
+  // Photo stack: random images, NOT tied to which recipes are "new".
+  const imagesContainer = document.getElementById('newRecipesImages');
+  if (imagesContainer) {
+    imagesContainer.innerHTML = '';
+    const randomPicks = getRandomBannerImages(NEW_RECIPES_BANNER_IMAGE_COUNT);
+    randomPicks.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = 'Recipe photo';
+      imagesContainer.appendChild(img);
+    });
+  }
+
+  newRecipesBanner.style.display = 'flex';
+}
+
+// Dismiss only hides the banner for the current page view — no
+// localStorage, so it always comes back on the next visit/reload.
+newRecipesCloseBtn?.addEventListener('click', () => {
+  newRecipesBanner.style.display = 'none';
+});
+
+exploreNewRecipesBtn?.addEventListener('click', () => {
+  filterState.onlyNew = true;
+  resetOtherFiltersForNewView();
+  writeFiltersToURL();
+  showRecipes();
+  document.getElementById('recipesGrid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// "Back to All Recipes" — exits the new-recipes filtered view, restoring
+// the full grid with default filters.
+backToAllBtn?.addEventListener('click', () => {
+  filterState.onlyNew = false;
+  resetOtherFiltersForNewView();
+  writeFiltersToURL();
+  showRecipes();
+});
+
+/** Clears the other filters when jumping into "new recipes" view so the
+ *  user sees the full new batch rather than an intersection with whatever
+ *  filters happened to be active. */
+function resetOtherFiltersForNewView() {
+  filterState.searchTerm = '';
+  filterState.dietVal = 'All';
+  filterState.cookingModeVal = 'All';
+  filterState.cuisineVal = 'All';
+  filterState.categoryVal = 'All';
+  filterState.accessoryVal = 'All';
+  filterState.flavorVal = 'All';
+  filterState.consistencyVal = 'All';
+  filterState.maxCookingTime = 35;
+
+  if (searchBarDesktop) searchBarDesktop.value = '';
+  if (searchBarMobile) searchBarMobile.value = '';
+  document.querySelectorAll('.diet-chip').forEach(c => c.classList.toggle('active', c.dataset.value === 'All'));
+  document.querySelectorAll('.mini-chip').forEach(c => c.classList.toggle('active', c.dataset.value === 'All'));
+  ['cookingMode', 'cuisine', 'category', 'accessory'].forEach(name => {
+    const allInput = document.querySelector(`input[name="${name}"][value="All"]`);
+    if (allInput) allInput.checked = true;
+  });
+  if (cookingTime) { cookingTime.value = 35; cookingTimeLabel.textContent = '35 min'; }
+  if (cookingTimeMobile) { cookingTimeMobile.value = 35; cookingTimeLabelMobile.textContent = '35'; }
+}
+
 // FILTER STATE
 const filterState = {
   searchTerm: '',
@@ -50,7 +218,8 @@ const filterState = {
   accessoryVal: 'All',
   flavorVal: 'All',
   consistencyVal: 'All',
-  maxCookingTime: 35
+  maxCookingTime: 35,
+  onlyNew: false // true while viewing the "Explore New Recipes" filtered grid
 };
 
 // ─── URL STATE ────────────────────────────────────────────────────────────────
@@ -70,6 +239,7 @@ function readFiltersFromURL() {
   if (params.has('category'))  result.categoryVal     = params.get('category');
   if (params.has('accessory')) result.accessoryVal    = params.get('accessory');
   if (params.has('time'))      result.maxCookingTime  = parseInt(params.get('time'), 10);
+  if (params.has('new'))       result.onlyNew         = params.get('new') === '1';
   return result;
 }
 
@@ -87,6 +257,7 @@ function writeFiltersToURL() {
   if (filterState.categoryVal !== 'All')         params.set('category',  filterState.categoryVal);
   if (filterState.accessoryVal !== 'All')        params.set('accessory', filterState.accessoryVal);
   if (filterState.maxCookingTime !== 35)         params.set('time',      filterState.maxCookingTime);
+  if (filterState.onlyNew)                       params.set('new',       '1');
 
   const newSearch = params.toString();
   const newURL = newSearch
@@ -150,6 +321,7 @@ function syncRadioGroup(name, value) {
 
 searchBarDesktop?.addEventListener('input', debounce((e) => {
   filterState.searchTerm = e.target.value.toLowerCase().trim();
+  filterState.onlyNew = false;
   writeFiltersToURL();
   showRecipes();
 }, 250));
@@ -229,6 +401,7 @@ function buildDietChips(values) {
       document.querySelectorAll('.diet-chip').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
       filterState.dietVal = val;
+      filterState.onlyNew = false;
       writeFiltersToURL();
       showRecipes();
     });
@@ -250,6 +423,7 @@ function buildRadioGroup(container, values, name) {
     const input = label.querySelector('input');
     input.addEventListener('change', () => {
       filterState[`${name}Val`] = val;
+      filterState.onlyNew = false;
       writeFiltersToURL();
       showRecipes();
     });
@@ -273,6 +447,7 @@ function buildMiniChips(containerId, values, stateKey, configMap) {
       container.querySelectorAll('.mini-chip').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
       filterState[stateKey] = val;
+      filterState.onlyNew = false;
       writeFiltersToURL();
       showRecipes();
     });
@@ -318,6 +493,10 @@ function loadRecipes() {
       buildMiniChips('flavorChipGroup', getUniqueValues('Flavor Profile'), 'flavorVal', FLAVOUR_CONFIG);
       buildMiniChips('consistencyChipGroup', getUniqueValues('Consistency'), 'consistencyVal', CONSISTENCY_CONFIG);
       populateMobileFilters();
+
+      // Build the "new recipes" banner before applying URL filters, since
+      // a `?new=1` URL needs newRecipeNames already populated.
+      initNewRecipesBanner();
 
       // ← Apply any filters baked into the shared URL
       applyURLFiltersToUI();
@@ -439,6 +618,11 @@ async function downloadRecipe(recipe, event) {
 function filterRecipes() {
   return recipes.filter(r => {
     if (r.hidden) return false;
+
+    if (filterState.onlyNew) {
+      return newRecipeNames.has(r['Recipe Name']);
+    }
+
     const searchOk =
       !filterState.searchTerm ||
       (r['Recipe Name'] || '').toLowerCase().includes(filterState.searchTerm);
@@ -519,19 +703,37 @@ function buildProfileStrip(flavour, consistency) {
 
 function showRecipes() {
   let filtered = filterRecipes();
-  
-  // Apply sorting based on filterState.sortBy
-  filtered = filtered.sort((a, b) => {
-    const ta = parseInt(a['On2Cook Cooking Time'], 10) || 999;
-    const tb = parseInt(b['On2Cook Cooking Time'], 10) || 999;
-    
-    if (filterState.sortBy === 'time-asc') {
-      return ta - tb;
-    } else {
-      return tb - ta;
-    }
-  });
-  recipeCountEl.textContent = `${filtered.length} recipes found`;
+
+  // Apply sorting based on filterState.sortBy.
+  // In the "new recipes" view, keep newest-first ordering instead of
+  // re-sorting by cooking time, so the explore view matches the banner.
+  if (filterState.onlyNew) {
+    filtered = filtered.sort((a, b) => {
+      const da = parseModifiedDate(a[MODIFIED_DATE_FIELD]) || 0;
+      const db = parseModifiedDate(b[MODIFIED_DATE_FIELD]) || 0;
+      return db - da;
+    });
+  } else {
+    filtered = filtered.sort((a, b) => {
+      const ta = parseInt(a['On2Cook Cooking Time'], 10) || 999;
+      const tb = parseInt(b['On2Cook Cooking Time'], 10) || 999;
+
+      if (filterState.sortBy === 'time-asc') {
+        return ta - tb;
+      } else {
+        return tb - ta;
+      }
+    });
+  }
+
+  recipeCountEl.textContent = filterState.onlyNew
+    ? `${filtered.length} new recipes`
+    : `${filtered.length} recipes found`;
+
+  if (backToAllBtn) {
+    backToAllBtn.style.display = filterState.onlyNew ? 'inline-flex' : 'none';
+  }
+
   recipesGrid.innerHTML = '';
 
   if (filtered.length === 0) {
@@ -558,9 +760,11 @@ function showRecipes() {
     card.className = 'recipe-card';
 
     const cleanTime = r['Normal Cooking Time']?.replace(/[,;!?'"]/g, '') || '';
+    const isNew = filterState.onlyNew && newRecipeNames.has(r['Recipe Name']);
 
     card.innerHTML = `
   <div class="recipe-card-image-wrap">
+    ${isNew ? '<span class="recipe-new-tag">NEW</span>' : ''}
     <img src="${r.Image}" alt="${r['Recipe Name']}" class="recipe-image" data-zip-url="${r.ZipURL || r.PopupImage || r.Image}" />
     <div class="recipe-time-pill">${r['Total Output']}</div>
     <!-- Download button - HIDDEN by default -->
@@ -624,6 +828,7 @@ function showRecipes() {
 cookingTime.addEventListener('input', () => {
   filterState.maxCookingTime = parseInt(cookingTime.value, 10);
   cookingTimeLabel.textContent = `${cookingTime.value} min`;
+  filterState.onlyNew = false;
   writeFiltersToURL();
   showRecipes();
 });
@@ -637,6 +842,7 @@ clearBtn.addEventListener('click', () => {
   filterState.accessoryVal = 'All';
   filterState.maxCookingTime = 35;
   filterState.sortBy = 'time-asc';
+  filterState.onlyNew = false;
   cookingTime.value = 35;
   cookingTimeLabel.textContent = '35 min';
 
@@ -701,6 +907,7 @@ function applyMobileFilters() {
   if (flavorMobile) filterState.flavorVal = flavorMobile.value;
   if (consistencyMobile) filterState.consistencyVal = consistencyMobile.value;
   cookingTimeLabelMobile.textContent = cookingTimeMobile.value;
+  filterState.onlyNew = false;
   writeFiltersToURL();
   showRecipes();
 }
@@ -752,6 +959,7 @@ clearBtnMobile.addEventListener('click', () => {
   cookingTimeMobile.value = 35;
   cookingTimeLabelMobile.textContent = '35';
   filterState.sortBy = 'time-asc';
+  filterState.onlyNew = false;
   updateMobileSortButtons();
   writeFiltersToURL();
   applyMobileFilters();

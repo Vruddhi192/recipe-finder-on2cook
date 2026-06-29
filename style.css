@@ -220,9 +220,7 @@ img,
   width: 38px;
   height: 38px;
   border: none;
-  /* border-radius: 6px; */
   background: url("chef.png") center/cover no-repeat;
-  /* box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.08); */
 }
 
 
@@ -277,7 +275,7 @@ img,
   background: #ef4444;
 }
 .egg-dot {
-  background: #f5c542; /* yellowish for egg */
+  background: #f5c542;
 }
 .diet-chip:hover {
   background: rgba(226, 239, 255, 0.98);
@@ -340,7 +338,6 @@ input[type="range"]::-moz-range-thumb {
   align-items: start;
 }
 
-/* Pill itself can grow in height */
 .radio-pill {
   display: inline-flex;
   align-items: center;
@@ -352,13 +349,10 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   font-size: 0.8rem;
   text-align: center;
-
-  /* let content wrap and pill auto‑height */
   flex-wrap: wrap;
   white-space: normal;
   overflow: visible;
   text-overflow: unset;
-
   color: #0f172a;
   transition:
     background 0.18s ease,
@@ -371,10 +365,9 @@ input[type="range"]::-moz-range-thumb {
   display: none;
 }
 
-/* IMPORTANT: allow text to wrap */
 .radio-pill span {
   display: block;
-  white-space: normal;  /* remove nowrap */
+  white-space: normal;
   line-height: 1.2;
 }
 
@@ -502,13 +495,11 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 3px;
 }
 
-/* Veg square + dot */
 .diet-icon.veg {
   border: 2.5px solid green;
   background-color: transparent;
 }
 
-/* Non‑veg square + dot */
 .diet-icon.non-veg {
   border: 2.5px solid red;
   background-color: transparent;
@@ -517,7 +508,6 @@ input[type="range"]::-moz-range-thumb {
   border: 2.5px solid #FFD700;
   background-color: transparent;
 }
-/* COMMON center dot */
 .diet-icon::before {
   content: "";
   position: absolute;
@@ -526,10 +516,9 @@ input[type="range"]::-moz-range-thumb {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  transform: translate(-50%, -50%);  /* perfectly center inside square */
+  transform: translate(-50%, -50%);
 }
 
-/* Color the dot per type */
 .diet-icon.veg::before {
   background-color: green;
 }
@@ -666,12 +655,12 @@ input[type="range"]::-moz-range-thumb {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  animation: filterBounce 1.8s ease-in-out infinite; /* Continuous gentle bounce */
-  transition: all 0.2s ease; /* Smooth hover interactions */
+  animation: filterBounce 1.8s ease-in-out infinite;
+  transition: all 0.2s ease;
 }
 
 .mobile-filter-btn:hover {
-  animation-play-state: paused; /* Pause bounce on hover */
+  animation-play-state: paused;
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
 }
@@ -864,9 +853,7 @@ input[type="range"]::-moz-range-thumb {
   border-color: transparent;
   box-shadow: 0 6px 16px rgba(237, 28, 36, 0.4);
 }
-/* Add to your existing CSS - mobile sort buttons need slight adjustment */
 @media (max-width: 800px) {
-  /* Mobile sort buttons - stack vertically for better space */
   .mobile-filter-content .sort-controls {
     flex-direction: column;
     gap: 8px;
@@ -878,7 +865,6 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 12px;
   }
   
-  /* Dark theme adjustments for mobile modal */
   .mobile-filter-content .sort-btn {
     background: rgba(248, 250, 252, 0.95);
     border-color: rgba(148, 163, 184, 0.6);
@@ -1076,13 +1062,12 @@ input[type="range"]::-moz-range-thumb {
 
 #clearBtnMobile {
   flex: 1;
-  margin: 0; /* Reset any existing margin */
+  margin: 0;
 }
-/* Mobile sort controls - side by side */
 .sort-controls-mobile {
   display: flex;
   gap: 8px;
-  flex-direction: row; /* Force side-by-side */
+  flex-direction: row;
 }
 
 .mobile-filter-content .sort-controls-mobile .sort-btn {
@@ -1090,13 +1075,12 @@ input[type="range"]::-moz-range-thumb {
   padding: 12px 16px;
   font-size: 0.88rem;
   border-radius: 12px;
-  min-height: 48px; /* Touch-friendly */
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Override the existing mobile sort stacking */
 @media (max-width: 800px) {
   .mobile-filter-content .sort-controls {
     flex-direction: column !important;
@@ -1133,7 +1117,6 @@ input[type="range"]::-moz-range-thumb {
       0 0 0 1px rgba(255, 255, 255, 0.7);
   }
 
-  /* Enhanced header */
   .mobile-filter-content .filter-header {
     color: #64748b;
     font-size: 1rem;
@@ -1151,7 +1134,6 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
   }
 
-  /* Enhanced labels */
   .mobile-filter-content .filter-group label {
     color: #475569;
     font-size: 0.85rem;
@@ -1160,7 +1142,6 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 10px;
   }
 
-  /* Search input - glassmorphism */
   #searchBarMobile {
     width: 100%;
     padding: 14px 16px;
@@ -1185,7 +1166,6 @@ input[type="range"]::-moz-range-thumb {
     color: #94a3b8;
   }
 
-  /* PERFECTED Sort buttons - side by side */
   .sort-controls-mobile {
     display: flex;
     gap: 10px;
@@ -1224,7 +1204,6 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 8px 20px rgba(237, 28, 36, 0.15);
   }
 
-  /* Select dropdowns - glassmorphism */
   .mobile-filter-content select {
     width: 100%;
     padding: 14px 16px;
@@ -1251,7 +1230,6 @@ input[type="range"]::-moz-range-thumb {
     background: rgba(255, 255, 255, 0.95);
   }
 
-  /* Enhanced slider */
   .mobile-filter-content .time-row {
     background: rgba(255, 255, 255, 0.7);
     padding: 12px 16px;
@@ -1273,7 +1251,6 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 6px 16px rgba(237, 28, 36, 0.3);
   }
 
-  /* PERFECTED Action buttons */
   .filter-actions {
     margin-top: 24px;
     padding-top: 20px;
@@ -1324,7 +1301,6 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.4);
   }
 
-  /* Close button */
   .close-filter-btn {
     position: absolute;
     top: 16px;
@@ -1347,7 +1323,6 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 8px 24px rgba(239, 68, 68, 0.4);
   }
 
-  /* Scrollbar */
   .mobile-filter-content::-webkit-scrollbar {
     width: 4px;
   }
@@ -1360,7 +1335,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 2px;
   }
 }
-/* ✅ FIX SEARCH BAR OVERFLOW */
+/* FIX SEARCH BAR OVERFLOW */
 .mobile-filter-content #searchBarMobile {
   box-sizing: border-box !important;
   max-width: 100%;
@@ -1369,7 +1344,6 @@ input[type="range"]::-moz-range-thumb {
   padding: 14px 16px !important;
 }
 
-/* Ensure container doesn't clip */
 .mobile-filter-content .filter-group {
   width: 100%;
   box-sizing: border-box;
@@ -1377,14 +1351,12 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 16px;
 }
 /* ========== DOWNLOAD BUTTON STYLES ========== */
-/* ========== DOWNLOAD BUTTON - HOVER ONLY ========== */
 .recipe-card-image-wrap {
   position: relative;
   overflow: hidden;
 }
 
 .download-btn {
-  /* HIDDEN BY DEFAULT */
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -1430,7 +1402,6 @@ input[type="range"]::-moz-range-thumb {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
-/* SHOW ON HOVER */
 .recipe-card:hover .download-btn,
 .recipe-image:hover + .download-btn {
   opacity: 1 !important;
@@ -1438,7 +1409,6 @@ input[type="range"]::-moz-range-thumb {
   transform: scale(1) translateY(0);
 }
 
-/* Smooth entrance animation */
 .recipe-card:hover .download-btn {
   animation: downloadBtnSlideIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1454,7 +1424,206 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* Ensure button stays above time pill */
 .recipe-time-pill {
   z-index: 10;
+}
+
+/* ========== RECIPES COLUMN ==========
+   Wraps the banner + recipe count + grid together so the banner sits
+   beside the filter sidebar, never spanning above/over it. */
+.recipes-column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== NEW RECIPES BANNER (horizontal strip style) ========== */
+.new-recipes-banner {
+  position: relative;
+  width: 100%;
+  margin: 0 0 22px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #fef9f4 100%);
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 24px;
+  min-height: 120px;
+}
+
+.new-recipes-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(15, 23, 42, 0.08);
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.1s ease;
+  z-index: 5;
+}
+.new-recipes-close:hover {
+  background: #ed1c24;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.nrb-left {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.nrb-headline {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  text-transform: uppercase;
+}
+.nrb-headline .accent {
+  color: #ed1c24;
+}
+
+.nrb-sub {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: #64748b;
+  max-width: 320px;
+}
+
+.nrb-cta {
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #ed1c24, #fb923c);
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(237, 28, 36, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.nrb-cta:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(237, 28, 36, 0.5);
+}
+.nrb-cta-arrow { transition: transform 0.18s ease; }
+.nrb-cta:hover .nrb-cta-arrow { transform: translateX(3px); }
+
+/* Red chevron arrow strip */
+.nrb-chevrons {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  opacity: 0.9;
+}
+.nrb-chevrons span {
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 16px solid #ed1c24;
+}
+.nrb-chevrons span:nth-child(2) { opacity: 0.7; }
+.nrb-chevrons span:nth-child(3) { opacity: 0.45; }
+
+/* Right-side cascading photo stack (random images) */
+.nrb-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+.nrb-right img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.25);
+  margin-left: -16px;
+  position: relative;
+  background: #e5e7eb; /* shows while image loads */
+}
+.nrb-right img:first-child { margin-left: 0; }
+.nrb-right img:nth-child(1) { z-index: 3; transform: rotate(-3deg); }
+.nrb-right img:nth-child(2) { z-index: 2; transform: translateY(6px) rotate(2deg); }
+.nrb-right img:nth-child(3) { z-index: 1; transform: translateY(-4px) rotate(-2deg); }
+
+@media (max-width: 760px) {
+  .new-recipes-banner {
+    flex-wrap: wrap;
+    padding: 16px 18px;
+  }
+  .nrb-chevrons { display: none; }
+  .nrb-right { width: 100%; justify-content: flex-end; margin-top: 6px; }
+  .nrb-right img { width: 68px; height: 68px; }
+}
+
+/* ========== RECIPE COUNT ROW + BACK TO ALL RECIPES ========== */
+.recipe-count-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 1rem 0;
+  flex-wrap: wrap;
+}
+.recipe-count-row .recipe-count-bar {
+  margin: 0;
+}
+.back-to-all-btn {
+  border: 1px solid rgba(237, 28, 36, 0.35);
+  background: rgba(237, 28, 36, 0.08);
+  color: #ed1c24;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.back-to-all-btn:hover {
+  background: #ed1c24;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(237, 28, 36, 0.35);
+}
+
+/* "NEW" tag shown on cards while viewing the Explore New Recipes grid */
+.recipe-new-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 12;
+  background: linear-gradient(135deg, #ed1c24, #fb923c);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(237, 28, 36, 0.45);
 }

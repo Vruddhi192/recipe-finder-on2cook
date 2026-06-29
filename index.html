@@ -46,10 +46,6 @@
   </button>
 </div>
 
-
-  <!-- Recipe count -->
-  <span id="recipeCount" class="recipe-count-bar"></span>
-
   <!-- MAIN CONTENT -->
   <div class="main-content">
 
@@ -131,9 +127,48 @@
       <button id="clearBtn">Clear Filters</button>
     </aside>
 
-    <!-- RECIPES GRID -->
-    <section id="recipesGrid"></section>
+    <!-- RECIPES COLUMN: banner + count + grid, sits beside the filter sidebar
+         (never spans above/over it) -->
+    <div class="recipes-column">
+
+      <!-- New Recipes Banner (count auto-populated from the N most recently
+           modified recipes; the 3 photos on the right are random recipe
+           photos, unrelated to which recipes are flagged "new"). Always
+           visible on load — dismissing only hides it for the current page
+           view, it returns on the next visit/reload. -->
+      <div id="newRecipesBanner" class="new-recipes-banner" style="display:none;">
+        <button id="newRecipesCloseBtn" class="new-recipes-close" aria-label="Dismiss">&times;</button>
+
+        <div class="nrb-left">
+          <h3 class="nrb-headline">
+            <span class="accent" id="newRecipesCount">20</span> NEW RECIPES ADDED!
+          </h3>
+          <p class="nrb-sub" id="newRecipesSub">Transform simple ingredients into extraordinary meals.</p>
+          <button id="exploreNewRecipesBtn" class="nrb-cta">
+            Explore New Recipes <span class="nrb-cta-arrow">&rarr;</span>
+          </button>
+        </div>
+
+        <div class="nrb-chevrons" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="nrb-right" id="newRecipesImages"></div>
+      </div>
+
+      <!-- Recipe count / back-to-all-recipes control -->
+      <div class="recipe-count-row">
+        <span id="recipeCount" class="recipe-count-bar"></span>
+        <button id="backToAllBtn" class="back-to-all-btn" style="display:none;">
+          &larr; Back to All Recipes
+        </button>
+      </div>
+
+      <!-- RECIPES GRID -->
+      <section id="recipesGrid"></section>
+    </div>
   </div>
+
 
   <!-- Mobile Filter Button -->
   <button id="mobileFilterBtn" class="mobile-filter-btn" aria-label="Show filters">
@@ -152,18 +187,6 @@
           <input type="text" id="searchBarMobile" placeholder="Search by recipe name..." />
         </div>
 
-        <!-- Add this right after the cookingTimeMobile filter-group in #mobileFilters -->
-        <!-- <div class="filter-group">
-          <label for="sortMobile">Sort By</label>
-          <div class="sort-controls">
-            <button id="sortTimeAscMobile" class="sort-btn active" data-sort="time-asc">
-              ⏱ Fastest
-            </button>
-            <button id="sortTimeDescMobile" class="sort-btn" data-sort="time-desc">
-              ⏱ Slowest
-            </button>
-          </div>
-        </div> -->
         <div class="filter-group">
           <label for="sortMobile">Sort By</label>
           <div class="sort-controls-mobile">
@@ -218,7 +241,6 @@
           </select>
         </div>
 
-        <!-- <button id="clearBtnMobile">Clear Filters</button> -->
         <div class="filter-group filter-group--mini">
           <label for="flavorMobile">Flavor Profile</label>
           <select id="flavorMobile">
