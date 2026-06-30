@@ -563,7 +563,7 @@ async function downloadSingleRecipeZip(recipe) {
   const popupPath = recipe.PopupImage.split('?')[0];
   const fileNameWithExt = popupPath.split('/').pop();
   let baseName = fileNameWithExt.replace(/\.pdf$/i, '');
-  const zipUrl = `/updated_zips/${baseName}.zip`;
+  const zipUrl = `/zips/${baseName}.zip`;
   console.log('Trying:', zipUrl);
 
   const headResponse = await fetch(zipUrl, { method: 'HEAD' });
