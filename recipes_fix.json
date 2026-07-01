@@ -8023,7 +8023,8 @@
     "Total Output": "2000G",
     "On2Cook Cooking Time": "11",
     "Normal Cooking Time": "145 mins",
-    "Modified": "2026-06-26T08:45:14Z"
+    "Modified": "2026-06-26T08:45:14Z",
+    "hidden": true
   },
   {
     "Recipe Name": "MOONG DAL SOAKED",
@@ -11630,7 +11631,8 @@
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-26T06:53:21Z"
+    "Modified": "2026-06-26T06:53:21Z",
+    "hidden": true
   },
   {
     "Recipe Name": "SUJI HALWA 3000G",
@@ -11652,7 +11654,8 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-06-10T11:58:51Z",
+    "hidden": true
   },
   {
     "Recipe Name": "SUJI HALWA 300G",
