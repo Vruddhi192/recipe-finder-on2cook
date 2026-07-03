@@ -1,0 +1,91 @@
+{
+  "Ingredients": [
+    {
+      "app_audio": "Raw Sliced Onion  500 gm",
+      "audio": "Raw",
+      "audioI": "Sliced Onion ",
+      "audioP": "Raw",
+      "audioQ": "500",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Sliced Onion ",
+      "weight": "500 gm"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "300",
+      "Induction_power": "100",
+      "Magnetron_on_time": "300",
+      "Magnetron_power": "100",
+      "Text": "Sliced Onion ",
+      "Weight": "500 gm",
+      "app_audio": " Sliced Onion ",
+      "audioI": "Sliced Onion ",
+      "audioP": "",
+      "audioQ": "500",
+      "audioU": "5Minute",
+      "durationInSec": 300,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "3",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    },
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "180",
+      "Induction_power": "60",
+      "Magnetron_on_time": "180",
+      "Magnetron_power": "100",
+      "Text": "Sliced Onion ",
+      "Weight": "500 gm",
+      "app_audio": " Sliced Onion ",
+      "audioI": "Sliced Onion ",
+      "audioP": "",
+      "audioQ": "500",
+      "audioU": "3Minute",
+      "durationInSec": 180,
+      "id": 2,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "true",
+      "stirrer_on": "3",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "CARAMELIZED ONION"
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "CARAMELIZED ONION (WITH PTFE PAN BOWL)\nNORMAL COOKING TIME 20 MINUTES \nFINAL OUTPUT 300G\n\nACCESSORIES\nPan Non-Coated (SS)\nPTFE PAN BOWL\nSILICONE STIRRER ",
+  "difficulty": "Easy",
+  "id": 787,
+  "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped744571406002390434.png",
+  "isSelected": false,
+  "name": [
+    "CARAMELIZED ONION"
+  ],
+  "subCategories": "",
+  "tags": ""
+}
