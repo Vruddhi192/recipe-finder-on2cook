@@ -1808,6 +1808,26 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
+    "Recipe Name": "CARAMELIZED ONION (WITH PTFE PAN BOWL)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "BASE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 8,
+    "Image": "../test_images/CARAMELIZED ONION.jpg",
+    "PopupImage": "../test_popup_images/CARAMELIZED ONION.pdf",
+    "Ingredients": [
+      "Raw Sliced Onion  500 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "300G",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-07-03T11:18:18Z"
+  },
+  {
     "Recipe Name": "CARROT CAKE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "BAKING",
@@ -2820,12 +2840,12 @@
   },
   {
     "Recipe Name": "CHICKEN CURRY",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 8,
     "Image": "../test_images/CHICKEN CURRY.jpg",
     "PopupImage": "../test_popup_images/CHICKEN CURRY.pdf",
@@ -2843,10 +2863,33 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
-    "Recipe Name": "CHICKEN CURRY",
+    "Recipe Name": "CHICKEN CURRY 1K",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 8,
+    "Image": "../test_images/CHICKEN CURRY 1K.jpg",
+    "PopupImage": "../test_popup_images/CHICKEN CURRY 1K.pdf",
+    "Ingredients": [
+      "Mix Oil & Vegetables  330 gm",
+      "Marinated  Marinated Chicken  690 gm",
+      "Auto Water (Auto) 170 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1KG",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "40 mins",
+    "Modified": "2026-07-03T12:28:11Z"
+  },
+  {
+    "Recipe Name": "CHICKEN CURRY 3000G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -2864,7 +2907,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "55 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "CHICKEN CURRY VIETNAMESE",
@@ -4651,7 +4694,7 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-07-01T08:51:00Z"
+    "Modified": "2026-07-02T13:22:51Z"
   },
   {
     "Recipe Name": "DHABA MUTTON",
@@ -8518,8 +8561,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MYSORE PAK 1KG",
@@ -8695,7 +8738,7 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-07-06T12:51:22Z"
   },
   {
     "Recipe Name": "PAAL PAYASAM",
@@ -10665,7 +10708,7 @@
     "Total Output": "1200 G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-07-06T07:08:11Z"
   },
   {
     "Recipe Name": "SAUTE CARROT (ANTUNE)",
@@ -11362,7 +11405,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-07-06T07:08:11Z"
   },
   {
     "Recipe Name": "STEAM RICE 500G",
@@ -11652,8 +11695,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "SUJI HALWA 2K",
@@ -12297,11 +12340,11 @@
   {
     "Recipe Name": "TOMATO GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 18,
     "Image": "../test_images/TOMATO GRAVY.jpg",
     "PopupImage": "../test_popup_images/TOMATO GRAVY.pdf",
@@ -12317,7 +12360,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "TOMATO GRAVY 1KG",
@@ -12339,6 +12383,31 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-06-12T12:16:40Z"
+  },
+  {
+    "Recipe Name": "TOMATO GRAVY 3K",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 18,
+    "Image": "../test_images/TOMATO GRAVY 3K.jpg",
+    "PopupImage": "../test_popup_images/TOMATO GRAVY 3K.pdf",
+    "Ingredients": [
+      "Take Oil 500 gm",
+      "Take Whole Spices  35 number",
+      "Masala  Indian Masala 130 gm",
+      "Paste Gravy Paste 1600 gm",
+      "Paste Nuts Paste  650 gm",
+      "Powder Garnish 10 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "3K",
+    "On2Cook Cooking Time": "18",
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-07-06T12:51:22Z"
   },
   {
     "Recipe Name": "VIETNAMESE TOMATO NOODLE SOUP",
@@ -12599,6 +12668,26 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "",
     "Modified": "2026-06-22T13:19:36Z"
+  },
+  {
+    "Recipe Name": "UTTAPAM",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SHALLOW-FRYING",
+    "Cuisine": "SOUTH INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 3,
+    "Image": "../test_images/UTTAPAM.jpg",
+    "PopupImage": "../test_popup_images/UTTAPAM.pdf",
+    "Ingredients": [
+      "Batter  Fresh Uttapam Batter 120 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick)",
+    "Total Output": "110 G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-07-03T11:28:59Z"
   },
   {
     "Recipe Name": "VADA FRY",
