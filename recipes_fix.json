@@ -1197,7 +1197,7 @@
     "Ingredients": [
       "Take Oil & Tadka 250 gm",
       "Mix Gravy Mix 1330 gm",
-      "Auto Water (Auto) 300 ml"
+      "Auto Water (Auto) 350 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1500G",
@@ -4664,13 +4664,13 @@
     "Image": "../test_images/DAL MAKHANI 1K.jpg",
     "PopupImage": "../test_popup_images/DAL MAKHANI 1K.pdf",
     "Ingredients": [
-      "Mix  Dal Makhani Mix 905 gm",
-      "Auto  Water (Auto) 400 ml"
+      "Mix  Dal Makhani Mix 907 gm",
+      "Auto  Boiled Dal Stock 400 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1KG",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": "25 mins",
+    "Normal Cooking Time": "45 mins",
     "Modified": "2026-07-09T13:49:08Z"
   },
   {
