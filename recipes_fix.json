@@ -713,6 +713,28 @@
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi - Gravy",
     "Cooking Time": 14,
+    "Image": "../test_images/ARRABBIATA 1KG.jpg",
+    "PopupImage": "../test_popup_images/ARRABBIATA 1KG.pdf",
+    "Ingredients": [
+      "Chopped  Oil & Vegetables  200 gm",
+      "Chopped  Chopped Tomato 1500g, Kashmiri Chilli Powder 5g, Salt 12g 1517 gm",
+      "Dried Garnish  12 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1KG",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-06-10T11:58:51Z"
+  },
+  {
+    "Recipe Name": "ARRABBIATA SAUCE",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
+    "Cooking Time": 14,
     "Image": "../test_images/ARRABBIATA SAUCE.jpg",
     "PopupImage": "../test_popup_images/ARRABBIATA SAUCE.pdf",
     "Ingredients": [
@@ -1162,13 +1184,35 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "BLACK BEANS",
+    "Recipe Name": "BHUNA GRAVY 1500",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 14,
+    "Image": "../test_images/BHUNA GRAVY 1500.jpg",
+    "PopupImage": "../test_popup_images/BHUNA GRAVY 1500.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka 250 gm",
+      "Mix Gravy Mix 1330 gm",
+      "Auto Water (Auto) 300 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1500G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-09T13:40:57Z"
+  },
+  {
+    "Recipe Name": "BLACK BEANS (FROM SOAKED BLACK TURTLE BEAN)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 34,
     "Image": "../test_images/BLACK BEANS.jpg",
     "PopupImage": "../test_popup_images/BLACK BEANS.pdf",
@@ -1181,7 +1225,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "250 G",
     "On2Cook Cooking Time": "34",
-    "Normal Cooking Time": "65 mins"
+    "Normal Cooking Time": "65 mins",
+    "Modified": "2026-06-12T13:04:21Z"
   },
   {
     "Recipe Name": "BOILED CHOLE",
@@ -1224,13 +1269,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "BOILED PASTA",
+    "Recipe Name": "BOILED PASTA (PENNE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 14,
     "Image": "../test_images/BOILED PASTA.jpg",
     "PopupImage": "../test_popup_images/BOILED PASTA.pdf",
@@ -1241,7 +1286,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "900G",
     "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": "50 mins"
+    "Normal Cooking Time": "50 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "BOMBAY KEEMA MASALA",
@@ -1354,13 +1400,13 @@
     "Modified": "2026-06-19T09:45:51Z"
   },
   {
-    "Recipe Name": "BROCCOLI  ANTUNES",
+    "Recipe Name": "SAUTE BROCCOLI (ANTUNE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "BREAKFAST",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 6,
     "Image": "../test_images/BROCCOLI  ANTUNES.jpg",
     "PopupImage": "../test_popup_images/BROCCOLI  ANTUNES.pdf",
@@ -1370,7 +1416,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-05T08:52:39Z"
   },
   {
     "Recipe Name": "BROCCOLI CHEESE",
@@ -1805,13 +1852,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "CARAMELIZED ONION",
+    "Recipe Name": "CARAMELIZED ONION (WITH PTFE PAN BOWL)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "BASE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 8,
     "Image": "../test_images/CARAMELIZED ONION.jpg",
     "PopupImage": "../test_popup_images/CARAMELIZED ONION.pdf",
@@ -1821,7 +1868,8 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "300G",
     "On2Cook Cooking Time": "8",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-07-03T11:18:18Z"
   },
   {
     "Recipe Name": "CARROT CAKE",
@@ -2317,13 +2365,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHI FRIED RICE",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Recipe Name": "CHI FRIED RICE (CHICKEN FRIED RICE)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 4,
     "Image": "../test_images/CHI FRIED RICE.jpg",
     "PopupImage": "../test_popup_images/CHI FRIED RICE.pdf",
@@ -2338,7 +2386,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Rice Stirrer",
     "Total Output": "550 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-22T08:01:38Z"
   },
   {
     "Recipe Name": "CHICKEN GHEE ROAST",
@@ -2390,13 +2439,13 @@
     "Modified": "2026-06-23T11:56:52Z"
   },
   {
-    "Recipe Name": "CHI LOLLIPOP FRY",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "CHICKEN LOLLIPOP",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 2,
     "Image": "../test_images/CHI LOLLIPOP FRY.jpg",
     "PopupImage": "../test_popup_images/CHI LOLLIPOP FRY.pdf",
@@ -2407,7 +2456,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
     "Total Output": "200",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins"
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN DRY",
@@ -2574,13 +2624,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHI SCHZ RICE",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Recipe Name": "CHI SCHZ RICE (CHICKEN SCHEZWAN FRIED RICE)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 4,
     "Image": "../test_images/CHI SCHZ RICE.jpg",
     "PopupImage": "../test_popup_images/CHI SCHZ RICE.pdf",
@@ -2595,7 +2645,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Rice Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "7 mins"
+    "Normal Cooking Time": "7 mins",
+    "Modified": "2026-06-22T08:20:46Z"
   },
   {
     "Recipe Name": "CHICKEN STIR FRY NOODLES",
@@ -2783,13 +2834,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHICKEN CHILLI",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "CHICKEN CHILLI (CHICKEN CHILLI DRY)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 2,
     "Image": "../test_images/CHICKEN CHILLI.jpg",
     "PopupImage": "../test_popup_images/CHICKEN CHILLI.pdf",
@@ -2801,7 +2852,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "12 mins"
+    "Normal Cooking Time": "12 mins",
+    "Modified": "2026-06-22T12:57:17Z"
   },
   {
     "Recipe Name": "CHICKEN CHILLI GRAVY",
@@ -2855,8 +2907,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN CURRY 1K",
@@ -2881,13 +2933,13 @@
     "Modified": "2026-07-03T12:28:11Z"
   },
   {
-    "Recipe Name": "CHICKEN CURRY 3K",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Recipe Name": "CHICKEN CURRY 3000G",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 16,
     "Image": "../test_images/CHICKEN CURRY 3K.jpg",
     "PopupImage": "../test_popup_images/CHICKEN CURRY 3K.pdf",
@@ -2898,7 +2950,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "3000G",
     "On2Cook Cooking Time": "16",
-    "Normal Cooking Time": "55 mins"
+    "Normal Cooking Time": "55 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "CHICKEN CURRY VIETNAMESE",
@@ -3507,13 +3560,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHICKPEA BOILED",
+    "Recipe Name": "PINDI CHOLE",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 14,
     "Image": "../test_images/CHICKPEA BOILED.jpg",
     "PopupImage": "../test_popup_images/CHICKPEA BOILED.pdf",
@@ -3523,7 +3576,8 @@
     "Accessories": "Pressure Cooker",
     "Total Output": "BOILED CHICKPEA 700 G",
     "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "CHILI POTATO DRY",
@@ -3666,13 +3720,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHINESE GOBI FRY",
+    "Recipe Name": "GOBI MANCHURIAN DRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/CHINESE GOBI FRY.jpg",
     "PopupImage": "../test_popup_images/CHINESE GOBI FRY.pdf",
@@ -3683,7 +3737,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "180 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "10 mins"
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "CHINGRI MALAI",
@@ -4288,13 +4343,13 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
-    "Recipe Name": "CRISPY CHI FRY",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "CRISPY CHICKEN",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "../test_images/CRISPY CHI FRY.jpg",
     "PopupImage": "../test_popup_images/CRISPY CHI FRY.pdf",
@@ -4304,7 +4359,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "25 mins"
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "CRISPY CHICKEN",
@@ -4328,13 +4384,13 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "CRISPY VEG FRY",
+    "Recipe Name": "CRISPY VEGETABLE",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/CRISPY VEG FRY.jpg",
     "PopupImage": "../test_popup_images/CRISPY VEG FRY.pdf",
@@ -4344,7 +4400,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "25 mins"
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "CRISPY VEGETABLE",
@@ -4529,6 +4586,28 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
+    "Recipe Name": "DAL FRY 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 6,
+    "Image": "../test_images/DAL FRY 1KG.jpg",
+    "PopupImage": "../test_popup_images/DAL FRY 1KG.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka  273 gm",
+      "Take Boiled Dal Mix 548 gm",
+      "Auto Water (Auto) 300 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1KG",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-09T13:52:37Z"
+  },
+  {
     "Recipe Name": "DAL FRY 3000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -4574,13 +4653,34 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "DAL MAKHANI 1KG",
+    "Recipe Name": "DAL MAKHANI 1K",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 10,
+    "Image": "../test_images/DAL MAKHANI 1K.jpg",
+    "PopupImage": "../test_popup_images/DAL MAKHANI 1K.pdf",
+    "Ingredients": [
+      "Mix  Dal Makhani Mix 905 gm",
+      "Auto  Water (Auto) 400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1KG",
+    "On2Cook Cooking Time": "10",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-07-09T13:49:08Z"
+  },
+  {
+    "Recipe Name": "DAL MAKHANI 1KG (FROM SOAKED URAD DAL)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 32,
     "Image": "../test_images/DAL MAKHANI 1KG.jpg",
     "PopupImage": "../test_popup_images/DAL MAKHANI 1KG.pdf",
@@ -4592,7 +4692,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "32",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-17T10:53:30Z"
   },
   {
     "Recipe Name": "DAL MAKHANI BULK",
@@ -4661,13 +4762,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "DEHY DELIGHT",
+    "Recipe Name": "DEHY DELIGHT (DEHYDRATED SAMBHAR PREMIX)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "SOUTH INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 10,
     "Image": "../test_images/DEHY DELIGHT.jpg",
     "PopupImage": "../test_popup_images/DEHY DELIGHT.pdf",
@@ -4679,7 +4780,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1200G",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": "25 mins"
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-07-02T13:22:51Z"
   },
   {
     "Recipe Name": "DHABA MUTTON",
@@ -5288,13 +5390,13 @@
     "Modified": "2026-06-05T08:49:47Z"
   },
   {
-    "Recipe Name": "FRIED KOFTA",
+    "Recipe Name": "MALAI KOFTA",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED KOFTA.jpg",
     "PopupImage": "../test_popup_images/FRIED KOFTA.pdf",
@@ -5305,7 +5407,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "16 PCS",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "FRIED MOMO",
@@ -5329,13 +5432,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "FRIED MUSHROOM",
+    "Recipe Name": "MUSHROOM CHILLI DRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED MUSHROOM.jpg",
     "PopupImage": "../test_popup_images/FRIED MUSHROOM.pdf",
@@ -5346,7 +5449,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins"
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "FRIED PANEER STRIPS",
@@ -5433,13 +5537,13 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "FRY PANEER",
+    "Recipe Name": "PANEER CHILI DRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 2,
     "Image": "../test_images/FRY PANEER.jpg",
     "PopupImage": "../test_popup_images/FRY PANEER.pdf",
@@ -5450,7 +5554,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins"
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "FRY VEG BIRYANI",
@@ -5805,13 +5910,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "GRILL CHICKEN",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Recipe Name": "GRILL CHICKEN (NEW GRILL PAN)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "GRILLING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 5,
     "Image": "../test_images/GRILL CHICKEN.jpg",
     "PopupImage": "../test_popup_images/GRILL CHICKEN.pdf",
@@ -5822,7 +5927,8 @@
     "Accessories": "Grill Pan",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "5",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "GRILL SANDWICH (NEW GRILL PAN)",
@@ -6410,6 +6516,29 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
+    "Recipe Name": "KADAI GRAVY 1200",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 12,
+    "Image": "../test_images/KADAI GRAVY 1200.jpg",
+    "PopupImage": "../test_popup_images/KADAI GRAVY 1200.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka 230 gm",
+      "Mix Gravy Mix 1195 gm",
+      "Auto Water (Auto) 350 ml",
+      "Diced Kadhai Vegetables  200 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1200G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-09T13:42:37Z"
+  },
+  {
     "Recipe Name": "KADAI PANEER 600",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -6541,13 +6670,13 @@
     "Modified": "2026-06-23T12:44:49Z"
   },
   {
-    "Recipe Name": "KALAKAND 250 G",
+    "Recipe Name": "KALAKAND 250G",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
     "Cooking Time": 4,
     "Image": "../test_images/KALAKAND 250 G.jpg",
     "PopupImage": "../test_popup_images/KALAKAND 250 G.pdf",
@@ -6558,7 +6687,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "250 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "25 mins"
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-06-18T09:58:48Z"
   },
   {
     "Recipe Name": "KASHMIRI PULAO",
@@ -6880,13 +7010,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "KOTHMIR VADI FRY",
+    "Recipe Name": "KOTHMIR VADI",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/KOTHMIR VADI FRY.jpg",
     "PopupImage": "../test_popup_images/KOTHMIR VADI FRY.pdf",
@@ -6896,7 +7026,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "10NOS",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "15 mins"
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "KUNG PAO MUSHROOM",
@@ -6989,13 +7120,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "LCA TEA CAKE",
+    "Recipe Name": "LCA TEA CAKE (LEMON CRANBERRY ALMOND CAKE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BAKING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
     "Cooking Time": 6,
     "Image": "../test_images/LCA TEA CAKE.jpg",
     "PopupImage": "../test_popup_images/LCA TEA CAKE.pdf",
@@ -7007,16 +7138,17 @@
     "Accessories": "Pan Non-Coated (Ss), Cake Kit",
     "Total Output": "600G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-18T11:24:50Z"
   },
   {
-    "Recipe Name": "LE CORIANDER SP",
+    "Recipe Name": "VEG LEMON CORIANDER SOUP",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "SOUP",
+    "Flavor Profile": "Sour",
+    "Consistency": "Liquid",
     "Cooking Time": 4,
     "Image": "../test_images/LE CORIANDER SP.jpg",
     "PopupImage": "../test_popup_images/LE CORIANDER SP.pdf",
@@ -7031,16 +7163,17 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "700 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins"
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "LEMON CORIANDER",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Recipe Name": "LEMON CORIANDER ( CHICKEN SOUP)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "SOUP",
+    "Flavor Profile": "Sour",
+    "Consistency": "Liquid",
     "Cooking Time": 3,
     "Image": "../test_images/LEMON CORIANDER.jpg",
     "PopupImage": "../test_popup_images/LEMON CORIANDER.pdf",
@@ -7053,7 +7186,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "LEMON RICE",
@@ -7123,13 +7257,13 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "MAC N CHA MAG",
+    "Recipe Name": "MAC AND CHEESE (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BOILING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 6,
     "Image": "../test_images/MAC N CHA MAG.jpg",
     "PopupImage": "../test_popup_images/MAC N CHA MAG.pdf",
@@ -7142,7 +7276,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "15 mins"
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-06-22T08:45:58Z"
   },
   {
     "Recipe Name": "MACRONI PASTA",
@@ -7166,13 +7301,13 @@
     "Modified": "2026-06-23T09:59:38Z"
   },
   {
-    "Recipe Name": "MAGGI PREMIX",
+    "Recipe Name": "MAGGI PREMIX (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 15,
     "Image": "../test_images/MAGGI PREMIX.jpg",
     "PopupImage": "../test_popup_images/MAGGI PREMIX.pdf",
@@ -7184,16 +7319,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-05T12:18:56Z"
   },
   {
-    "Recipe Name": "MAGGI RED SAUCE",
+    "Recipe Name": "MAGGI RED SAUCE (PENNE MAGGI RED SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 15,
     "Image": "../test_images/MAGGI RED SAUCE.jpg",
     "PopupImage": "../test_popup_images/MAGGI RED SAUCE.pdf",
@@ -7205,7 +7341,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-05T12:59:15Z"
   },
   {
     "Recipe Name": "MAKHANA KHEER",
@@ -7249,13 +7386,36 @@
     "Modified": "2026-06-24T12:30:12Z"
   },
   {
-    "Recipe Name": "MALABAR BIRYANI",
+    "Recipe Name": "MAKHANI GRAVY1K",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 13,
+    "Image": "../test_images/MAKHANI GRAVY1K.jpg",
+    "PopupImage": "../test_popup_images/MAKHANI GRAVY1K.pdf",
+    "Ingredients": [
+      "Take Oil 150 gm",
+      "Take Whole Spices 11 number",
+      "Mix Indian Masala 1110 gm",
+      "Auto Water (Auto) 350 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "13",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-09T13:39:13Z"
+  },
+  {
+    "Recipe Name": "MALABAR BIRYANI (CHICKEN JEERAKASAL RICE BIRYANI)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "SOUTH INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 17,
     "Image": "../test_images/MALABAR BIRYANI.jpg",
     "PopupImage": "../test_popup_images/MALABAR BIRYANI.pdf",
@@ -7269,7 +7429,8 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "17",
-    "Normal Cooking Time": "60 mins"
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "MALABAR PRAWN",
@@ -7470,13 +7631,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "MANCHURIAN FRY",
+    "Recipe Name": "VEG MANCHURIAN GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 2,
     "Image": "../test_images/MANCHURIAN FRY.jpg",
     "PopupImage": "../test_popup_images/MANCHURIAN FRY.pdf",
@@ -7487,7 +7648,8 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit, Frying Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "10 mins"
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "MANCHURIAN SAUCE",
@@ -8022,13 +8184,13 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "MOONG DAL HALWA",
+    "Recipe Name": "MOONG DAL HALWA (500G)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 5,
     "Image": "../test_images/MOONG DAL HALWA.jpg",
     "PopupImage": "../test_popup_images/MOONG DAL HALWA.pdf",
@@ -8039,16 +8201,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "5",
-    "Normal Cooking Time": "25 mins"
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-06-26T09:56:47Z"
   },
   {
-    "Recipe Name": "MOONG DAL HALWA1",
+    "Recipe Name": "MOONG DAL HALWA1 (1KG)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 6,
     "Image": "../test_images/MOONG DAL HALWA1.jpg",
     "PopupImage": "../test_popup_images/MOONG DAL HALWA1.pdf",
@@ -8059,16 +8222,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-26T07:39:08Z"
   },
   {
-    "Recipe Name": "MOONG DAL HALWA2",
+    "Recipe Name": "MOONG DAL HALWA 2000G",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 11,
     "Image": "../test_images/MOONG DAL HALWA2.jpg",
     "PopupImage": "../test_popup_images/MOONG DAL HALWA2.pdf",
@@ -8079,7 +8243,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2000G",
     "On2Cook Cooking Time": "11",
-    "Normal Cooking Time": "145 mins"
+    "Normal Cooking Time": "145 mins",
+    "Modified": "2026-06-26T08:45:14Z"
   },
   {
     "Recipe Name": "MOONG DAL SOAKED",
@@ -8529,8 +8694,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MYSORE PAK 1KG",
@@ -8664,13 +8829,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "ONION GRAVY 2KG",
+    "Recipe Name": "ONION GRAVY 2K",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 21,
     "Image": "../test_images/ONION GRAVY 2KG.jpg",
     "PopupImage": "../test_popup_images/ONION GRAVY 2KG.pdf",
@@ -8683,7 +8848,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2K",
     "On2Cook Cooking Time": "21",
-    "Normal Cooking Time": "50 mins"
+    "Normal Cooking Time": "50 mins",
+    "Modified": "2026-07-09T13:25:14Z"
   },
   {
     "Recipe Name": "ONION PAKODA",
@@ -8706,13 +8872,13 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "ONION TOMATO 3KG",
+    "Recipe Name": "ONION TOMATO 3KG (GRAVY)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 18,
     "Image": "../test_images/ONION TOMATO 3KG.jpg",
     "PopupImage": "../test_popup_images/ONION TOMATO 3KG.pdf",
@@ -8727,7 +8893,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "18",
-    "Normal Cooking Time": "60 mins"
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-07-06T12:51:22Z"
   },
   {
     "Recipe Name": "PAAL PAYASAM",
@@ -9154,13 +9321,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PANEER TIKKA OLD",
+    "Recipe Name": "PANEER TIKKA OLD (WITH SKEWERS & MP MAT OLD RECIPE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/PANEER TIKKA OLD.jpg",
     "PopupImage": "../test_popup_images/PANEER TIKKA OLD.pdf",
@@ -9171,7 +9338,8 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "15 mins"
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-06-19T10:50:48Z"
   },
   {
     "Recipe Name": "PAO BHAJI MASALA",
@@ -9266,13 +9434,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PEAS PULAO",
+    "Recipe Name": "PEAS PULAO (3KG)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 14,
     "Image": "../test_images/PEAS PULAO.jpg",
     "PopupImage": "../test_popup_images/PEAS PULAO.pdf",
@@ -9283,7 +9451,8 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-26T09:03:28Z"
   },
   {
     "Recipe Name": "PEAS PULAO 1000G",
@@ -9329,13 +9498,13 @@
     "Modified": "2026-06-26T09:03:28Z"
   },
   {
-    "Recipe Name": "PENNE AL DENTE",
+    "Recipe Name": "PENNE AL DENTE (PASTA ANTUNE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 12,
     "Image": "../test_images/PENNE AL DENTE.jpg",
     "PopupImage": "../test_popup_images/PENNE AL DENTE.pdf",
@@ -9346,16 +9515,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "12",
-    "Normal Cooking Time": "50 mins"
+    "Normal Cooking Time": "50 mins",
+    "Modified": "2026-06-05T08:49:47Z"
   },
   {
-    "Recipe Name": "PENNE ALF MAG",
+    "Recipe Name": "PENNE ALFREDO (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BOILING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 15,
     "Image": "../test_images/PENNE ALF MAG.jpg",
     "PopupImage": "../test_popup_images/PENNE ALF MAG.pdf",
@@ -9368,16 +9538,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PENNE ALFREDO",
+    "Recipe Name": "PENNE ALFREDO (ALFREDO SAUCE - WHITE SAUCE PASTA)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 15,
     "Image": "../test_images/PENNE ALFREDO.jpg",
     "PopupImage": "../test_popup_images/PENNE ALFREDO.pdf",
@@ -9389,16 +9560,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "800 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "35 mins"
+    "Normal Cooking Time": "35 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PENNE ARR MAG",
+    "Recipe Name": "PENNE ARRABIATA (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BOILING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 13,
     "Image": "../test_images/PENNE ARR MAG.jpg",
     "PopupImage": "../test_popup_images/PENNE ARR MAG.pdf",
@@ -9411,7 +9583,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "13",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "PENNE ARRABIATA (WITH FRESH ARRABIATA SAUCE)",
@@ -9436,13 +9609,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PENNE PASTA 300G",
+    "Recipe Name": "PENNE PASTA 300G (ALFREDO SAUCE - WHITE SAUCE PASTA)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 15,
     "Image": "../test_images/PENNE PASTA 300G.jpg",
     "PopupImage": "../test_popup_images/PENNE PASTA 300G.pdf",
@@ -9454,7 +9627,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "PENNE PESTO  (WITH FRESH BASIL PESTO)",
@@ -9525,13 +9699,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PENNE RED A",
+    "Recipe Name": "PENNE RED (RED SAUCE PASTA ANTUNE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 16,
     "Image": "../test_images/PENNE RED A.jpg",
     "PopupImage": "../test_popup_images/PENNE RED A.pdf",
@@ -9542,16 +9716,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "16",
-    "Normal Cooking Time": "50 mins"
+    "Normal Cooking Time": "50 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "PENNE RED SAUCE",
+    "Recipe Name": "PENNE RED SAUCE (WITH FRESH ARRABIATA SAUCE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 15,
     "Image": "../test_images/PENNE RED SAUCE.jpg",
     "PopupImage": "../test_popup_images/PENNE RED SAUCE.pdf",
@@ -9563,16 +9738,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "35 mins"
+    "Normal Cooking Time": "35 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PENNE WHITE",
+    "Recipe Name": "PENNE WHITE (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 15,
     "Image": "../test_images/PENNE WHITE.jpg",
     "PopupImage": "../test_popup_images/PENNE WHITE.pdf",
@@ -9584,7 +9760,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-05T12:27:38Z"
   },
   {
     "Recipe Name": "PEPPER CHICKEN",
@@ -9943,13 +10120,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PRASUMA CHI MOMO",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Recipe Name": "PRASUMA CHI MOMO (FROZEN CHICKEN MOMO 20PCS)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "STEAMING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 7,
     "Image": "../test_images/PRASUMA CHI MOMO.jpg",
     "PopupImage": "../test_popup_images/PRASUMA CHI MOMO.pdf",
@@ -9960,7 +10137,8 @@
     "Accessories": "Pan Non-Coated (Ss), Teflon Plate, Momo Kit",
     "Total Output": "20 PCS",
     "On2Cook Cooking Time": "7",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "PRAWN DIM SUM",
@@ -10323,13 +10501,13 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "RARA CHICKEN",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Recipe Name": "RARA CHICKEN (500G)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 8,
     "Image": "../test_images/RARA CHICKEN.jpg",
     "PopupImage": "../test_popup_images/RARA CHICKEN.pdf",
@@ -10342,7 +10520,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "8",
-    "Normal Cooking Time": "40 mins"
+    "Normal Cooking Time": "40 mins",
+    "Modified": "2026-06-29T11:48:52Z"
   },
   {
     "Recipe Name": "RAVA UPMA",
@@ -10398,13 +10577,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "RED MAC MAG",
+    "Recipe Name": "RED MACRONI PASTA (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "ITALIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 6,
     "Image": "../test_images/RED MAC MAG.jpg",
     "PopupImage": "../test_popup_images/RED MAC MAG.pdf",
@@ -10417,16 +10596,17 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "15 mins"
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "RED SAUCE 300G",
+    "Recipe Name": "RED SAUCE 300G (PENNE PASTA WITH FRESH TOMATO PUREE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 15,
     "Image": "../test_images/RED SAUCE 300G.jpg",
     "PopupImage": "../test_popup_images/RED SAUCE 300G.pdf",
@@ -10438,16 +10618,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "RED SAUCE MAGGI",
+    "Recipe Name": "RED SAUCE MAGGI (PENNE MAGGI RED SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 15,
     "Image": "../test_images/RED SAUCE MAGGI.jpg",
     "PopupImage": "../test_popup_images/RED SAUCE MAGGI.pdf",
@@ -10459,16 +10640,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-05T12:38:12Z"
   },
   {
-    "Recipe Name": "RED SAUCE PASTA",
+    "Recipe Name": "RED SAUCE PASTA (PENNE PASTA WITH FRESH TOMATO PUREE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 15,
     "Image": "../test_images/RED SAUCE PASTA.jpg",
     "PopupImage": "../test_popup_images/RED SAUCE PASTA.pdf",
@@ -10480,7 +10662,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "800 G",
     "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "40 mins"
+    "Normal Cooking Time": "40 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "RICE KHEER",
@@ -10684,13 +10867,13 @@
     "Modified": "2026-07-06T07:08:11Z"
   },
   {
-    "Recipe Name": "SAUTE CARROT A",
+    "Recipe Name": "SAUTE CARROT (ANTUNE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "BREAKFAST",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 5,
     "Image": "../test_images/SAUTE CARROT A.jpg",
     "PopupImage": "../test_popup_images/SAUTE CARROT A.pdf",
@@ -10700,16 +10883,17 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000G",
     "On2Cook Cooking Time": "5",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "SAUTE POTATOES A",
+    "Recipe Name": "SAUTE POTATOES (ANTUNE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "BREAKFAST",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 5,
     "Image": "../test_images/SAUTE POTATOES A.jpg",
     "PopupImage": "../test_popup_images/SAUTE POTATOES A.pdf",
@@ -10719,7 +10903,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000G",
     "On2Cook Cooking Time": "5",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "SAUTE VEGETABLES",
@@ -11441,13 +11626,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "STICKY BDW CAKE",
+    "Recipe Name": "STICKY BDW CAKE (BANANA DATES WALNUT CAKE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
+    "Cooking Mode": "BAKING",
     "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
     "Cooking Time": 6,
     "Image": "../test_images/STICKY BDW CAKE.jpg",
     "PopupImage": "../test_popup_images/STICKY BDW CAKE.pdf",
@@ -11459,7 +11644,8 @@
     "Accessories": "Pan Non-Coated (Ss), Cake Kit",
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-18T11:24:50Z"
   },
   {
     "Recipe Name": "STIR FRY CABBAGE",
@@ -11665,8 +11851,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "SUJI HALWA 2K",
@@ -11948,13 +12134,13 @@
     "Modified": "2026-06-26T09:36:21Z"
   },
   {
-    "Recipe Name": "THAI CHI CURRY G",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Recipe Name": "THAI GREEN CURRY CHICKEN",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 4,
     "Image": "../test_images/THAI CHI CURRY G.jpg",
     "PopupImage": "../test_popup_images/THAI CHI CURRY G.pdf",
@@ -11966,7 +12152,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "750 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "30 mins"
+    "Normal Cooking Time": "30 mins",
+    "Modified": "2026-06-05T08:52:39Z"
   },
   {
     "Recipe Name": "THAI CHICKEN RED CURRY",
@@ -12106,13 +12293,13 @@
     "Modified": "2026-06-05T08:49:47Z"
   },
   {
-    "Recipe Name": "THAI RED CURRY",
+    "Recipe Name": "VEG THAI RED CURRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "BOILING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 4,
     "Image": "../test_images/THAI RED CURRY.jpg",
     "PopupImage": "../test_popup_images/THAI RED CURRY.pdf",
@@ -12124,7 +12311,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "750 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "20 mins"
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-05T08:52:39Z"
   },
   {
     "Recipe Name": "THAI RED PASTE",
@@ -12195,13 +12383,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "THECHA PASTE",
+    "Recipe Name": "THECHA CHICKEN",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi - Gravy",
     "Cooking Time": 2,
     "Image": "../test_images/THECHA PASTE.jpg",
     "PopupImage": "../test_popup_images/THECHA PASTE.pdf",
@@ -12212,7 +12400,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500G",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "5 mins"
+    "Normal Cooking Time": "5 mins",
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "CHICKEN THUKPA SOUP",
@@ -12235,6 +12424,28 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-10T11:58:51Z"
+  },
+  {
+    "Recipe Name": "TIKKA GRAVY 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 14,
+    "Image": "../test_images/TIKKA GRAVY 1KG.jpg",
+    "PopupImage": "../test_popup_images/TIKKA GRAVY 1KG.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka 230 gm",
+      "Mix Gravy Mix 1180 gm",
+      "Auto Water (Auto) 300 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-09T13:30:34Z"
   },
   {
     "Recipe Name": "TOM KHA GAI SOUP",
@@ -12327,8 +12538,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "TOMATO GRAVY 1KG",
@@ -12617,13 +12828,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "URAD DAL",
+    "Recipe Name": "DAL MAKHANI",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "BOILING + SAUTEING",
+    "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
     "Cooking Time": 10,
     "Image": "../test_images/URAD DAL.jpg",
     "PopupImage": "../test_popup_images/URAD DAL.pdf",
@@ -12633,7 +12844,8 @@
     "Accessories": "Pressure Cooker",
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "UTTAPAM",
@@ -12830,13 +13042,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "VEG CHILI G RICE",
+    "Recipe Name": "VEG CHILI G RICE (VEG CHILLI GARLIC FRIED RICE)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 3,
     "Image": "../test_images/VEG CHILI G RICE.jpg",
     "PopupImage": "../test_popup_images/VEG CHILI G RICE.pdf",
@@ -12848,7 +13060,8 @@
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "450 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins"
+    "Normal Cooking Time": "12 mins",
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "ASIAN CHILLI GARLIC VEGGIES",
@@ -12959,6 +13172,28 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-07-01T05:13:20Z"
+  },
+  {
+    "Recipe Name": "VEG GRAVY 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 12,
+    "Image": "../test_images/VEG GRAVY 1KG.jpg",
+    "PopupImage": "../test_popup_images/VEG GRAVY 1KG.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka 230 gm",
+      "Mix Gravy Mix 1185 gm",
+      "Auto Water (Auto) 400 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-09T13:44:58Z"
   },
   {
     "Recipe Name": "VEG HAKKA NOODLES",
@@ -13138,13 +13373,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "VEG MANCHURIAN D",
+    "Recipe Name": "VEG MANCHURIAN D (VEG MANCHURIAN DRY)",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Cooking Mode": "FRYING + SAUTEING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Cooking Time": 3,
     "Image": "../test_images/VEG MANCHURIAN D.jpg",
     "PopupImage": "../test_popup_images/VEG MANCHURIAN D.pdf",
@@ -13156,7 +13391,8 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": ""
+    "Normal Cooking Time": "",
+    "Modified": "2026-06-23T08:04:41Z"
   },
   {
     "Recipe Name": "VEG MANCHURIAN GRAVY",
@@ -13432,6 +13668,27 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "120 mins",
     "Modified": "2026-06-22T13:19:36Z"
+  },
+  {
+    "Recipe Name": "WHITE GRAVY 1700",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 12,
+    "Image": "../test_images/WHITE GRAVY 1700.jpg",
+    "PopupImage": "../test_popup_images/WHITE GRAVY 1700.pdf",
+    "Ingredients": [
+      "Take Gravy Mix  1492 gm",
+      "Auto  Water (Auto) 700 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Gravy Stirrer",
+    "Total Output": "1700G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-07-09T13:42:37Z"
   },
   {
     "Recipe Name": "WHITE GRAVY GN",
