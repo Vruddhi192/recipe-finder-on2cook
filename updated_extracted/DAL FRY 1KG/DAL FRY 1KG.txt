@@ -1,1 +1,119 @@
-{"Ingredients": [{"app_audio": "Take Oil & Tadka  273 gm", "audio": "Take", "audioI": "Oil & Tadka ", "audioP": "Take", "audioQ": "273", "audioU": "gm", "id": 1, "image": "", "pan_type": "SS", "text": "Oil 100g, Cumin Seeds 3g, Chopped Garlic 50g, Chopped Onion 100g, Chopped Green Chilli 20g", "title": "Oil & Tadka ", "weight": "273 gm"}, {"app_audio": "Take Boiled Dal Mix 548 gm", "audio": "Take", "audioI": "Boiled Dal Mix", "audioP": "Take", "audioQ": "548", "audioU": "gm", "id": 2, "image": "", "pan_type": "SS", "text": "Boiled Toor Dal 250g, Boiled Masoor Dal 250g, Turmeric Powder 5g, Salt 10g, Chopped Coriander 3g, Butter 30g", "title": "Boiled Dal Mix", "weight": "548 gm"}, {"app_audio": "Auto Water (Auto) 300 ml", "audio": "Auto", "audioI": "Water (Auto)", "audioP": "Auto", "audioQ": "300", "audioU": "ml", "id": 3, "image": "", "pan_type": "SS", "text": "", "title": "Water (Auto)", "weight": "300 ml"}], "Instruction": [{"Audio": "", "Indtime_lid_con": "", "Induction_on_time": "210", "Induction_power": "100", "Magnetron_on_time": "210", "Magnetron_power": "100", "Text": "Oil & Tadka ", "Weight": "305 gm", "app_audio": " Oil & Tadka ", "audioI": "Oil & Tadka ", "audioP": "", "audioQ": "305", "audioU": "3Minute30Second", "durationInSec": 210, "id": 1, "image": "", "lid": "close", "mag_severity": "high", "pump_on": "", "purge_on": "", "skip": "", "stirrer_on": "4", "threshold": "0", "wait_time": "", "warm_time": ""}, {"Audio": "", "Indtime_lid_con": "", "Induction_on_time": "150", "Induction_power": "100", "Magnetron_on_time": "150", "Magnetron_power": "100", "Text": "Boiled Dal Mix", "Weight": "548 gm", "app_audio": " Boiled Dal Mix", "audioI": "Boiled Dal Mix", "audioP": "", "audioQ": "548", "audioU": "2Minute30Second", "durationInSec": 150, "id": 2, "image": "", "lid": "close", "mag_severity": "high", "pump_on": "30", "purge_on": "", "skip": "false", "stirrer_on": "4", "threshold": "0", "wait_time": "", "warm_time": ""}], "audio1": ["DAL FRY 1KG"], "audio2": ["preparation"], "category": "0", "description": "DAL FRY 1KG (SMOKIN CURRIES)\nNORMAL COOKING TIME 45 MINUTES \nFINAL OUTPUT 1KG\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer", "difficulty": "Easy", "id": 621, "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped6944232843417781036.png", "isSelected": false, "name": ["DAL FRY 1KG"], "subCategories": "", "tags": ""}
+{
+  "Ingredients": [
+    {
+      "app_audio": "Take Oil & Tadka  273 gm",
+      "audio": "Take",
+      "audioI": "Oil & Tadka ",
+      "audioP": "Take",
+      "audioQ": "273",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Oil 100g, Cumin Seeds 3g, Chopped Garlic 50g, Chopped Onion 100g, Chopped Green Chilli 20g",
+      "title": "Oil & Tadka ",
+      "weight": "273 gm"
+    },
+    {
+      "app_audio": "Take Boiled Dal Mix 548 gm",
+      "audio": "Take",
+      "audioI": "Boiled Dal Mix",
+      "audioP": "Take",
+      "audioQ": "548",
+      "audioU": "gm",
+      "id": 2,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Boiled Toor Dal 250g, Boiled Masoor Dal 250g, Turmeric Powder 5g, Salt 10g, Chopped Coriander 3g, Butter 30g",
+      "title": "Boiled Dal Mix",
+      "weight": "548 gm"
+    },
+    {
+      "app_audio": "Auto Water (Auto) 300 ml",
+      "audio": "Auto",
+      "audioI": "Water (Auto)",
+      "audioP": "Auto",
+      "audioQ": "300",
+      "audioU": "ml",
+      "id": 3,
+      "image": "",
+      "pan_type": "SS",
+      "text": "",
+      "title": "Water (Auto)",
+      "weight": "300 ml"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "210",
+      "Induction_power": "100",
+      "Magnetron_on_time": "210",
+      "Magnetron_power": "100",
+      "Text": "Oil & Tadka ",
+      "Weight": "305 gm",
+      "app_audio": " Oil & Tadka ",
+      "audioI": "Oil & Tadka ",
+      "audioP": "",
+      "audioQ": "305",
+      "audioU": "3Minute30Second",
+      "durationInSec": 210,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    },
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "150",
+      "Induction_power": "100",
+      "Magnetron_on_time": "150",
+      "Magnetron_power": "100",
+      "Text": "Boiled Dal Mix",
+      "Weight": "548 gm",
+      "app_audio": " Boiled Dal Mix",
+      "audioI": "Boiled Dal Mix",
+      "audioP": "",
+      "audioQ": "548",
+      "audioU": "2Minute30Second",
+      "durationInSec": 150,
+      "id": 2,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "30",
+      "purge_on": "",
+      "skip": "false",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "DAL FRY 1KG"
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "DAL FRY 1KG (WITH BOILED DAL)\nNORMAL COOKING TIME 45 MINUTES \nFINAL OUTPUT 1KG\n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "difficulty": "Easy",
+  "id": 621,
+  "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped6944232843417781036.png",
+  "isSelected": false,
+  "name": [
+    "DAL FRY 1KG"
+  ],
+  "subCategories": "",
+  "tags": ""
+}

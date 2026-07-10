@@ -1186,11 +1186,11 @@
   {
     "Recipe Name": "BHUNA GRAVY 1500",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 14,
     "Image": "../test_images/BHUNA GRAVY 1500.jpg",
     "PopupImage": "../test_popup_images/BHUNA GRAVY 1500.pdf",
@@ -1203,7 +1203,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:40:57Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "BLACK BEANS (FROM SOAKED BLACK TURTLE BEAN)",
@@ -4586,7 +4587,7 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "DAL FRY 1KG",
+    "Recipe Name": "DAL FRY 1KG (WITH BOILED DAL)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -4605,7 +4606,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:52:37Z"
+    "Modified": "2026-07-10T10:24:00Z"
   },
   {
     "Recipe Name": "DAL FRY 3000G",
@@ -4653,7 +4654,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "DAL MAKHANI 1K",
+    "Recipe Name": "DAL MAKHANI 1K (WITH BOILED DAL)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -4671,7 +4672,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:49:08Z"
+    "Modified": "2026-07-10T10:24:00Z"
   },
   {
     "Recipe Name": "DAL MAKHANI 1KG (FROM SOAKED URAD DAL)",
@@ -6518,11 +6519,11 @@
   {
     "Recipe Name": "KADAI GRAVY 1200",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 12,
     "Image": "../test_images/KADAI GRAVY 1200.jpg",
     "PopupImage": "../test_popup_images/KADAI GRAVY 1200.pdf",
@@ -6536,7 +6537,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:42:37Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "KADAI PANEER 600",
@@ -7388,11 +7390,11 @@
   {
     "Recipe Name": "MAKHANI GRAVY1K",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 13,
     "Image": "../test_images/MAKHANI GRAVY1K.jpg",
     "PopupImage": "../test_popup_images/MAKHANI GRAVY1K.pdf",
@@ -7406,7 +7408,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:39:13Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MALABAR BIRYANI (CHICKEN JEERAKASAL RICE BIRYANI)",
@@ -9786,6 +9789,28 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-22T13:19:36Z"
+  },
+  {
+    "Recipe Name": "PEPPER GRAVY 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 8,
+    "Image": "../test_images/PEPPER GRAVY 1KG.jpg",
+    "PopupImage": "../test_popup_images/PEPPER GRAVY 1KG.pdf",
+    "Ingredients": [
+      "Take Oil & Whole Spices  110 gm",
+      "Mix Gravy Mix  790 gm",
+      "Auto Water (Auto) 350 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "50 mins",
+    "Modified": "2026-07-10T10:24:00Z"
   },
   {
     "Recipe Name": "PEPPER QUINOA",
@@ -12428,11 +12453,11 @@
   {
     "Recipe Name": "TIKKA GRAVY 1KG",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 14,
     "Image": "../test_images/TIKKA GRAVY 1KG.jpg",
     "PopupImage": "../test_popup_images/TIKKA GRAVY 1KG.pdf",
@@ -12445,7 +12470,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:30:34Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "TOM KHA GAI SOUP",
@@ -13176,11 +13202,11 @@
   {
     "Recipe Name": "VEG GRAVY 1KG",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 12,
     "Image": "../test_images/VEG GRAVY 1KG.jpg",
     "PopupImage": "../test_popup_images/VEG GRAVY 1KG.pdf",
@@ -13193,7 +13219,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-09T13:44:58Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "VEG HAKKA NOODLES",
@@ -13672,11 +13699,11 @@
   {
     "Recipe Name": "WHITE GRAVY 1700",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
-    "Flavor Profile": "Medium Spicy",
-    "Consistency": "Gravy",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Cooking Time": 12,
     "Image": "../test_images/WHITE GRAVY 1700.jpg",
     "PopupImage": "../test_popup_images/WHITE GRAVY 1700.pdf",
@@ -13688,7 +13715,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-07-09T13:42:37Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "WHITE GRAVY GN",
@@ -13784,5 +13812,48 @@
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-06-22T13:19:36Z"
+  },
+  {
+    "Recipe Name": "ZEEBA BIRYANI 1KG (RICE BRAND - ZEEBA)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Cooking Time": 14,
+    "Image": "../test_images/ZEEBA BIRYANI 1KG.jpg",
+    "PopupImage": "../test_popup_images/ZEEBA BIRYANI 1KG.pdf",
+    "Ingredients": [
+      "Take Ghee & Spices  50 gm",
+      "Take Rice & Marinated Chicken  813 gm",
+      "Auto Water (Auto) 650 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-10T10:36:12Z"
+  },
+  {
+    "Recipe Name": "ZEEBA STEAM RICE (RICE BRAND - ZEEBA)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 14,
+    "Image": "../test_images/ZEEBA STEAM RICE.jpg",
+    "PopupImage": "../test_popup_images/ZEEBA STEAM RICE.pdf",
+    "Ingredients": [
+      "Add Soaked Rice 200g, Salt 4g, Oil 10g 214 gm",
+      "Auto  Water (Auto) 730 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "500G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "",
+    "Modified": "2026-07-10T10:36:12Z"
   }
 ]
