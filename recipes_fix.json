@@ -7735,6 +7735,31 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
+    "Recipe Name": "MIRCHI SALAN2500",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "SOUTH INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 16,
+    "Image": "../test_images/MIRCHI SALAN2500.jpg",
+    "PopupImage": "../popup_images_with_cover/MIRCHI SALAN2500.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka 226 gm",
+      "Mix Mixed Paste 1220 gm",
+      "Mix Dry Spice Blend 105 gm",
+      "Auto Water (Auto) 1000 ml",
+      "Take Tamarind Pulp 360 gm",
+      "Take Garnish  210 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "2500G",
+    "On2Cook Cooking Time": "16",
+    "Normal Cooking Time": "45 mins",
+    "Modified": "2026-07-22T11:08:23Z"
+  },
+  {
     "Recipe Name": "MASALA MAGGI",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
@@ -8811,6 +8836,29 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-10T11:58:51Z"
+  },
+  {
+    "Recipe Name": "ZEEBA BIRYANI 3K",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 25,
+    "Image": "../test_images/ZEEBA BIRYANI 3K.jpg",
+    "PopupImage": "../popup_images_with_cover/ZEEBA BIRYANI 3K.pdf",
+    "Ingredients": [
+      "Take Ghee & Spices  56 gm",
+      "Take Rice & Marinated Chicken  2396 gm",
+      "Auto Water (Auto) 1690 ml",
+      "Take Ghee 50 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "3400G",
+    "On2Cook Cooking Time": "25",
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-07-22T11:26:51Z"
   },
   {
     "Recipe Name": "RICE KHEER",
