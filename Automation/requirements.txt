@@ -1,0 +1,8 @@
+requests
+reportlab
+svglib
+qrcode
+Pillow
+dropbox
+pypdf
+PyMuPDF
