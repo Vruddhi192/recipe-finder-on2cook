@@ -37,7 +37,7 @@ import extract_zips
 import accessory_mapping
 import generate_popup_images
 import parse_txt_to_json
-import add_disclaimer_onpopup-pdf
+import add_disclaimer_onpopup_pdf
 import sync_description
 import flag_orphan_recipes
 
@@ -76,8 +76,7 @@ def main():
         parse_txt_to_json.generate_recipes_json()
 
         step_header(6, "Add bilingual disclaimer to updated popup PDFs")
-        add_disclaimer_onpopup-pdf.add_disclaimers_for_updated(updated_stems)
-
+        add_disclaimer_onpopup_pdf.add_disclaimers_for_updated(updated_stems)
         step_header(7, "Sync description first lines from Smartsheet Recipe Names")
         sync_description.main()
 
