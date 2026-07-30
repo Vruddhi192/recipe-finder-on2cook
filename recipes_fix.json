@@ -1612,8 +1612,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "GHEE RICE",
@@ -1948,8 +1948,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ALOO SAMOSA",
@@ -3704,8 +3704,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ROSE PISTA CAKE",
@@ -4206,8 +4206,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN DRY",
@@ -4965,6 +4965,28 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
+    "Recipe Name": "EGGLESS CAKE (CHOCOLATE CAKE)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "BASE",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Dry",
+    "Cooking Time": 6,
+    "Image": "../test_images/EGGLESS CAKE.jpg",
+    "PopupImage": "../popup_images_with_cover/EGGLESS CAKE.pdf",
+    "Ingredients": [
+      "Mix Wet Ingredients 315 gm",
+      "Mix Dry Ingredients 318 gm",
+      "Mix Final Batter  633 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit",
+    "Total Output": "550G",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-07-30T05:32:32Z"
+  },
+  {
     "Recipe Name": "CHICKEN KOSHA",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -5634,8 +5656,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL ALOO PARATHA",
@@ -8274,8 +8296,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN HANDI POT BIRYANI",
@@ -8967,8 +8989,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "VEGETABLE KORMA",
@@ -12054,8 +12076,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL POPPONS",
@@ -12299,8 +12321,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MASHED POTATOES",
@@ -12635,8 +12657,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
