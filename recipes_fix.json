@@ -1996,6 +1996,28 @@
     "Modified": "2026-07-01T08:46:35Z"
   },
   {
+    "Recipe Name": "MUTTON KHEEMA MS",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 12,
+    "Image": "../test_images/MUTTON KHEEMA MS.jpg",
+    "PopupImage": "../popup_images_with_cover/MUTTON KHEEMA MS.pdf",
+    "Ingredients": [
+      "Tadka Oil & Tadka 713 gm",
+      "Mix Raw Keema & Gravy 624 gm",
+      "Auto  Water (Auto) 600 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1500G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-07-31T06:55:56Z"
+  },
+  {
     "Recipe Name": "ZEEBA BIRYANI 1KG (RICE BRAND - ZEEBA)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
