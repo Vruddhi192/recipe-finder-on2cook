@@ -147,7 +147,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "ONION GRAVY 2K\nFINAL OUTPUT 2K\nNORMAL COOKING TIME 50 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer\n\nNote : After cooking, you can blend the mixture into a fine paste to form a gravy, then cook for another 2 minutes if you prefer a smoother gravy texture.\n\n",
+  "description": "ONION GRAVY 2K (CHOPPED ONION GRAVY)\nFINAL OUTPUT 2K\nNORMAL COOKING TIME 50 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer\n\nNote : After cooking, you can blend the mixture into a fine paste to form a gravy, then cook for another 2 minutes if you prefer a smoother gravy texture.\n\n",
   "difficulty": "Easy",
   "id": 795,
   "imageUrl": "content://com.invent.ontocook.cropper.fileprovider/my_images/Pictures/cropped7309237722214994837.png",
