@@ -1572,6 +1572,27 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
+    "Recipe Name": "CHICKEN TIKKA (WITH SKEWERS & MP MAT OLD RECIPE)",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Cooking Time": 4,
+    "Image": "../test_images/CHICKEN TIKKA S.jpg",
+    "PopupImage": "../popup_images_with_cover/CHICKEN TIKKA S.pdf",
+    "Ingredients": [
+      "Take Marinated Chicken 415 gm",
+      "Add Oil for Brushing  30 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "350 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-19T10:50:48Z"
+  },
+  {
     "Recipe Name": "CHAPLI KEBAB",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
@@ -1612,8 +1633,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "GHEE RICE",
@@ -1948,8 +1969,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "ALOO SAMOSA",
@@ -3726,8 +3747,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "ROSE PISTA CAKE",
@@ -4228,8 +4249,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN DRY",
@@ -5678,8 +5699,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL ALOO PARATHA",
@@ -8318,8 +8339,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN HANDI POT BIRYANI",
@@ -9011,8 +9032,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "VEGETABLE KORMA",
@@ -9132,6 +9153,29 @@
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-10T11:58:51Z",
     "hidden": true
+  },
+  {
+    "Recipe Name": "YELLOW GRAVY GN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Cooking Time": 20,
+    "Image": "../test_images/YELLOW GRAVY GN.jpg",
+    "PopupImage": "../popup_images_with_cover/YELLOW GRAVY GN.pdf",
+    "Ingredients": [
+      "Take Oil & Spices  765 gm",
+      "Take Paste & Spices 2675 gm",
+      "Powder Garnish  10 gm",
+      "Auto Water (Auto) 200 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "3000G",
+    "On2Cook Cooking Time": "20",
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-08-03T06:53:09Z"
   },
   {
     "Recipe Name": "SAUTE VEGETABLES",
@@ -10888,7 +10932,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-08-03T06:11:18Z"
+    "Modified": "2026-08-03T06:38:07Z"
   },
   {
     "Recipe Name": "PENNE AL DENTE (PASTA ANTUNE)",
@@ -12098,8 +12142,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL POPPONS",
@@ -12343,8 +12387,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MASHED POTATOES",
@@ -12679,8 +12723,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
