@@ -1096,6 +1096,11 @@ popupModal.addEventListener('click', e => {
   }
 });
 
+popupCloseBtn.addEventListener('click', () => {
+  popupModal.style.display = 'none';
+  popupPDF.src = '';
+});
+
 function isImageVisible() {
   return popupImage.style.display !== 'none';
 }
