@@ -40,6 +40,57 @@ def get_local_mtime(file_path):
     return datetime.fromtimestamp(os.path.getmtime(file_path), tz=timezone.utc)
 
 
+def get_sheet_modified_map() -> dict:
+    """
+    Returns {zip_stem_upper: row_modifiedAt_iso} for every Smartsheet row
+    that has a ZIP attachment — using Smartsheet's own row-level modified
+    timestamp, which is tracked natively and bumped on ANY cell edit (no
+    extra "Modified" column needs to exist on the sheet for this to work).
+
+    Keyed by ZIP stem (not by the Recipe Name cell) so it lines up exactly
+    with `updated_stems` everywhere else in the pipeline.
+    """
+    print("📡 Fetching Smartsheet row-modified timestamps...")
+    resp = requests.get(
+        f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}",
+        headers=SMARTSHEET_HEADERS,
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"Sheet fetch failed: {resp.status_code} – {resp.text}")
+
+    sheet = resp.json()
+    row_modified = {
+        str(row["id"]): (row.get("modifiedAt") or row.get("createdAt") or "")
+        for row in sheet["rows"]
+    }
+
+    resp = requests.get(
+        f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments",
+        headers=SMARTSHEET_HEADERS,
+        params={"includeAll": "true"},
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"Attachments fetch failed: {resp.status_code} – {resp.text}")
+
+    stem_modified = {}
+    for att in resp.json().get("data", []):
+        if att.get("parentType") != "ROW":
+            continue
+        name = att.get("name", "")
+        if not name.lower().endswith(".zip"):
+            continue
+        stem     = Path(name).stem.upper()
+        row_id   = str(att.get("parentId", ""))
+        modified = row_modified.get(row_id, "")
+        if modified:
+            # If a row somehow has >1 zip attachment, keep the newest.
+            if stem not in stem_modified or modified > stem_modified[stem]:
+                stem_modified[stem] = modified
+
+    print(f"   → {len(stem_modified)} recipes with row-modified timestamps")
+    return stem_modified
+
+
 def download_all_zips() -> set:
     """
     Downloads all new/updated ZIP attachments from Smartsheet into ZIP_ROOT.

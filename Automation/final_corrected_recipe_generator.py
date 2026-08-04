@@ -1620,15 +1620,28 @@ class RecipePDFGenerator:
                     accessories.append(line.title())
         return accessories
 
+    # Units seen in real recipe data (extend here as new units show up)
+    _QTY_UNITS = (
+        r'gm|g|kg|ml|l|liter|litre|number|no|nos|inch|pinch|'
+        r'tsp|tbsp|pcs|pc|strand|strands|string|strings|slice|slices|cup|cups'
+    )
+    # Equipment/accessory names that sometimes leak into the Ingredients list.
+    # Matched as whole words/phrases so "pan" doesn't also catch "Paneer",
+    # "stand" doesn't catch "Standard Roux", etc.
+    _SKIP_TERMS = ['grill mesh', 'cake mold', 'stirrer', 'pan', 'tray', 'rack', 'stand']
+    _SKIP_RE = re.compile(
+        r'\b(?:' + '|'.join(re.escape(t) for t in _SKIP_TERMS) + r')\b', re.I
+    )
+
     def extract_ingredients(self, recipe_data):
-        qty_token = re.compile(r'^\d+(gm|g|kg|ml|l|number|Nos|inch)$', re.I)
+        qty_token = re.compile(rf'^\d+(?:\.\d+)?(?:{self._QTY_UNITS})$', re.I)
 
         def squash_qty(tokens):
             out, i = [], 0
             while i < len(tokens):
                 if (i + 1 < len(tokens) and
-                    tokens[i].isdigit() and
-                    re.fullmatch(r'gm|g|kg|ml|l|number|Nos|inch', tokens[i + 1], re.I)):
+                    re.fullmatch(r'\d+(?:\.\d+)?', tokens[i]) and
+                    re.fullmatch(self._QTY_UNITS, tokens[i + 1], re.I)):
                     out.append(tokens[i] + tokens[i + 1])
                     i += 2
                 else:
@@ -1636,7 +1649,6 @@ class RecipePDFGenerator:
                     i += 1
             return out
 
-        skip = {'grill mesh', 'cake mold', 'stirrer', 'pan', 'tray', 'rack', 'stand'}
         ingredients = []
         for ing in recipe_data.get('Ingredients', []):
             wt = ing.get('weight', '').strip()
@@ -1644,7 +1656,7 @@ class RecipePDFGenerator:
             txt = ing.get('text', '').replace(',', ' ').strip()
             txt = re.sub(r'\([^)]*\)', '', txt).strip()
             print(f"DEBUG: Processing ingredient - weight: '{wt}', title: '{ttl}', text: '{txt}'")
-            if any(s in ttl.lower() for s in skip):
+            if self._SKIP_RE.search(ttl):
                 continue
             if wt and ttl:
                 wt_standardized = re.sub(r'\bgm\b', 'g', wt, flags=re.IGNORECASE)

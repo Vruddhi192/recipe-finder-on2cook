@@ -11,6 +11,13 @@ each one and calls it in order, passing `updated_stems` along the chain so
 later steps know which recipes were actually new/changed this run instead
 of reprocessing everything.
 
+Change detection now has two sources, unioned together into `updated_stems`:
+  a) download_zips' own check — ZIP attachment updatedAt vs. local file mtime
+     (catches: new ZIP uploaded, or existing ZIP re-uploaded/replaced)
+  b) pipeline_state's check — Smartsheet's native row-modified timestamp vs.
+     what we recorded last successful run (catches: a plain edit to the row
+     itself — Recipe Name, Cuisine, Category, etc. — with no new ZIP upload)
+
 Steps:
   1. download_zips      — fetch new/updated ZIPs from Smartsheet
   2. extract_zips        — extract ZIPs → extracted/
@@ -40,6 +47,7 @@ import parse_txt_to_json
 import add_disclaimer_onpopup_pdf
 import sync_description
 import flag_orphan_recipes
+import pipeline_state
 
 
 def banner(title: str):
@@ -48,7 +56,7 @@ def banner(title: str):
     print(f"{'═'*60}")
 
 
-def step_header(n: int, title: str):
+def step_header(n, title: str):
     print(f"\n{'─'*60}")
     print(f"  STEP {n}: {title}")
     print(f"{'─'*60}")
@@ -61,7 +69,20 @@ def main():
 
     try:
         step_header(1, "Download ZIPs from Smartsheet")
-        updated_stems = download_zips.download_all_zips()
+        zip_updated_stems = download_zips.download_all_zips()
+
+        step_header("1b", "Detect row-level changes (edits with no new ZIP)")
+        current_modified = download_zips.get_sheet_modified_map()
+        previous_state    = pipeline_state.load_state()
+        row_changed_stems = pipeline_state.get_changed_stems(current_modified, previous_state)
+        if row_changed_stems:
+            print(f"  🔁 {len(row_changed_stems)} recipe(s) changed in Smartsheet since last run:")
+            for s in sorted(row_changed_stems):
+                print(f"       - {s}")
+        else:
+            print("  ✔  No row-level changes since last run.")
+
+        updated_stems = zip_updated_stems | row_changed_stems
 
         step_header(2, "Extract ZIPs")
         extract_zips.extract_all_zips(updated_stems)
@@ -85,6 +106,9 @@ def main():
 
         step_header(9, "Flag orphan recipes (no Smartsheet match) as hidden")
         flag_orphan_recipes.flag_orphan_recipes()
+
+        step_header("10", "Save pipeline state (row-modified snapshot)")
+        pipeline_state.save_state(current_modified)
 
     except Exception as e:
         print(f"\n💥 PIPELINE FAILED: {e}")
