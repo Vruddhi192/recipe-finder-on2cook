@@ -1637,7 +1637,7 @@
     "hidden": true
   },
   {
-    "Recipe Name": "GHEE RICE",
+    "Recipe Name": "GHEE RICE 2700G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -1656,7 +1656,7 @@
     "Total Output": "2700G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-04T09:45:30Z"
   },
   {
     "Recipe Name": "TARIWALA KUKKAD",
@@ -1725,7 +1725,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "PINDI CHOLE",
+    "Recipe Name": "PINDI CHOLE 3100G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -1744,7 +1744,7 @@
     "Total Output": "3100G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:39:53Z"
   },
   {
     "Recipe Name": "BREAD PAKODA",
@@ -2336,7 +2336,7 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
-    "Recipe Name": "BUTTER CHICKEN",
+    "Recipe Name": "BUTTER CHICKEN 700G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -2356,10 +2356,10 @@
       "Marinate Marinated Chicken  350 gm"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "700 GM",
+    "Total Output": "",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-22T13:14:06Z"
+    "Modified": "2026-08-04T09:46:42Z"
   },
   {
     "Recipe Name": "BOILED CHOLE",
@@ -3181,13 +3181,14 @@
     "Image": "../test_images/VEG CHILI G RICE.jpg",
     "PopupImage": "../popup_images_with_cover/VEG CHILI G RICE.pdf",
     "Ingredients": [
-      "Take Oil & Vegetables  120 gm",
-      "Take Rice & Mix Sauce  365 gm"
+      "Take Oil 20 gm",
+      "Chopped  Vegetables 92 gm",
+      "Take Rice & Mix Sauce  358 gm"
     ],
-    "Accessories": "Pan Non-Coated (Ss), Rice Stirrer",
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "450 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "15 mins",
+    "Normal Cooking Time": "12 mins",
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
@@ -4342,7 +4343,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHICKEN BIRYANI",
+    "Recipe Name": "CHICKEN BIRYANI 2800G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -4362,7 +4363,7 @@
     "Total Output": "2800 G",
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:41:35Z"
   },
   {
     "Recipe Name": "DAL MAKHANI",
@@ -4551,7 +4552,7 @@
     "PopupImage": "../popup_images_with_cover/PENNE PESTO.pdf",
     "Ingredients": [
       "Mix Maida 20 g, Butter 30 g, Chopped Garlic 15 g, Milk 200 g, Raw Penne Pasta 100 g 365 gm",
-      "Diced Cut Vegetables & Mix Sauce  254 gm",
+      "Diced Cut Vegetables & Mix Sauce  256 gm",
       "Auto Water (Auto) 900 ml",
       "Blender  Pesto Recipe (Blender) 200 gm"
     ],
@@ -4716,10 +4717,10 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "GHEE RICE",
+    "Recipe Name": "GHEE RICE 2000G",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
+    "Cooking Mode": "SAUTEING + STEAMING",
+    "Cuisine": "SOUTH INDIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
@@ -4733,10 +4734,10 @@
       "Take Water Spray  1120 ml"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "2000 GM",
+    "Total Output": "",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-04T09:45:30Z"
   },
   {
     "Recipe Name": "SAUTE BROCCOLI (ANTUNE)",
@@ -5240,12 +5241,12 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "BUTTER CHICKEN",
+    "Recipe Name": "BUTTER CHICKEN 3000G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Gravy",
     "Cooking Time": 16,
     "Image": "../test_images/BUTTER CHICKEN3K.jpg",
@@ -5259,7 +5260,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:14:06Z"
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "THAI CHILLI BASIL FRIED RICE",
@@ -6107,13 +6108,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PINDI CHOLE",
+    "Recipe Name": "PINDI CHOLE 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
-    "Consistency": "Semi - Gravy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 6,
     "Image": "../test_images/PINDI CHOLE.jpg",
     "PopupImage": "../popup_images_with_cover/PINDI CHOLE.pdf",
@@ -6127,7 +6128,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:39:18Z"
   },
   {
     "Recipe Name": "PRASUMA CHI MOMO (FROZEN CHICKEN MOMO 20PCS)",
@@ -6522,7 +6523,7 @@
     "Modified": "2026-07-22T11:41:25Z"
   },
   {
-    "Recipe Name": "RAJMA MASALA",
+    "Recipe Name": "RAJMA MASALA 300G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -6541,7 +6542,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:43:01Z"
   },
   {
     "Recipe Name": "FRESH STEAM MOMO",
@@ -7150,13 +7151,13 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PINDI CHOLE",
+    "Recipe Name": "PINDI CHOLE 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
-    "Consistency": "Semi - Gravy",
+    "Consistency": "Semi-Dry",
     "Cooking Time": 14,
     "Image": "../test_images/CHICKPEA BOILED.jpg",
     "PopupImage": "../popup_images_with_cover/CHICKPEA BOILED.pdf",
@@ -7167,7 +7168,7 @@
     "Total Output": "BOILED CHICKPEA 700 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:39:18Z"
   },
   {
     "Recipe Name": "VEGETABLE UPMA",
@@ -9887,7 +9888,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "RAJMA MASALA",
+    "Recipe Name": "RAJMA MASALA 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -9907,7 +9908,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:44:14Z"
   },
   {
     "Recipe Name": "PANEER MAKHANI",
@@ -10209,18 +10210,19 @@
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
-    "Cooking Time": 15,
+    "Cooking Time": 11,
     "Image": "../test_images/JEERA RICE.jpg",
     "PopupImage": "../popup_images_with_cover/JEERA RICE.pdf",
     "Ingredients": [
-      "Soaked  Soaked Rice 1200g, Salt 30g 1230 gm",
-      "Auto Water (Auto) 1640 ml",
-      "Take Oil 50g, Cumin Seeds 15g, Bayleaf 5Nos 65 gm"
+      "Add Ghee 20g, Cumin Seeds 5g 25 gm",
+      "Add Soaked Rice 400g, Salt 8g 408 gm",
+      "Auto  Water (Auto) 940 ml",
+      "Add Garnish  5 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "2700G",
-    "On2Cook Cooking Time": "15",
-    "Normal Cooking Time": "",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "11",
+    "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
@@ -11019,7 +11021,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "RAJMA MASALA",
+    "Recipe Name": "RAJMA MASALA 3000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -11038,7 +11040,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-04T09:43:39Z"
   },
   {
     "Recipe Name": "VEG SUKTO",
@@ -11124,10 +11126,14 @@
     "Image": "../test_images/VEG DIWANI HANDI.jpg",
     "PopupImage": "../popup_images_with_cover/VEG DIWANI HANDI.pdf",
     "Ingredients": [
-      "Take Gravy & Spices 606 ml",
-      "Auto Water (Auto) 250 ml"
+      "Take Oil 30 ml",
+      "Take Cumin Seeds    2 gm",
+      "Puree Raw Gravy Paste 315 gm",
+      "Take Cream Mix 38 gm",
+      "Finely Chop Chopped Vegetables 21 gm",
+      "Diamond Cut Cut Vegetables 200 gm"
     ],
-    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
     "Total Output": "550 GM",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "45 mins",
@@ -11519,13 +11525,13 @@
     "Image": "../test_images/CHICKEN TIKKA.jpg",
     "PopupImage": "../popup_images_with_cover/CHICKEN TIKKA.pdf",
     "Ingredients": [
-      "Take Marinated Chicken 425 gm",
-      "Add Oil for Brushing  20 ml"
+      "Take Marinated Chicken 415 gm",
+      "Add Oil for Brushing  30 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "",
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "15 mins",
+    "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
@@ -13852,7 +13858,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHICKEN BIRYANI",
+    "Recipe Name": "CHICKEN BIRYANI 1000G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -13871,7 +13877,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "GUJIYA",

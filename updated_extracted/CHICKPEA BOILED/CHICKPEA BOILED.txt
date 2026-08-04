@@ -78,7 +78,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "PINDI CHOLE\nFINAL OUTPUT BOILED CHICKPEA 700 G\n\nACCESSORIES\nPressure Cooker\n",
+  "description": "PINDI CHOLE 1000G\nFINAL OUTPUT BOILED CHICKPEA 700 G\n\nACCESSORIES\nPressure Cooker\n",
   "difficulty": "Easy",
   "id": 66,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/CHNA%20DAL%20BOILED%20200%20GM/CHNA%20DAL%20BOILED%20200%20GM.jpg",
