@@ -31,7 +31,7 @@ endobj
 /PCSp 6 0 R
 >>
 /XObject <<
-/FormXob.41171c1cf77c5a3751cab7c7e1e9360a 7 0 R
+/FormXob.1bfa4e7550f52795ef0383f16288269c 7 0 R
 >>
 /Font <<
 /F1 8 0 R
@@ -116,7 +116,7 @@ endobj
 11 0 obj
 <<
 /Type /FontDescriptor
-/FontName /QHBAAA+DejaVuSans-Oblique
+/FontName /QBBAAA+DejaVuSans-Oblique
 /Flags 4
 /FontBBox [ -1015.625 -350.097656 1659.17968 1067.87109 ]
 /ItalicAngle 0
@@ -239,7 +239,7 @@ endobj
 19 0 obj
 <<
 /Type /FontDescriptor
-/FontName /QBBAAA+NotoColorEmoji
+/FontName /QHBAAA+NotoColorEmoji
 /Flags 4
 /FontBBox [ 0 0 0 0 ]
 /ItalicAngle 0
@@ -528,7 +528,7 @@ BT
 ET
 q
 297.6378 0 0 274.9606 0 371.3386 cm
-/FormXob.41171c1cf77c5a3751cab7c7e1e9360a Do
+/FormXob.1bfa4e7550f52795ef0383f16288269c Do
 Q
 BT
 /F2 18 Tf
