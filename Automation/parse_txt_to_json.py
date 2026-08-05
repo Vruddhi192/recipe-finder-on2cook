@@ -160,7 +160,7 @@ def load_smartsheet_data():
                 recipe_name = str(value).strip().upper()
             elif col_name in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category"]:
                 row_data[col_name] = str(value).strip().upper()
-            elif col_name in ["Flavor Profile", "Consistency"]:
+            elif col_name in ["Flavor Profile", "Consistency", "Prerequisite Recipe"]:
                 row_data[col_name] = str(value).strip() if value else ""
 
         # Smartsheet tracks a last-modified timestamp on every row natively
@@ -273,6 +273,7 @@ def parse_recipe_txt(txt_path):
         "Category": "MAIN COURSE",
         "Flavor Profile": "",
         "Consistency": "",
+        "Prerequisite Recipe": "",
         "Cooking Time": total_on2cook_time_min,
         "Image": "",
         "PopupImage": "",
@@ -339,7 +340,7 @@ def generate_recipes_json():
         # Apply Smartsheet overrides if matched
         if matched_name:
             ss = smartsheet_map[matched_name]
-            for field in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Flavor Profile", "Consistency"]:
+            for field in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Flavor Profile", "Consistency", "Prerequisite Recipe"]:
                 recipe[field] = ss.get(field, recipe[field])
             # Modified isn't a fallback-able field like the others (recipe
             # dict has no prior value for it) — just take it straight from
@@ -398,6 +399,7 @@ def generate_recipes_json():
     print("   - Category")
     print("   - Flavor Profile")
     print("   - Consistency")
+    print("   - Prerequisite Recipe")
     print("🔒 Protected fields (never overwritten):")
     print("   - hidden")
     print("   - hiddenReason")

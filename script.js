@@ -701,6 +701,42 @@ function buildProfileStrip(flavour, consistency) {
   return `<div class="profile-strip">${parts.join('')}</div>`;
 }
 
+// ── Prerequisite Recipe ──────────────────────────────────────────────────
+// "Prerequisite Recipe" is a Smartsheet column: the name of a recipe that
+// needs to be prepared first (e.g. "Manchurian Fry" requires "Paneer Fry"
+// to already be made). We look the name up against the full recipes list
+// to grab its thumbnail and to make the row clickable.
+
+function findRecipeByName(name) {
+  if (!name) return null;
+  const target = name.trim().toUpperCase();
+  return recipes.find(r => (r['Recipe Name'] || '').trim().toUpperCase() === target) || null;
+}
+
+function buildPrerequisiteRow(recipe) {
+  const prereqName = (recipe['Prerequisite Recipe'] || '').trim();
+  if (!prereqName) return '';
+
+  const prereqRecipe = findRecipeByName(prereqName);
+  const thumbSrc = prereqRecipe ? prereqRecipe.Image : '';
+  const safeName = prereqName.replace(/"/g, '&quot;');
+
+  return `
+    <div class="prereq-row" data-prereq-name="${safeName}" title="Tap to view ${safeName}">
+      <div class="prereq-thumb-wrap">
+        ${thumbSrc
+          ? `<img src="${thumbSrc}" alt="${safeName}" class="prereq-thumb" />`
+          : `<div class="prereq-thumb prereq-thumb-placeholder">🍳</div>`}
+      </div>
+      <div class="prereq-info">
+        <span class="prereq-label">Prerequisite Recipe</span>
+        <span class="prereq-name">${prereqName}</span>
+      </div>
+      <span class="prereq-chevron">&rsaquo;</span>
+    </div>
+  `;
+}
+
 function showRecipes() {
   let filtered = filterRecipes();
 
@@ -804,12 +840,21 @@ function showRecipes() {
             <span class="badge-text">Normal  ${cleanTime}</span>
           </div>
         </div>
+        ${buildPrerequisiteRow(r)}
       </div>
     `;
 
-    // Add click handler for card (excluding download button)
+    // Add click handler for card (excluding download/save buttons and the
+    // prerequisite row, which navigates to a different recipe's popup)
     card.addEventListener('click', (e) => {
-      if (!e.target.closest('.download-btn')) {
+      const prereqEl = e.target.closest('.prereq-row');
+      if (prereqEl) {
+        e.stopPropagation();
+        const target = findRecipeByName(prereqEl.getAttribute('data-prereq-name'));
+        if (target) openPopup(target);
+        return;
+      }
+      if (!e.target.closest('.download-btn') ) {
         openPopup(r);
       }
     });
