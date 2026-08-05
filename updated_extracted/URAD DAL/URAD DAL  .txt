@@ -78,7 +78,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "DAL MAKHANI\nFINAL OUTPUT 1000 G\n\nACCESSORIES\nPressure Cooker\n\n",
+  "description": "URAD DAL BOILED\nFINAL OUTPUT 1000 G\n\nACCESSORIES\nPressure Cooker\n\n",
   "difficulty": "Easy",
   "id": 63,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/URAD%20DAL%20BOILED%20400%20GM/URAD%20DAL%20BOILED%20400%20GM.jpg",
