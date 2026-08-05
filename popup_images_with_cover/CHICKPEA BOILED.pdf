@@ -31,7 +31,7 @@ endobj
 /PCSp 6 0 R
 >>
 /XObject <<
-/FormXob.d4484d8dc0298600d4370341d37cafbe 7 0 R
+/FormXob.1f096d1ed7fcdb848a60680b210df6ef 7 0 R
 >>
 /Font <<
 /F1 8 0 R
@@ -239,7 +239,7 @@ endobj
 19 0 obj
 <<
 /Type /FontDescriptor
-/FontName /QPAAAA+NotoColorEmoji
+/FontName /QHBAAA+NotoColorEmoji
 /Flags 4
 /FontBBox [ 0 0 0 0 ]
 /ItalicAngle 0
@@ -322,7 +322,7 @@ endobj
 25 0 obj
 <<
 /Type /FontDescriptor
-/FontName /QHBAAA+DejaVuSans-Bold
+/FontName /QVAAAA+DejaVuSans-Bold
 /Flags 4
 /FontBBox [ -1069.33593 -415.039062 1975.09765 1175.29296 ]
 /ItalicAngle 0
@@ -427,7 +427,7 @@ endobj
 31 0 obj
 <<
 /Type /FontDescriptor
-/FontName /QVAAAA+DejaVuSans
+/FontName /QPAAAA+DejaVuSans
 /Flags 4
 /FontBBox [ -1020.50781 -462.890625 1793.45703 1232.42187 ]
 /ItalicAngle 0
@@ -510,7 +510,7 @@ endstream
 endobj
 35 0 obj
 <<
-/Length 392162
+/Length 392159
 >>
 stream
 q
@@ -526,7 +526,7 @@ BT
 ET
 q
 297.6378 0 0 274.9606 0 371.3386 cm
-/FormXob.d4484d8dc0298600d4370341d37cafbe Do
+/FormXob.1f096d1ed7fcdb848a60680b210df6ef Do
 Q
 BT
 /F2 18 Tf
@@ -10494,12 +10494,6 @@ BT
 9.21875 0 Td
 (\000\006) Tj
 4.765625 0 Td
-(\000\011) Tj
-5.875 0 Td
-(\000\014) Tj
-9.171875 0 Td
-(\000\006) Tj
-4.765625 0 Td
 (\000\027) Tj
 9.515625 0 Td
 (\000\014) Tj
@@ -10508,6 +10502,12 @@ BT
 4.15625 0 Td
 (\000\002) Tj
 4.15625 0 Td
+(\000\023) Tj
+4.15625 0 Td
+(\000\013) Tj
+9.5 0 Td
+(\000\025) Tj
+9.515625 0 Td
 (\000\006) Tj
 4.765625 0 Td
 (\000\011) Tj
@@ -10819,5 +10819,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-539383
+539380
 %%EOF
