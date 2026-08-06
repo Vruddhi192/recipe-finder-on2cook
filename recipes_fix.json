@@ -1706,8 +1706,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "GHEE RICE 2700G",
@@ -2057,8 +2057,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "ALOO SAMOSA",
@@ -3499,6 +3499,29 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
+    "Recipe Name": "CHOPPED MASALA (KADAI MASALA 1300G)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Semi-Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 17,
+    "Image": "../test_images/CHOPPED MASALA 1300G.jpg",
+    "PopupImage": "../popup_images_with_cover/CHOPPED MASALA 1300G.pdf",
+    "Ingredients": [
+      "Add Oil & Tadka 1260 gm",
+      "Mix Powder Spices & Tomatoes  700 gm",
+      "Auto Water (Auto) 100 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1300G",
+    "On2Cook Cooking Time": "17",
+    "Normal Cooking Time": "35 mins",
+    "Modified": "2026-07-10T10:24:00Z"
+  },
+  {
     "Recipe Name": "MOONG DAL CHILLA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING + SAUTEING",
@@ -3914,8 +3937,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "ROSE PISTA CAKE",
@@ -4438,8 +4461,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN DRY",
@@ -5953,8 +5976,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL ALOO PARATHA",
@@ -6514,6 +6537,27 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-10T11:58:51Z"
+  },
+  {
+    "Recipe Name": "AMUL CHEESE POPPONS",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "INDIAN",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 2,
+    "Image": "../test_images/AMUL CHEESE POPPONS.jpg",
+    "PopupImage": "../popup_images_with_cover/AMUL CHEESE POPPONS.pdf",
+    "Ingredients": [
+      "Amul Cheese Poppons 12Nos 250 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "12 NOS ( FROZEN 250 G )",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "8 mins",
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
@@ -7352,6 +7396,29 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z"
+  },
+  {
+    "Recipe Name": "GUJARATI KADHI GN (GUJARATI KADHI GANDHINAGAR)",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GUJARATI",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Gravy",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 14,
+    "Image": "../test_images/GUJARATI KADHI GN.jpg",
+    "PopupImage": "../popup_images_with_cover/GUJARATI KADHI GN.pdf",
+    "Ingredients": [
+      "Take Ghee  & Tadka 110 gm",
+      "Whisk  Curd Mixer  2290 gm",
+      "Auto Water (Auto) 1250 ml"
+    ],
+    "Accessories": "",
+    "Total Output": "3000G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "40 mins",
+    "Modified": "2026-08-06T08:20:56Z"
   },
   {
     "Recipe Name": "CHINESE GOBI FRY",
@@ -8707,8 +8774,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN HANDI POT BIRYANI",
@@ -9431,8 +9498,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "VEGETABLE KORMA",
@@ -12674,8 +12741,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL POPPONS",
@@ -12699,14 +12766,14 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "MUSHROOM CHILLI GRAVY",
+    "Recipe Name": "MUSHROOM FRY 200G",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
+    "Cooking Mode": "FRYING",
     "Cuisine": "PAN ASIAN",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Extra Spicy",
-    "Consistency": "Gravy",
-    "Prerequisite Recipe": "MUSHROOM FRY",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
     "Cooking Time": 2,
     "Image": "../test_images/MUSHROOM FRY.jpg",
     "PopupImage": "../popup_images_with_cover/MUSHROOM FRY.pdf",
@@ -12718,7 +12785,7 @@
     "Total Output": "200G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-06T06:49:05Z"
+    "Modified": "2026-08-06T07:17:49Z"
   },
   {
     "Recipe Name": "VEG MANCHOW SOUP",
@@ -12930,8 +12997,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MASHED POTATOES",
@@ -13281,8 +13348,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
