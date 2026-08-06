@@ -4,6 +4,8 @@ import re
 import requests
 from pathlib import Path
 
+import download_zips  # for the ZIP stem → Smartsheet row ID join
+
 # ===============================
 # CONFIG
 # ===============================
@@ -133,7 +135,60 @@ def load_existing_recipes(path):
 # SMARTSHEET LOGIC
 # ===============================
 
+def load_smartsheet_rows_by_id():
+    """
+    Fetches the sheet once and returns {row_id_str: row_data}, where row_data
+    holds the *exact* Smartsheet column values for that row — Recipe Name
+    included.
+
+    This backs the primary (ZIP-based) match in generate_recipes_json(): once
+    we know which row a recipe's ZIP belongs to (via
+    download_zips.get_zip_stem_to_row_id()), we read everything — including
+    the Recipe Name itself — straight from that row, instead of trusting
+    whatever name is baked into the ZIP's internal .txt file.
+    """
+    print("📡 Fetching Smartsheet rows (by row ID)...")
+
+    url = f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}"
+    response = requests.get(url, headers=SMARTSHEET_HEADERS)
+
+    if response.status_code != 200:
+        raise Exception(f"Smartsheet API error: {response.status_code} - {response.text}")
+
+    sheet = response.json()
+    column_map = {col["id"]: col["title"] for col in sheet["columns"]}
+
+    rows_by_id = {}
+
+    for row in sheet["rows"]:
+        row_data = {}
+
+        for cell in row["cells"]:
+            col_name = column_map.get(cell["columnId"])
+            value = cell.get("value", "")
+
+            if col_name == "Recipe Name":
+                row_data["Recipe Name"] = str(value).strip().upper()
+            elif col_name in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category"]:
+                row_data[col_name] = str(value).strip().upper()
+            elif col_name in ["Flavor Profile", "Consistency", "Prerequisite Recipe"]:
+                row_data[col_name] = str(value).strip() if value else ""
+
+        row_data["Modified"] = row.get("modifiedAt") or row.get("createdAt") or ""
+        rows_by_id[str(row["id"])] = row_data
+
+    print(f"✅ Loaded {len(rows_by_id)} Smartsheet rows (by ID)")
+    return rows_by_id
+
+
 def load_smartsheet_data():
+    """
+    Fallback lookup: {recipe_name_upper: row_data}, matched by text against
+    the Recipe Name column. Only consulted when a recipe's ZIP isn't found
+    among Smartsheet's current attachments (e.g. the row's ZIP was replaced,
+    or the row was deleted after this recipe was already extracted locally)
+    — see the ZIP-based match in generate_recipes_json() for the primary path.
+    """
     print("📡 Fetching Smartsheet data...")
 
     url = f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}"
@@ -300,6 +355,15 @@ def generate_recipes_json():
     # 🔒 Load existing JSON first so we can restore protected fields later
     existing_map = load_existing_recipes(OUTPUT_JSON)
 
+    # Primary match path: this recipe's own ZIP stem → Smartsheet row ID →
+    # that row's own cells. Reliable because it's the same ZIP file identity
+    # already used to download and extract the recipe — it can't drift the
+    # way text-matching on the internal name/description can.
+    zip_stem_to_row_id = download_zips.get_zip_stem_to_row_id()
+    rows_by_id = load_smartsheet_rows_by_id()
+
+    # Fallback match path (name/description text matching) — only used when
+    # a recipe's ZIP isn't found among Smartsheet's current attachments.
     smartsheet_map = load_smartsheet_data()
 
     for recipe_key in os.listdir(EXTRACT_ROOT):
@@ -318,28 +382,40 @@ def generate_recipes_json():
         original_name = recipe["_original_name"]
 
         matched_name = None
+        ss = None
 
-        # 1️⃣ Try matching JSON name first
-        if name in smartsheet_map:
-            matched_name = name
-            print(f"✅ Matched using JSON name: {name}")
+        # 1️⃣ ZIP-based match (preferred) — recipe_key IS the ZIP's own stem,
+        # so look its Smartsheet row up directly and read that row's cells,
+        # including the Recipe Name itself.
+        row_id = zip_stem_to_row_id.get(recipe_key)
+        if row_id and row_id in rows_by_id:
+            ss = rows_by_id[row_id]
+            matched_name = ss.get("Recipe Name") or name
+            recipe["Recipe Name"] = matched_name
+            print(f"✅ Matched via ZIP → row ID: {recipe_key} → {matched_name}")
 
-        else:
-            # 2️⃣ Try description first line
-            description = recipe.get("description", "")
-            if description:
-                first_line = description.strip().split("\n")[0].strip().upper()
-                metadata_keywords = ["NORMAL COOKING TIME", "NORMAL TIME", "FINAL OUTPUT", "OUTPUT", "ACCESSORIES"]
+        # 2️⃣ Fallback: old text-matching behavior, only if the ZIP-based
+        # match above didn't find anything.
+        if not ss:
+            if name in smartsheet_map:
+                matched_name = name
+                ss = smartsheet_map[matched_name]
+                print(f"↩️ Fallback-matched using JSON name: {name}")
+            else:
+                description = recipe.get("description", "")
+                if description:
+                    first_line = description.strip().split("\n")[0].strip().upper()
+                    metadata_keywords = ["NORMAL COOKING TIME", "NORMAL TIME", "FINAL OUTPUT", "OUTPUT", "ACCESSORIES"]
 
-                if first_line and not any(first_line.startswith(k) for k in metadata_keywords):
-                    if first_line in smartsheet_map:
-                        matched_name = first_line
-                        recipe["Recipe Name"] = first_line
-                        print(f"🔁 Matched using description name: {first_line}")
+                    if first_line and not any(first_line.startswith(k) for k in metadata_keywords):
+                        if first_line in smartsheet_map:
+                            matched_name = first_line
+                            recipe["Recipe Name"] = first_line
+                            ss = smartsheet_map[matched_name]
+                            print(f"↩️ Fallback-matched using description name: {first_line}")
 
-        # Apply Smartsheet overrides if matched
-        if matched_name:
-            ss = smartsheet_map[matched_name]
+        # Apply Smartsheet overrides if matched (via either path above)
+        if ss:
             for field in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Flavor Profile", "Consistency", "Prerequisite Recipe"]:
                 recipe[field] = ss.get(field, recipe[field])
             # Modified isn't a fallback-able field like the others (recipe
@@ -392,7 +468,8 @@ def generate_recipes_json():
         json.dump(recipes, f, indent=2, ensure_ascii=False)
 
     print(f"\n✅ {len(recipes)} recipes written to {OUTPUT_JSON}")
-    print("📡 Smartsheet is the master for:")
+    print("📡 Smartsheet is the master for (matched via ZIP → row ID, falling back to name/description text-match):")
+    print("   - Recipe Name")
     print("   - Veg/Non Veg")
     print("   - Cooking Mode")
     print("   - Cuisine")

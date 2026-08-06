@@ -91,6 +91,47 @@ def get_sheet_modified_map() -> dict:
     return stem_modified
 
 
+def get_zip_stem_to_row_id() -> dict:
+    """
+    Returns {zip_stem_upper: row_id} for every Smartsheet row that has a ZIP
+    attachment.
+
+    This is the reliable join key between a locally-extracted recipe folder
+    (named after its own ZIP's stem — see extract_zips.py) and its exact
+    Smartsheet row. parse_txt_to_json.py uses this to fetch a recipe's
+    Recipe Name (and every other column) directly from the row that ZIP
+    belongs to, instead of text-matching the name baked into the ZIP's
+    internal .txt file against the sheet — which drifts whenever that
+    internal name doesn't exactly match what's typed in the Recipe Name
+    column.
+    """
+    print("📡 Fetching ZIP attachments to build stem → row ID map...")
+    resp = requests.get(
+        f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments",
+        headers=SMARTSHEET_HEADERS,
+        params={"includeAll": "true"},
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"Attachments fetch failed: {resp.status_code} – {resp.text}")
+
+    stem_to_row_id = {}
+    for att in resp.json().get("data", []):
+        if att.get("parentType") != "ROW":
+            continue
+        name = att.get("name", "")
+        if not name.lower().endswith(".zip"):
+            continue
+        stem = Path(name).stem.upper()
+        row_id = att.get("parentId")
+        if row_id is not None:
+            # If a row somehow has >1 zip attachment, last one wins — same
+            # tie-break behavior as get_sheet_modified_map above.
+            stem_to_row_id[stem] = str(row_id)
+
+    print(f"   → {len(stem_to_row_id)} ZIP → row ID mappings")
+    return stem_to_row_id
+
+
 def download_all_zips() -> set:
     """
     Downloads all new/updated ZIP attachments from Smartsheet into ZIP_ROOT.
