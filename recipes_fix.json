@@ -693,7 +693,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PENNE PESTO  (WITH FRESH BASIL PESTO)",
+    "Recipe Name": "PENNE PESTO 300G (WITH FRESH BASIL PESTO)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -714,7 +714,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "DABELI FILLING",
@@ -928,7 +928,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T06:37:19Z"
   },
   {
     "Recipe Name": "CHILLI CHEESE STEAM BUN",
@@ -977,12 +977,12 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
-    "Recipe Name": "PANEER MAKHANI",
+    "Recipe Name": "PANEER MAKHANI 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
     "Cooking Time": 7,
@@ -996,7 +996,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "BANANA CARAMEL CAKE",
@@ -1023,9 +1023,9 @@
   {
     "Recipe Name": "PANEER MANCHURIAN GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
-    "Category": "STARTERS",
+    "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "PANEER FRY",
@@ -1042,7 +1042,7 @@
     "Total Output": "350GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "TOMATO GRAVY 3K",
@@ -1116,7 +1116,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "BROWN ONION RICE",
@@ -1286,7 +1286,7 @@
   {
     "Recipe Name": "FISH MASALA CURRY (MACHER JHOL)",
     "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "BENGALI",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Medium Spicy",
@@ -1305,7 +1305,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "FRY VEG BIRYANI",
@@ -1706,8 +1706,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "GHEE RICE 2700G",
@@ -2057,8 +2057,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ALOO SAMOSA",
@@ -2392,12 +2392,12 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PANEER MAKHANI",
+    "Recipe Name": "PANEER MAKHANI 2000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
     "Cooking Time": 9,
@@ -2411,7 +2411,7 @@
     "Total Output": "2000G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "CREAM OF CORN",
@@ -3219,14 +3219,14 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PANEER CHILI DRY",
+    "Recipe Name": "PANEER FRY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
+    "Cooking Mode": "FRYING",
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
-    "Flavor Profile": "Extra Spicy",
+    "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
-    "Prerequisite Recipe": "PANEER FRY",
+    "Prerequisite Recipe": "",
     "Cooking Time": 2,
     "Image": "../test_images/FRY PANEER.jpg",
     "PopupImage": "../popup_images_with_cover/FRY PANEER.pdf",
@@ -3238,7 +3238,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "PARUPPU PAYASAM",
@@ -3268,7 +3268,7 @@
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
     "Cuisine": "BENGALI",
-    "Category": "MAIN COURSE",
+    "Category": "STARTERS",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -3282,12 +3282,12 @@
     "Total Output": "4 NOS (80100G PER PCS)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "PUNJABI KADHI",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
+    "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
@@ -3308,7 +3308,7 @@
     "Total Output": "1000 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-23T05:41:18Z"
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "VEG CHILI G RICE (VEG CHILLI GARLIC FRIED RICE)",
@@ -3355,7 +3355,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "PRAWN DIM SUM",
@@ -3563,7 +3563,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:38:55Z"
   },
   {
     "Recipe Name": "TOM YUM THAI SOUP",
@@ -3612,12 +3612,12 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "PANEER MAKHANI",
+    "Recipe Name": "PANEER MAKHANI 3000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
     "Cooking Time": 13,
@@ -3631,7 +3631,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-06-05T08:49:47Z"
   },
   {
     "Recipe Name": "BRAZILIAN CHICKEN BALLS",
@@ -3751,7 +3751,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:37:19Z"
   },
   {
     "Recipe Name": "THAI GREEN PASTE",
@@ -3914,8 +3914,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ROSE PISTA CAKE",
@@ -3945,7 +3945,7 @@
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
     "Cuisine": "PAN ASIAN",
-    "Category": "MAIN COURSE",
+    "Category": "STARTERS",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -3960,7 +3960,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T06:41:17Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "MALAI GOBI TIKKA",
@@ -4003,7 +4003,7 @@
     "Total Output": "600 G",
     "On2Cook Cooking Time": "1",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "VIETNAMESE TOMATO NOODLE SOUP",
@@ -4438,8 +4438,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN DRY",
@@ -4467,7 +4467,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "POHA PAKODA",
@@ -4878,7 +4878,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T08:58:19Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "MUGHLAI PANEER",
@@ -4945,7 +4945,7 @@
       "Take Water Spray  1120 ml"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "",
+    "Total Output": "2000 GM",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-04T09:45:30Z"
@@ -5930,7 +5930,7 @@
     "Total Output": "300G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "TIKKA GRAVY 1KG",
@@ -5953,8 +5953,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL ALOO PARATHA",
@@ -7355,12 +7355,12 @@
   },
   {
     "Recipe Name": "CHINESE GOBI FRY",
-    "Veg/Non Veg": "",
-    "Cooking Mode": "",
-    "Cuisine": "",
-    "Category": "",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Prerequisite Recipe": "",
     "Cooking Time": 3,
     "Image": "../test_images/CHINESE GOBI FRY.jpg",
@@ -7373,7 +7373,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T06:07:15Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "ASIAN CHILLI GARLIC FISH",
@@ -7488,7 +7488,7 @@
     "Total Output": "BOILED CHICKPEA 700 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "Modified": "2026-08-05T06:39:24Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "VEGETABLE UPMA",
@@ -7769,12 +7769,12 @@
   },
   {
     "Recipe Name": "CHINESE FRIED CHICKEN",
-    "Veg/Non Veg": "",
-    "Cooking Mode": "",
-    "Cuisine": "",
-    "Category": "",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "PAN ASIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Prerequisite Recipe": "",
     "Cooking Time": 2,
     "Image": "../test_images/CN FRIED CHICKEN.jpg",
@@ -7787,7 +7787,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T09:52:14Z"
+    "Modified": "2026-06-10T11:58:51Z"
   },
   {
     "Recipe Name": "MALAI KULFI",
@@ -8311,12 +8311,12 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHICKEN HANDI",
+    "Recipe Name": "CHICKEN HANDI 3200G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
+    "Flavor Profile": "Medium Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
     "Cooking Time": 17,
@@ -8331,12 +8331,12 @@
     "Total Output": "3350G",
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-05T08:52:39Z"
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "BHARELA MIRCHI",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "GRILLING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
@@ -8355,7 +8355,7 @@
     "Total Output": "400G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "SEMIYA PAYASAM",
@@ -8707,8 +8707,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN HANDI POT BIRYANI",
@@ -8973,7 +8973,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "VEG KOFTA FRY",
+    "Recipe Name": "KOFTA FRY (25 PCS)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
     "Cuisine": "INDIAN",
@@ -8992,7 +8992,7 @@
     "Total Output": "PER BATCH FRYING 25 NOS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "MEXICAN RICE",
@@ -9204,14 +9204,14 @@
     "Modified": "2026-06-23T09:59:38Z"
   },
   {
-    "Recipe Name": "MALAI KOFTA",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Gravy",
-    "Prerequisite Recipe": "KOFTA FRY",
+    "Recipe Name": "KOFTA FRY 16PCS",
+    "Veg/Non Veg": "",
+    "Cooking Mode": "",
+    "Cuisine": "",
+    "Category": "",
+    "Flavor Profile": "",
+    "Consistency": "",
+    "Prerequisite Recipe": "",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED KOFTA.jpg",
     "PopupImage": "../popup_images_with_cover/FRIED KOFTA.pdf",
@@ -9223,7 +9223,7 @@
     "Total Output": "16 PCS",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "BAINGAN BHARTA",
@@ -9431,8 +9431,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "VEGETABLE KORMA",
@@ -9809,7 +9809,7 @@
   {
     "Recipe Name": "VEG MANCHURIAN GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
@@ -9830,7 +9830,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "VALOR PAPDI SHAK",
@@ -9970,7 +9970,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:38:55Z"
   },
   {
     "Recipe Name": "PONGAL",
@@ -10107,7 +10107,7 @@
     "Total Output": "6 PCS",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T06:39:24Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "VEG SWEET CORN SOUP",
@@ -10139,7 +10139,7 @@
   {
     "Recipe Name": "MUSHROOM CHILLI GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Extra Spicy",
@@ -10160,7 +10160,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "MASALA MAGGI",
@@ -11283,7 +11283,7 @@
   {
     "Recipe Name": "PANEER CHILLI GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Extra Spicy",
@@ -11306,7 +11306,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN GRAVY",
@@ -11334,7 +11334,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "BHINDI MASALA",
@@ -11366,7 +11366,7 @@
   {
     "Recipe Name": "GOBI MANCHURIAN GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING + SAUTEING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "MAIN COURSE",
     "Flavor Profile": "Less Spicy",
@@ -11389,7 +11389,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "TOMATO GRAVY 1KG",
@@ -11561,13 +11561,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "ARRABBIATA SAUCE",
+    "Recipe Name": "ARRABBIATA 1KG (ARRABBIATA BASE SAUCE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "BASE",
     "Flavor Profile": "Medium Spicy",
-    "Consistency": "Semi - Gravy",
+    "Consistency": "Gravy",
     "Prerequisite Recipe": "",
     "Cooking Time": 14,
     "Image": "../test_images/ARRABBIATA 1KG.jpg",
@@ -11581,7 +11581,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-07-14T06:21:49Z"
   },
   {
     "Recipe Name": "CREAM OF PEAS",
@@ -11892,14 +11892,14 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "MUSHROOM CHILLI DRY",
+    "Recipe Name": "MUSHROOM FRY 500G",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
+    "Cooking Mode": "FRYING",
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
-    "Flavor Profile": "Extra Spicy",
+    "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
-    "Prerequisite Recipe": "MUSHROOM FRY",
+    "Prerequisite Recipe": "",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED MUSHROOM.jpg",
     "PopupImage": "../popup_images_with_cover/FRIED MUSHROOM.pdf",
@@ -11911,7 +11911,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "PINDI CHOLE MASALA",
@@ -12049,7 +12049,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "RAJMA BOILED 400 G",
+    "Recipe Name": "RAJMA BOILED",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
     "Cuisine": "INDIAN",
@@ -12067,7 +12067,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T07:16:23Z"
   },
   {
     "Recipe Name": "PANEER PEAS KEEMA",
@@ -12480,7 +12480,7 @@
     "Total Output": "350G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "PENNE ARRABIATA (MAGGI PREMIX)",
@@ -12674,8 +12674,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL POPPONS",
@@ -12699,14 +12699,14 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "MUSHROOM FRY",
+    "Recipe Name": "MUSHROOM CHILLI GRAVY",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING",
+    "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
-    "Category": "STARTERS",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Dry",
-    "Prerequisite Recipe": "",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Extra Spicy",
+    "Consistency": "Gravy",
+    "Prerequisite Recipe": "MUSHROOM FRY",
     "Cooking Time": 2,
     "Image": "../test_images/MUSHROOM FRY.jpg",
     "PopupImage": "../popup_images_with_cover/MUSHROOM FRY.pdf",
@@ -12718,7 +12718,7 @@
     "Total Output": "200G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T06:49:05Z"
   },
   {
     "Recipe Name": "VEG MANCHOW SOUP",
@@ -12930,8 +12930,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MASHED POTATOES",
@@ -12953,7 +12953,7 @@
     "Total Output": "1100 G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T07:18:10Z"
   },
   {
     "Recipe Name": "RICE KHEER",
@@ -13281,8 +13281,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
@@ -13540,7 +13540,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:27:17Z"
   },
   {
     "Recipe Name": "DAL MAKHANI 1KG (FROM SOAKED URAD DAL)",
@@ -14263,7 +14263,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-05T09:07:34Z"
+    "Modified": "2026-08-06T06:38:55Z"
   },
   {
     "Recipe Name": "KALAKAND",
