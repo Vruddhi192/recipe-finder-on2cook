@@ -391,8 +391,18 @@ def generate_recipes_json():
         if row_id and row_id in rows_by_id:
             ss = rows_by_id[row_id]
             matched_name = ss.get("Recipe Name") or name
+
+            # Explicit check: does the ZIP's own internal name agree with
+            # what's typed in Smartsheet's Recipe Name column for this row?
+            # Smartsheet always wins either way — this is just visibility so
+            # you can spot rows where the two have drifted apart.
+            if name and matched_name and name != matched_name:
+                print(f"   ℹ️ Recipe Name check: ZIP's internal name ('{name}') "
+                      f"≠ Smartsheet Recipe Name ('{matched_name}') for row {row_id} "
+                      f"— using Smartsheet's value")
+
             recipe["Recipe Name"] = matched_name
-            print(f"✅ Matched via ZIP → row ID: {recipe_key} → {matched_name}")
+            print(f"✅ Matched via ZIP → row ID: {recipe_key} → {matched_name} (from Smartsheet Recipe Name column)")
 
         # 2️⃣ Fallback: old text-matching behavior, only if the ZIP-based
         # match above didn't find anything.
