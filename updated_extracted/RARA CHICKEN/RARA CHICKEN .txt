@@ -147,7 +147,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "RARA CHICKEN (500G)\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 40 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
+  "description": "RARA CHICKEN 500G\nFINAL OUTPUT 500 G\nNORMAL COOKING TIME 40 MINUTES \n\nACCESSORIES\nPan Non-Coated (SS)\nSilicone Stirrer",
   "difficulty": "Easy",
   "id": 781,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/RARA%20CHICKEN%20/RARA%20CHICKEN%20.jpg",

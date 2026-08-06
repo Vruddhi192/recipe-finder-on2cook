@@ -162,7 +162,7 @@
     "Recipe Name": "AMUL HASH BROWN",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "INDIAN",
+    "Cuisine": "GLOBAL CUISINE",
     "Category": "SIDE DISH",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -389,7 +389,7 @@
     "Modified": "2026-06-18T09:49:56Z"
   },
   {
-    "Recipe Name": "DOODHI HALWA 400",
+    "Recipe Name": "DOODHI HALWA 400G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -409,7 +409,7 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "MURGIR JHOL",
@@ -437,7 +437,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "VEG BIRYANI 3200",
+    "Recipe Name": "VEG BIRYANI 3200G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -458,10 +458,10 @@
     "Total Output": "3200G",
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
-    "Recipe Name": "VEG MAGGI 2KG",
+    "Recipe Name": "VEG MAGGI 2000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -480,7 +480,7 @@
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-23T07:12:56Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "TUSCAN CHICKEN",
@@ -740,6 +740,33 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
+    "Recipe Name": "BUTTER CHICKEN 700G",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 8,
+    "Image": "../test_images/BUTTER CHICKEN 700G.jpg",
+    "PopupImage": "../popup_images_with_cover/BUTTER CHICKEN 700G.pdf",
+    "Ingredients": [
+      "Take Oil 20 ml",
+      "Take Ghee 20 gm",
+      "Mix Raw Gravy  325 gm",
+      "Auto Water (Auto) 100 ml",
+      "Mix Dry Spices 15 gm",
+      "Mix Cream 30gm, Butter 20gm 50 gm",
+      "Marinate Marinated Chicken  350 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "700G",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-08-04T09:46:42Z"
+  },
+  {
     "Recipe Name": "CHICKEN BIRYANI 3200G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -784,7 +811,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "MIRCHI SALAN2500",
+    "Recipe Name": "MIRCHI SALAN 2500G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "SOUTH INDIAN",
@@ -807,7 +834,7 @@
     "Total Output": "2500G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-22T11:08:23Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "SHAHI DAHI HALWA",
@@ -928,7 +955,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-08-06T06:37:19Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CHILLI CHEESE STEAM BUN",
@@ -1686,6 +1713,30 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
+    "Recipe Name": "JEERA RICE 1KG",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 11,
+    "Image": "../test_images/JEERA RICE 1000G.jpg",
+    "PopupImage": "../popup_images_with_cover/JEERA RICE 1000G.pdf",
+    "Ingredients": [
+      "Add Ghee 20g, Cumin Seeds 5g 25 gm",
+      "Add Soaked Rice 400g, Salt 8g 408 gm",
+      "Auto  Water (Auto) 940 ml",
+      "Add Garnish  5 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "1000G",
+    "On2Cook Cooking Time": "11",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-08-06T10:57:07Z"
+  },
+  {
     "Recipe Name": "BHUNA GRAVY 1500",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "AUTO",
@@ -2130,7 +2181,7 @@
     "Modified": "2026-07-31T06:55:56Z"
   },
   {
-    "Recipe Name": "ZEEBA BIRYANI 1KG (RICE BRAND - ZEEBA)",
+    "Recipe Name": "ZEEBA BIRYANI 1000G (RICE BRAND - ZEEBA)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
     "Cuisine": "INDIAN",
@@ -2150,7 +2201,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-10T10:36:12Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "SAMBHAR",
@@ -2179,7 +2230,7 @@
     "Modified": "2026-07-06T07:08:11Z"
   },
   {
-    "Recipe Name": "DUDHI HALWA 1500",
+    "Recipe Name": "DUDHI HALWA 1500G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -2198,7 +2249,7 @@
     "Total Output": "1500 G",
     "On2Cook Cooking Time": "23",
     "Normal Cooking Time": "55 mins",
-    "Modified": "2026-06-11T05:02:48Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "UDUPI SAMBER",
@@ -2225,7 +2276,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHOLE MASALA 1KG",
+    "Recipe Name": "CHOLE MASALA 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -2247,7 +2298,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "SCHEZWAN PULAO",
@@ -2440,13 +2491,13 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
-    "Recipe Name": "BUTTER CHICKEN 700G",
-    "Veg/Non Veg": "NON VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
+    "Recipe Name": "BUTTER CHICKEN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Gravy",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Prerequisite Recipe": "",
     "Cooking Time": 8,
     "Image": "../test_images/BUTTER CHICKEN.jpg",
@@ -2461,10 +2512,11 @@
       "Marinate Marinated Chicken  350 gm"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
+    "Total Output": "700 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
-    "Modified": "2026-08-04T09:46:42Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "BOILED CHOLE",
@@ -2532,7 +2584,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "DAL VADA",
@@ -2814,7 +2866,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "VEG BIRYANI 2800",
+    "Recipe Name": "VEG BIRYANI 2800G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -2835,7 +2887,7 @@
     "Total Output": "2800G",
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CURD RICE",
@@ -3285,7 +3337,7 @@
     "Modified": "2026-08-06T07:16:23Z"
   },
   {
-    "Recipe Name": "PUNJABI KADHI",
+    "Recipe Name": "PUNJABI KADHI 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
     "Cuisine": "INDIAN",
@@ -3308,7 +3360,7 @@
     "Total Output": "1000 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "VEG CHILI G RICE (VEG CHILLI GARLIC FRIED RICE)",
@@ -3428,13 +3480,13 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "PEAS PULAO (3KG)",
+    "Recipe Name": "PEAS PULAO",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
     "Category": "MAIN COURSE",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Semi-Dry",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Prerequisite Recipe": "",
     "Cooking Time": 14,
     "Image": "../test_images/PEAS PULAO.jpg",
@@ -3447,7 +3499,8 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-26T09:03:28Z"
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "TANDOORI CHICKEN",
@@ -3892,7 +3945,7 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "ONION GRAVY 2K (CHOPPED ONION GRAVY)",
+    "Recipe Name": "ONION GRAVY 2000G (CHOPPED ONION GRAVY)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -3913,7 +3966,7 @@
     "Total Output": "2K",
     "On2Cook Cooking Time": "21",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-08-03T07:55:34Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "KADAI GRAVY 1200",
@@ -4005,7 +4058,7 @@
     "Total Output": "350 GM",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "KESAR PEDA",
@@ -4157,7 +4210,7 @@
     "Recipe Name": "AMUL DAHI TIKKA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "INDIAN",
     "Category": "SIDE DISH",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
@@ -4172,7 +4225,7 @@
     "Total Output": "12 NOS ( FROZEN 350 G )",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CHICKEN SWEET CORN SOUP",
@@ -4316,7 +4369,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T11:21:24Z"
   },
   {
     "Recipe Name": "EGG BHURJI",
@@ -5132,6 +5185,31 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
+    "Recipe Name": "BUTTER CHICKEN 1000G",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 10,
+    "Image": "../test_images/BUTTER CHICKEN 1000G.jpg",
+    "PopupImage": "../popup_images_with_cover/BUTTER CHICKEN 1000G.pdf",
+    "Ingredients": [
+      "Take Oil 40g, Butter 40g 80 ml",
+      "Paste Gravy Paste 565 gm",
+      "Auto Water (Auto) 300 ml",
+      "Mix Indian Seasoning  65 gm",
+      "Marinate Marinated Chicken  460 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "1000 G",
+    "On2Cook Cooking Time": "10",
+    "Normal Cooking Time": "40 mins",
+    "Modified": "2026-08-06T11:45:52Z"
+  },
+  {
     "Recipe Name": "KOREAN RAMEN (NISSIN PKT)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -5610,7 +5688,7 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
-    "Recipe Name": "KADAI PANEER 600",
+    "Recipe Name": "KADAI PANEER 600G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -5629,7 +5707,7 @@
     "Total Output": "600 G (GIFT CITY)",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "SAOJI CHICKEN",
@@ -5887,7 +5965,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "PUNJABI KADHI",
+    "Recipe Name": "PUNJABI KADHI 2000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -5906,7 +5984,7 @@
     "Total Output": "2000G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-23T05:41:18Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CREAM OF CARROTS",
@@ -6743,7 +6821,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "MOONG DAL HALWA1 (1KG)",
+    "Recipe Name": "MOONG DAL HALWA 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -6762,7 +6840,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-26T07:39:08Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "DEHY DELIGHT (DEHYDRATED SAMBHAR PREMIX)",
@@ -6788,7 +6866,7 @@
     "Modified": "2026-07-02T13:22:51Z"
   },
   {
-    "Recipe Name": "ZEEBA BIRYANI 3K (CHICKEN BIRYANI)",
+    "Recipe Name": "ZEEBA BIRYANI 3000G (CHICKEN BIRYANI)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
     "Cuisine": "INDIAN",
@@ -6809,7 +6887,7 @@
     "Total Output": "3400G",
     "On2Cook Cooking Time": "25",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-07-22T11:41:25Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "TANDOORI GOBI TIKKA",
@@ -7277,7 +7355,7 @@
     "Modified": "2026-06-23T11:56:52Z"
   },
   {
-    "Recipe Name": "KORI GASSI 650 G",
+    "Recipe Name": "KORI GASSI 650G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "SOUTH INDIAN",
@@ -7301,7 +7379,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-22T13:19:36Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "EGG ROAST",
@@ -7418,7 +7496,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-08-06T08:20:56Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CHINESE GOBI FRY",
@@ -7580,7 +7658,7 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "DAL MAKHANI 1K (WITH BOILED DAL)",
+    "Recipe Name": "DAL MAKHANI 1000G (WITH BOILED DAL)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -7599,7 +7677,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-10T10:24:00Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "EGG SCHEZWAN NOODLES",
@@ -7854,7 +7932,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T06:30:27Z"
   },
   {
     "Recipe Name": "MALAI KULFI",
@@ -8138,6 +8216,28 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
+    "Recipe Name": "GULAB JAMUN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 3,
+    "Image": "../test_images/GULAB JAMUN.jpg",
+    "PopupImage": "../popup_images_with_cover/GULAB JAMUN.pdf",
+    "Ingredients": [
+      "Take  Pre Heat Oil At 160° C Degree 1500 ml",
+      "Take Gulab Jamun  291 number"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Frying Kit",
+    "Total Output": "12 NOS",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "10 mins",
+    "Modified": "2026-08-06T10:57:07Z"
+  },
+  {
     "Recipe Name": "STUFFED BRINJAL",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -8185,6 +8285,28 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-05T09:04:53Z"
+  },
+  {
+    "Recipe Name": "PEAS PULAO 3000G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Semi-Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 14,
+    "Image": "../test_images/PEAS PULAO 3000G.jpg",
+    "PopupImage": "../popup_images_with_cover/PEAS PULAO 3000G.pdf",
+    "Ingredients": [
+      "Take Rice 1060g, Green Peas 200g, Salt 25g, Oil 50g 1335 gm",
+      "Auto Water (Auto) 1064 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "3000 G",
+    "On2Cook Cooking Time": "14",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "PENNE WHITE (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
@@ -8847,7 +8969,7 @@
     "Modified": "2026-06-18T09:58:48Z"
   },
   {
-    "Recipe Name": "SUJI HALWA 2K",
+    "Recipe Name": "SUJI HALWA 2000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -8867,7 +8989,7 @@
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-26T06:53:21Z",
+    "Modified": "2026-08-06T10:57:07Z",
     "hidden": true
   },
   {
@@ -9528,7 +9650,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "KORI GASSI 2200 G",
+    "Recipe Name": "KORI GASSI 2200G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "SOUTH INDIAN",
@@ -9552,7 +9674,7 @@
     "Total Output": "2200 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "RED MACRONI PASTA (MAGGI PREMIX)",
@@ -9784,7 +9906,7 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
-    "Recipe Name": "MOONG DAL HALWA (500G)",
+    "Recipe Name": "MOONG DAL HALWA 500G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -9803,7 +9925,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-26T09:56:47Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CHI SCHZ RICE (CHICKEN SCHEZWAN FRIED RICE)",
@@ -10983,7 +11105,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "PEPPER GRAVY 1KG",
+    "Recipe Name": "PEPPER GRAVY 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -11003,7 +11125,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-07-10T10:24:00Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "COFFEE WALNUT CAKE",
@@ -11169,7 +11291,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "PEAS PULAO 2KG",
+    "Recipe Name": "PEAS PULAO 2000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING + STEAMING",
     "Cuisine": "INDIAN",
@@ -11189,10 +11311,10 @@
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-26T09:03:28Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
-    "Recipe Name": "GUJARATI DAL 3KG",
+    "Recipe Name": "GUJARATI DAL 3000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GUJARATI",
@@ -11212,7 +11334,7 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-05T09:04:53Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "PINEAPPLE SHEERA",
@@ -11459,7 +11581,7 @@
     "Modified": "2026-08-06T06:49:05Z"
   },
   {
-    "Recipe Name": "TOMATO GRAVY 1KG",
+    "Recipe Name": "TOMATO GRAVY 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -11478,7 +11600,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-08-03T06:38:07Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "PENNE AL DENTE (PASTA ANTUNE)",
@@ -11503,7 +11625,7 @@
     "Modified": "2026-06-05T08:49:47Z"
   },
   {
-    "Recipe Name": "MYSORE PAK 1KG",
+    "Recipe Name": "MYSORE PAK 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -11524,7 +11646,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-23T13:03:58Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "DHABA MUTTON",
@@ -11628,7 +11750,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "ARRABBIATA 1KG (ARRABBIATA BASE SAUCE)",
+    "Recipe Name": "ARRABBIATA 1000G (ARRABBIATA BASE SAUCE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "GLOBAL CUISINE",
@@ -11648,7 +11770,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-07-14T06:21:49Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CREAM OF PEAS",
@@ -12163,7 +12285,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "THAI RED PASTE1K",
+    "Recipe Name": "THAI RED PASTE 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
@@ -12184,7 +12306,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-07-07T11:34:16Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "BOILED MUTTON",
@@ -12208,7 +12330,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "KALAKAND 1 KG",
+    "Recipe Name": "KALAKAND 1000G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -12227,7 +12349,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "90 mins",
-    "Modified": "2026-06-23T12:44:49Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "CHICKEN LOLLIPOP FRY",
@@ -12276,7 +12398,7 @@
     "Modified": "2026-06-22T13:19:36Z"
   },
   {
-    "Recipe Name": "CHICKEN CURRY 1K",
+    "Recipe Name": "CHICKEN CURRY 1000G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -12296,7 +12418,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-07-03T12:28:11Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "MUSHROOM CHILLI DRY",
@@ -12671,7 +12793,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z"
+    "Modified": "2026-08-06T11:21:24Z"
   },
   {
     "Recipe Name": "VEG STIR FRY NOODLES",
@@ -12973,9 +13095,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "SUJI HALWA",
@@ -13448,7 +13568,7 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "RARA CHICKEN (500G)",
+    "Recipe Name": "RARA CHICKEN 500G",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -13469,7 +13589,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-29T11:48:52Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "THAI GREEN CURRY VEG",
@@ -13821,9 +13941,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-22T13:19:36Z",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "Modified": "2026-06-22T13:19:36Z"
   },
   {
     "Recipe Name": "RED SAUCE MAGGI (PENNE MAGGI RED SAUCE PREMIX PASTA)",
@@ -14264,7 +14382,7 @@
     "Modified": "2026-06-05T09:04:53Z"
   },
   {
-    "Recipe Name": "DAL FRY 1KG (WITH BOILED DAL)",
+    "Recipe Name": "DAL FRY 1000G (WITH BOILED DAL)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -14284,7 +14402,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-07-10T10:24:00Z"
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "JEERA ALOO",
