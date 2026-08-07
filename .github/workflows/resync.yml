@@ -1,0 +1,66 @@
+name: Manual Recipe Resync
+
+# Manual only — click "Run workflow" in the Actions tab when you want to
+# force a full content-hash reconciliation. Add a `schedule:` trigger here
+# too if you later want this to also run periodically on its own.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  resync:
+    runs-on: ubuntu-latest
+    # This can take a while — it force-downloads every ZIP on Smartsheet.
+    # Adjust based on how many recipes you have / how long a full run takes.
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          # Needed so the commit-back step at the end has something to push to.
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r Automation/requirements.txt
+
+      - name: Run resync
+        working-directory: Automation
+        env:
+          SMARTSHEET_TOKEN: ${{ secrets.SMARTSHEET_TOKEN }}
+          SMARTSHEET_SHEET_ID: ${{ secrets.SMARTSHEET_SHEET_ID }}
+          DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
+        run: python resync_from_zip_content.py
+
+      - name: Commit results back to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Only the state files + the artifacts your site actually serves,
+          # all of which live one level above Automation/ (see ZIP_ROOT,
+          # OUTPUT_JSON, IMAGE_DIR, etc. in the pipeline scripts).
+          # Deliberately NOT committing zips/, extracted/,
+          # updated_extracted/, updated_zips/, or test_popup_images/ —
+          # those are scratch/build folders regenerated fresh every run
+          # (test_popup_images holds pre-disclaimer PDFs; the served
+          # version is popup_images_with_cover) and would otherwise bloat
+          # the repo with hundreds of MB over time.
+          git add \
+            pipeline_state.json \
+            zip_content_state.json \
+            recipes_fix.json \
+            test_images \
+            popup_images_with_cover \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "Nothing changed — skipping commit."
+          else
+            git commit -m "Manual resync: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
