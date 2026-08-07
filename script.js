@@ -714,27 +714,36 @@ function findRecipeByName(name) {
 }
 
 function buildPrerequisiteRow(recipe) {
-  const prereqName = (recipe['Prerequisite Recipe'] || '').trim();
-  if (!prereqName) return '';
+  const raw = (recipe['Prerequisite Recipe'] || '').trim();
+  if (!raw) return '';
 
-  const prereqRecipe = findRecipeByName(prereqName);
-  const thumbSrc = prereqRecipe ? prereqRecipe.Image : '';
-  const safeName = prereqName.replace(/"/g, '&quot;');
+  // Comma-separated in the sheet — each one is its own prerequisite and
+  // gets its own row/thumbnail/tap target, not lumped into one string.
+  const prereqNames = raw.split(',').map(n => n.trim()).filter(Boolean);
+  if (!prereqNames.length) return '';
 
-  return `
-    <div class="prereq-row" data-prereq-name="${safeName}" title="Tap to view ${safeName}">
-      <div class="prereq-thumb-wrap">
-        ${thumbSrc
-          ? `<img src="${thumbSrc}" alt="${safeName}" class="prereq-thumb" />`
-          : `<div class="prereq-thumb prereq-thumb-placeholder">🍳</div>`}
+  const rows = prereqNames.map(prereqName => {
+    const prereqRecipe = findRecipeByName(prereqName);
+    const thumbSrc = prereqRecipe ? prereqRecipe.Image : '';
+    const safeName = prereqName.replace(/"/g, '&quot;');
+
+    return `
+      <div class="prereq-row" data-prereq-name="${safeName}" title="Tap to view ${safeName}">
+        <div class="prereq-thumb-wrap">
+          ${thumbSrc
+            ? `<img src="${thumbSrc}" alt="${safeName}" class="prereq-thumb" />`
+            : `<div class="prereq-thumb prereq-thumb-placeholder">🍳</div>`}
+        </div>
+        <div class="prereq-info">
+          <span class="prereq-label">Prerequisite Recipe</span>
+          <span class="prereq-name">${prereqName}</span>
+        </div>
+        <span class="prereq-chevron">&rsaquo;</span>
       </div>
-      <div class="prereq-info">
-        <span class="prereq-label">Prerequisite Recipe</span>
-        <span class="prereq-name">${prereqName}</span>
-      </div>
-      <span class="prereq-chevron">&rsaquo;</span>
-    </div>
-  `;
+    `;
+  }).join('');
+
+  return `<div class="prereq-group">${rows}</div>`;
 }
 
 function showRecipes() {
@@ -854,7 +863,7 @@ function showRecipes() {
         if (target) openPopup(target);
         return;
       }
-      if (!e.target.closest('.download-btn') ) {
+      if (!e.target.closest('.download-btn') && !e.target.closest('.save-recipe-btn')) {
         openPopup(r);
       }
     });
