@@ -14,6 +14,7 @@ Usage:
 """
 
 import os
+import sys
 import stat
 import time
 import shutil
@@ -53,12 +54,21 @@ def safe_rmtree(path, retries=6, delay=0.5):
         except Exception:
             pass
 
+    # shutil.rmtree's error-handler kwarg was renamed from `onerror` to
+    # `onexc` in Python 3.12 (`onerror` still works, just deprecated, until
+    # 3.14). Pick whichever this interpreter actually supports instead of
+    # hardcoding one — otherwise this throws a TypeError on anything older
+    # than 3.12 before it even gets a chance to retry.
+    rmtree_kwargs = (
+        {"onexc": _on_exc} if sys.version_info >= (3, 12) else {"onerror": _on_exc}
+    )
+
     last_err = None
     for attempt in range(1, retries + 1):
         if not os.path.exists(path):
             return
         try:
-            shutil.rmtree(path, onexc=_on_exc)
+            shutil.rmtree(path, **rmtree_kwargs)
             return
         except Exception as e:
             last_err = e
