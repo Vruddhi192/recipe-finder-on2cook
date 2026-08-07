@@ -1,1 +1,105 @@
-{"Ingredients": [{"app_audio": "Mix  Oil & Vegetables  225 gm", "audio": "Mix ", "audioI": "Oil & Vegetables ", "audioP": "Mix ", "audioQ": "225", "audioU": "gm", "id": 1, "image": "", "pan_type": "SS", "text": "Oil 50g, Ginger 10g, Garlic 5g, Sliced Bell Peppers 40 g, Sliced Cabbage 40 g, Sliced Onions 40 g, Sliced Carrot 40 g", "title": "Oil & Vegetables ", "weight": "225 gm"}, {"app_audio": "Mix Sauce & Noodles  460 gm", "audio": "Mix", "audioI": "Sauce & Noodles ", "audioP": "Mix", "audioQ": "460", "audioU": "gm", "id": 2, "image": "", "pan_type": "SS", "text": "Boiled Noodles 400g, Schezwan Sauce 40g, Light Sauces 10g, Vinegar 5g, Aromatic 5g", "title": "Sauce & Noodles ", "weight": "460 gm"}], "Instruction": [{"Audio": "", "Indtime_lid_con": "", "Induction_on_time": "120", "Induction_power": "100", "Magnetron_on_time": "120", "Magnetron_power": "100", "Text": "Oil & Vegetables ", "Weight": "225 gm", "app_audio": " Oil & Vegetables ", "audioI": "Oil & Vegetables ", "audioP": "", "audioQ": "225", "audioU": "2Minute", "durationInSec": 120, "id": 1, "image": "", "lid": "close", "mag_severity": "high", "pump_on": "", "purge_on": "", "skip": "", "stirrer_on": "4", "threshold": "0", "wait_time": "", "warm_time": ""}, {"Audio": "", "Indtime_lid_con": "", "Induction_on_time": "90", "Induction_power": "30", "Magnetron_on_time": "90", "Magnetron_power": "100", "Text": "Sauce & Noodles ", "Weight": "460 gm", "app_audio": " Sauce & Noodles ", "audioI": "Sauce & Noodles ", "audioP": "", "audioQ": "460", "audioU": "1Minute30Second", "durationInSec": 90, "id": 2, "image": "", "lid": "close", "mag_severity": "high", "pump_on": "", "purge_on": "", "skip": "false", "stirrer_on": "4", "threshold": "0", "wait_time": "", "warm_time": ""}], "audio1": ["VEG NOODLES "], "audio2": ["preparation"], "category": "0", "description": "VEG HAKKA NOODLES \nNORMAL COOKING TIME 7 MINUTES \nFINAL OUTPUT 450 G\n\nACCESSORIES\nPan Non-Coated (SS)\nNoodles Stirrer\n", "difficulty": "Easy", "id": 356, "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/%20Noodles%20%20New%20Pan/%20Noodles%20%20New%20Pan.jpg", "isSelected": false, "name": ["VEG NOODLES "], "subCategories": "", "tags": ""}
+{
+  "Ingredients": [
+    {
+      "app_audio": "Mix  Oil & Vegetables  225 gm",
+      "audio": "Mix ",
+      "audioI": "Oil & Vegetables ",
+      "audioP": "Mix ",
+      "audioQ": "225",
+      "audioU": "gm",
+      "id": 1,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Oil 50g, Ginger 10g, Garlic 5g, Sliced Bell Peppers 40 g, Sliced Cabbage 40 g, Sliced Onions 40 g, Sliced Carrot 40 g",
+      "title": "Oil & Vegetables ",
+      "weight": "225 gm"
+    },
+    {
+      "app_audio": "Mix Sauce & Noodles  460 gm",
+      "audio": "Mix",
+      "audioI": "Sauce & Noodles ",
+      "audioP": "Mix",
+      "audioQ": "460",
+      "audioU": "gm",
+      "id": 2,
+      "image": "",
+      "pan_type": "SS",
+      "text": "Boiled Noodles 400g, Schezwan Sauce 40g, Light Sauces 10g, Vinegar 5g, Aromatic 5g",
+      "title": "Sauce & Noodles ",
+      "weight": "460 gm"
+    }
+  ],
+  "Instruction": [
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "120",
+      "Induction_power": "100",
+      "Magnetron_on_time": "120",
+      "Magnetron_power": "100",
+      "Text": "Oil & Vegetables ",
+      "Weight": "225 gm",
+      "app_audio": " Oil & Vegetables ",
+      "audioI": "Oil & Vegetables ",
+      "audioP": "",
+      "audioQ": "225",
+      "audioU": "2Minute",
+      "durationInSec": 120,
+      "id": 1,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    },
+    {
+      "Audio": "",
+      "Indtime_lid_con": "",
+      "Induction_on_time": "90",
+      "Induction_power": "30",
+      "Magnetron_on_time": "90",
+      "Magnetron_power": "100",
+      "Text": "Sauce & Noodles ",
+      "Weight": "460 gm",
+      "app_audio": " Sauce & Noodles ",
+      "audioI": "Sauce & Noodles ",
+      "audioP": "",
+      "audioQ": "460",
+      "audioU": "1Minute30Second",
+      "durationInSec": 90,
+      "id": 2,
+      "image": "",
+      "lid": "close",
+      "mag_severity": "high",
+      "pump_on": "",
+      "purge_on": "",
+      "skip": "false",
+      "stirrer_on": "4",
+      "threshold": "0",
+      "wait_time": "",
+      "warm_time": ""
+    }
+  ],
+  "audio1": [
+    "VEG NOODLES "
+  ],
+  "audio2": [
+    "preparation"
+  ],
+  "category": "0",
+  "description": "VEGETABLE NOODLES\nNORMAL COOKING TIME 7 MINUTES \nFINAL OUTPUT 450 G\n\nACCESSORIES\nPan Non-Coated (SS)\nNoodles Stirrer\n",
+  "difficulty": "Easy",
+  "id": 356,
+  "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/%20Noodles%20%20New%20Pan/%20Noodles%20%20New%20Pan.jpg",
+  "isSelected": false,
+  "name": [
+    "VEG NOODLES "
+  ],
+  "subCategories": "",
+  "tags": ""
+}
