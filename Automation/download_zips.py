@@ -2,13 +2,19 @@
 """
 download_zips.py
 
-Fetches new/updated recipe ZIPs from Smartsheet.
+Fetches new/changed recipe ZIPs from Smartsheet.
 
 Fast path: a single sheet-level /attachments call fetches every attachment
 in one shot (instead of the old row-by-row approach, which was 1 API call
 per row). Per-attachment detail calls are still needed to get a fresh
-download URL + updatedAt timestamp, but the expensive "find all attachments"
-step is now O(1) API calls instead of O(rows).
+download URL — the expensive "find all attachments" step is O(1) API calls
+instead of O(rows).
+
+Freshness is decided by the caller (all-in-one.py), not by comparing local
+file mtimes: it passes in `stale_stems`, computed from Smartsheet's
+row-level modifiedAt vs. what was recorded last run (pipeline_state.py).
+A stem in that set gets redownloaded unconditionally; anything else is
+downloaded only if there's no local copy at all yet.
 
 Usage:
   python download_zips.py
@@ -17,7 +23,6 @@ Usage:
 import os
 import requests
 from pathlib import Path
-from datetime import datetime, timezone
 
 # ── Config ────────────────────────────────────────────────────────────────────
 SMARTSHEET_TOKEN    = os.environ["SMARTSHEET_TOKEN"]
@@ -28,16 +33,6 @@ SMARTSHEET_HEADERS  = {
 }
 
 ZIP_ROOT = "../zips"
-
-
-def parse_smartsheet_timestamp(ts_str):
-    if not ts_str:
-        return None
-    return datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-
-
-def get_local_mtime(file_path):
-    return datetime.fromtimestamp(os.path.getmtime(file_path), tz=timezone.utc)
 
 
 def get_sheet_modified_map() -> dict:
@@ -132,16 +127,41 @@ def get_zip_stem_to_row_id() -> dict:
     return stem_to_row_id
 
 
-def download_all_zips() -> set:
+def download_all_zips(stale_stems: set = None) -> set:
     """
-    Downloads all new/updated ZIP attachments from Smartsheet into ZIP_ROOT.
+    Downloads ZIP attachments from Smartsheet into ZIP_ROOT.
+
+    A recipe's ZIP is (re)downloaded when either:
+      - `stale_stems` says its Smartsheet row is new or has changed since
+        the last successful pipeline run (the authoritative check — see
+        pipeline_state.py / get_sheet_modified_map above), or
+      - there's no local copy of the ZIP on disk at all (belt-and-suspenders
+        for a stem that isn't flagged stale but genuinely isn't there —
+        e.g. it was deleted locally, or this is the very first run before
+        pipeline_state.json exists).
+
+    This intentionally does NOT compare the attachment's own timestamp
+    against the local file's mtime anymore. That comparison is fragile:
+    filesystem mtimes get reset by file copies, container rebuilds, git
+    checkouts, redeploys, etc. — any of which makes a genuinely-updated
+    recipe look "already current" (local mtime ends up newer than the
+    remote timestamp simply because the file was touched more recently
+    than it was actually uploaded) and it silently gets skipped forever.
+    Smartsheet's row-level modifiedAt, persisted across runs in
+    pipeline_state.json, is the single source of truth for staleness now.
+
+    Args:
+        stale_stems: set of recipe stems (uppercased) that are new or have
+            changed since the last successful run. Pass the set returned by
+            pipeline_state.get_changed_stems(). If None, only stems with no
+            local ZIP at all are downloaded (nothing is treated as stale).
 
     Returns:
-        set of recipe stems (uppercased, e.g. "CHICKEN BIRYANI") that were
-        newly added or updated this run — used by later pipeline steps to
-        decide what needs reprocessing instead of redoing everything.
+        set of recipe stems (uppercased) that were actually downloaded
+        this run.
     """
     Path(ZIP_ROOT).mkdir(exist_ok=True)
+    stale_stems = stale_stems or set()
 
     # Single call: fetch ALL row-level attachments at once.
     print("📡 Fetching all attachments (single API call)...")
@@ -159,20 +179,28 @@ def download_all_zips() -> set:
     ]
     print(f"   → {len(all_attachments)} ZIP attachments found")
 
-    newly_added   = []
-    updated       = []
-    updated_stems = set()
-    skipped       = 0
-    failed        = []
+    downloaded_stems = set()
+    skipped          = 0
+    failed            = []
 
     for i, att in enumerate(all_attachments, 1):
         att_id   = att["id"]
         att_name = att.get("name", f"attachment_{att_id}")
+        stem     = Path(att_name).stem.upper()
         file_path = os.path.join(ZIP_ROOT, att_name)
 
-        print(f"[{i}/{len(all_attachments)}] {att_name}")
+        is_stale     = stem in stale_stems
+        has_local    = os.path.exists(file_path)
+        needs_download = is_stale or not has_local
 
-        # Fetch full details to get a fresh download URL + updatedAt
+        if not needs_download:
+            skipped += 1
+            continue
+
+        reason = "new/changed row" if is_stale else "no local copy"
+        print(f"[{i}/{len(all_attachments)}] {att_name} — downloading ({reason})")
+
+        # Fetch full details to get a fresh download URL
         detail_resp = requests.get(
             f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments/{att_id}",
             headers=SMARTSHEET_HEADERS,
@@ -182,26 +210,12 @@ def download_all_zips() -> set:
             failed.append(att_name)
             continue
 
-        details     = detail_resp.json()
-        url         = details.get("url")
-        remote_time = parse_smartsheet_timestamp(details.get("updatedAt") or details.get("createdAt"))
-
+        url = detail_resp.json().get("url")
         if not url:
             print(f"  ❌ No download URL, skipping.")
             failed.append(att_name)
             continue
 
-        # Skip if local file is already up-to-date
-        if os.path.exists(file_path) and remote_time:
-            local_time = get_local_mtime(file_path)
-            if remote_time <= local_time:
-                print(f"  ⏭  Up to date, skipping.")
-                skipped += 1
-                continue
-            else:
-                print(f"  🔄 Updated on Smartsheet, replacing...")
-
-        # Download
         try:
             dl_resp = requests.get(url, stream=True)
             dl_resp.raise_for_status()
@@ -209,25 +223,23 @@ def download_all_zips() -> set:
                 for chunk in dl_resp.iter_content(chunk_size=8192):
                     f.write(chunk)
             print(f"  ✓ Saved.")
-            if os.path.exists(file_path) and remote_time:
-                updated.append(att_name)
-            else:
-                newly_added.append(att_name)
-            updated_stems.add(Path(att_name).stem.upper())
+            downloaded_stems.add(stem)
         except Exception as e:
             print(f"  ❌ Download failed: {e}")
             failed.append(att_name)
 
-    print(f"\n  New      : {len(newly_added)}")
-    print(f"  Updated  : {len(updated)}")
-    print(f"  Skipped  : {skipped}")
-    print(f"  Failed   : {len(failed)}")
+    print(f"\n  Downloaded : {len(downloaded_stems)}")
+    print(f"  Skipped    : {skipped}")
+    print(f"  Failed     : {len(failed)}")
     if failed:
         for f in failed:
             print(f"    ✗ {f}")
 
-    return updated_stems
+    return downloaded_stems
 
 
 if __name__ == "__main__":
+    print("ℹ  Running standalone — no stale_stems passed in, so only ZIPs with")
+    print("   no local copy at all will be downloaded. Row edits without a new")
+    print("   ZIP won't be caught this way; run all-in-one.py for that.")
     download_all_zips()
