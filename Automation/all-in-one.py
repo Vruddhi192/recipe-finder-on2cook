@@ -11,26 +11,40 @@ each one and calls it in order, passing `updated_stems` along the chain so
 later steps know which recipes were actually new/changed this run instead
 of reprocessing everything.
 
-Change detection now has two sources, unioned together into `updated_stems`:
-  a) download_zips' own check — ZIP attachment updatedAt vs. local file mtime
-     (catches: new ZIP uploaded, or existing ZIP re-uploaded/replaced)
-  b) pipeline_state's check — Smartsheet's native row-modified timestamp vs.
-     what we recorded last successful run (catches: a plain edit to the row
-     itself — Recipe Name, Cuisine, Category, etc. — with no new ZIP upload)
+Change detection is now a single source of truth, computed FIRST, before
+anything is downloaded: Smartsheet's native row-modified timestamp
+(bumped on ANY change to that row — a new/replaced ZIP attachment,
+Recipe Name, Cuisine, Category, Prerequisite Recipe, anything) is compared
+against what pipeline_state.py recorded at the end of the last successful
+run. A row is "stale" if it's not in that record at all (new) or its
+modifiedAt is newer than what's recorded (changed). Every downstream step
+— ZIP download, extraction, accessory mapping, popup generation — forces a
+full redo for stale stems, and otherwise skips only if a local copy
+already exists.
+
+(Older versions of this pipeline additionally compared each ZIP
+attachment's own timestamp against the local file's mtime on disk. That
+check was dropped: filesystem mtimes get reset by file copies, container
+rebuilds, git checkouts, redeploys, etc., which silently made genuinely
+updated recipes look "already current" and skipped them forever.)
 
 Steps:
-  1. download_zips      — fetch new/updated ZIPs from Smartsheet
-  2. extract_zips        — extract ZIPs → extracted/
-  3. accessory_mapping    — map accessories + fix descriptions → updated_extracted/ + updated_zips/
-  4. generate_popups     — generate popup PDFs (skips if PDF already exists)
-  5. parse_to_json       — generate recipes_fix.json from updated_extracted/
-  6. add_disclaimer      — append bilingual (Hindi/English) instruction block to
-                            popup PDFs, only for recipes updated this run (needs
-                            recipes_fix.json from step 5, hence it runs right after)
-  7. sync_description    — patch description first lines from Smartsheet Recipe Names
-  8. parse_to_json       — re-run to pick up sync_description changes
-  9. flag_orphan_recipes — hide recipes with no Smartsheet match (must run LAST,
-                            after sync_description has had its chance to fix names)
+  1. Detect changed/new recipes  — Smartsheet row-modified vs. last run
+  2. download_zips        — force-download ZIPs for stale recipes (or any
+                             recipe with no local ZIP at all yet)
+  3. extract_zips          — extract ZIPs → extracted/
+  4. accessory_mapping      — map accessories + fix descriptions → updated_extracted/ + updated_zips/
+  5. generate_popups       — generate popup PDFs (skips if PDF already exists
+                             and the recipe isn't stale)
+  6. parse_to_json         — generate recipes_fix.json from updated_extracted/
+  7. add_disclaimer        — append bilingual (Hindi/English) instruction block to
+                             popup PDFs, only for recipes updated this run (needs
+                             recipes_fix.json from step 6, hence it runs right after)
+  8. sync_description      — patch description first lines from Smartsheet Recipe Names
+  9. parse_to_json         — re-run to pick up sync_description changes
+  10. flag_orphan_recipes  — hide recipes with no Smartsheet match (must run LAST,
+                             after sync_description has had its chance to fix names)
+  11. save pipeline state  — record this run's row-modified snapshot for next time
 
 Usage:
   python all-in-one.py
@@ -68,46 +82,50 @@ def main():
     print(f"  Started: {start.strftime('%Y-%m-%d %H:%M:%S')}")
 
     try:
-        step_header(1, "Download ZIPs from Smartsheet")
-        zip_updated_stems = download_zips.download_all_zips()
-
-        step_header("1b", "Detect row-level changes (edits with no new ZIP)")
+        step_header(1, "Detect changed/new recipes (Smartsheet row-modified vs. last run)")
         current_modified = download_zips.get_sheet_modified_map()
         previous_state    = pipeline_state.load_state()
-        row_changed_stems = pipeline_state.get_changed_stems(current_modified, previous_state)
-        if row_changed_stems:
-            print(f"  🔁 {len(row_changed_stems)} recipe(s) changed in Smartsheet since last run:")
-            for s in sorted(row_changed_stems):
+        stale_stems       = pipeline_state.get_changed_stems(current_modified, previous_state)
+        if stale_stems:
+            print(f"  🔁 {len(stale_stems)} recipe(s) new or changed since last run:")
+            for s in sorted(stale_stems):
                 print(f"       - {s}")
         else:
-            print("  ✔  No row-level changes since last run.")
+            print("  ✔  No new/changed recipes since last run.")
 
-        updated_stems = zip_updated_stems | row_changed_stems
+        step_header(2, "Download ZIPs from Smartsheet")
+        downloaded_stems = download_zips.download_all_zips(stale_stems)
 
-        step_header(2, "Extract ZIPs")
+        # Union: stale_stems (Smartsheet says changed) | downloaded_stems
+        # (we actually fetched something, e.g. a stem with no local ZIP at
+        # all yet even though it wasn't flagged stale). Almost always the
+        # same set, but the union covers both edge cases correctly.
+        updated_stems = stale_stems | downloaded_stems
+
+        step_header(3, "Extract ZIPs")
         extract_zips.extract_all_zips(updated_stems)
 
-        step_header(3, "Accessory mapping + description fixes")
+        step_header(4, "Accessory mapping + description fixes")
         accessory_mapping.process_all_accessories(updated_stems)
 
-        step_header(4, "Generate popup PDFs")
+        step_header(5, "Generate popup PDFs")
         generate_popup_images.generate_all_popups(updated_stems)
 
-        step_header(5, "Parse to JSON")
+        step_header(6, "Parse to JSON")
         parse_txt_to_json.generate_recipes_json()
 
-        step_header(6, "Add bilingual disclaimer to updated popup PDFs")
+        step_header(7, "Add bilingual disclaimer to updated popup PDFs")
         add_disclaimer_onpopup_pdf.add_disclaimers_for_updated(updated_stems)
-        step_header(7, "Sync description first lines from Smartsheet Recipe Names")
+        step_header(8, "Sync description first lines from Smartsheet Recipe Names")
         sync_description.main()
 
-        step_header(8, "Parse to JSON (re-run to pick up sync_description changes)")
+        step_header(9, "Parse to JSON (re-run to pick up sync_description changes)")
         parse_txt_to_json.generate_recipes_json()
 
-        step_header(9, "Flag orphan recipes (no Smartsheet match) as hidden")
+        step_header(10, "Flag orphan recipes (no Smartsheet match) as hidden")
         flag_orphan_recipes.flag_orphan_recipes()
 
-        step_header("10", "Save pipeline state (row-modified snapshot)")
+        step_header(11, "Save pipeline state (row-modified snapshot)")
         pipeline_state.save_state(current_modified)
 
     except Exception as e:
