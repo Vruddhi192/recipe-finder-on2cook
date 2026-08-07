@@ -1,4 +1,4 @@
-﻿/* ========== GLOBAL ========== */
+/* ========== GLOBAL ========== */
 body {
   background: radial-gradient(circle at top, #fdfdfd 0%, #e5edf7 60%, #d9e2ec 100%);
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -553,12 +553,18 @@ input[type="range"]::-moz-range-thumb {
   font-size: 0.9rem;
 }
 
-/* Prerequisite Recipe row (from Smartsheet "Prerequisite Recipe" column) */
+/* Prerequisite Recipe row(s) (from Smartsheet "Prerequisite Recipe" column,
+   comma-separated when a recipe has more than one prerequisite) */
+.prereq-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
 .prereq-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
   padding: 7px 10px;
   border-radius: 12px;
   background: #eef7ea;
