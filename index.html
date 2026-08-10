@@ -87,6 +87,16 @@
         </div>
       </div>
 
+      <!-- Max Yield (Total Output) -->
+      <div class="filter-group">
+        <label>Max Yield</label>
+        <div class="time-row">
+          <span>Any</span>
+          <input type="range" id="yieldFilter" min="0" max="3500" step="50" value="3500" />
+          <span id="yieldFilterLabel">Any</span>
+        </div>
+      </div>
+
       <!-- Cooking Mode radios -->
       <div class="filter-group">
         <label>Cooking Mode</label>
@@ -235,6 +245,12 @@
         </div>
 
         <div class="filter-group">
+          <label for="yieldFilterMobile">Max Yield</label>
+          <input type="range" id="yieldFilterMobile" min="0" max="3500" step="50" value="3500" />
+          <span id="yieldFilterLabelMobile">Any</span>
+        </div>
+
+        <div class="filter-group">
           <label for="accessoryMobile">Accessory</label>
           <select id="accessoryMobile">
             <option value="All">All</option>
@@ -266,6 +282,18 @@
 <div id="popupModal" style="display:none; position: fixed; top:0; left:0; width:100vw; height:100vh; z-index: 10000; background: rgba(0, 0, 0, 0.85); justify-content: center; align-items: center;">
   <div class="popup-container">
     <button id="popupCloseBtn" class="popup-close-btn">&times;</button>
+    <div class="popup-header">
+      <h3 id="popupTitle" class="popup-title"></h3>
+      <button id="popupDownloadBtn" class="popup-download-btn" title="Download Recipe ZIP">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Download</span>
+      </button>
+    </div>
+    <div id="popupLinks" class="popup-links"></div>
     <div class="popup-image-wrapper">
       <img id="popupImage" src="" alt="Recipe Image" class="popup-image" />
       <iframe id="popupPDF" style="display:none;"></iframe>

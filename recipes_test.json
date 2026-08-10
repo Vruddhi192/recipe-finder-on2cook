@@ -3722,24 +3722,6 @@
     "Normal Cooking Time": "20 mins"
   },
   {
-    "Recipe Name": "GULAB JAMUN F",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 2,
-    "Image": "test_images/GULAB JAMUN F.jpg",
-    "PopupImage": "test_popup_images/GULAB JAMUN F.pdf",
-    "Ingredients": [
-      "Take  Oil 2 liter",
-      "Take Gulab Jamun  12 number"
-    ],
-    "Accessories": "",
-    "Total Output": "",
-    "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": ""
-  },
-  {
     "Recipe Name": "HANDVO",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -6416,25 +6398,6 @@
     "Total Output": "1200 G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins"
-  },
-  {
-    "Recipe Name": "SAUTE VEGETABLES",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "AUTO",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "MAIN COURSE",
-    "Cooking Time": 4,
-    "Image": "test_images/SAUTE VEGETABLES.jpg",
-    "PopupImage": "test_popup_images/SAUTE VEGETABLES.pdf",
-    "Ingredients": [
-      "Heat Olive Oil 10g, Butter 20g, Chopped Garlic 15g 45 ml",
-      "Cut Mix Vegetables  400 gm",
-      "Take  Mix Seasoning 7 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "20 mins"
   },
   {
     "Recipe Name": "SCHEZWAN CHICKEN",
