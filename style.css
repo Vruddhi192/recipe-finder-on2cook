@@ -553,31 +553,49 @@ input[type="range"]::-moz-range-thumb {
   font-size: 0.9rem;
 }
 
-/* Prerequisite Recipe row(s) (from Smartsheet "Prerequisite Recipe" column,
-   comma-separated when a recipe has more than one prerequisite) */
+/* Prerequisite Recipe / Used In row(s) — from the Smartsheet "Prerequisite
+   Recipe" column (comma-separated when a recipe has more than one) and its
+   reverse lookup (recipes that need THIS one as their prerequisite). Both
+   share the same row layout; variant classes only change the color. */
 .prereq-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-top: 10px;
 }
-.prereq-row {
+.recipe-link-row {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 7px 10px;
   border-radius: 12px;
-  background: #eef7ea;
-  border: 1px solid #d9ecd4;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
 }
-.prereq-row:hover {
+.recipe-link-row:active {
+  transform: scale(0.98);
+}
+.recipe-link-row--prereq {
+  background: #eef7ea;
+  border: 1px solid #d9ecd4;
+}
+.recipe-link-row--prereq:hover {
   background: #e2f2dc;
   border-color: #c3e4ba;
 }
-.prereq-row:active {
-  transform: scale(0.98);
+.recipe-link-row--prereq .prereq-label {
+  color: #5c8a54;
+}
+.recipe-link-row--usedin {
+  background: #eef2ff;
+  border: 1px solid #dbe3fb;
+}
+.recipe-link-row--usedin:hover {
+  background: #e2e8fc;
+  border-color: #c7d2f9;
+}
+.recipe-link-row--usedin .prereq-label {
+  color: #4f5fae;
 }
 .prereq-thumb-wrap {
   flex-shrink: 0;
@@ -628,6 +646,53 @@ input[type="range"]::-moz-range-thumb {
   font-size: 1.35rem;
   color: #9ca3af;
   line-height: 1;
+}
+
+/* "Used As Base For N recipes" — collapsed by default, expands on tap */
+.usedin-collapsible {
+  margin-top: 10px;
+}
+.usedin-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #eef2ff;
+  border: 1px solid #dbe3fb;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #4f5fae;
+  font-family: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.usedin-toggle:hover {
+  background: #e2e8fc;
+  border-color: #c7d2f9;
+}
+.usedin-toggle-icon {
+  display: inline-block;
+  font-size: 0.65rem;
+  transition: transform 0.15s ease;
+}
+.usedin-collapsible.expanded .usedin-toggle-icon {
+  transform: rotate(90deg);
+}
+.usedin-toggle-label {
+  text-align: left;
+}
+.usedin-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+.usedin-panel .prereq-group {
+  margin-top: 8px;
+}
+.usedin-collapsible.expanded .usedin-panel {
+  max-height: 2000px;
 }
 
 
@@ -967,11 +1032,69 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 20px;
   max-width: 90vw;
   max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+}
+
+/* Recipe name + download button, shown above the image/PDF */
+.popup-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-right: 44px; /* keep clear of the close button */
+}
+.popup-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popup-download-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #ed1c24;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+.popup-download-btn:hover {
+  background: #c81319;
+}
+.popup-download-btn:active {
+  transform: scale(0.96);
+}
+
+/* Prerequisite / Used In rows inside the popup — reuses .recipe-link-row */
+.popup-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.popup-links:empty {
+  display: none;
+}
+.popup-links .prereq-group {
+  margin-top: 0;
+}
+.popup-links .usedin-collapsible {
+  margin-top: 0;
 }
 
 .popup-close-btn {
@@ -1097,7 +1220,18 @@ input[type="range"]::-moz-range-thumb {
   .popup-image-wrapper {
     height: 60vh;
   }
-  
+
+  .popup-title {
+    font-size: 0.95rem;
+  }
+  .popup-download-btn {
+    padding: 7px 11px;
+    font-size: 0.75rem;
+  }
+  .popup-download-btn span {
+    display: none; /* icon-only on small screens to save space */
+  }
+
   .zoom-controls {
     bottom: 12px;
     padding: 6px 10px;

@@ -4,6 +4,8 @@ let recipes = [];
 const dietTypeChipGroup = document.getElementById('dietTypeChipGroup');
 const cookingTime = document.getElementById('cookingTime');
 const cookingTimeLabel = document.getElementById('cookingTimeLabel');
+const yieldFilter = document.getElementById('yieldFilter');
+const yieldFilterLabel = document.getElementById('yieldFilterLabel');
 const cookingModeRadioGroup = document.getElementById('cookingModeRadioGroup');
 const cuisineRadioGroup = document.getElementById('cuisineRadioGroup');
 const categoryRadioGroup = document.getElementById('categoryRadioGroup');
@@ -29,6 +31,8 @@ const categoryMobile = document.getElementById('categoryMobile');
 const accessoryMobile = document.getElementById('accessoryMobile');
 const cookingTimeMobile = document.getElementById('cookingTimeMobile');
 const cookingTimeLabelMobile = document.getElementById('cookingTimeLabelMobile');
+const yieldFilterMobile = document.getElementById('yieldFilterMobile');
+const yieldFilterLabelMobile = document.getElementById('yieldFilterLabelMobile');
 const clearBtnMobile = document.getElementById('clearBtnMobile');
 
 const sortTimeAscMobile = document.getElementById('sortTimeAscMobile');
@@ -38,6 +42,10 @@ const sortTimeDescMobile = document.getElementById('sortTimeDescMobile');
 const popupModal = document.getElementById('popupModal');
 const popupImage = document.getElementById('popupImage');
 const popupCloseBtn = document.getElementById('popupCloseBtn');
+const popupTitle = document.getElementById('popupTitle');
+const popupLinks = document.getElementById('popupLinks');
+const popupDownloadBtn = document.getElementById('popupDownloadBtn');
+let currentPopupRecipe = null; // tracks which recipe the popup is currently showing, for the download button
 
 // New recipes banner elements
 const newRecipesBanner = document.getElementById('newRecipesBanner');
@@ -194,6 +202,7 @@ function resetOtherFiltersForNewView() {
   filterState.flavorVal = 'All';
   filterState.consistencyVal = 'All';
   filterState.maxCookingTime = 35;
+  filterState.maxYield = YIELD_MAX;
 
   if (searchBarDesktop) searchBarDesktop.value = '';
   if (searchBarMobile) searchBarMobile.value = '';
@@ -205,6 +214,64 @@ function resetOtherFiltersForNewView() {
   });
   if (cookingTime) { cookingTime.value = 35; cookingTimeLabel.textContent = '35 min'; }
   if (cookingTimeMobile) { cookingTimeMobile.value = 35; cookingTimeLabelMobile.textContent = '35'; }
+  if (yieldFilter) { yieldFilter.value = YIELD_MAX; yieldFilterLabel.textContent = 'Any'; }
+  if (yieldFilterMobile) { yieldFilterMobile.value = YIELD_MAX; yieldFilterLabelMobile.textContent = 'Any'; }
+}
+
+// ===============================
+// YIELD (Total Output) PARSING & FILTER
+// ===============================
+// "Total Output" is a free-text Smartsheet column ("300G", "1.2 KG",
+// "12 NOS ( FROZEN 240 G )", "8 PORTION", etc). We pull the first
+// gram/kg weight mentioned so recipes can be filtered by yield. Entries
+// with no parseable weight (e.g. "8 PORTION") get yieldGrams = null and
+// are simply excluded once the filter is actually in use.
+const YIELD_MAX = 3500; // slider's right-hand end == "Any" (no filter)
+
+function parseYieldGrams(str) {
+  if (!str) return null;
+  const s = String(str).toUpperCase();
+  const m = s.match(/(\d+(?:\.\d+)?)\s*(KG|GMS|GM|G|K)\b/);
+  let val = null;
+  if (m) {
+    const num = parseFloat(m[1]);
+    const unit = m[2];
+    val = (unit === 'KG' || unit === 'K') ? num * 1000 : num;
+  } else {
+    const bare = s.match(/^\s*(\d+(?:\.\d+)?)\s*$/);
+    if (bare) val = parseFloat(bare[1]);
+  }
+  if (val == null || isNaN(val)) return null;
+  // Sanity cap — guards against data glitches like a stripped dash turning
+  // "80-100G" into "80100G". Nothing legitimate in this catalogue exceeds
+  // a few kilos per batch.
+  if (val > 6000) return null;
+  return val;
+}
+
+function yieldLabelText(v) {
+  return v >= YIELD_MAX ? 'Any' : `≤ ${v}g`;
+}
+
+// ===============================
+// "USED AS BASE FOR" (reverse Prerequisite Recipe lookup)
+// ===============================
+// Prerequisite Recipe only points "downward" (recipe -> what it needs).
+// This builds the reverse map so a recipe can also show which other
+// recipes need IT as a prerequisite.
+let usedInMap = new Map();
+
+function buildUsedInMap() {
+  usedInMap = new Map();
+  recipes.forEach(r => {
+    const raw = (r['Prerequisite Recipe'] || '').trim();
+    if (!raw) return;
+    raw.split(',').map(n => n.trim()).filter(Boolean).forEach(prereqName => {
+      const key = prereqName.toUpperCase();
+      if (!usedInMap.has(key)) usedInMap.set(key, []);
+      usedInMap.get(key).push(r);
+    });
+  });
 }
 
 // FILTER STATE
@@ -219,6 +286,7 @@ const filterState = {
   flavorVal: 'All',
   consistencyVal: 'All',
   maxCookingTime: 35,
+  maxYield: YIELD_MAX, // slider default = "Any" (no yield filtering)
   onlyNew: false // true while viewing the "Explore New Recipes" filtered grid
 };
 
@@ -239,6 +307,7 @@ function readFiltersFromURL() {
   if (params.has('category'))  result.categoryVal     = params.get('category');
   if (params.has('accessory')) result.accessoryVal    = params.get('accessory');
   if (params.has('time'))      result.maxCookingTime  = parseInt(params.get('time'), 10);
+  if (params.has('yield'))     result.maxYield        = parseInt(params.get('yield'), 10);
   if (params.has('new'))       result.onlyNew         = params.get('new') === '1';
   return result;
 }
@@ -257,6 +326,7 @@ function writeFiltersToURL() {
   if (filterState.categoryVal !== 'All')         params.set('category',  filterState.categoryVal);
   if (filterState.accessoryVal !== 'All')        params.set('accessory', filterState.accessoryVal);
   if (filterState.maxCookingTime !== 35)         params.set('time',      filterState.maxCookingTime);
+  if (filterState.maxYield !== YIELD_MAX)        params.set('yield',     filterState.maxYield);
   if (filterState.onlyNew)                       params.set('new',       '1');
 
   const newSearch = params.toString();
@@ -288,6 +358,16 @@ function applyURLFiltersToUI() {
   cookingTimeLabel.textContent = `${filterState.maxCookingTime} min`;
   cookingTimeMobile.value = filterState.maxCookingTime;
   cookingTimeLabelMobile.textContent = `${filterState.maxCookingTime}`;
+
+  // ── Yield slider ──
+  if (yieldFilter) {
+    yieldFilter.value = filterState.maxYield;
+    yieldFilterLabel.textContent = yieldLabelText(filterState.maxYield);
+  }
+  if (yieldFilterMobile) {
+    yieldFilterMobile.value = filterState.maxYield;
+    yieldFilterLabelMobile.textContent = yieldLabelText(filterState.maxYield);
+  }
 
   // ── Diet chips (desktop) ──
   document.querySelectorAll('.diet-chip').forEach(c => {
@@ -484,6 +564,11 @@ function loadRecipes() {
     .then(data => {
       recipes = data;
 
+      // Pre-compute yield in grams (for the yield filter) and the reverse
+      // "used as base for" lookup (for the Used In rows) once up front.
+      recipes.forEach(r => { r.yieldGrams = parseYieldGrams(r['Total Output']); });
+      buildUsedInMap();
+
       // Build UI controls
       buildDietChips(getUniqueValues('Veg/Non Veg'));
       buildRadioGroup(cookingModeRadioGroup, getUniqueValues('Cooking Mode'), 'cookingMode');
@@ -648,13 +733,20 @@ function filterRecipes() {
       r['On2Cook Cooking Time'] &&
       parseInt(r['On2Cook Cooking Time'], 10) <= filterState.maxCookingTime;
 
+    // At the slider's max (YIELD_MAX / "Any") the filter is off, so recipes
+    // with no parseable yield still show. Once the user actually drags it
+    // down, only recipes with a known yield within range qualify.
+    const yieldOk =
+      filterState.maxYield >= YIELD_MAX ||
+      (r.yieldGrams != null && r.yieldGrams <= filterState.maxYield);
+
     const flavorOk =
       filterState.flavorVal === 'All' || r['Flavor Profile'] === filterState.flavorVal;
 
     const consistencyOk =
       filterState.consistencyVal === 'All' || r['Consistency'] === filterState.consistencyVal;
 
-    return searchOk && dietOk && modeOk && cuisineOk && catOk && accOk && timeOk && flavorOk && consistencyOk;
+    return searchOk && dietOk && modeOk && cuisineOk && catOk && accOk && timeOk && yieldOk && flavorOk && consistencyOk;
   });
 }
 
@@ -701,16 +793,44 @@ function buildProfileStrip(flavour, consistency) {
   return `<div class="profile-strip">${parts.join('')}</div>`;
 }
 
-// ── Prerequisite Recipe ──────────────────────────────────────────────────
+// ── Prerequisite Recipe / Used In ───────────────────────────────────────
 // "Prerequisite Recipe" is a Smartsheet column: the name of a recipe that
 // needs to be prepared first (e.g. "Manchurian Fry" requires "Paneer Fry"
 // to already be made). We look the name up against the full recipes list
-// to grab its thumbnail and to make the row clickable.
+// to grab its thumbnail and to make the row clickable — tapping it opens
+// that recipe's own card/popup (complete with its own download button),
+// same as tapping any recipe card.
+//
+// "Used In" is the reverse lookup (built into usedInMap): given a recipe,
+// which OTHER recipes list it as their prerequisite. E.g. from "Chinese
+// Fried Chicken" you can see every recipe that needs it (Chicken Chilli,
+// etc), each also clickable.
 
 function findRecipeByName(name) {
   if (!name) return null;
   const target = name.trim().toUpperCase();
   return recipes.find(r => (r['Recipe Name'] || '').trim().toUpperCase() === target) || null;
+}
+
+/** Builds one clickable, thumbnailed row linking to another recipe.
+ *  variantClass controls the color treatment (prereq = green, used-in = indigo). */
+function buildRecipeLinkRow(name, linkedRecipe, label, variantClass) {
+  const thumbSrc = linkedRecipe ? linkedRecipe.Image : '';
+  const safeName = name.replace(/"/g, '&quot;');
+  return `
+    <div class="recipe-link-row ${variantClass}" data-nav-name="${safeName}" title="Tap to view ${safeName}">
+      <div class="prereq-thumb-wrap">
+        ${thumbSrc
+          ? `<img src="${thumbSrc}" alt="${safeName}" class="prereq-thumb" />`
+          : `<div class="prereq-thumb prereq-thumb-placeholder">🍳</div>`}
+      </div>
+      <div class="prereq-info">
+        <span class="prereq-label">${label}</span>
+        <span class="prereq-name">${name}</span>
+      </div>
+      <span class="prereq-chevron">&rsaquo;</span>
+    </div>
+  `;
 }
 
 function buildPrerequisiteRow(recipe) {
@@ -722,28 +842,39 @@ function buildPrerequisiteRow(recipe) {
   const prereqNames = raw.split(',').map(n => n.trim()).filter(Boolean);
   if (!prereqNames.length) return '';
 
-  const rows = prereqNames.map(prereqName => {
-    const prereqRecipe = findRecipeByName(prereqName);
-    const thumbSrc = prereqRecipe ? prereqRecipe.Image : '';
-    const safeName = prereqName.replace(/"/g, '&quot;');
-
-    return `
-      <div class="prereq-row" data-prereq-name="${safeName}" title="Tap to view ${safeName}">
-        <div class="prereq-thumb-wrap">
-          ${thumbSrc
-            ? `<img src="${thumbSrc}" alt="${safeName}" class="prereq-thumb" />`
-            : `<div class="prereq-thumb prereq-thumb-placeholder">🍳</div>`}
-        </div>
-        <div class="prereq-info">
-          <span class="prereq-label">Prerequisite Recipe</span>
-          <span class="prereq-name">${prereqName}</span>
-        </div>
-        <span class="prereq-chevron">&rsaquo;</span>
-      </div>
-    `;
-  }).join('');
+  const rows = prereqNames
+    .map(n => buildRecipeLinkRow(n, findRecipeByName(n), 'Prerequisite Recipe', 'recipe-link-row--prereq'))
+    .join('');
 
   return `<div class="prereq-group">${rows}</div>`;
+}
+
+/** Reverse of buildPrerequisiteRow: recipes that need THIS recipe as their
+ *  prerequisite (e.g. from "Chinese Fried Chicken" -> "Chicken Chilli").
+ *  Collapsed behind a toggle by default since this list can get long. */
+function buildUsedInRow(recipe) {
+  const key = (recipe['Recipe Name'] || '').trim().toUpperCase();
+  const usedBy = usedInMap.get(key) || [];
+  if (!usedBy.length) return '';
+
+  const rows = usedBy
+    .map(u => buildRecipeLinkRow(u['Recipe Name'], u, 'Used As Base For', 'recipe-link-row--usedin'))
+    .join('');
+
+  const count = usedBy.length;
+  const label = `Used As Base For ${count} recipe${count === 1 ? '' : 's'}`;
+
+  return `
+    <div class="usedin-collapsible">
+      <button type="button" class="usedin-toggle">
+        <span class="usedin-toggle-icon">&#9656;</span>
+        <span class="usedin-toggle-label">${label}</span>
+      </button>
+      <div class="usedin-panel">
+        <div class="prereq-group">${rows}</div>
+      </div>
+    </div>
+  `;
 }
 
 function showRecipes() {
@@ -850,16 +981,23 @@ function showRecipes() {
           </div>
         </div>
         ${buildPrerequisiteRow(r)}
+        ${buildUsedInRow(r)}
       </div>
     `;
 
     // Add click handler for card (excluding download/save buttons and the
-    // prerequisite row, which navigates to a different recipe's popup)
+    // prerequisite/used-in rows, which navigate to a different recipe's popup)
     card.addEventListener('click', (e) => {
-      const prereqEl = e.target.closest('.prereq-row');
-      if (prereqEl) {
+      const toggleEl = e.target.closest('.usedin-toggle');
+      if (toggleEl) {
         e.stopPropagation();
-        const target = findRecipeByName(prereqEl.getAttribute('data-prereq-name'));
+        toggleEl.closest('.usedin-collapsible')?.classList.toggle('expanded');
+        return;
+      }
+      const linkEl = e.target.closest('.recipe-link-row');
+      if (linkEl) {
+        e.stopPropagation();
+        const target = findRecipeByName(linkEl.getAttribute('data-nav-name'));
         if (target) openPopup(target);
         return;
       }
@@ -887,6 +1025,14 @@ cookingTime.addEventListener('input', () => {
   showRecipes();
 });
 
+yieldFilter?.addEventListener('input', () => {
+  filterState.maxYield = parseInt(yieldFilter.value, 10);
+  yieldFilterLabel.textContent = yieldLabelText(filterState.maxYield);
+  filterState.onlyNew = false;
+  writeFiltersToURL();
+  showRecipes();
+});
+
 clearBtn.addEventListener('click', () => {
   filterState.searchTerm = '';
   filterState.dietVal = 'All';
@@ -899,6 +1045,9 @@ clearBtn.addEventListener('click', () => {
   filterState.onlyNew = false;
   cookingTime.value = 35;
   cookingTimeLabel.textContent = '35 min';
+
+  if (yieldFilter) { yieldFilter.value = YIELD_MAX; yieldFilterLabel.textContent = 'Any'; }
+  filterState.maxYield = YIELD_MAX;
 
   document.querySelectorAll('.diet-chip').forEach(c => {
     c.classList.toggle('active', c.dataset.value === 'All');
@@ -924,6 +1073,8 @@ clearBtn.addEventListener('click', () => {
   accessoryMobile.value = 'All';
   cookingTimeMobile.value = 35;
   cookingTimeLabelMobile.textContent = '35';
+
+  if (yieldFilterMobile) { yieldFilterMobile.value = YIELD_MAX; yieldFilterLabelMobile.textContent = 'Any'; }
 
   if (searchBarDesktop) searchBarDesktop.value = '';
   if (searchBarMobile)  searchBarMobile.value  = '';
@@ -956,11 +1107,13 @@ function applyMobileFilters() {
   filterState.categoryVal = categoryMobile.value;
   filterState.accessoryVal = accessoryMobile.value;
   filterState.maxCookingTime = parseInt(cookingTimeMobile.value, 10);
+  if (yieldFilterMobile) filterState.maxYield = parseInt(yieldFilterMobile.value, 10);
   const flavorMobile = document.getElementById('flavorMobile');
   const consistencyMobile = document.getElementById('consistencyMobile');
   if (flavorMobile) filterState.flavorVal = flavorMobile.value;
   if (consistencyMobile) filterState.consistencyVal = consistencyMobile.value;
   cookingTimeLabelMobile.textContent = cookingTimeMobile.value;
+  if (yieldFilterMobile) yieldFilterLabelMobile.textContent = yieldLabelText(filterState.maxYield);
   filterState.onlyNew = false;
   writeFiltersToURL();
   showRecipes();
@@ -968,6 +1121,10 @@ function applyMobileFilters() {
 
 cookingTimeMobile.addEventListener('input', () => {
   cookingTimeLabelMobile.textContent = cookingTimeMobile.value;
+});
+
+yieldFilterMobile?.addEventListener('input', () => {
+  yieldFilterLabelMobile.textContent = yieldLabelText(parseInt(yieldFilterMobile.value, 10));
 });
 
 searchBarMobile.addEventListener('input', () => {
@@ -1012,7 +1169,9 @@ clearBtnMobile.addEventListener('click', () => {
   accessoryMobile.value = 'All';
   cookingTimeMobile.value = 35;
   cookingTimeLabelMobile.textContent = '35';
+  if (yieldFilterMobile) { yieldFilterMobile.value = YIELD_MAX; yieldFilterLabelMobile.textContent = 'Any'; }
   filterState.sortBy = 'time-asc';
+  filterState.maxYield = YIELD_MAX;
   filterState.onlyNew = false;
   updateMobileSortButtons();
   writeFiltersToURL();
@@ -1106,6 +1265,10 @@ let zoomState = {
 function openPopup(recipe) {
   injectNavArrows();
 
+  currentPopupRecipe = recipe;
+  if (popupTitle) popupTitle.textContent = recipe['Recipe Name'] || '';
+  if (popupLinks) popupLinks.innerHTML = buildPrerequisiteRow(recipe) + buildUsedInRow(recipe);
+
   // Build pages: if clubbedWith, prepend the linked recipe's PDF
   popupPages = [];
   if (recipe.clubbedWith) {
@@ -1120,7 +1283,29 @@ function openPopup(recipe) {
   renderPopupPage();
   updateNavArrows();
   popupModal.style.display = 'flex';
+  // Reset scroll to top in case a long prereq/used-in list left it scrolled
+  document.querySelector('.popup-container')?.scrollTo?.(0, 0);
 }
+
+// Clicking a prerequisite/used-in row inside the popup itself swaps the
+// popup to that recipe (same behaviour as clicking the row on a grid card).
+popupLinks?.addEventListener('click', (e) => {
+  const toggleEl = e.target.closest('.usedin-toggle');
+  if (toggleEl) {
+    toggleEl.closest('.usedin-collapsible')?.classList.toggle('expanded');
+    return;
+  }
+  const linkEl = e.target.closest('.recipe-link-row');
+  if (!linkEl) return;
+  const target = findRecipeByName(linkEl.getAttribute('data-nav-name'));
+  if (target) openPopup(target);
+});
+
+// Download button inside the popup downloads whichever recipe is currently
+// showing — no need to close the popup and hunt for its card in the grid.
+popupDownloadBtn?.addEventListener('click', (e) => {
+  if (currentPopupRecipe) downloadRecipe(currentPopupRecipe, e);
+});
 
 function resetZoom() {
   zoomState.scale = 1;
@@ -1147,12 +1332,14 @@ popupModal.addEventListener('click', e => {
   if (e.target === popupModal) {
     popupModal.style.display = 'none';
     popupPDF.src = '';
+    currentPopupRecipe = null;
   }
 });
 
 popupCloseBtn.addEventListener('click', () => {
   popupModal.style.display = 'none';
   popupPDF.src = '';
+  currentPopupRecipe = null;
 });
 
 function isImageVisible() {
