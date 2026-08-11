@@ -1778,8 +1778,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "GHEE RICE 2700G",
@@ -2129,8 +2129,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ALOO SAMOSA",
@@ -2536,8 +2536,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "BOILED CHOLE",
@@ -2584,6 +2584,28 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "18 mins",
     "Modified": "2026-06-10T11:58:51Z"
+  },
+  {
+    "Recipe Name": "GULAB JAMUN",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "INDIAN",
+    "Category": "DESSERTS",
+    "Flavor Profile": "Sweet",
+    "Consistency": "Semi-Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 2,
+    "Image": "../test_images/GULAB JAMUN F.jpg",
+    "PopupImage": "../popup_images_with_cover/GULAB JAMUN F.pdf",
+    "Ingredients": [
+      "Take  Oil 2 liter",
+      "Take Gulab Jamun  12 number"
+    ],
+    "Accessories": "",
+    "Total Output": "",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "",
+    "Modified": "2026-08-06T10:57:07Z"
   },
   {
     "Recipe Name": "DAL VADA",
@@ -3498,8 +3520,8 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "TANDOORI CHICKEN",
@@ -3989,8 +4011,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ROSE PISTA CAKE",
@@ -4513,8 +4535,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN MANCHURIAN DRY",
@@ -6053,8 +6075,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL ALOO PARATHA",
@@ -8917,8 +8939,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN HANDI POT BIRYANI",
@@ -9641,8 +9663,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "VEGETABLE KORMA",
@@ -12927,8 +12949,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL POPPONS",
@@ -13139,6 +13161,29 @@
     "Modified": "2026-08-07T07:43:41Z"
   },
   {
+    "Recipe Name": "SAUTE VEGETABLES",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "SIDE DISH",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 4,
+    "Image": "../test_images/SAUTE VEGETABLES.jpg",
+    "PopupImage": "../popup_images_with_cover/SAUTE VEGETABLES.pdf",
+    "Ingredients": [
+      "Heat Olive Oil 10g, Butter 20g, Chopped Garlic 15g 45 ml",
+      "Cut Mix Vegetables  400 gm",
+      "Take  Mix Seasoning 7 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Total Output": "",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-06-05T09:04:53Z"
+  },
+  {
     "Recipe Name": "SUJI HALWA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "AUTO",
@@ -13160,8 +13205,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MASHED POTATOES",
@@ -13511,8 +13556,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
