@@ -31,7 +31,7 @@ endobj
 /PCSp 6 0 R
 >>
 /XObject <<
-/FormXob.ebf446782a9852c684ff75f830c843a3 7 0 R
+/FormXob.a3a19b1578ebb40438a56ee833dd8ce6 7 0 R
 >>
 /Font <<
 /F1 8 0 R
@@ -614,7 +614,7 @@ endstream
 endobj
 36 0 obj
 <<
-/Length 54541
+/Length 54856
 >>
 stream
 q
@@ -630,7 +630,7 @@ BT
 ET
 q
 297.6378 0 0 274.9606 0 371.3386 cm
-/FormXob.ebf446782a9852c684ff75f830c843a3 Do
+/FormXob.a3a19b1578ebb40438a56ee833dd8ce6 Do
 Q
 BT
 /F2 18 Tf
@@ -768,6 +768,38 @@ ET
 BT
 1 0 0 1 79.37008 153.0709 Tm
 (4 g Salt\054 5 g Sugar\054 20 g Curd) Tj
+T*
+ET
+BT
+/F1 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 22.67717 138.8976 Tm
+(150 g) Tj
+T*
+ET
+BT
+1 0 0 1 79.37008 138.8976 Tm
+(Paneer) Tj
+T*
+ET
+BT
+/F1 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 79.37008 124.7244 Tm
+(150 g Paneer\054 1 g Kasuri Methi) Tj
+T*
+ET
+BT
+/F1 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 79.37008 110.5512 Tm
+(100 g Cream\054 2 g Coriander) Tj
 T*
 ET
 0.952941 0.439216 0.160784 rg
@@ -5178,5 +5210,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-1243061
+1243376
 %%EOF
