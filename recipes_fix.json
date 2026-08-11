@@ -2586,28 +2586,6 @@
     "Modified": "2026-06-10T11:58:51Z"
   },
   {
-    "Recipe Name": "GULAB JAMUN",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "FRYING",
-    "Cuisine": "INDIAN",
-    "Category": "DESSERTS",
-    "Flavor Profile": "Sweet",
-    "Consistency": "Semi-Dry",
-    "Prerequisite Recipe": "",
-    "Cooking Time": 2,
-    "Image": "../test_images/GULAB JAMUN F.jpg",
-    "PopupImage": "../popup_images_with_cover/GULAB JAMUN F.pdf",
-    "Ingredients": [
-      "Take  Oil 2 liter",
-      "Take Gulab Jamun  12 number"
-    ],
-    "Accessories": "",
-    "Total Output": "",
-    "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "",
-    "Modified": "2026-08-06T10:57:07Z"
-  },
-  {
     "Recipe Name": "DAL VADA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
@@ -13159,29 +13137,6 @@
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-07T07:43:41Z"
-  },
-  {
-    "Recipe Name": "SAUTE VEGETABLES",
-    "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
-    "Category": "SIDE DISH",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Dry",
-    "Prerequisite Recipe": "",
-    "Cooking Time": 4,
-    "Image": "../test_images/SAUTE VEGETABLES.jpg",
-    "PopupImage": "../popup_images_with_cover/SAUTE VEGETABLES.pdf",
-    "Ingredients": [
-      "Heat Olive Oil 10g, Butter 20g, Chopped Garlic 15g 45 ml",
-      "Cut Mix Vegetables  400 gm",
-      "Take  Mix Seasoning 7 gm"
-    ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
-    "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z"
   },
   {
     "Recipe Name": "SUJI HALWA",
