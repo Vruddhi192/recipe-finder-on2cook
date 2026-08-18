@@ -3215,7 +3215,7 @@
       "Auto Water  300 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "",
+    "Total Output": "2200G",
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-07-13T09:13:49Z",
@@ -6411,14 +6411,14 @@
     "Image": "../test_images/WHITE SAUCE.jpg",
     "PopupImage": "../popup_images_with_cover/WHITE SAUCE.pdf",
     "Ingredients": [
-      "Take Butter 50g, Maida 50g 100 gm",
+      "Take Butter 50g, Maida 50g, Nutmeg Powder A Pinch 100 gm",
       "Take Milk 1000 gm",
       "Auto Water (Auto) 100 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000G",
     "On2Cook Cooking Time": "7",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-23T08:14:20Z",
     "IngredientImage": ""
   },
@@ -7764,7 +7764,7 @@
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
-    "Cooking Time": 21,
+    "Cooking Time": 16,
     "Image": "../test_images/ONION GRAVY 2KG.jpg",
     "PopupImage": "../popup_images_with_cover/ONION GRAVY 2KG.pdf",
     "Ingredients": [
@@ -7775,7 +7775,7 @@
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2K",
-    "On2Cook Cooking Time": "21",
+    "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "50 mins",
     "Modified": "2026-08-06T10:57:07Z",
     "IngredientImage": ""
@@ -8386,8 +8386,8 @@
       "Mix Mix Sauce  293 gm",
       "Auto Water (Auto) 100 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -9943,7 +9943,7 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "500G",
     "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "20 mins",
     "Modified": "2026-07-10T10:36:12Z",
     "IngredientImage": ""
   },
@@ -11070,17 +11070,17 @@
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
-    "Cooking Time": 17,
+    "Cooking Time": 13,
     "Image": "../test_images/CHOPPED MASALA.jpg",
     "PopupImage": "../popup_images_with_cover/CHOPPED MASALA.pdf",
     "Ingredients": [
-      "Add Oil & Tadka 1260 gm",
-      "Mix Powder Spices & Tomatoes  700 gm",
+      "Add Oil & Tadka 707 gm",
+      "Mix Powder Spices & Tomatoes  358 gm",
       "Auto Water (Auto) 100 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "1300G",
-    "On2Cook Cooking Time": "17",
+    "Total Output": "700 G",
+    "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-06-10T11:58:51Z",
     "IngredientImage": ""
