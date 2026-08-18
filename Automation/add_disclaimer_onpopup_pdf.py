@@ -1,40 +1,45 @@
 """
 add_recipe_cover_pages.py
 
-Appends a bilingual (Hindi + English) instruction block BELOW the existing
-content of every recipe's popup PDF -- it does NOT add a new page in front.
-The page simply grows taller to fit the added text; it is never forced to
-A4/A5 or any other fixed paper size.
+Builds a single, continuously-growing page for every recipe's popup PDF by
+stacking (top to bottom):
+
+    1. [OPTIONAL] an ingredient-collage image, if one exists for that recipe
+       in INGREDIENT_IMAGE_DIR (one image per recipe, sparse coverage --
+       silently skipped when missing, no placeholder inserted)
+    2. the EXISTING recipe PDF content, completely untouched
+    3. a bilingual (Hindi + English) instruction block, built the same way
+       it always was (Groq-cleaned steps, wkhtmltopdf render, cropped to
+       content height)
+
+The page is never forced to A4/A5/etc -- it simply grows tall enough to fit
+whichever of the three segments are present for that recipe.
 
 For every recipe in recipes_fix.json this script:
   1. Finds the recipe's raw step data. It looks for the original TXT (JSON)
      file inside EXTRACT_ROOT/<recipe_key>/  -- <recipe_key> is taken from the
      "Image" field of the recipe (this is exactly how download_zips.py /
-     all-in-one.py name that folder, so it lines up 1:1).
-     If that folder/txt can't be found, it falls back to the "Ingredients"
+     all-in-one.py name that folder, so it lines up 1:1). The same
+     <recipe_key> is also the filename stem used to look up the optional
+     ingredient image in INGREDIENT_IMAGE_DIR.
+     If the txt folder can't be found, it falls back to the "Ingredients"
      list that is already stored in recipes_fix.json for that recipe.
   2. Sends that raw step/ingredient data to the Groq API, which returns:
        - clean, natural-sounding English step sentences
        - natural (not word-for-word) Hindi translations of those same steps
-     This replaces the old Google-Translate-based literal translation, so
-     both the English phrasing and the Hindi translation actually read
-     sensibly.
   3. Builds an HTML block (Hindi first, then English) listing:
         - "Thank you for downloading <Recipe Name>"
         - "Place the pan on the On2Cook device"
         - "Step 1: ...", "Step 2: ...", one line per step
         - a closing line: "Once the device stops cooking, open the lid and
           take out the food."
-  4. Renders that block with wkhtmltopdf (so Hindi/Devanagari text shapes
-     correctly -- reportlab alone does NOT reorder/combine Devanagari matras
-     and conjuncts correctly) at the SAME WIDTH as the existing recipe PDF,
-     rendered tall, then crops it down to the exact height its content
-     actually uses (via PyMuPDF), so the added block is only as tall as it
-     needs to be.
-  5. Takes the existing recipe PDF's last page, grows its page height by
-     that amount, keeps the existing content pinned at the top exactly as
-     it was, and places the new Hindi/English block directly underneath it
-     on the SAME page.
+  4. Renders that block (and the ingredient-image segment, if present) with
+     wkhtmltopdf (so Hindi/Devanagari text shapes correctly) at the SAME
+     WIDTH as the existing recipe PDF, then crops each down to the exact
+     height its content actually uses (via PyMuPDF).
+  5. Takes the existing recipe PDF's last page, grows its page height to fit
+     every present segment, keeps the existing content exactly as it was,
+     and stacks the segments in order on that same page.
 
 Requirements:
     pip install pypdf pymupdf requests --break-system-packages
@@ -69,7 +74,8 @@ BASE_DIR = Path(__file__).parent
 RECIPES_JSON = BASE_DIR / ".." / "recipes_fix.json"        # same file all-in-one.py writes
 EXTRACT_ROOT = (Path(__file__).parent / ".." / "updated_extracted").resolve()     # unzipped recipe folders (has the .txt files)
 POPUP_DIR = (Path(__file__).parent / ".." / "test_popup_images").resolve()        # your EXISTING recipe pdfs live here
-OUTPUT_DIR = (Path(__file__).parent / ".." / "popup_images_with_cover").resolve()  # NEW pdfs (existing + appended block) go here
+OUTPUT_DIR = (Path(__file__).parent / ".." / "popup_images_with_cover").resolve()  # NEW pdfs (existing + appended blocks) go here
+INGREDIENT_IMAGE_DIR = (Path(__file__).parent / ".." / "ingredient_images").resolve()  # ONE image per recipe, sparse coverage
 
 FONT_NAME = "Noto Sans Devanagari"
 FONT_FILE = Path(__file__).parent / ".." / "Fonts" / "NotoSansDevanagari.ttf"
@@ -77,6 +83,7 @@ SKIP_HIDDEN = True   # skip recipes marked "hidden": true in recipes_fix.json
 font_url = FONT_FILE.resolve().as_uri()
 
 PT_PER_MM = 72 / 25.4
+GAP_PT = 10  # vertical gap inserted between stacked segments
 
 # ===============================
 # GROQ CONFIG (replaces the old Google-Translate step)
@@ -222,7 +229,8 @@ def recipe_folder_name(recipe):
     The download pipeline names Image/PopupImage after the recipe's folder
     name inside EXTRACT_ROOT (see all-in-one.py: recipe["Image"] =
     f"{IMAGE_DIR}/{recipe_key}.jpg"). So the stem of "Image" IS the folder
-    name we need to look inside for the .txt file.
+    name we need to look inside for the .txt file -- and it's also the
+    filename stem used for the optional ingredient image.
     """
     image_path = recipe.get("Image", "")
     if not image_path:
@@ -241,6 +249,27 @@ def find_txt_file(recipe):
         if f.suffix.lower() == ".txt":
             return f
     return None
+
+
+def find_ingredient_image(recipe):
+    """
+    Reads the "IngredientImage" field recipes_fix.json already carries --
+    parse_txt_to_json.py is the single source of truth for this lookup (it
+    does one case-insensitive scan of INGREDIENT_IMAGE_DIR per run, see
+    build_ingredient_image_index() there, so filename case/spacing quirks
+    are resolved once instead of re-derived independently here). This
+    function just resolves that field to a real path and confirms the file
+    is still there. Coverage is sparse -- returns None (caller skips the
+    segment entirely) if the field is empty or the file's gone missing.
+    """
+    field = recipe.get("IngredientImage", "")
+    if not field:
+        return None
+    candidate = INGREDIENT_IMAGE_DIR / Path(field).name
+    if not candidate.exists():
+        print(f"  ! IngredientImage listed in recipes_fix.json but not found on disk: {candidate}")
+        return None
+    return candidate
 
 
 def get_step_ingredients(recipe):
@@ -344,9 +373,43 @@ def build_addition_html(recipe_name, english_steps, hindi_steps, width_mm):
 """
 
 
+def build_ingredient_image_html(recipe_name, image_path, width_mm):
+    """
+    Simple, minimal-chrome block: just the ingredient-collage image scaled
+    to the same width as the rest of the stacked page, no extra text.
+    """
+    name = escape_html(recipe_name.title())
+    image_url = image_path.resolve().as_uri()
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * {{ box-sizing: border-box; }}
+  body {{
+      margin: 0;
+      padding: 4mm;
+      width: {width_mm}mm;
+      font-family: Arial, sans-serif;
+  }}
+  img {{
+      display: block;
+      width: 100%;
+      height: auto;
+  }}
+</style>
+</head>
+<body>
+  <img src="{image_url}" alt="{name} ingredients">
+</body>
+</html>
+"""
+
+
 def get_page_width_mm(pdf_path):
-    """Read the existing recipe PDF's page width so the appended block is
-    rendered at that same width (its height is auto-fit separately)."""
+    """Read the existing recipe PDF's page width so appended blocks are
+    rendered at that same width (height is auto-fit separately)."""
     try:
         reader = PdfReader(str(pdf_path))
         width_pt = float(reader.pages[-1].mediabox.width)
@@ -355,14 +418,14 @@ def get_page_width_mm(pdf_path):
         return 105  # ~A6 width fallback, only used if the PDF can't be read
 
 
-def render_addition_pdf(html, out_path, width_mm, max_height_mm=4000):
+def render_html_to_pdf(html, out_path, width_mm, max_height_mm=4000):
     """
     wkhtmltopdf has no "auto height" option, so we render at a generous
-    fixed height (4000mm -- comfortably more than any recipe's step list
-    will ever need) and then crop it down to the real content height in
+    fixed height (4000mm -- comfortably more than any segment will ever
+    need) and then crop it down to the real content height in
     crop_to_content(). Width matches the existing recipe PDF exactly.
     """
-    html_path = out_path.with_suffix(".addition.html")
+    html_path = out_path.with_suffix(".src.html")
     html_path.write_text(html, encoding="utf-8")
 
     wkhtmltopdf = find_wkhtmltopdf()
@@ -389,15 +452,28 @@ def render_addition_pdf(html, out_path, width_mm, max_height_mm=4000):
 
 def crop_to_content(src_path, dst_path, bottom_margin_mm=6):
     """
-    Measures where the rendered text actually ends (via PyMuPDF) and crops
-    the tall placeholder page down to that real height, so the block we
-    append is never taller than it needs to be -- no fixed A4/A5 sizing.
+    Measures where the rendered content actually ends (via PyMuPDF) and
+    crops the tall placeholder page down to that real height, so the
+    segment is never taller than it needs to be -- no fixed A4/A5 sizing.
+    Uses text blocks when present; falls back to image bboxes (needed for
+    the pure-image ingredient segment, which has no text blocks at all).
     Returns the final content height in points.
     """
     doc = fitz.open(str(src_path))
     page = doc[0]
-    blocks = page.get_text("blocks")
-    max_y1 = max((b[3] for b in blocks), default=page.rect.height)
+
+    max_y1 = 0.0
+    text_blocks = page.get_text("blocks")
+    if text_blocks:
+        max_y1 = max(b[3] for b in text_blocks)
+
+    for img in page.get_image_info():
+        bbox = img.get("bbox")
+        if bbox:
+            max_y1 = max(max_y1, bbox[3])
+
+    if max_y1 <= 0:
+        max_y1 = page.rect.height
 
     bottom_margin_pt = bottom_margin_mm * PT_PER_MM
     content_height_pt = min(max_y1 + bottom_margin_pt, page.rect.height)
@@ -411,22 +487,44 @@ def crop_to_content(src_path, dst_path, bottom_margin_mm=6):
     return content_height_pt
 
 
+def build_segment_pdf(html, tmp_dir, stem_tag, width_mm):
+    """
+    Renders html -> pdf -> crops to content height. Returns
+    (cropped_pdf_path, content_height_pt), or raises RuntimeError.
+    """
+    raw_pdf = tmp_dir / f"{stem_tag}.raw.pdf"
+    cropped_pdf = tmp_dir / f"{stem_tag}.pdf"
+
+    render_html_to_pdf(html, raw_pdf, width_mm)
+    content_height_pt = crop_to_content(raw_pdf, cropped_pdf)
+    raw_pdf.unlink(missing_ok=True)
+
+    return cropped_pdf, content_height_pt
+
+
 # ===============================
-# APPEND ADDITION BELOW EXISTING PAGE CONTENT
+# STACK SEGMENTS ONTO THE EXISTING PDF'S LAST PAGE
 # ===============================
 
-def append_below(existing_pdf_path, addition_pdf_path, addition_height_pt, out_path, gap_pt=10):
+def stack_segments(existing_pdf_path, top_segments, bottom_segments, out_path, gap_pt=GAP_PT):
     """
-    Grows the existing recipe PDF's LAST page downward by exactly the height
-    of the addition block, keeps all of the original content pinned at the
-    top exactly where it was, and places the new Hindi/English block right
-    underneath it on that same (now taller) page. Every other page (if any)
-    is copied through unchanged. The final page size is whatever it needs
-    to be -- never forced to A4/A5/etc.
+    Grows the existing recipe PDF's LAST page to fit:
+
+        [top_segments...] -> [existing page content, unchanged] -> [bottom_segments...]
+
+    top_segments / bottom_segments are each an ordered list of
+    (pdf_path, height_pt) tuples for single-page PDFs (already cropped to
+    their real content height). Either list may be empty. Every other page
+    (if any) is copied through unchanged. The final page size is whatever
+    it needs to be -- never forced to A4/A5/etc.
     """
     reader_existing = PdfReader(str(existing_pdf_path))
-    reader_addition = PdfReader(str(addition_pdf_path))
-    addition_page = reader_addition.pages[0]
+
+    top_pages = [(PdfReader(str(p)).pages[0], h) for p, h in top_segments]
+    bottom_pages = [(PdfReader(str(p)).pages[0], h) for p, h in bottom_segments]
+
+    top_extra = sum(h + gap_pt for _, h in top_pages)
+    bottom_extra = sum(h + gap_pt for _, h in bottom_pages)
 
     writer = PdfWriter()
     n_pages = len(reader_existing.pages)
@@ -438,16 +536,35 @@ def append_below(existing_pdf_path, addition_pdf_path, addition_height_pt, out_p
 
         orig_w = float(page.mediabox.width)
         orig_h = float(page.mediabox.height)
-        new_h = orig_h + gap_pt + addition_height_pt
+        new_h = orig_h + top_extra + bottom_extra
 
         grown_page = PageObject.create_blank_page(width=orig_w, height=new_h)
-        # push the ORIGINAL content up so it keeps sitting at the top,
-        # unchanged, exactly as it looked before
+
+        # Original content sits below all top_segments, at exactly the
+        # height it needs, unchanged -- so it's pushed up by top_extra plus
+        # however much bottom content sits beneath it.
         grown_page.merge_transformed_page(
-            page, Transformation().translate(tx=0, ty=gap_pt + addition_height_pt)
+            page, Transformation().translate(tx=0, ty=bottom_extra)
         )
-        # the new Hindi/English block sits at the bottom (y=0)
-        grown_page.merge_page(addition_page)
+
+        # Top segments stack downward from the very top of the page.
+        cursor_y = new_h
+        for seg_page, seg_h in top_pages:
+            cursor_y -= seg_h
+            grown_page.merge_transformed_page(
+                seg_page, Transformation().translate(tx=0, ty=cursor_y)
+            )
+            cursor_y -= gap_pt
+
+        # Bottom segments stack downward starting right under the original
+        # content, ending at y=0.
+        cursor_y = bottom_extra
+        for seg_page, seg_h in bottom_pages:
+            cursor_y -= gap_pt if seg_page is not bottom_pages[0][0] else 0
+            cursor_y -= seg_h
+            grown_page.merge_transformed_page(
+                seg_page, Transformation().translate(tx=0, ty=cursor_y)
+            )
 
         writer.add_page(grown_page)
 
@@ -471,6 +588,22 @@ def process_recipe(recipe, tmp_dir):
     if not existing_pdf.exists():
         return f"SKIP  {name}: existing pdf not found -> {existing_pdf}"
 
+    width_mm = get_page_width_mm(existing_pdf)
+    top_segments = []
+    bottom_segments = []
+    note = ""
+
+    # --- optional ingredient-image segment (TOP) ---
+    ingredient_image = find_ingredient_image(recipe)
+    if ingredient_image:
+        try:
+            img_html = build_ingredient_image_html(name, ingredient_image, width_mm)
+            img_pdf, img_h = build_segment_pdf(img_html, tmp_dir, f"{existing_pdf.stem}.ingredients", width_mm)
+            top_segments.append((img_pdf, img_h))
+        except RuntimeError as e:
+            note += f" [ingredient image failed: {e}]"
+
+    # --- disclaimer segment (BOTTOM) -- unchanged logic ---
     raw_steps = get_step_ingredients(recipe)
 
     try:
@@ -496,29 +629,20 @@ def process_recipe(recipe, tmp_dir):
                 english_steps.append(step)
                 hindi_steps.append(step)
 
-    width_mm = get_page_width_mm(existing_pdf)
-    html = build_addition_html(name, english_steps, hindi_steps, width_mm)
-
-    addition_raw_pdf = tmp_dir / f"{existing_pdf.stem}.addition.raw.pdf"
-    addition_cropped_pdf = tmp_dir / f"{existing_pdf.stem}.addition.pdf"
-
+    disclaimer_html = build_addition_html(name, english_steps, hindi_steps, width_mm)
     try:
-        render_addition_pdf(html, addition_raw_pdf, width_mm)
-
-        shutil.copy(addition_raw_pdf, addition_cropped_pdf)
-
-        reader = PdfReader(str(addition_cropped_pdf))
-        content_height_pt = float(reader.pages[0].mediabox.height)
+        disclaimer_pdf, disclaimer_h = build_segment_pdf(
+            disclaimer_html, tmp_dir, f"{existing_pdf.stem}.disclaimer", width_mm
+        )
     except RuntimeError as e:
         return f"FAIL  {name}: {e}"
+    bottom_segments.append((disclaimer_pdf, disclaimer_h))
 
     final_path = OUTPUT_DIR / existing_pdf.name
-    append_below(existing_pdf, addition_cropped_pdf, content_height_pt, final_path)
+    stack_segments(existing_pdf, top_segments, bottom_segments, final_path)
 
-    # addition_raw_pdf.unlink(missing_ok=True)
-    # addition_cropped_pdf.unlink(missing_ok=True)
-
-    return f"OK    {name}: {len(english_steps)} step(s) -> {final_path}"
+    img_tag = "+img" if ingredient_image else "no-img"
+    return f"OK    {name}: {len(english_steps)} step(s), {img_tag} -> {final_path}{note}"
 
 
 def _process_recipes(recipes) -> tuple:

@@ -13,6 +13,9 @@ EXTRACT_ROOT = "../updated_extracted"
 IMAGE_DIR = "../test_images"
 POPUP_DIR = "../popup_images_with_cover"
 OUTPUT_JSON = "../recipes_fix.json"
+INGREDIENT_IMAGE_DIR = "../ingredient_images"  # one image per recipe, sparse coverage
+
+INGREDIENT_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
 SMARTSHEET_TOKEN = os.environ["SMARTSHEET_TOKEN"]
 SMARTSHEET_SHEET_ID = os.environ["SMARTSHEET_SHEET_ID"]
@@ -129,6 +132,45 @@ def load_existing_recipes(path):
 
     print(f"🔒 Loaded {len(lookup)} existing entries for protected-field preservation")
     return lookup
+
+
+# ===============================
+# INGREDIENT IMAGE LOOKUP
+# ===============================
+
+def build_ingredient_image_index():
+    """
+    Scans INGREDIENT_IMAGE_DIR ONCE and builds {recipe_key_upper: filename}.
+    Matching is done by upper-casing both sides, so this is immune to
+    case-mismatches between the normalized recipe_key (always uppercase,
+    per extract_zips.normalize_name()) and however the image file actually
+    got named on disk (e.g. "Chicken Biryani.jpg" still matches
+    "CHICKEN BIRYANI"). This is the single source of truth for this lookup
+    -- add_disclaimer_onpopup_pdf.py reads the field this writes into
+    recipes_fix.json rather than re-deriving its own match.
+
+    Coverage is expected to be sparse -- recipes with no image simply get
+    an empty "IngredientImage" field.
+    """
+    index = {}
+    folder = Path(INGREDIENT_IMAGE_DIR)
+    if not folder.is_dir():
+        return index
+
+    for f in folder.iterdir():
+        if not f.is_file():
+            continue
+        if f.suffix.lower() not in INGREDIENT_IMAGE_EXTENSIONS:
+            continue
+        key = f.stem.upper()
+        if key in index:
+            print(f"⚠ Duplicate ingredient image for key '{key}': "
+                  f"'{index[key]}' and '{f.name}' both match -- keeping the first one seen")
+            continue
+        index[key] = f.name
+
+    print(f"🥕 Indexed {len(index)} ingredient image(s) from {INGREDIENT_IMAGE_DIR}")
+    return index
 
 
 # ===============================
@@ -355,6 +397,10 @@ def generate_recipes_json():
     # 🔒 Load existing JSON first so we can restore protected fields later
     existing_map = load_existing_recipes(OUTPUT_JSON)
 
+    # Ingredient images: one case-insensitive scan of the whole folder,
+    # instead of a per-recipe filesystem check (see build_ingredient_image_index).
+    ingredient_image_index = build_ingredient_image_index()
+
     # Primary match path: this recipe's own ZIP stem → Smartsheet row ID →
     # that row's own cells. Reliable because it's the same ZIP file identity
     # already used to download and extract the recipe — it can't drift the
@@ -440,6 +486,11 @@ def generate_recipes_json():
         recipe["Image"] = f"{IMAGE_DIR}/{recipe_key}.jpg"
         recipe["PopupImage"] = f"{POPUP_DIR}/{popup_name}.pdf"
 
+        ingredient_image_filename = ingredient_image_index.get(recipe_key.upper(), "")
+        recipe["IngredientImage"] = (
+            f"{INGREDIENT_IMAGE_DIR}/{ingredient_image_filename}" if ingredient_image_filename else ""
+        )
+
         recipe.pop("_original_name", None)
         recipe.pop("description", None)
 
@@ -477,7 +528,9 @@ def generate_recipes_json():
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(recipes, f, indent=2, ensure_ascii=False)
 
+    matched_ingredient_images = sum(1 for r in recipes if r.get("IngredientImage"))
     print(f"\n✅ {len(recipes)} recipes written to {OUTPUT_JSON}")
+    print(f"🥕 {matched_ingredient_images}/{len(recipes)} recipes matched with an ingredient image")
     print("📡 Smartsheet is the master for (matched via ZIP → row ID, falling back to name/description text-match):")
     print("   - Recipe Name")
     print("   - Veg/Non Veg")
