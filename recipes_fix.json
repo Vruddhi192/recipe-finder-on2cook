@@ -232,8 +232,8 @@
     "Total Output": "3200 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN KEBAB",
@@ -563,8 +563,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "YELLOW GRAVY",
@@ -853,8 +853,8 @@
     "Total Output": "2300 GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "BOILED PASTA (PENNE)",
@@ -1945,8 +1945,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "STEAM RICE 2000G",
@@ -4796,8 +4796,8 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL SAMOSA",
@@ -5539,6 +5539,29 @@
     "Modified": "2026-08-06T06:49:05Z"
   },
   {
+    "Recipe Name": "MALAI BROCCOLI TIKKA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 3,
+    "Image": "../test_images/MALAI BROCCOLI TIKKA.jpg",
+    "PopupImage": "../popup_images_with_cover/MALAI BROCCOLI TIKKA.pdf",
+    "Ingredients": [
+      "Diced Fresh Broccoli 300 gm",
+      "Brushing  Oil  20 gm",
+      "Paste  Malai Marination  254 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Mp Mats Small",
+    "Total Output": "350 G",
+    "On2Cook Cooking Time": "3",
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-06-22T13:19:36Z"
+  },
+  {
     "Recipe Name": "EGGLESS BROWNIE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BAKING",
@@ -6109,8 +6132,8 @@
     "Total Output": "1200G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "WHITE SAUCE",
@@ -6824,8 +6847,8 @@
     "Total Output": "1500G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "VEGETABLE STIR FRIED CLEAR SAUCE",
@@ -7583,8 +7606,8 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "GHEE RICE 1000G",
@@ -8193,6 +8216,28 @@
     "Modified": "2026-06-05T08:52:39Z"
   },
   {
+    "Recipe Name": "TANDOORI BROCCOLI TIKKA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "TANDOORI MARINADE",
+    "Cooking Time": 4,
+    "Image": "../test_images/TANDOORI BROCCOLI TIKKA.jpg",
+    "PopupImage": "../popup_images_with_cover/TANDOORI BROCCOLI TIKKA.pdf",
+    "Ingredients": [
+      "Take Marinated Broccoli  415 gm",
+      "Brushing  Oil 20 20 gm"
+    ],
+    "Accessories": "Pan Honeycomb (Non-Stick)",
+    "Total Output": "350 G",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-08-07T07:41:37Z"
+  },
+  {
     "Recipe Name": "ZEEBA BIRYANI 1000G (RICE BRAND - ZEEBA)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
@@ -8257,8 +8302,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MUGHLAI PANEER",
@@ -10999,8 +11044,8 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MALAI PANEER TIKKA",
@@ -11881,8 +11926,8 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "PANEER JALFREZI",
@@ -14478,8 +14523,8 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "BOMBAY KEEMA MASALA",
