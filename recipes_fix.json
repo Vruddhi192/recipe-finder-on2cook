@@ -194,7 +194,7 @@
     "IngredientImage": ""
   },
   {
-    "Recipe Name": "PASTA",
+    "Recipe Name": "BATHUA SABZI",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
     "Cuisine": "INDIAN",
@@ -214,7 +214,7 @@
     "Total Output": "800G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-14T06:49:40Z",
+    "Modified": "2026-08-19T10:13:14Z",
     "IngredientImage": "../ingredient_images/BATHUA SUBZI.png"
   },
   {
@@ -8132,12 +8132,12 @@
   },
   {
     "Recipe Name": "KOFTA FRY 16PCS",
-    "Veg/Non Veg": "",
-    "Cooking Mode": "",
-    "Cuisine": "",
-    "Category": "",
-    "Flavor Profile": "",
-    "Consistency": "",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "FRYING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
     "Prerequisite Recipe": "",
     "Cooking Time": 2,
     "Image": "../test_images/FRIED KOFTA.jpg",
@@ -8150,7 +8150,7 @@
     "Total Output": "16 PCS",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-06T07:16:23Z",
+    "Modified": "2026-08-19T10:16:20Z",
     "IngredientImage": ""
   },
   {
