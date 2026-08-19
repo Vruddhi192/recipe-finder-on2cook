@@ -242,8 +242,8 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN KEBAB",
@@ -587,8 +587,8 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "YELLOW GRAVY",
@@ -889,8 +889,8 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "BOILED PASTA (PENNE)",
@@ -1222,14 +1222,13 @@
     "Image": "../test_images/VEG CHILI G RICE.jpg",
     "PopupImage": "../popup_images_with_cover/VEG CHILI G RICE.pdf",
     "Ingredients": [
-      "Take Oil 20 gm",
-      "Chopped  Vegetables 92 gm",
-      "Take Rice & Mix Sauce  358 gm"
+      "Take Oil & Vegetables  120 gm",
+      "Take Rice & Mix Sauce  365 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Rice Stirrer",
     "Total Output": "450 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins",
+    "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
     "IngredientImage": ""
   },
@@ -2028,8 +2027,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "STEAM RICE 2000G",
@@ -3215,7 +3214,7 @@
       "Auto Water  300 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "",
+    "Total Output": "2200G",
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-07-13T09:13:49Z",
@@ -3757,7 +3756,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "7",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-14T06:30:44Z",
     "IngredientImage": ""
   },
@@ -4363,10 +4362,10 @@
     "Ingredients": [
       "Take Butter 30 gm",
       "Chop Chopped MIX VEGETABLES  50 gm",
-      "Mix Egg Mix 3 number"
+      "Mix Egg Mix 122 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "",
+    "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -5002,8 +5001,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL SAMOSA",
@@ -5193,7 +5192,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "6 NOS (FROZEN PCS 125 G)",
     "On2Cook Cooking Time": "2",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "8 mins",
     "Modified": "2026-06-10T11:58:51Z",
     "IngredientImage": "../ingredient_images/AMUL CHEESE CORN.png"
   },
@@ -5943,7 +5942,7 @@
     "Accessories": "Pan Non-Coated (Ss), Frying Kit",
     "Total Output": "500G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-05T09:04:53Z",
     "IngredientImage": ""
   },
@@ -6395,8 +6394,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "WHITE SAUCE",
@@ -6411,14 +6410,14 @@
     "Image": "../test_images/WHITE SAUCE.jpg",
     "PopupImage": "../popup_images_with_cover/WHITE SAUCE.pdf",
     "Ingredients": [
-      "Take Butter 50g, Maida 50g 100 gm",
+      "Take Butter 50g, Maida 50g, Nutmeg Powder A Pinch 100 gm",
       "Take Milk 1000 gm",
       "Auto Water (Auto) 100 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "1000G",
     "On2Cook Cooking Time": "7",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-23T08:14:20Z",
     "IngredientImage": ""
   },
@@ -7010,7 +7009,7 @@
     "PopupImage": "../popup_images_with_cover/PENNE PESTO.pdf",
     "Ingredients": [
       "Mix Maida 20 g, Butter 30 g, Chopped Garlic 15 g, Milk 200 g, Raw Penne Pasta 100 g 365 gm",
-      "Diced Cut Vegetables & Mix Sauce  256 gm",
+      "Diced Cut Vegetables & Mix Sauce  254 gm",
       "Auto Water (Auto) 900 ml",
       "Blender  Pesto Recipe (Blender) 200 gm"
     ],
@@ -7140,8 +7139,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/BHUNA GRAVY 1500.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "VEGETABLE STIR FRIED CLEAR SAUCE",
@@ -7385,9 +7384,9 @@
       "Add Butter For Brushing 20 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Teflon Plate",
-    "Total Output": "",
+    "Total Output": "200G",
     "On2Cook Cooking Time": "4",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-10T11:58:51Z",
     "IngredientImage": ""
   },
@@ -7764,7 +7763,7 @@
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
-    "Cooking Time": 21,
+    "Cooking Time": 16,
     "Image": "../test_images/ONION GRAVY 2KG.jpg",
     "PopupImage": "../popup_images_with_cover/ONION GRAVY 2KG.pdf",
     "Ingredients": [
@@ -7775,7 +7774,7 @@
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2K",
-    "On2Cook Cooking Time": "21",
+    "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "50 mins",
     "Modified": "2026-08-06T10:57:07Z",
     "IngredientImage": ""
@@ -7930,8 +7929,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/BUTTER CHICKEN.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "GHEE RICE 1000G",
@@ -8386,8 +8385,8 @@
       "Mix Mix Sauce  293 gm",
       "Auto Water (Auto) 100 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -8656,8 +8655,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MUGHLAI PANEER",
@@ -9438,8 +9437,8 @@
       "Take Cheese  50 gm",
       "Take Water 400 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
-    "Total Output": "",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "300G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-06T11:21:24Z",
@@ -9943,7 +9942,7 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "500G",
     "On2Cook Cooking Time": "14",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "20 mins",
     "Modified": "2026-07-10T10:36:12Z",
     "IngredientImage": ""
   },
@@ -10129,10 +10128,10 @@
     "Ingredients": [
       "Take Butter 30 gm",
       "Chopped Vegetable 50 gm",
-      "Mix Egg Mix 3 number"
+      "Mix Egg Mix 122 number"
     ],
     "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "",
+    "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -10576,10 +10575,10 @@
     "Ingredients": [
       "Take Butter 30 gm",
       "Sliced  Vegetable 50 gm",
-      "Mix Egg Mix 3 number"
+      "Mix Egg Mix 122 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "",
+    "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -10775,10 +10774,10 @@
     "Ingredients": [
       "Take Butter 30 gm",
       "Sliced  Vegetable 50 gm",
-      "Mix Egg Mix 3 number"
+      "Mix Egg Mix 122 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss)",
-    "Total Output": "",
+    "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -11070,17 +11069,17 @@
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
-    "Cooking Time": 17,
+    "Cooking Time": 13,
     "Image": "../test_images/CHOPPED MASALA.jpg",
     "PopupImage": "../popup_images_with_cover/CHOPPED MASALA.pdf",
     "Ingredients": [
-      "Add Oil & Tadka 1260 gm",
-      "Mix Powder Spices & Tomatoes  700 gm",
+      "Add Oil & Tadka 707 gm",
+      "Mix Powder Spices & Tomatoes  358 gm",
       "Auto Water (Auto) 100 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
-    "Total Output": "1300G",
-    "On2Cook Cooking Time": "17",
+    "Total Output": "700 G",
+    "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-06-10T11:58:51Z",
     "IngredientImage": ""
@@ -11515,8 +11514,8 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MALAI PANEER TIKKA",
@@ -11682,7 +11681,7 @@
     "Accessories": "Pan Non-Coated (Ss)",
     "Total Output": "500G",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-05T09:04:53Z",
     "IngredientImage": ""
   },
@@ -12435,8 +12434,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "PANEER JALFREZI",
@@ -13141,7 +13140,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "500G",
     "On2Cook Cooking Time": "10",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "40 mins",
     "Modified": "2026-06-05T08:52:39Z",
     "IngredientImage": ""
   },
@@ -14501,7 +14500,7 @@
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "",
+    "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-23T08:04:41Z",
     "IngredientImage": ""
   },
@@ -15070,7 +15069,7 @@
       "Add Oil for Brushing  20 ml"
     ],
     "Accessories": "Pan Honeycomb (Non-Stick)",
-    "Total Output": "",
+    "Total Output": "350 GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
@@ -15143,8 +15142,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "BOMBAY KEEMA MASALA",
@@ -15408,7 +15407,7 @@
     "Image": "../test_images/MILLET CHILLA.jpg",
     "PopupImage": "../popup_images_with_cover/MILLET CHILLA.pdf",
     "Ingredients": [
-      "Batter  Chilla Mix 595 gm"
+      "Batter  Chilla Mix 598 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Pizza Kit",
     "Total Output": "910 NOS (EACH PCS 60 G)",

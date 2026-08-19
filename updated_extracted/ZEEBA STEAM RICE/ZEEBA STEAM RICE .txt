@@ -335,7 +335,7 @@
     "preparation"
   ],
   "category": "0",
-  "description": "ZEEBA STEAM RICE (RICE BRAND - ZEEBA)\nSOAKED RICE 200G \nFINAL OUTPUT 500G\n\nACCESSORIES\nPan Non-Coated (SS)",
+  "description": "ZEEBA STEAM RICE (RICE BRAND - ZEEBA)\nSOAKED RICE 200G \nNORMAL COOKING TIME 20 MINUTES \nFINAL OUTPUT 500G\n\nACCESSORIES\nPan Non-Coated (SS)",
   "difficulty": "Easy",
   "id": 808,
   "imageUrl": "file:///data/user/0/com.invent.ontocook/files/OnToCook/ZEEBA%20STEAM%20RICE%20/ZEEBA%20STEAM%20RICE%20.jpg",
