@@ -34,17 +34,14 @@ Steps:
                              recipe with no local ZIP at all yet)
   3. extract_zips          — extract ZIPs → extracted/
   4. accessory_mapping      — map accessories + fix descriptions → updated_extracted/ + updated_zips/
-  5. generate_popups       — generate popup PDFs (skips if PDF already exists
-                             and the recipe isn't stale)
+  5. generate_popups       — generate popup PDFs directly into final_recipe_pdfs/
+                             (skips if PDF already exists and the recipe isn't stale)
   6. parse_to_json         — generate recipes_fix.json from updated_extracted/
-  7. add_disclaimer        — append bilingual (Hindi/English) instruction block to
-                             popup PDFs, only for recipes updated this run (needs
-                             recipes_fix.json from step 6, hence it runs right after)
-  8. sync_description      — patch description first lines from Smartsheet Recipe Names
-  9. parse_to_json         — re-run to pick up sync_description changes
-  10. flag_orphan_recipes  — hide recipes with no Smartsheet match (must run LAST,
+  7. sync_description      — patch description first lines from Smartsheet Recipe Names
+  8. parse_to_json         — re-run to pick up sync_description changes
+  9. flag_orphan_recipes   — hide recipes with no Smartsheet match (must run LAST,
                              after sync_description has had its chance to fix names)
-  11. save pipeline state  — record this run's row-modified snapshot for next time
+  10. save pipeline state  — record this run's row-modified snapshot for next time
 
 Usage:
   python all-in-one.py
@@ -58,7 +55,6 @@ import extract_zips
 import accessory_mapping
 import generate_popup_images
 import parse_txt_to_json
-import add_disclaimer_onpopup_pdf
 import sync_description
 import flag_orphan_recipes
 import pipeline_state
@@ -114,18 +110,16 @@ def main():
         step_header(6, "Parse to JSON")
         parse_txt_to_json.generate_recipes_json()
 
-        step_header(7, "Add bilingual disclaimer to updated popup PDFs")
-        add_disclaimer_onpopup_pdf.add_disclaimers_for_updated(updated_stems)
-        step_header(8, "Sync description first lines from Smartsheet Recipe Names")
+        step_header(7, "Sync description first lines from Smartsheet Recipe Names")
         sync_description.main()
 
-        step_header(9, "Parse to JSON (re-run to pick up sync_description changes)")
+        step_header(8, "Parse to JSON (re-run to pick up sync_description changes)")
         parse_txt_to_json.generate_recipes_json()
 
-        step_header(10, "Flag orphan recipes (no Smartsheet match) as hidden")
+        step_header(9, "Flag orphan recipes (no Smartsheet match) as hidden")
         flag_orphan_recipes.flag_orphan_recipes()
 
-        step_header(11, "Save pipeline state (row-modified snapshot)")
+        step_header(10, "Save pipeline state (row-modified snapshot)")
         pipeline_state.save_state(current_modified)
 
     except Exception as e:

@@ -25,8 +25,6 @@ off that same set — means:
   - generate_popups       deletes and regenerates every popup PDF (its
                            skip check is `stem in updated_stems` — with
                            every stem in that set, nothing is skipped)
-  - add_disclaimer        re-stamps the bilingual disclaimer on every
-                           regenerated popup PDF
 
 parse_to_json, sync_description, and flag_orphan_recipes already run
 over the full dataset every time in the normal pipeline (they don't take
@@ -53,7 +51,6 @@ import extract_zips
 import accessory_mapping
 import generate_popup_images
 import parse_txt_to_json
-import add_disclaimer_onpopup_pdf
 import sync_description
 import flag_orphan_recipes
 import pipeline_state
@@ -106,19 +103,16 @@ def main():
         step_header(6, "Parse to JSON")
         parse_txt_to_json.generate_recipes_json()
 
-        step_header(7, "Add bilingual disclaimer to all regenerated popup PDFs")
-        add_disclaimer_onpopup_pdf.add_disclaimers_for_updated(updated_stems)
-
-        step_header(8, "Sync description first lines from Smartsheet Recipe Names")
+        step_header(7, "Sync description first lines from Smartsheet Recipe Names")
         sync_description.main()
 
-        step_header(9, "Parse to JSON (re-run to pick up sync_description changes)")
+        step_header(8, "Parse to JSON (re-run to pick up sync_description changes)")
         parse_txt_to_json.generate_recipes_json()
 
-        step_header(10, "Flag orphan recipes (no Smartsheet match) as hidden")
+        step_header(9, "Flag orphan recipes (no Smartsheet match) as hidden")
         flag_orphan_recipes.flag_orphan_recipes()
 
-        step_header(11, "Save pipeline state (row-modified snapshot)")
+        step_header(10, "Save pipeline state (row-modified snapshot)")
         pipeline_state.save_state(current_modified)
 
     except Exception as e:

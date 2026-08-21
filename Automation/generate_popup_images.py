@@ -16,7 +16,7 @@ import subprocess
 from pathlib import Path
 
 ZIP_ROOT  = "../updated_zips"
-POPUP_DIR = "../test_popup_images"
+POPUP_DIR = "../final_recipe_pdfs"
 
 RECIPE_GENERATOR_SCRIPT = "final_corrected_recipe_generator.py"
 
@@ -93,4 +93,3 @@ def generate_all_popups(updated_stems: set = None) -> int:
 
 if __name__ == "__main__":
     generate_all_popups()
-

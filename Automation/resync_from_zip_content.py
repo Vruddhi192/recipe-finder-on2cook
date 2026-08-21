@@ -11,7 +11,7 @@ it force-downloads every recipe ZIP from Smartsheet unconditionally, hashes
 each one, and compares that hash against what was recorded the last time
 this script ran. Anything whose content is new or different gets pushed
 through the full downstream pipeline (extract → accessory mapping → popup
-PDF → JSON → disclaimer → description sync → orphan flagging).
+PDF → JSON → description sync → orphan flagging).
 
 Why this exists: before the row-modified/mtime bug was fixed, some recipes
 edited in Smartsheet were silently never re-pulled locally — and because
@@ -45,7 +45,6 @@ import extract_zips
 import accessory_mapping
 import generate_popup_images
 import parse_txt_to_json
-import add_disclaimer_onpopup_pdf
 import sync_description
 import flag_orphan_recipes
 import pipeline_state
@@ -146,9 +145,8 @@ def main():
         parse_txt_to_json.generate_recipes_json()
 
         print("\n" + "─" * 60)
-        print("  Adding disclaimers + syncing descriptions...")
+        print("  Syncing descriptions...")
         print("─" * 60)
-        add_disclaimer_onpopup_pdf.add_disclaimers_for_updated(content_changed_stems)
         sync_description.main()
         parse_txt_to_json.generate_recipes_json()
 
