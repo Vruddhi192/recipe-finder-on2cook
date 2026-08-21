@@ -11,7 +11,7 @@ import download_zips  # for the ZIP stem → Smartsheet row ID join
 # ===============================
 EXTRACT_ROOT = "../updated_extracted"
 IMAGE_DIR = "../test_images"
-POPUP_DIR = "../popup_images_with_cover"
+POPUP_DIR = "../final_recipe_pdfs"
 OUTPUT_JSON = "../recipes_fix.json"
 INGREDIENT_IMAGE_DIR = "../ingredient_images"  # one image per recipe, sparse coverage
 
