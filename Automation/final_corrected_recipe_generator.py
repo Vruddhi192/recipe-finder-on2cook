@@ -27,6 +27,24 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOGO_PATH = os.path.join(SCRIPT_DIR, 'image.jfif')
 LOGO_RATIO = 4
 
+# =========================
+# Configuration for ingredient image + disclaimer block
+# =========================
+# ingredient_images/ and recipes_fix.json live one level up from this
+# script (Automation/), same layout used by build_recipe_popups.py.
+INGREDIENT_IMAGE_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..', 'ingredient_images'))
+RECIPES_FIX_JSON = os.path.abspath(os.path.join(SCRIPT_DIR, '..', 'recipes_fix.json'))
+
+# =========================
+# Configuration for header icon badges (new design)
+# =========================
+# Drop scale.svg / clock.svg / bowl.svg / ingredients.svg here (white-on-transparent
+# artwork works best, they're drawn inside a solid colored circle). Missing files
+# fall back to a simple hand-drawn glyph so the script still runs without assets.
+ICONS_DIR = os.path.join(SCRIPT_DIR, 'Icons')
+MARBLE_BG_PATH = os.path.join(SCRIPT_DIR, 'marble_background.png')  # exact supplied marble texture
+
+
 def safe_int(value, default=0):
     """Safely convert a value to integer, returning default for invalid inputs."""
     try:
@@ -151,6 +169,1330 @@ def _resolve_output_pdf_path(output_pdf_path, candidate_name, source_path, recip
         return os.path.join(os.path.dirname(os.path.abspath(source_path)) if source_path else os.getcwd(), f"{base}.pdf")
     return _default_output_path_from(source_path, candidate_name)
 
+
+# ===============================================================
+# INGREDIENT IMAGE LOOKUP + DISCLAIMER TEXT (module-level helpers)
+# ===============================================================
+# recipes_fix.json carries a precomputed "IngredientImage" field per
+# recipe (see build_recipe_popups.py). We reuse that same lookup here
+# so ingredient-image resolution stays consistent across both scripts.
+
+_RECIPES_INDEX = None
+
+
+def _load_recipes_index():
+    """Loads recipes_fix.json once per process, indexed by folder stem
+    (Path(recipe['Image']).stem, uppercased). Returns {} on any failure."""
+    global _RECIPES_INDEX
+    if _RECIPES_INDEX is not None:
+        return _RECIPES_INDEX
+
+    _RECIPES_INDEX = {}
+    if not os.path.exists(RECIPES_FIX_JSON):
+        print(f"⚠️  recipes_fix.json not found at {RECIPES_FIX_JSON} -- "
+              f"ingredient-image lookup will fall back to filename matching only.")
+        return _RECIPES_INDEX
+
+    try:
+        with open(RECIPES_FIX_JSON, 'r', encoding='utf-8') as f:
+            recipes = json.load(f)
+    except Exception as e:
+        print(f"⚠️  Could not read recipes_fix.json ({e}) -- "
+              f"ingredient-image lookup will fall back to filename matching only.")
+        return _RECIPES_INDEX
+
+    for recipe in recipes:
+        image_field = recipe.get('Image', '')
+        if not image_field:
+            continue
+        stem = os.path.splitext(os.path.basename(image_field))[0].strip().upper()
+        if stem:
+            _RECIPES_INDEX[stem] = recipe
+
+    print(f"✅ Loaded recipes_fix.json: {len(_RECIPES_INDEX)} recipe(s) indexed by folder stem")
+    return _RECIPES_INDEX
+
+
+def find_ingredient_image_path(recipe_stem):
+    """Authoritative lookup via recipes_fix.json's IngredientImage field,
+    falling back to a direct filename match in INGREDIENT_IMAGE_DIR."""
+    stem = (recipe_stem or '').strip()
+    if not stem:
+        return None
+
+    index = _load_recipes_index()
+    recipe = index.get(stem.upper())
+    if recipe:
+        field = recipe.get('IngredientImage', '')
+        if field:
+            candidate = os.path.join(INGREDIENT_IMAGE_DIR, os.path.basename(field))
+            if os.path.exists(candidate):
+                print(f"🖼  Found ingredient image for '{stem}' via recipes_fix.json: {candidate}")
+                return candidate
+            else:
+                print(f"ℹ️  recipes_fix.json points to {candidate} but it doesn't exist on disk -- "
+                      f"trying filename fallback...")
+
+    # Fallback: direct filename match against files in INGREDIENT_IMAGE_DIR
+    if os.path.isdir(INGREDIENT_IMAGE_DIR):
+        for ext in ('.jpg', '.jpeg', '.png', '.webp'):
+            candidate = os.path.join(INGREDIENT_IMAGE_DIR, stem + ext)
+            if os.path.exists(candidate):
+                print(f"🖼  Found ingredient image for '{stem}' via filename fallback: {candidate}")
+                return candidate
+        stem_lower = stem.lower()
+        for fname in os.listdir(INGREDIENT_IMAGE_DIR):
+            name, ext = os.path.splitext(fname)
+            if name.strip().lower() == stem_lower and ext.lower() in ('.jpg', '.jpeg', '.png', '.webp'):
+                candidate = os.path.join(INGREDIENT_IMAGE_DIR, fname)
+                print(f"🖼  Found ingredient image for '{stem}' via case-insensitive fallback: {candidate}")
+                return candidate
+
+    print(f"ℹ️  No ingredient image found for '{stem}'")
+    return None
+
+
+
+# ===============================================================
+# HINDI / DEVANAGARI HELPERS
+# ===============================================================
+
+# Exact overrides are preferred for recipe names because recipe names are
+# often transliterations rather than literal dictionary translations.
+HINDI_RECIPE_NAME_OVERRIDES = {
+    "ALOO MATAR RASSA": "आलू मटर रस्सा",
+    "ALOO MATAR RASA": "आलू मटर रस्सा",
+    "APPLE CINNAMON CAKE": "एप्पल सिनेमन केक",
+    "APPLE CIN CAKE": "एप्पल सिनेमन केक",
+    "AALNI BHAAT": "आलनी भात",
+}
+
+# Longest phrases are replaced first.
+HINDI_PHRASE_MAP = {
+    "Whole Spice & Tampering": "साबुत मसाले और तड़का",
+    "Whole Spice & Tempering": "साबुत मसाले और तड़का",
+    "Kashmiri Red Chilli Powder": "कश्मीरी लाल मिर्च पाउडर",
+    "Kashmiri Red Chili Powder": "कश्मीरी लाल मिर्च पाउडर",
+    "Coriander Powder": "धनिया पाउडर",
+    "Red Chilli Powder": "लाल मिर्च पाउडर",
+    "Red Chili Powder": "लाल मिर्च पाउडर",
+    "Whole Red Chilli": "साबुत लाल मिर्च",
+    "Whole Red Chili": "साबुत लाल मिर्च",
+    "Musturd Seeds": "सरसों के दाने",
+    "Mustard Seeds": "सरसों के दाने",
+    "Cumin Seeds": "जीरा",
+    "Black Pepper": "काली मिर्च",
+    "Green Chilli": "हरी मिर्च",
+    "Green Chili": "हरी मिर्च",
+    "Green Peas": "हरे मटर",
+    "Diced Potatoes": "कटे हुए आलू",
+    "Raw Gravy Paste": "कच्ची ग्रेवी पेस्ट",
+    "Kasuri Methi": "कसूरी मेथी",
+    "Kasturi Methi": "कसूरी मेथी",
+}
+
+HINDI_WORD_MAP = {
+    "aloo": "आलू",
+    "potato": "आलू",
+    "potatoes": "आलू",
+    "matar": "मटर",
+    "peas": "मटर",
+    "rassa": "रस्सा",
+    "rasa": "रस्सा",
+    "paneer": "पनीर",
+    "chicken": "चिकन",
+    "mutton": "मटन",
+    "fish": "मछली",
+    "egg": "अंडा",
+    "eggs": "अंडे",
+    "curry": "करी",
+    "masala": "मसाला",
+    "gravy": "ग्रेवी",
+    "rice": "चावल",
+    "pulao": "पुलाव",
+    "biryani": "बिरयानी",
+    "dal": "दाल",
+    "khichdi": "खिचड़ी",
+    "soup": "सूप",
+    "fried": "फ्राइड",
+    "fry": "फ्राई",
+    "jeera": "जीरा",
+    "oil": "तेल",
+    "water": "पानी",
+    "garlic": "लहसुन",
+    "ginger": "अदरक",
+    "tomato": "टमाटर",
+    "tomatoes": "टमाटर",
+    "onion": "प्याज",
+    "onions": "प्याज",
+    "turmeric": "हल्दी",
+    "salt": "नमक",
+    "chilli": "मिर्च",
+    "chili": "मिर्च",
+    "powder": "पाउडर",
+    "raw": "कच्चा",
+    "paste": "पेस्ट",
+    "whole": "साबुत",
+    "spice": "मसाला",
+    "spices": "मसाले",
+    "apple": "एप्पल",
+    "cinnamon": "सिनेमन",
+    "cake": "केक",
+    "batter": "बैटर",
+    "flour": "आटा",
+    "butter": "बटर",
+    "sugar": "चीनी",
+    "milk": "दूध",
+    "tempering": "तड़का",
+    "chopped": "कटा हुआ",
+    "vegetable": "सब्ज़ी",
+    "vegetables": "सब्ज़ियाँ",
+    "soaked": "भिगोया हुआ",
+    "stock": "स्टॉक",
+    "grill": "ग्रिल",
+    "mesh": "मेश",
+    "mats": "मैट्स",
+    "mold": "मोल्ड",
+    "mould": "मोल्ड",
+    "stirrer": "स्टिरर",
+    "tray": "ट्रे",
+    "rack": "रैक",
+    "stand": "स्टैंड",
+    "pressure": "प्रेशर",
+    "cooker": "कुकर",
+    "mutton": "मटन",
+    "mix": "मिक्स",
+    "sauce": "सॉस",
+    "noodles": "नूडल्स",
+    "momo": "मोमो",
+    "kit": "किट",
+    "and": "और",
+}
+
+HINDI_ACTION_MAP = {
+    "heat": "गरम करें",
+    "cook": "पकाएँ",
+    "add": "डालें",
+    "take": "लें",
+    "mix": "मिलाएँ",
+    "stir": "चलाएँ",
+    "boil": "उबालें",
+    "fry": "तलें",
+    "saute": "भूनें",
+    "sauté": "भूनें",
+}
+
+
+
+def extract_full_recipe_name_from_description(recipe_data):
+    """Get the customer-facing English recipe name from description first.
+
+    Supported description examples:
+        ALOO MATAR RASSA
+        OUTPUT 600 GM
+        ...
+
+        RECIPE NAME: ALOO MATAR RASSA
+        OUTPUT 600 GM
+
+        NAME - ALOO MATAR RASSA
+
+    The description is authoritative when it contains a recipe-name line.
+    If the current recipe description contains only metadata (OUTPUT,
+    NORMAL COOKING TIME, ACCESSORIES, etc.), fall back to recipe_data["name"]
+    and then audio1.
+    """
+    desc = str(recipe_data.get("description", "") or "")
+    lines = [line.strip() for line in desc.splitlines() if line.strip()]
+
+    # Explicit labelled forms have highest priority.
+    for line in lines:
+        m = re.match(
+            r'^(?:RECIPE\s*NAME|FULL\s*NAME|NAME)\s*[:\-]\s*(.+?)\s*$',
+            line,
+            flags=re.IGNORECASE
+        )
+        if m and m.group(1).strip():
+            return m.group(1).strip()
+
+    # A free-standing title is expected before the metadata block.
+    metadata_prefixes = (
+        "OUTPUT",
+        "TOTAL OUTPUT",
+        "NORMAL COOKING TIME",
+        "COOKING TIME",
+        "ACCESSORIES",
+        "ACCESSORY",
+        "TOTAL INPUT",
+    )
+
+    for line in lines:
+        upper = line.upper().strip()
+
+        # Once metadata starts, remaining free text is metadata/accessory data,
+        # not the recipe title.
+        if any(upper.startswith(prefix) for prefix in metadata_prefixes):
+            break
+
+        # Ignore obvious separators/noise.
+        if upper in {"DESCRIPTION", "RECIPE", "DETAILS"}:
+            continue
+
+        if line:
+            return line
+
+    # Current/legacy files may not store the recipe title in description.
+    value = recipe_data.get("name", "")
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    value = str(value or "").strip()
+    if value:
+        return value
+
+    audio1 = recipe_data.get("audio1", "")
+    if isinstance(audio1, list):
+        audio1 = audio1[0] if audio1 else ""
+    audio1 = str(audio1 or "").strip()
+    if audio1:
+        return audio1
+
+    return "Unknown Recipe"
+
+
+
+def _recipe_name_as_text(recipe_data):
+    return extract_full_recipe_name_from_description(recipe_data)
+
+
+def _first_nonempty_recipe_field(recipe_data, keys):
+    for key in keys:
+        value = recipe_data.get(key)
+        if isinstance(value, list):
+            value = value[0] if value else ""
+        value = str(value or "").strip()
+        if value:
+            return value
+    return ""
+
+
+def _translate_words_fallback(text):
+    """Dictionary-based fallback used only when no exact Hindi field/override exists."""
+    text = str(text or "").strip()
+    if not text:
+        return ""
+
+    # Phrase replacements first.
+    translated = text
+    for english, hindi in sorted(HINDI_PHRASE_MAP.items(), key=lambda kv: len(kv[0]), reverse=True):
+        translated = re.sub(re.escape(english), hindi, translated, flags=re.IGNORECASE)
+
+    # Translate remaining standalone English words while preserving numbers/punctuation.
+    parts = re.split(r'(\s+|[,/&()\-]+)', translated)
+    out = []
+    for part in parts:
+        key = part.strip().lower()
+        if key in HINDI_WORD_MAP:
+            # Preserve the surrounding whitespace from the original token.
+            prefix = part[:len(part) - len(part.lstrip())]
+            suffix = part[len(part.rstrip()):] if part.rstrip() != part else ""
+            out.append(prefix + HINDI_WORD_MAP[key] + suffix)
+        else:
+            out.append(part)
+    return "".join(out).strip()
+
+
+def get_hindi_recipe_name(recipe_data):
+    """Return a Hindi subtitle for the recipe.
+
+    Priority:
+      1. Hindi field already present in recipe JSON.
+      2. Exact override dictionary.
+      3. Dictionary-based translation/transliteration fallback.
+    """
+    explicit = _first_nonempty_recipe_field(
+        recipe_data,
+        (
+            "name_hi", "name_hindi", "hindi_name", "nameHindi",
+            "hindiName", "NameHindi", "name_hi_IN"
+        )
+    )
+    if explicit:
+        return explicit
+
+    english_name = _recipe_name_as_text(recipe_data)
+    override = HINDI_RECIPE_NAME_OVERRIDES.get(english_name.upper())
+    if override:
+        return override
+
+    fallback = _translate_words_fallback(english_name)
+    return fallback if fallback else english_name
+
+
+def _strip_quantities_and_units(text):
+    """Remove recipe quantities from merged step text before Hindi translation."""
+    text = str(text or "")
+    # Examples removed: 150 g, 500 ml, 2.5 kg, 1 tbsp, etc.
+    text = re.sub(
+        r'\b\d+(?:\.\d+)?\s*(?:g|gm|gms|kg|ml|l|tsp|tbsp|cup|cups)\b',
+        '',
+        text,
+        flags=re.IGNORECASE
+    )
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r'\s*,\s*', ', ', text)
+    return text.strip(" ,")
+
+
+def translate_ingredient_text_to_hindi(text):
+    text = _strip_quantities_and_units(text)
+    if not text:
+        return ""
+
+    # Translate comma-separated merged ingredient names independently.
+    items = [item.strip() for item in text.split(",") if item.strip()]
+    translated_items = [_translate_words_fallback(item) for item in items]
+    translated_items = [item for item in translated_items if item]
+
+    if not translated_items:
+        return _translate_words_fallback(text)
+    if len(translated_items) == 1:
+        return translated_items[0]
+    if len(translated_items) == 2:
+        return f"{translated_items[0]} और {translated_items[1]}"
+    return ", ".join(translated_items[:-1]) + f" और {translated_items[-1]}"
+
+
+def translate_step_to_hindi(step):
+    """Translate one generated Recipe Steps line into natural Hindi."""
+    action = str(step.get("Audio", "") or "").strip().lower()
+    ingredient_text = str(step.get("Text", "") or "").strip()
+
+    # If Text is absent, try app_audio after removing a known English action.
+    if not ingredient_text:
+        app_audio = str(step.get("app_audio", "") or "").strip()
+        ingredient_text = re.sub(
+            r'^(Heat|Cook|Add|Take|Mix|Stir|Boil|Fry|Saute|Sauté)\s+',
+            '',
+            app_audio,
+            flags=re.IGNORECASE
+        ).strip()
+
+    ingredient_hi = translate_ingredient_text_to_hindi(ingredient_text)
+
+    # Infer action from app_audio if Audio is blank.
+    if not action:
+        app_audio = str(step.get("app_audio", "") or "").strip()
+        m = re.match(r'^(Heat|Cook|Add|Take|Mix|Stir|Boil|Fry|Saute|Sauté)\b', app_audio, flags=re.IGNORECASE)
+        if m:
+            action = m.group(1).lower()
+
+    # Merged zero-duration steps often lose the original Add action.
+    # If there is no action, use "डालें" for water/addition-like steps.
+    if not action:
+        raw_lower = ingredient_text.lower()
+        if "water" in raw_lower or "," in ingredient_text:
+            action_hi = "डालें"
+        else:
+            action_hi = ""
+    else:
+        action_hi = HINDI_ACTION_MAP.get(action, "")
+
+    if ingredient_hi and action_hi:
+        line = f"{ingredient_hi} {action_hi}"
+    elif ingredient_hi:
+        line = ingredient_hi
+    elif action_hi:
+        line = action_hi
+    else:
+        # Last-resort translation of whatever text we have.
+        line = _translate_words_fallback(ingredient_text)
+
+    lid = str(step.get("lid", "") or "").strip().lower()
+    if lid == "open":
+        line += " — ढक्कन खोलें"
+    elif lid == "close":
+        line += " — ढक्कन बंद रखें"
+
+    return line.strip()
+
+
+
+# Fixed bilingual guidance around the dynamic recipe steps.
+# These lines are NOT numbered; only the actual recipe steps are numbered.
+RECIPE_STEPS_INTRO_EN = (
+    "Please place the required cooking vessel on the On2Cook induction top. "
+    "Then follow only the manual setup or ingredient-addition steps shown below:"
+)
+RECIPE_STEPS_INTRO_HI = (
+    "कृपया आवश्यक कुकिंग वेसल को On2Cook इंडक्शन टॉप पर रखें। फिर केवल "
+    "नीचे दिए गए मैनुअल सेटअप या सामग्री डालने वाले चरणों का पालन करें:"
+)
+
+RECIPE_STEPS_OUTRO_EN = (
+    "Please open the lid of the On2Cook device, take out the food, and serve it."
+)
+RECIPE_STEPS_OUTRO_HI = (
+    "कृपया On2Cook डिवाइस का ढक्कन खोलें, खाना निकालें और परोसें।"
+)
+
+
+def _skip_is_true(step):
+    """Normalize the internal `skip` flag.
+
+    Customer-facing interpretation:
+      - skip == false/blank: after this cooking stage the next stage MAY
+        require a manual setup / ingredient-addition prompt.
+      - skip == true: the device continues automatically.
+
+    Source recipe files commonly encode False as an empty string.
+    """
+    value = step.get('skip', False)
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in ('1', 'true', 'yes', 'y')
+
+
+def _disclaimer_source_steps(recipe_data):
+    """Return ORIGINAL unmerged Instruction rows for skip/manual logic."""
+    original = recipe_data.get('_disclaimer_instruction_source')
+    if isinstance(original, list) and original:
+        return original
+    return recipe_data.get('Instruction', []) or []
+
+
+def _normalize_manual_name(text):
+    text = str(text or '').lower()
+    text = text.replace('&', ' and ')
+    text = re.sub(r'[^a-z0-9]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def _strip_action_prefix(text):
+    """Remove action verbs so a manual customer line can consistently say ADD."""
+    text = str(text or '').strip()
+    return re.sub(
+        r'^(?:Heat|Cook|Add|Take|Mix|Stir|Boil|Fry|Saute|Sauté|Pour|Place|Put)\s+',
+        '',
+        text,
+        flags=re.IGNORECASE
+    ).strip()
+
+
+def _water_like(text):
+    """Detect any water-related ingredient name, including source typo 'Watar'."""
+    return re.search(r'\b(?:water|watar)\b', str(text or ''), flags=re.IGNORECASE) is not None
+
+
+def _is_automatic_pump_water(text):
+    """Return True ONLY for ordinary pump water.
+
+    Rule requested for the customer recipe sheet:
+      - "Water" / "Watar" by itself -> automatic On2Cook pump water
+      - "Stock Water", "Coconut Water", "Rice Water", etc. -> SPECIAL water,
+        therefore it is a manual ingredient and must be shown in Recipe Steps.
+
+    Quantity/unit text is ignored when deciding, so:
+        "500 ml Water" -> automatic
+        "2200 g Stock Water" -> manual
+    """
+    text = str(text or '').strip()
+
+    # Remove a leading quantity/unit if this helper receives a full label.
+    text = re.sub(
+        r'^\s*\d+(?:\.\d+)?\s*(?:g|gm|gms|kg|ml|l|liter|litre|tsp|tbsp|cup|cups)\s+',
+        '',
+        text,
+        flags=re.IGNORECASE
+    ).strip()
+
+    normalized = _normalize_manual_name(text)
+    return normalized in ('water', 'watar')
+
+
+_ACCESSORY_TERMS = (
+    'grill mesh', 'mesh mat', 'mesh mats',
+    'cake mold', 'cake mould', 'mold', 'mould',
+    'stirrer', 'tray', 'rack', 'stand',
+    'cake kit', 'accessory', 'accessories',
+)
+
+
+def _is_accessory_text(text):
+    normalized = _normalize_manual_name(text)
+    if not normalized:
+        return False
+    return any(term in normalized for term in _ACCESSORY_TERMS)
+
+
+def _is_machine_action_only_text(text):
+    """Reject cooking operations that are not ingredients/accessories.
+
+    This specifically prevents output such as "Add 0 g Simmer".
+    """
+    text = str(text or '').strip()
+    if not text:
+        return True
+
+    lower = text.lower().strip()
+    if re.match(
+        r'^(?:heat|cook|boil|simmer|steam|fry|saute|sauté|mix|stir|roast|'
+        r'bake|grill|blend|whisk|knead|rest|cool|chill|freeze|serve|'
+        r'garnish|season|cover|uncover|temperature\s+down)\b',
+        lower
+    ):
+        return True
+
+    add_water_match = re.match(
+        r'^(?:add|pour)\s+(.+)$',
+        lower,
+        flags=re.IGNORECASE
+    )
+    if add_water_match and _is_automatic_pump_water(add_water_match.group(1)):
+        return True
+
+    return False
+
+
+def _parse_amount(text):
+    """Return (numeric value, unit, base-value) using the generator's 1:1 liquid convention."""
+    text = str(text or '').strip()
+    m = re.search(
+        r'(-?\d+(?:\.\d+)?)\s*(g|gm|gms|kg|ml|l|liter|litre|tsp|tbsp|cup|cups|pinch|number|no|nos|pcs|pc)\b',
+        text,
+        flags=re.IGNORECASE
+    )
+    if not m:
+        return None, None, None
+
+    qty = float(m.group(1))
+    unit = m.group(2).lower()
+
+    factors = {
+        'g': 1, 'gm': 1, 'gms': 1,
+        'kg': 1000,
+        'ml': 1, 'l': 1000, 'liter': 1000, 'litre': 1000,
+        'tsp': 5, 'tbsp': 15, 'cup': 240, 'cups': 240,
+        'pinch': 0.5,
+        # Equipment-count units are intentionally not used for food weight totals.
+        'number': None, 'no': None, 'nos': None, 'pcs': None, 'pc': None,
+    }
+    factor = factors.get(unit)
+    base = qty * factor if factor is not None else None
+    return qty, unit, base
+
+
+def _positive_food_weight(text):
+    qty, unit, _ = _parse_amount(text)
+    if qty is None:
+        return None
+    if unit in ('number', 'no', 'nos', 'pcs', 'pc'):
+        return None
+    return qty > 0
+
+
+def _parse_ingredient_components(ingredient):
+    """Parse a prepared ingredient group's components.
+
+    Primary source is Ingredients[].text. If text is blank, fall back to
+    Ingredients[].title because some recipes (for example BOILED MUTTON)
+    store the full component list directly in the title:
+        "Raw Mutton 1kg, Water 500ml, Salt 5g, Turmeric Powder 1g"
+    """
+    raw = str(ingredient.get('text', '') or '').strip()
+    if not raw:
+        raw = str(ingredient.get('title', '') or '').strip()
+    if not raw:
+        return []
+
+    qty_re = re.compile(
+        r'(\d+(?:\.\d+)?)\s*(g|gm|gms|kg|ml|l|liter|litre|tsp|tbsp|cup|cups|pinch|number|no|nos|pcs|pc)\b',
+        flags=re.IGNORECASE
+    )
+
+    components = []
+    cursor = 0
+    for match in qty_re.finditer(raw):
+        name = raw[cursor:match.start()]
+        name = name.strip(" ,;:-")
+        # Normalize the known source typo for customer-facing copy.
+        name = re.sub(r'\bWatar\b', 'Water', name, flags=re.IGNORECASE)
+        # If the preceding chunk contains a comma, keep only the text after it.
+        if ',' in name:
+            name = name.split(',')[-1].strip()
+        if ';' in name:
+            name = name.split(';')[-1].strip()
+
+        qty_text = clean_time_and_units_text(
+            f"{match.group(1)} {match.group(2)}"
+        )
+        _, _, base = _parse_amount(qty_text)
+
+        if name:
+            components.append((name, qty_text, base))
+        cursor = match.end()
+
+    return components
+
+
+def _manual_components_from_ingredient_group(ingredient):
+    """Return manual (non-water) labels from one Ingredients[] group."""
+    title = str(ingredient.get('title', '') or '').strip()
+    weight = clean_time_and_units_text(str(ingredient.get('weight', '') or '').strip())
+    components = _parse_ingredient_components(ingredient)
+
+    has_any_water_component = any(
+        _water_like(name) for name, _, _ in components
+    )
+    title_mentions_water = _water_like(title)
+
+    # Any food+water group is decomposed into its real components.
+    # Only plain "Water" is removed as automatic pump water.
+    # Special water such as Stock Water remains a manual component.
+    if title_mentions_water or has_any_water_component:
+        kept = []
+        for name, qty_text, _ in components:
+            if _is_automatic_pump_water(name):
+                continue
+            kept.append(f"{qty_text} {name}".strip())
+
+        if kept:
+            return kept
+        return []
+
+    # Normal prepared ingredient group: trust Ingredients[].weight/title.
+    if title and weight:
+        qty, unit, _ = _parse_amount(weight)
+        if qty is not None and qty <= 0:
+            return []
+        return [f"{weight} {title}".strip()]
+
+    return [title] if title else []
+
+
+def _hindi_manual_label(english_label):
+    """Translate the ingredient name while keeping the quantity/unit readable."""
+    text = str(english_label or '').strip()
+    m = re.match(
+        r'^\s*(\d+(?:\.\d+)?\s*(?:g|gm|gms|kg|ml|l|tsp|tbsp|cup|cups|pinch|number|no|nos|pcs|pc))\s+(.+)$',
+        text,
+        flags=re.IGNORECASE
+    )
+    if m:
+        qty = clean_time_and_units_text(m.group(1))
+        name_hi = _translate_words_fallback(m.group(2)).replace(" & ", " और ")
+        return f"{qty} {name_hi}".strip()
+    return _translate_words_fallback(text).replace(" & ", " और ")
+
+
+def _meaningful_instruction_stage_names(recipe_data):
+    """Distinct non-accessory/non-operation ingredient stage names."""
+    names = []
+    seen = set()
+    for step in _disclaimer_source_steps(recipe_data):
+        raw = str(step.get('Text', '') or '').strip()
+        if not raw:
+            raw = _strip_action_prefix(step.get('app_audio', ''))
+
+        if (
+            not raw
+            or _is_accessory_text(raw)
+            or _is_machine_action_only_text(raw)
+        ):
+            continue
+
+        # Only a stage whose ingredient is literally plain Water is automatic.
+        # "Soaked Rice & Stock Water" and other named waters are real manual stages.
+        if _is_automatic_pump_water(raw):
+            continue
+
+        # A 0g food-looking row should not create a stage.
+        positive = _positive_food_weight(step.get('Weight', ''))
+        if positive is False:
+            continue
+
+        key = _normalize_manual_name(raw)
+        if key and key not in seen:
+            seen.add(key)
+            names.append(key)
+    return names
+
+
+def _position_ingredient_map(recipe_data):
+    """Order-map stages to Ingredients[] only when counts genuinely line up.
+
+    This fixes recipes such as AALNI BHAAT where the first instruction label
+    differs from the Ingredients[] group title, while avoiding bad mappings
+    for recipes such as APPLE CINNAMON CAKE where one generic 'Batter' stage
+    does not correspond one-to-one with all prepared ingredient groups.
+    """
+    stage_names = _meaningful_instruction_stage_names(recipe_data)
+    ingredients = recipe_data.get('Ingredients', []) or []
+
+    if not stage_names or len(stage_names) != len(ingredients):
+        return {}
+
+    return {stage_name: idx for idx, stage_name in enumerate(stage_names)}
+
+
+def _best_ingredient_group_for_step(step, recipe_data):
+    ingredients = recipe_data.get('Ingredients', []) or []
+    if not ingredients:
+        return None
+
+    raw = str(step.get('Text', '') or '').strip()
+    if not raw:
+        raw = _strip_action_prefix(step.get('app_audio', ''))
+    step_key = _normalize_manual_name(raw)
+
+    # 1) Exact title match.
+    for ing in ingredients:
+        if _normalize_manual_name(ing.get('title', '')) == step_key and step_key:
+            return ing
+
+    # 2) Strong token-overlap match.
+    step_tokens = set(step_key.split())
+    best = None
+    best_score = 0.0
+    for ing in ingredients:
+        ing_key = _normalize_manual_name(ing.get('title', ''))
+        ing_tokens = set(ing_key.split())
+        if not step_tokens or not ing_tokens:
+            continue
+        score = len(step_tokens & ing_tokens) / max(1, len(step_tokens | ing_tokens))
+        if score > best_score:
+            best_score = score
+            best = ing
+
+    if best is not None and best_score >= 0.60:
+        return best
+
+    # 3) Positional source-of-truth mapping, but ONLY if the counts align.
+    positional = _position_ingredient_map(recipe_data)
+    idx = positional.get(step_key)
+    if idx is not None and 0 <= idx < len(ingredients):
+        return ingredients[idx]
+
+    return None
+
+
+def _accessory_item_from_step(step):
+    """Return a readable accessory item from an Instruction row, else None."""
+    raw = str(step.get('Text', '') or '').strip()
+    if not raw:
+        raw = _strip_action_prefix(step.get('app_audio', ''))
+
+    if not _is_accessory_text(raw):
+        return None
+
+    weight = clean_time_and_units_text(str(step.get('Weight', '') or '').strip())
+    qty, unit, _ = _parse_amount(weight)
+
+    # Remove a quantity already embedded in Text ("2 GRILL MESH") so we do
+    # not render "2 2 Grill Mesh".
+    raw_name = re.sub(r'^\s*\d+(?:\.\d+)?\s*', '', raw).strip()
+    raw_name = raw_name.title().replace(" And ", " and ")
+
+    # "2 number" -> show "2"; avoid the word "number" in customer copy.
+    count_prefix = ''
+    if qty is not None and qty > 0:
+        if float(qty).is_integer():
+            count_prefix = str(int(qty))
+        else:
+            count_prefix = str(qty)
+
+    english = f"{count_prefix} {raw_name}".strip() if count_prefix else raw_name
+
+    hi_name = _translate_words_fallback(raw_name)
+    hindi = f"{count_prefix} {hi_name}".strip() if count_prefix else hi_name
+
+    return english, hindi
+
+
+def _description_accessories(recipe_data):
+    """Read the ACCESSORIES section from description without changing case."""
+    description = str(recipe_data.get('description', '') or '')
+    lines = [line.strip() for line in description.splitlines()]
+    accessories = []
+    collecting = False
+
+    stop_words = ('OUTPUT', 'FINAL OUTPUT', 'NORMAL COOKING', 'COOKING TIME', 'OTHER ESSENTIALS', 'NOTE', 'NOTES')
+
+    for line in lines:
+        if not line:
+            continue
+
+        if line.upper() == 'ACCESSORIES':
+            collecting = True
+            continue
+
+        if collecting:
+            upper = line.upper()
+            if any(upper.startswith(word) for word in stop_words):
+                break
+            accessories.append(line)
+
+    return accessories
+
+
+_SPECIAL_DESCRIPTION_ACCESSORY_TERMS = (
+    'pressure cooker',
+    'cake kit',
+    'momo kit',
+    'grill mesh',
+    'mesh mat',
+    'mesh mats',
+    'cake mold',
+    'cake mould',
+    'rack',
+    'tray',
+    'stand',
+)
+
+
+def _is_generic_pan_accessory(text):
+    normalized = _normalize_manual_name(text)
+    return (
+        normalized.startswith('pan ')
+        or ' coated pan' in normalized
+        or 'non coated pan' in normalized
+        or 'non coated ss' in normalized
+        or normalized == 'pan non coated ss'
+        or normalized == 'pan non coated'
+        or normalized == 'pan coated'
+    )
+
+
+def _description_special_accessories(recipe_data):
+    """Return setup-critical accessories from description.
+
+    Rules:
+      - Explicit setup items like Pressure Cooker / Grill Mesh / Cake Mold /
+        MOMO KIT / named stirrers are setup-critical.
+      - If a generic pan appears together with any additional accessory,
+        the whole combination is treated as a prerequisite setup. This is the
+        requested behavior for cases such as:
+            Pan Non-Coated (SS) + MOMO KIT
+            Pan Non-Coated (SS) + Noodles Stirrer
+    """
+    accessories = _description_accessories(recipe_data)
+    if not accessories:
+        return []
+
+    generic_pan_items = [a for a in accessories if _is_generic_pan_accessory(a)]
+    other_items = [a for a in accessories if not _is_generic_pan_accessory(a)]
+
+    # Requested rule: anything used WITH Pan Non-Coated (SS) becomes a
+    # prerequisite setup, and the combined setup should be shown together.
+    if generic_pan_items and other_items:
+        return generic_pan_items + other_items
+
+    result = []
+    for accessory in accessories:
+        normalized = _normalize_manual_name(accessory)
+
+        is_known_special = any(
+            term in normalized
+            for term in _SPECIAL_DESCRIPTION_ACCESSORY_TERMS
+        )
+
+        # A named/specialized stirrer (e.g. "Noodles Stirrer") requires
+        # explicit setup. Generic Silicone/Silicon Stirrer does not.
+        is_special_stirrer = (
+            normalized.endswith(' stirrer')
+            and normalized not in ('silicone stirrer', 'silicon stirrer')
+        )
+
+        if is_known_special or is_special_stirrer:
+            result.append(accessory)
+
+    return result
+
+def _build_accessory_setup_pair(recipe_data):
+    """Build one accessory setup instruction.
+
+    Priority:
+      1. Explicit accessory Instruction rows (best source).
+      2. If none exist, setup-critical accessories from description.
+    """
+    explicit_en = []
+    explicit_hi = []
+    seen = set()
+
+    for step in _disclaimer_source_steps(recipe_data):
+        item = _accessory_item_from_step(step)
+        if not item:
+            continue
+        key = _normalize_manual_name(item[0])
+        if key in seen:
+            continue
+        seen.add(key)
+        explicit_en.append(item[0])
+        explicit_hi.append(item[1])
+
+    if explicit_en:
+        en = (
+            "Set up the required accessories in the On2Cook device: "
+            + "; ".join(explicit_en) + "."
+        )
+        hi = (
+            "On2Cook डिवाइस में आवश्यक एक्सेसरीज़ सेट करें: "
+            + "; ".join(explicit_hi) + "।"
+        )
+        return en, hi
+
+    special = _description_special_accessories(recipe_data)
+    if not special:
+        return None
+
+    # Pressure Cooker is a cooking vessel, so phrase it naturally.
+    if len(special) == 1 and 'pressure cooker' in _normalize_manual_name(special[0]):
+        return (
+            "Use the Pressure Cooker as the cooking vessel.",
+            "कुकिंग वेसल के रूप में प्रेशर कुकर का उपयोग करें।"
+        )
+
+    # Recipe-specific stirrer.
+    if len(special) == 1 and _normalize_manual_name(special[0]).endswith(' stirrer'):
+        accessory = special[0]
+        hindi_accessory = _translate_words_fallback(accessory).replace(" & ", " और ")
+        return (
+            f"Fit the {accessory} before cooking.",
+            f"खाना पकाने से पहले {hindi_accessory} लगाएँ।"
+        )
+
+    english = "; ".join(special)
+    hindi = "; ".join(_translate_words_fallback(x).replace(" & ", " और ") for x in special)
+    return (
+        f"Set up the required accessories: {english}.",
+        f"आवश्यक एक्सेसरीज़ सेट करें: {hindi}।"
+    )
+
+
+def _manual_target_vessel(recipe_data):
+    """Choose the correct customer-facing vessel for manual additions."""
+    explicit_text = " ".join(
+        str(step.get('Text', '') or '')
+        for step in _disclaimer_source_steps(recipe_data)
+        if _is_accessory_text(step.get('Text', ''))
+    )
+
+    description_special = " ".join(_description_special_accessories(recipe_data))
+    accessory_text = f"{explicit_text} {description_special}".lower()
+
+    if 'pressure cooker' in accessory_text:
+        return "pressure cooker", "प्रेशर कुकर"
+    if 'cake mold' in accessory_text or 'cake mould' in accessory_text:
+        return "cake mold", "केक मोल्ड"
+    if 'tray' in accessory_text:
+        return "tray", "ट्रे"
+    if 'bowl' in accessory_text:
+        return "bowl", "बाउल"
+    return "pan", "पैन"
+
+
+def _manual_ingredient_item(step, recipe_data):
+    """Return (English, Hindi) food item for a MANUAL addition.
+
+    Priorities:
+      1. Reject accessories, Water and machine-only operations.
+      2. Use Ingredients[] as quantity/title source when the stage can be
+         matched reliably.
+      3. For mixed food+water Ingredients[] groups, retain ONLY non-water
+         subcomponents.
+      4. Fall back to Instruction text/weight when no safe Ingredients[]
+         mapping exists.
+    """
+    raw = str(step.get('Text', '') or '').strip()
+    if not raw:
+        raw = _strip_action_prefix(step.get('app_audio', ''))
+
+    if not raw or _is_accessory_text(raw):
+        return None
+
+    # IMPORTANT: try the Ingredients[] source BEFORE deciding this is a
+    # machine-only action. Ingredient-group names can legitimately begin
+    # with action-looking words, e.g. "Mix Sauce & Noodles".
+    matched_group = _best_ingredient_group_for_step(step, recipe_data)
+    if matched_group is not None:
+        labels = _manual_components_from_ingredient_group(matched_group)
+        if not labels:
+            return None
+
+        english = _join_english_items(labels)
+        hindi = _join_hindi_items([_hindi_manual_label(x) for x in labels])
+        return english, hindi
+
+    # Only an unmatched row is allowed to be discarded as a machine action.
+    # This still correctly rejects rows such as "Simmer" / "Temperature Down".
+    if _is_machine_action_only_text(raw):
+        return None
+
+    # Fallback: handle comma-separated already-merged instruction text.
+    if ',' in raw:
+        fragments = [f.strip() for f in raw.split(',') if f.strip()]
+        fragments = [
+            f for f in fragments
+            if not _is_automatic_pump_water(f)
+            and not _is_accessory_text(f)
+            and not _is_machine_action_only_text(f)
+        ]
+        if not fragments:
+            return None
+        english = ', '.join(fragments)
+        hindi = _join_hindi_items([_hindi_manual_label(x) for x in fragments])
+        return clean_time_and_units_text(english), clean_time_and_units_text(hindi)
+
+    # ONLY plain "Water" is automatic. Named/special water is manual.
+    if _is_automatic_pump_water(raw):
+        return None
+
+    # Never generate nonsense such as "0 g Simmer".
+    positive = _positive_food_weight(step.get('Weight', ''))
+    if positive is False:
+        return None
+
+    english_name = _strip_action_prefix(raw)
+    if not english_name:
+        return None
+
+    weight = clean_time_and_units_text(str(step.get('Weight', '') or '').strip())
+    english = f"{weight} {english_name}".strip() if weight else english_name
+    hindi = _hindi_manual_label(english)
+
+    return clean_time_and_units_text(english), clean_time_and_units_text(hindi)
+
+
+def _join_english_items(items):
+    items = [x for x in items if x]
+    if not items:
+        return ''
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} and {items[1]}"
+    return ', '.join(items[:-1]) + f", and {items[-1]}"
+
+
+def _join_hindi_items(items):
+    items = [x for x in items if x]
+    if not items:
+        return ''
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} और {items[1]}"
+    return ', '.join(items[:-1]) + f" और {items[-1]}"
+
+
+def _lid_instruction_pair(lid_value, initial=False):
+    """Concise lid guidance after a manual setup/addition."""
+    lid = str(lid_value or '').strip().lower()
+
+    if lid == 'open':
+        return "Keep the lid open.", "ढक्कन खुला रखें।"
+
+    if lid == 'close':
+        if initial:
+            return (
+                "Close the lid to start cooking.",
+                "खाना पकाना शुरू करने के लिए ढक्कन बंद करें।"
+            )
+        return (
+            "Close the lid to continue cooking.",
+            "खाना पकाना जारी रखने के लिए ढक्कन बंद करें।"
+        )
+
+    return '', ''
+
+
+def _build_prerequisite_pair(recipe_data):
+    """Return the bilingual setup prerequisite, if this recipe has one.
+
+    Prerequisites are deliberately NOT part of numbered Recipe Steps.
+    Examples:
+      - Fit the Noodles Stirrer before cooking.
+      - Use the Pressure Cooker as the cooking vessel.
+      - Set up Grill Mesh / Cake Mold / Stirrer.
+
+    This keeps Recipe Step numbering aligned with the actual cooking timeline.
+    """
+    return _build_accessory_setup_pair(recipe_data)
+
+
+def _build_manual_addition_events(recipe_data):
+    """Generate only NUMBERED food/ingredient customer actions.
+
+    Accessory/setup actions are handled separately as a Prerequisite and are
+    never counted as Step 1.
+
+    Numbered events are:
+      - the initial food loading action
+      - later food additions ONLY after a timed step whose skip is false/blank
+
+    Plain pump Water is automatic. Named/special water remains manual.
+    """
+    steps = _disclaimer_source_steps(recipe_data)
+    if not steps:
+        return []
+
+    events = []
+
+    vessel_en, vessel_hi = _manual_target_vessel(recipe_data)
+
+    # ---------------- INITIAL LOAD ----------------
+    initial_en = []
+    initial_hi = []
+    first_timed_index = None
+    initial_lid = ''
+
+    for idx, step in enumerate(steps):
+        item = _manual_ingredient_item(step, recipe_data)
+        if item:
+            initial_en.append(item[0])
+            initial_hi.append(item[1])
+
+        if safe_int(step.get('durationInSec', 0)) > 0:
+            first_timed_index = idx
+            initial_lid = step.get('lid', '')
+            break
+
+    if first_timed_index is None:
+        first_timed_index = len(steps) - 1
+        if steps:
+            initial_lid = steps[first_timed_index].get('lid', '')
+
+    if initial_en:
+        en = f"Add {_join_english_items(initial_en)} to the {vessel_en}."
+        hi = f"{vessel_hi} में {_join_hindi_items(initial_hi)} डालें।"
+
+        lid_en, lid_hi = _lid_instruction_pair(initial_lid, initial=True)
+        if lid_en:
+            en += f" {lid_en}"
+        if lid_hi:
+            hi += f" {lid_hi}"
+        events.append((en, hi))
+
+    # ---------------- PAUSE / ADD EVENTS ----------------
+    timed_indices = [
+        i for i, step in enumerate(steps)
+        if safe_int(step.get('durationInSec', 0)) > 0
+    ]
+
+    for pos, current_index in enumerate(timed_indices):
+        current_step = steps[current_index]
+
+        # skip=True => device continues automatically.
+        if _skip_is_true(current_step):
+            continue
+
+        # Need a later timed stage to prepare for.
+        if pos + 1 >= len(timed_indices):
+            continue
+
+        next_timed_index = timed_indices[pos + 1]
+        next_lid = steps[next_timed_index].get('lid', '')
+
+        items_en = []
+        items_hi = []
+
+        current_stage_key = _normalize_manual_name(current_step.get('Text', ''))
+
+        for target_index in range(current_index + 1, next_timed_index + 1):
+            target_step = steps[target_index]
+            target_stage_key = _normalize_manual_name(target_step.get('Text', ''))
+
+            # Example: APPLE CINNAMON CAKE has consecutive timed "Batter"
+            # rows. The first skip=false boundary does NOT mean the customer
+            # should add the same Batter again; the later Batter rows are
+            # automatic continuation stages.
+            if (
+                target_index == next_timed_index
+                and current_stage_key
+                and target_stage_key == current_stage_key
+            ):
+                continue
+
+            item = _manual_ingredient_item(target_step, recipe_data)
+            if item:
+                items_en.append(item[0])
+                items_hi.append(item[1])
+
+        # If the only thing in the window is Water or a machine operation,
+        # there is no customer action to show.
+        if not items_en:
+            continue
+
+        en = (
+            f"Open the lid and add {_join_english_items(items_en)} "
+            f"to the {vessel_en}."
+        )
+        hi = (
+            f"ढक्कन खोलें और {vessel_hi} में "
+            f"{_join_hindi_items(items_hi)} डालें।"
+        )
+
+        lid_en, lid_hi = _lid_instruction_pair(next_lid, initial=False)
+        if lid_en:
+            en += f" {lid_en}"
+        if lid_hi:
+            hi += f" {lid_hi}"
+
+        events.append((en, hi))
+
+    return events
+
+
+# Context-aware wording: harmless for standard recipes, and explicitly covers
+# recipes that require grill mesh / cake mold / stirrer / tray / rack etc.
+GENERIC_DISCLAIMER_EN = [
+    "When an accessory setup step is shown, use only the listed accessories and complete that setup before adding ingredients.",
+    "Plain Water listed simply as 'Water' is dispensed automatically by the On2Cook pump from the connected water bottle. Do not add this plain Water manually.",
+    "Any named or special water—such as Stock Water, Coconut Water, Rice Water, or another recipe-prepared liquid—must be added manually whenever it appears in the steps.",
+    "Open the lid only for the ingredient-addition prompts shown above, then set the lid as instructed before cooking continues.",
+]
+
+GENERIC_DISCLAIMER_HI = [
+    "जब एक्सेसरी सेटअप चरण दिखाया जाए, केवल सूचीबद्ध एक्सेसरीज़ का उपयोग करें और सामग्री डालने से पहले सेटअप पूरा करें।",
+    "यदि सामग्री में केवल 'Water' लिखा है, तो यह सामान्य पानी On2Cook कनेक्टेड पानी की बोतल से पंप द्वारा अपने-आप डालता है। यह सामान्य पानी हाथ से न डालें।",
+    "Stock Water, Coconut Water, Rice Water या किसी अन्य विशेष/रेसिपी में तैयार किए गए पानी या तरल को चरणों में दिखाए जाने पर हाथ से डालें।",
+    "ढक्कन केवल ऊपर दिए गए सामग्री डालने वाले चरणों में खोलें और खाना पकना जारी होने से पहले निर्देश के अनुसार ढक्कन की स्थिति रखें।",
+]
+
+
+def build_step_disclaimer_lines(recipe_data):
+    return [english for english, _ in _build_manual_addition_events(recipe_data)]
+
+
+def build_step_disclaimer_lines_hindi(recipe_data):
+    return [hindi for _, hindi in _build_manual_addition_events(recipe_data)]
+
+
+def _ingredient_group_nonwater_total(ingredient):
+    """Base-unit total for header Total Input, excluding only Water components."""
+    title = str(ingredient.get('title', '') or '').strip()
+    weight = str(ingredient.get('weight', '') or '').strip()
+    components = _parse_ingredient_components(ingredient)
+
+    has_pump_water_component = any(
+        _is_automatic_pump_water(name) for name, _, _ in components
+    )
+
+    if _is_automatic_pump_water(title) or has_pump_water_component:
+        total = 0.0
+        found_manual_component = False
+        for name, _, base in components:
+            if _is_automatic_pump_water(name):
+                continue
+            if base is not None:
+                total += base
+                found_manual_component = True
+
+        # Plain Water -> zero. Named/special waters remain included.
+        return total if found_manual_component else 0.0
+
+    _, _, base = _parse_amount(weight)
+    return base or 0.0
+
 class RecipePDFGenerator:
     def __init__(self, qr_image=None):
         # Page width updated to 210mm
@@ -177,10 +1519,23 @@ class RecipePDFGenerator:
         self.green_color = HexColor('#3CB371')   # Green color for regular periods
         self.skin_color = HexColor('#FDF4CB')
         self.light_gray = HexColor('#E8E8E8')
-        self.dark_gray = HexColor('#666666')
-        self.green_time = HexColor('#C1D040')
+        self.dark_gray = HexColor('#333333')      # darker secondary copy on marble
+        self.body_text = HexColor('#171717')       # primary body text
+        self.body_muted = HexColor('#343434')      # sub-ingredient / supporting copy
+        self.green_time = HexColor('#B9CC32')
         self.gold_step = HexColor('#FFD700')
         self.line_color = HexColor('#ed1c24')    # New color for underlines
+
+        # ---- New design palette (matches the "Aloo Matar Rassa" reference card) ----
+        self.page_bg = HexColor('#F7F7F4')       # marble base
+        self.cream_bg = HexColor('#FBFAF6')      # soft warm overlay
+        self.card_bg = HexColor('#FBF8EE')       # translucent-looking warm card
+        self.tan_pill = HexColor('#EFE6D2')      # legacy color
+        self.total_output_bg = HexColor('#BE1E2D') # requested Total Output background
+        self.title_green = HexColor('#123B2A')   # deeper green for strong contrast on marble
+        self.subtitle_brown = HexColor('#5A3925') # retained for compatibility; subtitle is no longer drawn
+        self.icon_green = HexColor('#557648')     # icon badge circles
+        self.divider_green = HexColor('#6F8E5D')  # stronger divider on marble
         
         # Circle diameter for induction/magnetron indicators: 18.459mm
         self.circle_diameter = 18.459 * mm
@@ -197,6 +1552,7 @@ class RecipePDFGenerator:
         
         # Setup fonts
         self.setup_fonts()
+        self.setup_hindi_fonts()
     
     def setup_fonts(self):
         """Setup custom fonts from fonts folder"""
@@ -245,10 +1601,829 @@ class RecipePDFGenerator:
             self.instruction_font = 'Helvetica'
             print("✅ System fonts loaded as fallback")
 
+    def setup_hindi_fonts(self):
+        """Register a Sans Devanagari font with shaping enabled.
+
+        Search order:
+          1. Project Fonts/ folder (recommended)
+          2. Common Linux Noto Sans Devanagari locations
+          3. Windows Nirmala UI (system Devanagari sans fallback)
+
+        The script does not bundle or copy font files.
+        """
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        local_fonts_dir = os.path.join(script_dir, 'Fonts')
+        parent_fonts_dir = os.path.abspath(os.path.join(script_dir, '..', 'Fonts'))
+
+        regular_candidates = [
+            os.path.join(local_fonts_dir, 'NotoSansDevanagari-Regular.ttf'),
+            os.path.join(local_fonts_dir, 'NotoSansDevanagari.ttf'),
+            os.path.join(parent_fonts_dir, 'NotoSansDevanagari-Regular.ttf'),
+            os.path.join(parent_fonts_dir, 'NotoSansDevanagari.ttf'),
+            '/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf',
+            '/usr/share/fonts/truetype/noto/NotoSansDevanagari.ttf',
+            r'C:\Windows\Fonts\Nirmala.ttf',
+        ]
+        bold_candidates = [
+            os.path.join(local_fonts_dir, 'NotoSansDevanagari-Bold.ttf'),
+            os.path.join(local_fonts_dir, 'NotoSansDevanagari.ttf'),
+            os.path.join(parent_fonts_dir, 'NotoSansDevanagari-Bold.ttf'),
+            os.path.join(parent_fonts_dir, 'NotoSansDevanagari.ttf'),
+            '/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf',
+            '/usr/share/fonts/truetype/noto/NotoSansDevanagari.ttf',
+            r'C:\Windows\Fonts\NirmalaB.ttf',
+        ]
+
+        regular_path = next((p for p in regular_candidates if os.path.exists(p)), None)
+        bold_path = next((p for p in bold_candidates if os.path.exists(p)), None)
+
+        if not regular_path:
+            raise RuntimeError(
+                "No Devanagari sans font found. Put NotoSansDevanagari-Regular.ttf "
+                "inside the project's Fonts folder."
+            )
+
+        if not bold_path:
+            bold_path = regular_path
+
+        # ReportLab 4.4+ supports HarfBuzz shaping when shapable=True and
+        # drawString(..., shaping=True) is used.
+        pdfmetrics.registerFont(
+            TTFont('HindiSans', regular_path, shapable=True)
+        )
+        pdfmetrics.registerFont(
+            TTFont('HindiSans-Bold', bold_path, shapable=True)
+        )
+
+        self.hindi_font = 'HindiSans'
+        self.hindi_bold_font = 'HindiSans-Bold'
+
+        print("✅ Devanagari font loaded:")
+        print(f"   Regular: {regular_path}")
+        print(f"   Bold:    {bold_path}")
+
+
+    # -----------------------------------------------------------
+    # MARBLE BACKGROUND + TYPOGRAPHY GUARDRAILS
+    # -----------------------------------------------------------
+
+    def draw_marble_background(self, c, x, y, width, height):
+        """Draw the EXACT supplied marble image as the background.
+
+        The source image is never regenerated. It is tiled vertically at the
+        page width so its proportions are preserved as much as possible on
+        dynamically tall recipe pages.
+
+        Expected asset:
+            marble_background.png
+        placed in the same folder as this Python script.
+
+        If the image is missing, the function falls back to a clean light base
+        instead of crashing PDF generation.
+        """
+        c.saveState()
+
+        # Hard clipping means the background can never paint outside its region.
+        clip = c.beginPath()
+        clip.rect(x, y, width, height)
+        c.clipPath(clip, stroke=0, fill=0)
+
+        # Always paint a neutral fallback under the texture.
+        c.setFillColor(self.page_bg)
+        c.rect(x, y, width, height, fill=1, stroke=0)
+
+        if os.path.exists(MARBLE_BG_PATH):
+            try:
+                with Image.open(MARBLE_BG_PATH) as bg:
+                    iw, ih = bg.size
+
+                if iw > 0 and ih > 0:
+                    # Preserve the uploaded image's aspect ratio at full page width.
+                    tile_h = width * (ih / iw)
+                    # Slight overlap avoids hairline seams between repeated tiles.
+                    overlap = 0.5 * mm
+                    tile_bottom = y
+                    while tile_bottom < y + height:
+                        c.drawImage(
+                            MARBLE_BG_PATH,
+                            x,
+                            tile_bottom,
+                            width=width,
+                            height=tile_h + overlap,
+                            preserveAspectRatio=False,
+                            anchor='c',
+                            mask='auto'
+                        )
+                        tile_bottom += max(1, tile_h - overlap)
+
+                    c.restoreState()
+                    return
+            except Exception as e:
+                print(f"⚠️ Marble background image could not be drawn ({e}); using plain fallback.")
+
+        c.restoreState()
+
+    def draw_soft_card(self, c, x, y, width, height, radius=4*mm):
+        """Transparent body card: marble stays fully visible; only a subtle outline remains."""
+        c.saveState()
+        c.setStrokeColor(HexColor('#D8D5CC'))
+        c.setLineWidth(0.28)
+        c.roundRect(x, y, width, height, radius, stroke=1, fill=0)
+        c.restoreState()
+
+    def _ellipsize_to_width(self, text, font_name, font_size, max_width):
+        """Return a single line guaranteed not to exceed max_width."""
+        text = str(text or '').strip()
+        if not text:
+            return ''
+        if pdfmetrics.stringWidth(text, font_name, font_size) <= max_width:
+            return text
+        suffix = "..."
+        available = max(1, max_width - pdfmetrics.stringWidth(suffix, font_name, font_size))
+        out = ''
+        for ch in text:
+            candidate = out + ch
+            if pdfmetrics.stringWidth(candidate, font_name, font_size) > available:
+                break
+            out = candidate
+        return (out.rstrip() + suffix) if out else suffix
+
+    def _break_long_token(self, token, font_name, font_size, max_width):
+        """Split a single unbroken token so it can never cross a text box."""
+        pieces = []
+        current = ''
+        for ch in str(token):
+            candidate = current + ch
+            if current and pdfmetrics.stringWidth(candidate, font_name, font_size) > max_width:
+                pieces.append(current)
+                current = ch
+            else:
+                current = candidate
+        if current:
+            pieces.append(current)
+        return pieces or ['']
+
+    def wrap_text_to_width(self, text, max_width, font_name, font_size, max_lines=None):
+        """Width-accurate wrapping using ReportLab font metrics.
+
+        - respects explicit newlines
+        - breaks extremely long words/tokens
+        - optionally caps line count and adds an ellipsis
+        """
+        text = '' if text is None else str(text)
+        all_lines = []
+
+        paragraphs = text.splitlines() or ['']
+        for para in paragraphs:
+            words = para.split()
+            if not words:
+                if all_lines:
+                    all_lines.append('')
+                continue
+
+            current = ''
+            for word in words:
+                # Force-split a token that is itself wider than the box.
+                token_parts = (
+                    self._break_long_token(word, font_name, font_size, max_width)
+                    if pdfmetrics.stringWidth(word, font_name, font_size) > max_width
+                    else [word]
+                )
+
+                for part_index, part in enumerate(token_parts):
+                    candidate = part if not current else current + ' ' + part
+                    if pdfmetrics.stringWidth(candidate, font_name, font_size) <= max_width:
+                        current = candidate
+                    else:
+                        if current:
+                            all_lines.append(current)
+                        current = part
+
+                    # If a token was force-split, commit all non-final pieces immediately.
+                    if len(token_parts) > 1 and part_index < len(token_parts) - 1:
+                        if current:
+                            all_lines.append(current)
+                            current = ''
+
+            if current:
+                all_lines.append(current)
+
+        if not all_lines:
+            all_lines = ['']
+
+        if max_lines is not None and len(all_lines) > max_lines:
+            all_lines = all_lines[:max_lines]
+            all_lines[-1] = self._ellipsize_to_width(
+                all_lines[-1] + '...', font_name, font_size, max_width
+            )
+
+        return all_lines
+
+    def fit_single_line_font_size(self, text, font_name, preferred_size, max_width, min_size=6):
+        """Shrink a single-line string until it fits its guardrail width."""
+        size = float(preferred_size)
+        while size > min_size and pdfmetrics.stringWidth(str(text), font_name, size) > max_width:
+            size -= 0.5
+        return max(float(min_size), size)
+
+    def draw_single_line_fit(self, c, text, x, y, width, font_name, font_size,
+                             min_size=6, fill_color=black, align='left', shaping=False):
+        """Draw one line inside a fixed-width box, shrinking/ellipsizing if needed."""
+        text = '' if text is None else str(text)
+        size = self.fit_single_line_font_size(text, font_name, font_size, width, min_size)
+        safe_text = self._ellipsize_to_width(text, font_name, size, width)
+
+        c.saveState()
+        clip = c.beginPath()
+        clip.rect(x, y - size * 0.35, width, size * 1.35)
+        c.clipPath(clip, stroke=0, fill=0)
+
+        c.setFillColor(fill_color)
+        c.setFont(font_name, size)
+        if align == 'center':
+            c.drawCentredString(x + width / 2, y, safe_text, shaping=shaping)
+        elif align == 'right':
+            c.drawRightString(x + width, y, safe_text, shaping=shaping)
+        else:
+            c.drawString(x, y, safe_text, shaping=shaping)
+        c.restoreState()
+        return size
+
+    def draw_wrapped_text_box(self, c, text, x, top_y, width, height, font_name,
+                              font_size, min_size=6, fill_color=black,
+                              line_gap=1.18, max_lines=None, shaping=False):
+        """Draw wrapped text inside a hard rectangular guardrail.
+
+        Font size is reduced only when necessary. If content still cannot fit,
+        the last visible line is ellipsized. The canvas is clipped as a final
+        safety net, so text can never bleed outside its box.
+        """
+        size = float(font_size)
+        chosen_lines = None
+        chosen_line_h = None
+        capacity = 1
+
+        while size >= min_size:
+            line_h = size * line_gap
+            capacity = max(1, int(height // line_h))
+            if max_lines is not None:
+                capacity = min(capacity, max_lines)
+            lines = self.wrap_text_to_width(text, width, font_name, size)
+            if len(lines) <= capacity:
+                chosen_lines = lines
+                chosen_line_h = line_h
+                break
+            size -= 0.5
+
+        if chosen_lines is None:
+            size = float(min_size)
+            chosen_line_h = size * line_gap
+            capacity = max(1, int(height // chosen_line_h))
+            if max_lines is not None:
+                capacity = min(capacity, max_lines)
+            chosen_lines = self.wrap_text_to_width(
+                text, width, font_name, size, max_lines=capacity
+            )
+        elif len(chosen_lines) > capacity:
+            chosen_lines = chosen_lines[:capacity]
+
+        if len(chosen_lines) == capacity:
+            full_lines = self.wrap_text_to_width(text, width, font_name, size)
+            if len(full_lines) > capacity:
+                chosen_lines[-1] = self._ellipsize_to_width(
+                    chosen_lines[-1] + '...', font_name, size, width
+                )
+
+        c.saveState()
+        clip = c.beginPath()
+        clip.rect(x, top_y - height, width, height)
+        c.clipPath(clip, stroke=0, fill=0)
+        c.setFillColor(fill_color)
+        c.setFont(font_name, size)
+
+        baseline = top_y - size
+        for line in chosen_lines:
+            c.drawString(x, baseline, line, shaping=shaping)
+            baseline -= chosen_line_h
+        c.restoreState()
+
+        return baseline, len(chosen_lines), size
+
+    def extract_on2cook_total_label(self, recipe_data):
+        """Header-friendly total On2Cook time only (no Python list repr)."""
+        total_sec = sum(safe_int(i.get("durationInSec", 0)) for i in recipe_data.get("Instruction", []))
+        mins, secs = divmod(total_sec, 60)
+        if mins == 1 and secs == 0:
+            return "1:00 min"
+        return f"{mins}:{secs:02d} mins"
+
+
+    # -----------------------------------------------------------
+    # NEW: ingredient image + disclaimer sizing/drawing helpers
+    # -----------------------------------------------------------
+
+    def get_ingredient_image_height(self, ingredient_image_path):
+        """Calculate image height when scaled proportionally to the full PDF width."""
+        if not ingredient_image_path:
+            return 0
+
+        try:
+            with Image.open(ingredient_image_path) as im:
+                w, h = im.size
+
+            if w <= 0 or h <= 0:
+                return 0
+
+            # Scale proportionally so the image is exactly the full PDF width.
+            return self.page_width * (h / w)
+
+        except Exception as e:
+            print(f"⚠️ Could not read ingredient image for sizing ({e}); using default height.")
+            return 0
+
+    def get_disclaimer_lines_and_height(self, recipe_data):
+        """Build bilingual manual Recipe Steps and reserve space for intro + steps +
+        water/lid note + outro.
+
+        Layout:
+          LEFT  : English heading -> intro -> numbered steps -> generic disclaimer -> closing line
+          RIGHT : Hindi heading   -> intro -> numbered steps -> generic disclaimer -> closing line
+
+        Returns:
+            (english_wrapped_steps,
+             hindi_wrapped_steps,
+             prerequisite_english_lines,
+             prerequisite_hindi_lines,
+             total_height)
+        """
+        english_raw = build_step_disclaimer_lines(recipe_data)
+        hindi_raw = build_step_disclaimer_lines_hindi(recipe_data)
+
+        prerequisite_pair = _build_prerequisite_pair(recipe_data)
+        prerequisite_en_raw = prerequisite_pair[0] if prerequisite_pair else ''
+        prerequisite_hi_raw = prerequisite_pair[1] if prerequisite_pair else ''
+
+        # Do NOT suppress the entire Recipe Steps / Disclaimer block merely
+        # because no numbered manual action was generated. The generic safety
+        # / pump-water disclaimer and final serving instruction still apply.
+        margin = 8 * mm
+        column_gap = 10 * mm
+        column_width = (self.page_width - 2 * margin - column_gap) / 2
+        column_width_mm = column_width / mm
+
+        # --- Optional prerequisite (NOT numbered) ---
+        prerequisite_english = []
+        if prerequisite_en_raw:
+            prerequisite_english = self.wrap_text_for_instruction(
+                f"Prerequisite: {prerequisite_en_raw}",
+                column_width_mm,
+                self.instruction_font,
+                9
+            )
+
+        prerequisite_hindi = []
+        if prerequisite_hi_raw:
+            prerequisite_hindi = self.wrap_text_for_instruction(
+                f"पूर्व तैयारी: {prerequisite_hi_raw}",
+                column_width_mm,
+                self.hindi_font,
+                9.5
+            )
+
+        # --- Dynamic numbered recipe steps ---
+        english_wrapped = []
+        for i, line in enumerate(english_raw, 1):
+            numbered = f"Step {i}: {line}"
+            english_wrapped.extend(
+                self.wrap_text_for_instruction(
+                    numbered, column_width_mm,
+                    self.instruction_font, 9
+                )
+            )
+
+        hindi_wrapped = []
+        for i, line in enumerate(hindi_raw, 1):
+            numbered = f"चरण {i}: {line}"
+            hindi_wrapped.extend(
+                self.wrap_text_for_instruction(
+                    numbered, column_width_mm,
+                    self.hindi_font, 9.5
+                )
+            )
+
+        # --- Fixed intro and closing guidance ---
+        english_intro = self.wrap_text_for_instruction(
+            RECIPE_STEPS_INTRO_EN,
+            column_width_mm,
+            self.instruction_font,
+            9
+        )
+        hindi_intro = self.wrap_text_for_instruction(
+            RECIPE_STEPS_INTRO_HI,
+            column_width_mm,
+            self.hindi_font,
+            9.5
+        )
+        english_outro = self.wrap_text_for_instruction(
+            RECIPE_STEPS_OUTRO_EN,
+            column_width_mm,
+            self.instruction_font,
+            9
+        )
+        hindi_outro = self.wrap_text_for_instruction(
+            RECIPE_STEPS_OUTRO_HI,
+            column_width_mm,
+            self.hindi_font,
+            9.5
+        )
+
+        # --- Fixed bilingual disclaimer heading + note text (not derived from Instruction) ---
+        english_disclaimer_label = self.wrap_text_for_instruction(
+            "Disclaimer", column_width_mm, self.instruction_font, 9
+        )
+        hindi_disclaimer_label = self.wrap_text_for_instruction(
+            "अस्वीकरण", column_width_mm, self.hindi_font, 9.5
+        )
+
+        english_generic = []
+        for line in GENERIC_DISCLAIMER_EN:
+            english_generic.extend(
+                self.wrap_text_for_instruction(
+                    line, column_width_mm, self.instruction_font, 9
+                )
+            )
+        hindi_generic = []
+        for line in GENERIC_DISCLAIMER_HI:
+            hindi_generic.extend(
+                self.wrap_text_for_instruction(
+                    line, column_width_mm, self.hindi_font, 9.5
+                )
+            )
+
+        # Spacing mirrors draw_disclaimer_block().
+        heading_height = 16 * mm
+        english_line_h = 4.7 * mm
+        hindi_line_h = 5.2 * mm
+        intro_bottom_gap = 2.8 * mm
+        steps_bottom_gap = 3.0 * mm
+        bottom_padding = 6 * mm
+
+        prerequisite_bottom_gap = 2.8 * mm
+
+        english_height = (
+            len(english_intro) * english_line_h
+            + intro_bottom_gap
+            + len(prerequisite_english) * english_line_h
+            + (prerequisite_bottom_gap if prerequisite_english else 0)
+            + len(english_wrapped) * english_line_h
+            + steps_bottom_gap
+            + len(english_outro) * english_line_h
+            + steps_bottom_gap
+            + len(english_disclaimer_label) * english_line_h
+            + steps_bottom_gap
+            + len(english_generic) * english_line_h
+        )
+        hindi_height = (
+            len(hindi_intro) * hindi_line_h
+            + intro_bottom_gap
+            + len(prerequisite_hindi) * hindi_line_h
+            + (prerequisite_bottom_gap if prerequisite_hindi else 0)
+            + len(hindi_wrapped) * hindi_line_h
+            + steps_bottom_gap
+            + len(hindi_outro) * hindi_line_h
+            + steps_bottom_gap
+            + len(hindi_disclaimer_label) * hindi_line_h
+            + steps_bottom_gap
+            + len(hindi_generic) * hindi_line_h
+        )
+
+        total_height = heading_height + max(english_height, hindi_height) + bottom_padding
+
+        return (
+            english_wrapped,
+            hindi_wrapped,
+            prerequisite_english,
+            prerequisite_hindi,
+            total_height
+        )
+
+    def draw_ingredient_image_block(self, c, ingredient_image_path, block_top_y, block_height):
+        """Draw ingredient image at the full PDF width, preserving its aspect ratio."""
+        if not ingredient_image_path or block_height <= 0:
+            return
+
+        try:
+            c.drawImage(
+                ingredient_image_path,
+                0,
+                block_top_y - block_height,
+                width=self.page_width,
+                height=block_height,
+                preserveAspectRatio=False,
+                anchor='c',
+                mask='auto'
+            )
+
+            print(
+                f"✅ Ingredient image drawn full width "
+                f"({self.page_width/mm:.0f}mm × {block_height/mm:.0f}mm)"
+            )
+
+        except Exception as e:
+            print(f"❌ Error drawing ingredient image: {e}")
+
+    def draw_disclaimer_block(
+        self,
+        c,
+        english_lines,
+        hindi_lines,
+        prerequisite_english,
+        prerequisite_hindi,
+        block_height
+    ):
+        """Bilingual Recipe Steps block.
+
+        Order in each language:
+          Intro
+          Prerequisite (if any; NOT numbered)
+          Step 1, Step 2, ...
+          Disclaimer
+          Final serve instruction
+        """
+        if block_height <= 0:
+            return
+
+        margin = 8 * mm
+        column_gap = 10 * mm
+        column_width = (self.page_width - 2 * margin - column_gap) / 2
+        column_width_mm = column_width / mm
+        left_x = margin
+        right_x = margin + column_width + column_gap
+
+        c.saveState()
+
+        heading_y = block_height - 8 * mm
+
+        # LEFT heading — English.
+        self.draw_single_line_fit(
+            c, "Recipe Steps",
+            left_x, heading_y, column_width,
+            self.section_title_font, 11,
+            min_size=8, fill_color=self.title_green
+        )
+
+        # RIGHT heading — Hindi.
+        self.draw_single_line_fit(
+            c, "पकाने के चरण",
+            right_x, heading_y, column_width,
+            self.hindi_bold_font, 12,
+            min_size=9, fill_color=self.title_green,
+            shaping=True
+        )
+
+        # Separate underline for each language column.
+        c.setLineWidth(0.3 * mm)
+        c.setStrokeColor(self.line_color)
+        c.line(left_x, heading_y - 2 * mm, left_x + column_width, heading_y - 2 * mm)
+        c.line(right_x, heading_y - 2 * mm, right_x + column_width, heading_y - 2 * mm)
+
+        # Thin central separator.
+        separator_x = margin + column_width + column_gap / 2
+        c.setStrokeColor(HexColor('#D5D2CB'))
+        c.setLineWidth(0.2 * mm)
+        c.line(
+            separator_x,
+            4 * mm,
+            separator_x,
+            heading_y + 1 * mm
+        )
+
+        en_line_h = 4.7 * mm
+        hi_line_h = 5.2 * mm
+        intro_bottom_gap = 2.8 * mm
+        steps_bottom_gap = 3.0 * mm
+
+        # ===========================================================
+        # ENGLISH — LEFT
+        # ===========================================================
+        y_en = heading_y - 8 * mm
+
+        # Intro line before Step 1.
+        english_intro_lines = self.wrap_text_for_instruction(
+            RECIPE_STEPS_INTRO_EN,
+            column_width_mm,
+            self.instruction_font,
+            9
+        )
+        for line in english_intro_lines:
+            if y_en < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                left_x, y_en, column_width,
+                self.instruction_font, 9,
+                min_size=7, fill_color=self.body_text
+            )
+            y_en -= en_line_h
+
+        y_en -= intro_bottom_gap
+
+        # Prerequisite is visually separate and NEVER numbered.
+        for line in prerequisite_english:
+            if y_en < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                left_x, y_en, column_width,
+                self.instruction_font, 9,
+                min_size=7, fill_color=self.title_green
+            )
+            y_en -= en_line_h
+
+        if prerequisite_english:
+            y_en -= 2.8 * mm
+
+        # Numbered English Recipe Steps begin with the first food/cooking stage.
+        for line in english_lines:
+            if y_en < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                left_x, y_en, column_width,
+                self.instruction_font, 9,
+                min_size=7, fill_color=self.body_text
+            )
+            y_en -= en_line_h
+
+        y_en -= steps_bottom_gap
+
+        # Important disclaimer immediately after the manual steps.
+        for wrapped in self.wrap_text_for_instruction(
+            "Disclaimer", column_width_mm, self.instruction_font, 9
+        ):
+            if y_en < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, wrapped,
+                left_x, y_en, column_width,
+                self.instruction_font, 9,
+                min_size=7, fill_color=HexColor('#BE1E2D')
+            )
+            y_en -= en_line_h
+
+        for line in GENERIC_DISCLAIMER_EN:
+            for wrapped in self.wrap_text_for_instruction(
+                line, column_width_mm, self.instruction_font, 9
+            ):
+                if y_en < 4 * mm:
+                    break
+                self.draw_single_line_fit(
+                    c, wrapped,
+                    left_x, y_en, column_width,
+                    self.instruction_font, 9,
+                    min_size=7, fill_color=HexColor('#BE1E2D')
+                )
+                y_en -= en_line_h
+
+        # Final serve instruction comes AFTER the disclaimer.
+        english_outro_lines = self.wrap_text_for_instruction(
+            RECIPE_STEPS_OUTRO_EN,
+            column_width_mm,
+            self.instruction_font,
+            9
+        )
+        for line in english_outro_lines:
+            if y_en < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                left_x, y_en, column_width,
+                self.instruction_font, 9,
+                min_size=7, fill_color=self.body_text
+            )
+            y_en -= en_line_h
+
+        y_en -= steps_bottom_gap
+
+        # ===========================================================
+        # HINDI — RIGHT
+        # ===========================================================
+        y_hi = heading_y - 8 * mm
+
+        # Intro line before चरण 1.
+        hindi_intro_lines = self.wrap_text_for_instruction(
+            RECIPE_STEPS_INTRO_HI,
+            column_width_mm,
+            self.hindi_font,
+            9.5
+        )
+        for line in hindi_intro_lines:
+            if y_hi < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                right_x, y_hi, column_width,
+                self.hindi_font, 9.5,
+                min_size=7.5, fill_color=self.body_text,
+                shaping=True
+            )
+            y_hi -= hi_line_h
+
+        y_hi -= intro_bottom_gap
+
+        # Hindi prerequisite is separate and NEVER numbered.
+        for line in prerequisite_hindi:
+            if y_hi < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                right_x, y_hi, column_width,
+                self.hindi_font, 9.5,
+                min_size=7.5, fill_color=self.title_green,
+                shaping=True
+            )
+            y_hi -= hi_line_h
+
+        if prerequisite_hindi:
+            y_hi -= 2.8 * mm
+
+        # Numbered Hindi Recipe Steps begin with the first food/cooking stage.
+        for line in hindi_lines:
+            if y_hi < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                right_x, y_hi, column_width,
+                self.hindi_font, 9.5,
+                min_size=7.5, fill_color=self.body_text,
+                shaping=True
+            )
+            y_hi -= hi_line_h
+
+        y_hi -= steps_bottom_gap
+
+        # Important Hindi disclaimer immediately after the manual steps.
+        for wrapped in self.wrap_text_for_instruction(
+            "अस्वीकरण", column_width_mm, self.hindi_font, 9.5
+        ):
+            if y_hi < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, wrapped,
+                right_x, y_hi, column_width,
+                self.hindi_font, 9.5,
+                min_size=7.5, fill_color=HexColor('#BE1E2D'),
+                shaping=True
+            )
+            y_hi -= hi_line_h
+
+        for line in GENERIC_DISCLAIMER_HI:
+            for wrapped in self.wrap_text_for_instruction(
+                line, column_width_mm, self.hindi_font, 9.5
+            ):
+                if y_hi < 4 * mm:
+                    break
+                self.draw_single_line_fit(
+                    c, wrapped,
+                    right_x, y_hi, column_width,
+                    self.hindi_font, 9.5,
+                    min_size=7.5, fill_color=HexColor('#BE1E2D'),
+                    shaping=True
+                )
+                y_hi -= hi_line_h
+
+        # Final Hindi serve instruction comes AFTER the disclaimer.
+        hindi_outro_lines = self.wrap_text_for_instruction(
+            RECIPE_STEPS_OUTRO_HI,
+            column_width_mm,
+            self.hindi_font,
+            9.5
+        )
+        for line in hindi_outro_lines:
+            if y_hi < 4 * mm:
+                break
+            self.draw_single_line_fit(
+                c, line,
+                right_x, y_hi, column_width,
+                self.hindi_font, 9.5,
+                min_size=7.5, fill_color=self.body_text,
+                shaping=True
+            )
+            y_hi -= hi_line_h
+
+        y_hi -= steps_bottom_gap
+
+        c.restoreState()
+        print(
+            f"✅ Bilingual disclaimer drawn with intro/generic/outro "
+            f"(English {len(english_lines)} step-line(s), "
+            f"Hindi {len(hindi_lines)} step-line(s))"
+        )
+
     def calculate_required_page_height(self, recipe_data, seconds_per_bar):
         """Calculate the required page height based on recipe content"""
         # Calculate left section height
-        left_height = self.calculate_left_section_height(recipe_data)
+        left_height = self.calculate_left_section_height(recipe_data)   
         
         # Calculate right section height
         right_height = self.calculate_right_section_height(recipe_data, seconds_per_bar)
@@ -257,75 +2432,133 @@ class RecipePDFGenerator:
         required_height = max(left_height, right_height) + 20*mm  # 20mm padding
         
         # Minimum height should be at least the original size
-        min_height = 228*mm
+        min_height = 150*mm
         
         return max(required_height, min_height)
 
     def calculate_left_section_height(self, recipe_data):
-        height = 0
-        height += self.image_height  # 97mm
-        height += 15*mm  # Recipe name
-        height += 7*mm   # Recipe name actual height
-        height += 7*mm   # Cooking time header
-        cooking_times = self.extract_cooking_time(recipe_data)
-        height += len(cooking_times) * 6*mm
-        height += 6*mm   # Accessories header
+        """Calculate body-left card height using the same wrapping rules used to draw it."""
+        text_margin = 8 * mm
+        inner_width = self.left_section_width - 2 * text_margin
+        name_x_offset = 20 * mm
+        name_width = inner_width - name_x_offset
+
+        height = 10 * mm
+        height += 8 * mm  # Cooking Time header
+
+        # Cooking time lines
+        for time_line in self.extract_cooking_time(recipe_data):
+            parts = [p.strip() for p in time_line.split('    ') if p.strip()]
+            for part in parts:
+                lines = self.wrap_text_to_width(
+                    part, inner_width, self.section_detail_font, self.section_detail_size
+                )
+                height += max(1, len(lines)) * 5 * mm
+
+        height += 2 * mm
+        height += 6 * mm  # Accessories heading
+
         accessories = self.extract_accessories(recipe_data)
-        if accessories:
-            if len(accessories) >= 2:
-                height += 6*mm
-                height += (len(accessories) - 2) * 6*mm
+        acc_text = ', '.join(accessories) if accessories else 'N/A'
+        acc_lines = self.wrap_text_to_width(
+            acc_text, inner_width, self.section_detail_font, self.section_detail_size
+        )
+        height += max(1, len(acc_lines)) * 5 * mm
+
+        height += 3 * mm + 9 * mm  # ingredients separator + header
+
+        for ingredient in self.extract_ingredients(recipe_data):
+            if ingredient.startswith('  '):
+                lines = self.wrap_text_to_width(
+                    ingredient.strip(), inner_width - 4 * mm,
+                    self.section_detail_font, self.section_detail_size
+                )
+            elif '	' in ingredient:
+                _, name = ingredient.split('	', 1)
+                lines = self.wrap_text_to_width(
+                    name, name_width, self.step_title_font, self.section_detail_size
+                )
             else:
-                height += 6*mm
-        else:
-            height += 6*mm
-        height += 3*mm + 8*mm  # Ingredients header
-        ingredients = self.extract_ingredients(recipe_data)
-        height += len(ingredients) * 5*mm  # 5mm per ingredient line (main and sub-ingredients)
+                lines = self.wrap_text_to_width(
+                    ingredient, inner_width, self.step_title_font, self.section_detail_size
+                )
+            height += max(1, len(lines)) * 5 * mm
+
+        other_essentials = self.extract_other_essentials(recipe_data)
+        if other_essentials:
+            height += 3 * mm + 9 * mm
+            for essential in other_essentials:
+                if essential.startswith('  '):
+                    lines = self.wrap_text_to_width(
+                        essential.strip(), name_width,
+                        self.section_detail_font, 10
+                    )
+                elif '	' in essential:
+                    _, name = essential.split('	', 1)
+                    lines = self.wrap_text_to_width(
+                        name, name_width, self.section_detail_font, 10
+                    )
+                else:
+                    lines = self.wrap_text_to_width(
+                        essential, inner_width, self.section_detail_font, 10
+                    )
+                height += max(1, len(lines)) * 5 * mm
+
+        height += 12 * mm
         return height
+
     def calculate_right_section_height(self, recipe_data, seconds_per_bar):
-        """Calculate required height for right section (timeline)"""
-        # Top margin for QR code and circles
-        height = 50*mm
-        
-        # Calculate timeline height
+        """Calculate enough body height for both the timeline and wrapped step copy."""
         instructions = recipe_data.get('Instruction', [])
-        if 'Instruction' in recipe_data:
-            merged_instructions = self.merge_zero_duration_steps(recipe_data['Instruction'])
-        else:
-            merged_instructions = instructions
-            
-        total_time_sec = sum(int(instr.get('durationInSec', 0)) for instr in merged_instructions)
-        first_duration = safe_int(merged_instructions[0].get('durationInSec', 0)) if merged_instructions else 0
+        merged = self.merge_zero_duration_steps(instructions) if instructions else []
+        consolidated = self.consolidate_timeline_steps(merged)
+
+        total_time_sec = sum(safe_int(s.get('durationInSec', 0)) for s in merged)
+        first_duration = safe_int(merged[0].get('durationInSec', 0)) if merged else 0
         extra_bars = 5 if first_duration == 0 else 0
-        time_bars = max(1, int(total_time_sec / seconds_per_bar))
+        time_bars = self.calculate_bar_position_with_rounding(total_time_sec, seconds_per_bar)
         total_bars = time_bars + extra_bars
-        
-        # Timeline bars height
-        bar_height = 1*mm
-        bar_spacing = 1*mm
-        timeline_height = total_bars * (bar_height + bar_spacing)
-        height += timeline_height
-        
-        # Step blocks height (approximate)
-        consolidated_steps = self.consolidate_timeline_steps(merged_instructions)
-        vertical_spacing = 10*mm
-        block_height = 6*mm
-        
-        for step in consolidated_steps:
-            height += vertical_spacing
+        timeline_depth = total_bars * (1 * mm + 1 * mm) + 8 * mm
+
+        # Same horizontal guardrail as draw_step_blocks_with_timing().
+        circle_radius = self.circle_diameter / 2
+        magnetron_x = self.page_width - 15 * mm
+        induction_x = magnetron_x - 23 * mm
+        x_offset = self.left_section_width + self.left_margin
+        text_start_x = x_offset + 6 * mm
+        timeline_left_boundary = induction_x - circle_radius
+        max_text_width = max(12 * mm, timeline_left_boundary - text_start_x)
+
+        block_height = 6 * mm
+        vertical_spacing = 7 * mm
+        current_y = 0
+        lowest_y = 0
+
+        for i, step in enumerate(consolidated):
+            step_y = current_y - (i * vertical_spacing)
             instruction_text = step.get('Text', '')
             if instruction_text:
-                lines = self.parse_instruction_with_weight(instruction_text, recipe_data,step)
-                num_lines = len(lines)
-                line_height = 4*mm
-                instruction_height = num_lines * line_height
-                height += block_height + instruction_height + 8*mm  # 8mm for power circles
-        
-        # Bottom margin
-        height -= 210*mm
-        
-        return height
+                raw_lines = self.parse_instruction_with_weight(instruction_text, recipe_data, step)
+                wrapped_lines = []
+                for line in raw_lines:
+                    wrapped_lines.extend(
+                        self.wrap_text_to_width(
+                            line, max_text_width,
+                            self.section_detail_font, 9
+                        )
+                    )
+                instruction_height = max(1, len(wrapped_lines)) * 4 * mm
+                power_y = step_y - block_height / 2 - 4 * mm - instruction_height
+                lowest_y = min(lowest_y, power_y - 5 * mm)
+                current_y -= (block_height / 2 + 4 * mm + instruction_height + 2 * mm)
+            else:
+                lowest_y = min(lowest_y, step_y - block_height)
+                current_y -= vertical_spacing
+
+        step_depth = -lowest_y
+        top_allowance = 30 * mm
+        bottom_allowance = 16 * mm
+        return max(70 * mm, top_allowance + max(step_depth, timeline_depth) + bottom_allowance)
 
     def merge_zero_duration_steps(self, instructions):
         if not instructions:
@@ -412,13 +2645,12 @@ class RecipePDFGenerator:
                 
                 with open(json_file, 'r', encoding='utf-8') as f:
                     recipe_data = json.load(f)
-                
-                # APPLY STEP MERGING HERE
-                if 'Instruction' in recipe_data:
-                    recipe_data['Instruction'] = self.merge_zero_duration_steps(recipe_data['Instruction'])
+                # Keep the raw Instruction rows intact here.
+                # generate_pdf() preserves them for skip/manual-addition logic
+                # before applying timeline-only zero-duration merging.
 
                 # Use recipe name from JSON for output path
-                candidate_name = recipe_data.get('name', ['recipe'])[0]
+                candidate_name = extract_full_recipe_name_from_description(recipe_data)
                 final_output_path = _resolve_output_pdf_path(output_pdf_path, candidate_name, zip_path, recipe_data)
 
                 self.generate_pdf(recipe_data, image_file, final_output_path, seconds_per_bar)
@@ -525,7 +2757,7 @@ class RecipePDFGenerator:
         self.qr_image = qr_img
 
         # Use recipe name from JSON
-        candidate_name = recipe_data.get('name', ['recipe'])[0]
+        candidate_name = extract_full_recipe_name_from_description(recipe_data)
         final_output_path = _resolve_output_pdf_path(output_pdf_path, candidate_name, json_path or image_path, recipe_data)
         self.generate_pdf(recipe_data, image_path, final_output_path, seconds_per_bar)
         return final_output_path
@@ -584,15 +2816,340 @@ class RecipePDFGenerator:
         self.qr_image = qr_img
         
         print("📄 Starting PDF generation...")
-        candidate_name = recipe_data.get('name', ['recipe'])[0]
+        candidate_name = extract_full_recipe_name_from_description(recipe_data)
         final_output_path = _resolve_output_pdf_path(output_pdf_path, candidate_name, txt_path or image_path, recipe_data)
         self.generate_pdf(recipe_data, image_path, final_output_path, seconds_per_bar)
         print(f"📄 Output path used: {final_output_path}")
         print("✅ TXT and image processing completed!")
         return final_output_path
 
+    # =========================================================
+    # NEW: header section (title, total input/output, cooking
+    # time, accessories, photo) drawn full-width at the top of
+    # the page, above the ingredient collage image.
+    # =========================================================
+
+    _WEIGHT_UNIT_TO_GRAMS = {
+        'g': 1, 'gm': 1, 'gms': 1, 'kg': 1000,
+        'ml': 1, 'l': 1000, 'liter': 1000, 'litre': 1000,
+        'tsp': 5, 'tbsp': 15, 'cup': 240, 'pinch': 0.5,
+    }
+
+    def calculate_total_input_grams(self, recipe_data):
+        """Total recipe input excluding only Water.
+
+        For mixed Ingredients[] groups such as:
+            Soaked Rice & Stock Water = 3200 g
+            text: Soaked Rice 1000 g, Stock Watar 2200 g
+        this returns 1000 g from that group rather than dropping all 3200 g.
+        """
+        total = 0.0
+        for ingredient in recipe_data.get('Ingredients', []):
+            total += _ingredient_group_nonwater_total(ingredient)
+        return round(total)
+
+    def format_total_input(self, recipe_data):
+        total = self.calculate_total_input_grams(recipe_data)
+        if total <= 0:
+            return "N/A"
+        return f"{total} gm"
+
+    def extract_normal_cooking_label(self, recipe_data):
+        """Short 'X minutes' label used in the header row (vs. the fuller
+        On2Cook/Normal comparison line used in the body card)."""
+        desc = recipe_data.get("description", "")
+        total_sec = sum(int(i.get("durationInSec", 0)) for i in recipe_data.get("Instruction", []))
+        match = re.search(r"NORMAL COOKING TIME\s*(\d+)\s*MINUTES", desc.upper())
+        if match:
+            mins = int(match.group(1))
+        else:
+            mins = max(1, (total_sec * 3) // 60)
+        unit = "minute" if mins == 1 else "minutes"
+        return f"{mins} {unit}"
+
+    def calculate_header_height(self, recipe_data):
+        """Header height for English title + Hindi subtitle + wrapped accessories."""
+        height = 95 * mm
+        accessories = self.extract_accessories(recipe_data)
+        if accessories:
+            acc_text = ', '.join(accessories)
+            acc_lines = self.wrap_text_to_width(
+                acc_text, 47 * mm, self.section_detail_font, 9
+            )
+            if len(acc_lines) > 2:
+                height += min(3, len(acc_lines) - 2) * 4.5 * mm
+        return height
+
+    def draw_icon_badge(self, c, cx, cy, radius, icon='scale'):
+        """Solid colored circle with either a bundled SVG icon (from
+        ICONS_DIR) or a simple built-in fallback glyph drawn on top."""
+        c.saveState()
+        c.setFillColor(self.icon_green)
+        c.setStrokeColor(self.icon_green)
+        c.circle(cx, cy, radius, fill=1, stroke=0)
+        svg_path = os.path.join(ICONS_DIR, f'{icon}.svg')
+        drew_svg = False
+        if os.path.exists(svg_path):
+            try:
+                drawing = svg2rlg(svg_path)
+                target = radius * 1.3
+                base = max(drawing.width, drawing.height, 1)
+                scale = target / base
+                drawing.width *= scale
+                drawing.height *= scale
+                drawing.scale(scale, scale)
+                renderPDF.draw(drawing, c, cx - (drawing.minWidth() * scale) / 2, cy - (drawing.height) / 2)
+                drew_svg = True
+            except Exception as e:
+                print(f"⚠️  Icon SVG '{icon}' failed to render ({e}); using fallback glyph.")
+        if not drew_svg:
+            self._draw_fallback_icon(c, cx, cy, radius, icon)
+        c.restoreState()
+
+    def _draw_fallback_icon(self, c, cx, cy, radius, icon):
+        """Minimal hand-drawn glyphs so the header still looks reasonable
+        with no icon assets in ICONS_DIR."""
+        c.setStrokeColor(white)
+        c.setFillColor(white)
+        c.setLineWidth(0.6)
+        if icon == 'clock':
+            c.circle(cx, cy, radius * 0.55, fill=0, stroke=1)
+            c.line(cx, cy, cx, cy + radius * 0.32)
+            c.line(cx, cy, cx + radius * 0.28, cy)
+        elif icon == 'scale':
+            c.line(cx - radius * 0.5, cy + radius * 0.1, cx + radius * 0.5, cy + radius * 0.1)
+            c.line(cx, cy + radius * 0.1, cx, cy - radius * 0.35)
+            c.circle(cx - radius * 0.5, cy - radius * 0.1, radius * 0.18, fill=0, stroke=1)
+            c.circle(cx + radius * 0.5, cy - radius * 0.1, radius * 0.18, fill=0, stroke=1)
+        elif icon == 'bowl':
+            p = c.beginPath()
+            p.moveTo(cx - radius * 0.5, cy + radius * 0.05)
+            p.curveTo(cx - radius * 0.5, cy - radius * 0.45, cx + radius * 0.5, cy - radius * 0.45, cx + radius * 0.5, cy + radius * 0.05)
+            c.drawPath(p, stroke=1, fill=0)
+            c.line(cx - radius * 0.55, cy + radius * 0.05, cx + radius * 0.55, cy + radius * 0.05)
+        else:  # 'ingredients' / generic
+            c.setFont('Helvetica-Bold', radius)
+            c.drawCentredString(cx, cy - radius * 0.35, (icon[:1] or 'I').upper())
+
+    def draw_rounded_image(self, c, image_path, x, y, w, h, radius):
+        """Draws image_path clipped to a rounded rectangle. Falls back to
+        a plain skin-colored rounded box if the image can't be loaded."""
+        c.saveState()
+        path = c.beginPath()
+        path.moveTo(x, y + radius)
+        path.arcTo(x, y, x + radius, y + radius, startAng=180, extent=90)
+        path.lineTo(x + w - radius, y)
+        path.arcTo(x + w - radius, y, x + w, y + radius, startAng=270, extent=90)
+        path.lineTo(x + w, y + h - radius)
+        path.arcTo(x + w - radius, y + h - radius, x + w, y + h, startAng=0, extent=90)
+        path.lineTo(x + radius, y + h)
+        path.arcTo(x, y + h - radius, x + radius, y + h, startAng=90, extent=90)
+        path.close()
+        c.clipPath(path, stroke=0, fill=0)
+        if image_path and os.path.exists(image_path):
+            try:
+                c.drawImage(image_path, x, y, width=w, height=h,
+                            preserveAspectRatio=True, anchor='c', mask='auto')
+            except Exception as e:
+                print(f"❌ Header photo draw error: {e}")
+                c.setFillColor(self.skin_color)
+                c.rect(x, y, w, h, fill=1, stroke=0)
+        else:
+            c.setFillColor(self.skin_color)
+            c.rect(x, y, w, h, fill=1, stroke=0)
+        c.restoreState()
+
+    def draw_header_section(self, c, recipe_data, image_path, header_top_y, header_height):
+        """Header:
+        - LARGE English full recipe name from description
+        - SMALL Hindi translation on the left under the English title
+        - no duplicated smaller English recipe name
+        """
+        margin = 8 * mm
+        photo_w = 76 * mm
+        photo_h = header_height - 14 * mm
+        photo_x = self.page_width - margin - photo_w
+        photo_y = header_top_y - header_height + 7 * mm
+        header_bottom = header_top_y - header_height
+
+        self.draw_marble_background(c, 0, header_bottom, self.page_width, header_height)
+
+        # DESCRIPTION-FIRST customer-facing name.
+        full_english_name = extract_full_recipe_name_from_description(recipe_data)
+        title_text = str(full_english_name).upper().strip()
+
+        max_title_width = max(25 * mm, photo_x - margin - 7 * mm)
+        title_y = header_top_y - 14 * mm
+
+        # Main title: English only, full-width.
+        self.draw_single_line_fit(
+            c, title_text,
+            margin, title_y, max_title_width,
+            self.recipe_name_font, 27,
+            min_size=13, fill_color=self.title_green
+        )
+
+        # Secondary line: HINDI ONLY, aligned to the LEFT under the English title.
+        hindi_subtitle = get_hindi_recipe_name(recipe_data)
+        subtitle_y = title_y - 9 * mm
+
+        hindi_width = min(62 * mm, max_title_width * 0.58)
+        hindi_x = margin
+
+        self.draw_single_line_fit(
+            c, hindi_subtitle,
+            hindi_x, subtitle_y, hindi_width,
+            self.hindi_bold_font, 13,
+            min_size=8.5, fill_color=self.subtitle_brown,
+            align='left', shaping=True
+        )
+
+        # Decorative divider remains on the left, with no duplicate English text.
+        divider_y = subtitle_y - 5 * mm
+        divider_w = min(62 * mm, max_title_width)
+        c.setStrokeColor(self.divider_green)
+        c.setLineWidth(0.65)
+        c.line(margin, divider_y, margin + divider_w, divider_y)
+        c.setFillColor(self.divider_green)
+        c.circle(margin + divider_w / 2, divider_y, 0.72 * mm, fill=1, stroke=0)
+
+        # ---- info columns ----
+        icon_radius = 4.3 * mm
+        icon_x = margin + icon_radius
+        text_x = margin + 2 * icon_radius + 3 * mm
+
+        output_x = margin + 61 * mm
+        if output_x + 39 * mm > photo_x:
+            output_x = max(text_x + 38 * mm, photo_x - 40 * mm)
+
+        left_text_w = max(28 * mm, output_x - text_x - 5 * mm)
+        row_y = divider_y - 11 * mm
+
+        def draw_info_row(y, icon, label, value_text, value_max_lines=2):
+            self.draw_icon_badge(c, icon_x, y, icon_radius, icon)
+
+            self.draw_single_line_fit(
+                c, label,
+                text_x, y + 2.6 * mm, left_text_w,
+                self.section_detail_font, 8.5,
+                min_size=6.5, fill_color=self.body_text
+            )
+
+            self.draw_wrapped_text_box(
+                c, value_text,
+                text_x, y + 0.7 * mm,
+                left_text_w, 11.8 * mm,
+                self.step_title_font, 10,
+                min_size=7.5,
+                fill_color=self.body_text,
+                line_gap=1.16,
+                max_lines=value_max_lines
+            )
+            return y - 15.5 * mm
+
+        next_y = draw_info_row(
+            row_y, 'scale',
+            'Total Input (Excl. Pump Water):',
+            self.format_total_input(recipe_data), 1
+        )
+        next_y = draw_info_row(
+            next_y, 'clock',
+            'Total Cooking Time:',
+            self.extract_on2cook_total_label(recipe_data), 1
+        )
+
+        accessories = self.extract_accessories(recipe_data)
+        acc_text = ', '.join(accessories) if accessories else 'N/A'
+        draw_info_row(next_y, 'ingredients', 'Accessories:', acc_text, 3)
+
+        # ---- Total Output middle column ----
+        output_icon_x = output_x + icon_radius
+        self.draw_icon_badge(c, output_icon_x, row_y, icon_radius, 'bowl')
+        output_text_x = output_icon_x + icon_radius + 3 * mm
+        output_text_w = max(18 * mm, photo_x - output_text_x - 4 * mm)
+
+        self.draw_single_line_fit(
+            c, "Total Output:",
+            output_text_x, row_y + 2.6 * mm, output_text_w,
+            self.section_detail_font, 8.5,
+            min_size=6.5, fill_color=self.body_text
+        )
+
+        # Requested #BE1E2D background behind the output WEIGHT.
+        output_value = self.extract_output(recipe_data)
+        output_value_y = row_y - 7.4 * mm
+        output_value_h = 8.5 * mm
+        c.setFillColor(self.total_output_bg)
+        c.roundRect(
+            output_text_x - 1.5 * mm,
+            output_value_y,
+            output_text_w + 3 * mm,
+            output_value_h,
+            output_value_h / 2,
+            stroke=0, fill=1
+        )
+        self.draw_single_line_fit(
+            c, output_value,
+            output_text_x, output_value_y + 2.15 * mm, output_text_w,
+            self.recipe_name_font, 13.5,
+            min_size=9, fill_color=white, align='center'
+        )
+
+        self.draw_rounded_image(
+            c, image_path,
+            photo_x, photo_y, photo_w, photo_h, 4 * mm
+        )
+
+    def draw_total_output_pill(self, c, recipe_data):
+        """Full-width cream pill with the final Total Output value, drawn
+        at the very bottom of the two-column body (matches the reference
+        card's closing strip)."""
+        pill_h = 9 * mm
+        pill_y = 2 * mm
+        c.saveState()
+        c.setFillColor(self.total_output_bg)
+        c.roundRect(
+            4 * mm, pill_y,
+            self.page_width - 8 * mm, pill_h,
+            pill_h / 2, stroke=0, fill=1
+        )
+
+        # Small white bowl icon treatment for contrast on #BE1E2D.
+        icon_cx = 4 * mm + pill_h / 2 + 3 * mm
+        icon_cy = pill_y + pill_h / 2
+        icon_r = pill_h / 2 - 1 * mm
+        c.setFillColor(white)
+        c.circle(icon_cx, icon_cy, icon_r, fill=1, stroke=0)
+        c.saveState()
+        c.setStrokeColor(self.total_output_bg)
+        c.setLineWidth(0.6)
+        p = c.beginPath()
+        p.moveTo(icon_cx - icon_r * 0.5, icon_cy + icon_r * 0.05)
+        p.curveTo(
+            icon_cx - icon_r * 0.5, icon_cy - icon_r * 0.45,
+            icon_cx + icon_r * 0.5, icon_cy - icon_r * 0.45,
+            icon_cx + icon_r * 0.5, icon_cy + icon_r * 0.05
+        )
+        c.drawPath(p, stroke=1, fill=0)
+        c.line(
+            icon_cx - icon_r * 0.55, icon_cy + icon_r * 0.05,
+            icon_cx + icon_r * 0.55, icon_cy + icon_r * 0.05
+        )
+        c.restoreState()
+
+        pill_text = f"Total Output: {self.extract_output(recipe_data)}"
+        self.draw_single_line_fit(
+            c, pill_text,
+            22 * mm, pill_y + pill_h / 2 - 1.6 * mm,
+            self.page_width - 44 * mm,
+            self.step_title_font, 10.5,
+            min_size=8, fill_color=white, align='center'
+        )
+        c.restoreState()
+
     def generate_pdf(self, recipe_data, image_path, output_path, seconds_per_bar):
         print("🔍 === STARTING PDF GENERATION ===")
+        print(f"🪨 Marble background asset: {MARBLE_BG_PATH} ({'FOUND' if os.path.exists(MARBLE_BG_PATH) else 'MISSING - fallback will be used'})")
         print(f"DEBUG: Raw description before cleaning: {recipe_data.get('description', '')!r}")
         
         # Clean recipe data
@@ -601,30 +3158,107 @@ class RecipePDFGenerator:
         print(f"DEBUG: Description after cleaning: {recipe_data.get('description', '')!r}")
         print("✅ Recipe data cleaned (time formats and units)")
         
-        # CRITICAL FIX: Apply step merging IMMEDIATELY and consistently
+        # Preserve the ORIGINAL cleaned Instruction rows for the customer-facing
+        # skip/manual-addition logic BEFORE the timeline is merged.
         if 'Instruction' in recipe_data:
-            print("🔍 Applying step merging in generate_pdf...")
+            recipe_data['_disclaimer_instruction_source'] = [
+                dict(step) for step in recipe_data['Instruction']
+            ]
+
+            print("🔍 Manual-addition source steps preserved:")
+            for i, step in enumerate(recipe_data['_disclaimer_instruction_source'], 1):
+                print(
+                    f"  Source Step {i}: skip={step.get('skip', '')!r}, "
+                    f"duration={safe_int(step.get('durationInSec', 0))}s, "
+                    f"text={step.get('Text', '')!r}"
+                )
+
+            print("🔍 Applying zero-duration merging for the cooking timeline only...")
             original_count = len(recipe_data['Instruction'])
             recipe_data['Instruction'] = self.merge_zero_duration_steps(recipe_data['Instruction'])
             merged_count = len(recipe_data['Instruction'])
-            print(f"✅ Step merging applied: {original_count} → {merged_count} steps")
-            
-            # VALIDATION: Log merged steps to confirm
+            print(f"✅ Timeline merge applied: {original_count} → {merged_count} steps")
+
             for i, step in enumerate(recipe_data['Instruction']):
                 duration = safe_int(step.get('durationInSec', 0))
                 text = step.get('Text', '')[:30]
-                print(f"  Merged Step {i+1}: '{text}...' Duration: {duration}s")
+                print(f"  Merged Timeline Step {i+1}: '{text}...' Duration: {duration}s")
+
+            manual_events = _build_manual_addition_events(recipe_data)
+            print(f"✅ Customer manual-addition events: {len(manual_events)}")
+            for i, (english, hindi) in enumerate(manual_events, 1):
+                print(f"  Manual Step {i} EN: {english}")
+                print(f"  Manual Step {i} HI: {hindi}")
         
         print(f"📏 Page width: {self.page_width/mm:.1f}mm")
         print(f"🎯 QR image status: {self.qr_image is not None}")
-        
-        # Rest of existing code remains the same...
-        self.page_height = self.calculate_required_page_height(recipe_data, seconds_per_bar)
-        print(f"📏 Calculated page height: {self.page_height/mm:.1f}mm")
-        
-        c = canvas.Canvas(output_path, pagesize=(self.page_width, self.page_height))
-        self.draw_left_section(c, recipe_data, image_path)
+
+        # -----------------------------------------------------------
+        # Figure out the header, ingredient-image, and disclaimer block
+        # sizes BEFORE computing final page height, so everything fits
+        # on one page with no separate render/stack/move steps.
+        # -----------------------------------------------------------
+        recipe_name_for_lookup = recipe_data.get('name', ['recipe'])[0]
+        ingredient_image_path = find_ingredient_image_path(recipe_name_for_lookup)
+        ingredient_img_height = self.get_ingredient_image_height(ingredient_image_path)
+        (
+            disclaimer_english,
+            disclaimer_hindi,
+            prerequisite_english,
+            prerequisite_hindi,
+            disclaimer_height
+        ) = self.get_disclaimer_lines_and_height(recipe_data)
+        header_height = self.calculate_header_height(recipe_data)
+
+        gap = 6 * mm
+        top_extra = header_height + ((ingredient_img_height + gap) if ingredient_image_path else 0)
+        has_disclaimer = bool(disclaimer_english or disclaimer_hindi)
+        bottom_extra = (disclaimer_height + gap) if has_disclaimer else 0
+
+        # Original content height (Cooking Time/Ingredients card + timeline)
+        content_height = self.calculate_required_page_height(recipe_data, seconds_per_bar)
+        total_page_height = content_height + top_extra + bottom_extra
+
+        print(f"📏 Calculated page height: {total_page_height/mm:.1f}mm "
+              f"(header {header_height/mm:.0f}mm + content {content_height/mm:.0f}mm"
+              f"{f' + image {ingredient_img_height/mm:.0f}mm' if ingredient_image_path else ''}"
+              f"{f' + steps {disclaimer_height/mm:.0f}mm' if has_disclaimer else ''})")
+
+        c = canvas.Canvas(output_path, pagesize=(self.page_width, total_page_height))
+
+        # Full-page subtle marble background
+        self.draw_marble_background(c, 0, 0, self.page_width, total_page_height)
+
+        # Header (title, total input/output, cooking time, accessories, photo)
+        self.draw_header_section(c, recipe_data, image_path, total_page_height, header_height)
+
+        # Ingredient collage image directly below the header
+        if ingredient_image_path:
+            self.draw_ingredient_image_block(
+                c, ingredient_image_path, total_page_height - header_height, ingredient_img_height)
+
+        # Two-column body (Cooking Time/Ingredients card + Timeline), shifted
+        # up by bottom_extra to leave room for the disclaimer block below it.
+        self.page_height = content_height
+        c.saveState()
+        c.translate(0, bottom_extra)
+        self.draw_left_section(c, recipe_data)
         self.draw_right_section(c, recipe_data, seconds_per_bar)
+        self.draw_total_output_pill(c, recipe_data)
+        c.restoreState()
+        self.page_height = total_page_height
+
+        # Step disclaimer in the reserved strip at the very bottom
+        if has_disclaimer:
+            self.draw_disclaimer_block(
+                c,
+                disclaimer_english,
+                disclaimer_hindi,
+                prerequisite_english,
+                prerequisite_hindi,
+                bottom_extra
+            )
+
         c.showPage()
         c.save()
         
@@ -678,55 +3312,15 @@ class RecipePDFGenerator:
         return consolidated_steps
 
     def wrap_text_for_instruction(self, text, max_width_mm, font_name, font_size):
-        """Wrap text to fit within specified width, breaking at word boundaries"""
-        import textwrap
-        from reportlab.pdfgen import canvas
-        
-        # Create a temporary canvas to measure text width
-        temp_canvas = canvas.Canvas("temp")
-        temp_canvas.setFont(font_name, font_size)
-        
-        # Calculate approximate characters per line based on average character width
-        avg_char_width = temp_canvas.stringWidth("M", font_name, font_size)  # Use 'M' as average
-        approx_chars_per_line = int((max_width_mm * mm) / avg_char_width)
-        
-        # Start with textwrap estimate, then refine
-        wrapped_lines = textwrap.wrap(text, width=max(30, approx_chars_per_line + 5))
-        
-        # Refine by checking actual pixel width
-        final_lines = []
-        for line in wrapped_lines:
-            line_width = temp_canvas.stringWidth(line, font_name, font_size)
-            
-            # If line is still too long, break it further
-            while line_width > (max_width_mm * mm):
-                # Find break point by reducing characters
-                words = line.split()
-                if len(words) <= 1:
-                    # Single long word - break it forcefully
-                    break_point = len(line) // 2
-                    final_lines.append(line[:break_point] + "-")
-                    line = line[break_point:]
-                else:
-                    # Remove last word and try again
-                    line = " ".join(words[:-1])
-                    remaining_words = words[-1:]
-                    
-                    # Add current line and continue with remaining
-                    if line:
-                        final_lines.append(line)
-                    line = " ".join(remaining_words)
-                
-                line_width = temp_canvas.stringWidth(line, font_name, font_size)
-            
-            if line.strip():  # Don't add empty lines
-                final_lines.append(line)
-        
-        print(f"📝 Wrapped text: '{text}' -> {len(final_lines)} lines")
-        for i, line in enumerate(final_lines):
-            print(f"   Line {i+1}: '{line}'")
-        
-        return final_lines
+        """Compatibility wrapper around the strict width-aware text guardrail."""
+        lines = self.wrap_text_to_width(
+            text,
+            max_width_mm * mm,
+            font_name,
+            font_size
+        )
+        print(f"📝 Wrapped text: '{text}' -> {len(lines)} lines")
+        return lines
 
     def draw_step_intersection_circles(self, c, consolidated_steps, center_x, scale_y, total_bars, extra_bars, bar_height, bar_spacing, seconds_per_bar): 
         circle_radius = 2*mm
@@ -794,9 +3388,13 @@ class RecipePDFGenerator:
             # Draw step block
             self.draw_top_rounded_rect(c, x_offset + 4 * mm, step_y + 1*mm,
                                     block_width, block_height, corner_radius, self.skin_color)
-            c.setFillColor(black)
-            c.setFont(self.step_title_font, 11)
-            c.drawString(x_offset + 4 * mm + 2*mm, step_y + 2* mm, f"Step {step_number}")  # Left-aligned
+            self.draw_single_line_fit(
+                c, f"Step {step_number}",
+                x_offset + 4 * mm + 2 * mm, step_y + 2 * mm,
+                block_width - 4 * mm,
+                self.step_title_font, 11,
+                min_size=8, fill_color=self.body_text
+            )
             
             # Draw duration
             duration = step.get('durationInSec', 0)
@@ -815,9 +3413,14 @@ class RecipePDFGenerator:
                 small_r = 1.5* mm
                 c.setFillColor(self.green_time)
                 c.circle(circle_x - 1*mm, step_y + 3.5* mm, small_r, fill=1, stroke=0)
-                c.setFillColor(black)
-                c.setFont(self.section_detail_font, 11)
-                c.drawString(circle_x + small_r + 0 * mm, step_y + 2 * mm, duration_text)
+                duration_x = circle_x + small_r
+                duration_w = max(14 * mm, timeline_left_boundary - duration_x - 1 * mm)
+                self.draw_single_line_fit(
+                    c, duration_text,
+                    duration_x, step_y + 2 * mm, duration_w,
+                    self.section_detail_font, 11,
+                    min_size=7.5, fill_color=self.body_text
+                )
             
             # Handle instruction text with wrapping
             instruction_text = step.get('Text', '')
@@ -997,136 +3600,179 @@ class RecipePDFGenerator:
                             print(f"    Bar {bar_position} (index {actual_bar_index}): RED at Y={bar_y/mm:.1f}mm (M:{magnetron_power})")
             current_time += duration
         print("=== END PUMP BAR DEBUG ===")
-    def draw_left_section(self, c, recipe_data, image_path):
-        # Draw image or placeholder
-        if image_path and os.path.exists(image_path):
-            try:
-                c.drawImage(image_path, 0, self.page_height - self.image_height,
-                            width=self.image_width, height=self.image_height,
-                            preserveAspectRatio=False, anchor='nw')
-            except Exception as e:
-                print(f"Image processing error: {e}")
-                c.setFillColor(self.skin_color)
-                c.rect(0, self.page_height - self.image_height,
-                    self.image_width, self.image_height, fill=1)
-        else:
-            c.setFillColor(self.skin_color)
-            c.rect(0, self.page_height - self.image_height,
-                self.image_width, self.image_height, fill=1)
-        
+
+    def draw_left_section(self, c, recipe_data):
+        """Body-left card with strict horizontal/vertical text guardrails."""
         text_margin = 8 * mm
-        y_pos = self.page_height - self.image_height - 15 * mm
-        
-        # Draw recipe name
-        recipe_name = recipe_data.get('name', ['Unknown Recipe'])
-        if isinstance(recipe_name, list):
-            recipe_name = recipe_name[0] if recipe_name else 'Unknown Recipe'
-        recipe_name = ' '.join(word.capitalize() for word in recipe_name.split())
-        reduced_name_size = 18
-        c.setFont(self.recipe_name_font, reduced_name_size)
-        c.setFillColor(black)
-        max_width = self.image_width - (2 * text_margin)
-        text_width = c.stringWidth(recipe_name, self.recipe_name_font, reduced_name_size)
-        if text_width > max_width:
-            scale_factor = max_width / text_width
-            adjusted_size = reduced_name_size * scale_factor
-            c.setFont(self.recipe_name_font, adjusted_size)
-        c.drawString(text_margin, y_pos, recipe_name)
-        y_pos -= 7 * mm
-        
-        def draw_underlined_header(text, ypos):
-            c.setFont(self.section_title_font, self.section_title_size)
-            c.setFillColor(black)
-            c.drawString(text_margin, ypos, text)
-            word_width = c.stringWidth(text, self.section_title_font, self.section_title_size)
-            line_start = text_margin + word_width + 3 * mm
-            line_end = self.image_width - 8 * mm
-            c.setLineWidth(0.1 * mm)
-            c.setStrokeColor(self.line_color)
-            c.line(line_start, ypos - 1, line_end, ypos - 1)
-        
+        card_height = self.calculate_left_section_height(recipe_data)
+        card_top = self.page_height
+        card_x = 2 * mm
+        card_w = self.left_section_width - 4 * mm
+        card_y = card_top - card_height
+
+        # Marble remains visible under a soft warm card.
+        self.draw_soft_card(c, card_x, card_y, card_w, card_height, 4 * mm)
+
+        card_bottom = card_y + 6 * mm
+        y_pos = card_top - 10 * mm
+        inner_right = self.left_section_width - 7 * mm
+        inner_width = inner_right - text_margin
+
+        def draw_icon_header(label, icon, y):
+            self.draw_icon_badge(c, text_margin + 3 * mm, y, 3.6 * mm, icon)
+            self.draw_single_line_fit(
+                c, label, text_margin + 9 * mm, y - 1.3 * mm,
+                inner_right - (text_margin + 9 * mm),
+                self.section_title_font, self.section_title_size,
+                min_size=8, fill_color=self.title_green
+            )
+            return y
+
         # Cooking Time
-        draw_underlined_header("Cooking Time", y_pos)
-        y_pos -= 7 * mm
-        c.setFont(self.section_detail_font, self.section_detail_size)
-        cooking_times = self.extract_cooking_time(recipe_data)
-        for time_line in cooking_times:
-            c.drawString(text_margin, y_pos, time_line)
-            y_pos -= 6 * mm
-        y_pos -= 0 * mm
-        
-        # Accessories - Bold title, normal content, no underline
-        accessories = self.extract_accessories(recipe_data)
-        c.setFont(self.section_title_font, self.section_title_size)  # Bold for "Accessories:"
-        c.setFillColor(black)
-        title_text = "Accessories:"
-        c.drawString(text_margin, y_pos, title_text)
-        title_width = c.stringWidth(title_text, self.section_title_font, self.section_title_size)
-        
-        c.setFont(self.section_detail_font, self.section_detail_size)  # Normal font for content
-        if accessories:
-            if len(accessories) >= 2:
-                content_text = f" {accessories[0]}, {accessories[1]}"  # Space for alignment
-                c.drawString(text_margin + title_width, y_pos, content_text)
-                y_pos -= 6 * mm
-                for acc in accessories[2:]:
-                    c.drawString(text_margin + 20 * mm, y_pos, acc)
-                    y_pos -= 6 * mm
-            else:
-                content_text = f" {accessories[0]}"  # Space for alignment
-                c.drawString(text_margin + title_width, y_pos, content_text)
-                y_pos -= 6 * mm
-        else:
-            content_text = " N/A"  # Space for alignment
-            c.drawString(text_margin + title_width, y_pos, content_text)
-            y_pos -= 6 * mm
-        
-        # Ingredients
-        y_pos -= 3 * mm
-        draw_underlined_header("Ingredients", y_pos)
+        y_pos = draw_icon_header("Cooking Time", 'clock', y_pos)
         y_pos -= 8 * mm
-        
-        c.setFont(self.section_detail_font, self.section_detail_size)
-        ingredients = self.extract_ingredients(recipe_data)
-        for ingredient in ingredients:
-            if y_pos < 10 * mm:
+
+        for time_line in self.extract_cooking_time(recipe_data):
+            for part in [p.strip() for p in time_line.split('    ') if p.strip()]:
+                wrapped = self.wrap_text_to_width(
+                    part, inner_width, self.section_detail_font, self.section_detail_size
+                )
+                for line in wrapped:
+                    if y_pos < card_bottom:
+                        break
+                    self.draw_single_line_fit(
+                        c, line, text_margin, y_pos, inner_width,
+                        self.section_detail_font, self.section_detail_size,
+                        min_size=7, fill_color=self.body_text
+                    )
+                    y_pos -= 5 * mm
+
+        y_pos -= 2 * mm
+
+        # Accessories
+        self.draw_single_line_fit(
+            c, "Accessories:", text_margin, y_pos, inner_width,
+            self.section_title_font, self.section_title_size,
+            min_size=8, fill_color=self.title_green
+        )
+        y_pos -= 6 * mm
+
+        accessories = self.extract_accessories(recipe_data)
+        acc_text = ', '.join(accessories) if accessories else 'N/A'
+        for line in self.wrap_text_to_width(
+            acc_text, inner_width, self.section_detail_font, self.section_detail_size
+        ):
+            if y_pos < card_bottom:
                 break
-            if ingredient.startswith('  '):
-                c.setFont(self.section_detail_font, self.section_detail_size)
-                c.drawString(text_margin + 20 * mm, y_pos, ingredient.strip())
-            else:
-                c.setFont(self.section_detail_font, self.section_detail_size)
-                if '\t' in ingredient:
-                    weight, name = ingredient.split('\t', 1)
-                    c.drawString(text_margin, y_pos, weight)
-                    c.drawString(text_margin + 20 * mm, y_pos, name)
-                else:
-                    c.drawString(text_margin, y_pos, ingredient)
+            self.draw_single_line_fit(
+                c, line, text_margin, y_pos, inner_width,
+                self.section_detail_font, self.section_detail_size,
+                min_size=7, fill_color=self.body_text
+            )
             y_pos -= 5 * mm
-        
+
+        y_pos -= 3 * mm
+        y_pos = draw_icon_header("Ingredients", 'ingredients', y_pos)
+        y_pos -= 9 * mm
+
+        ingredients = self.extract_ingredients(recipe_data)
+        weight_x = text_margin
+        name_x = text_margin + 20 * mm
+        name_width = inner_right - name_x
+        sub_x = text_margin + 4 * mm
+        sub_width = inner_right - sub_x
+
+        for ingredient in ingredients:
+            if y_pos < card_bottom:
+                break
+
+            if ingredient.startswith('  '):
+                lines = self.wrap_text_to_width(
+                    ingredient.strip(), sub_width,
+                    self.section_detail_font, self.section_detail_size
+                )
+                for line in lines:
+                    if y_pos < card_bottom:
+                        break
+                    self.draw_single_line_fit(
+                        c, line, sub_x, y_pos, sub_width,
+                        self.section_detail_font, self.section_detail_size,
+                        min_size=7, fill_color=self.body_muted
+                    )
+                    y_pos -= 5 * mm
+            else:
+                if '	' in ingredient:
+                    weight, name = ingredient.split('	', 1)
+                    name_lines = self.wrap_text_to_width(
+                        name, name_width, self.step_title_font, self.section_detail_size
+                    )
+                    self.draw_single_line_fit(
+                        c, weight, weight_x, y_pos, 18 * mm,
+                        self.step_title_font, self.section_detail_size,
+                        min_size=7, fill_color=self.body_text
+                    )
+                    for j, line in enumerate(name_lines):
+                        if y_pos < card_bottom:
+                            break
+                        self.draw_single_line_fit(
+                            c, line, name_x, y_pos, name_width,
+                            self.step_title_font, self.section_detail_size,
+                            min_size=7, fill_color=self.body_text
+                        )
+                        y_pos -= 5 * mm
+                else:
+                    lines = self.wrap_text_to_width(
+                        ingredient, inner_width,
+                        self.step_title_font, self.section_detail_size
+                    )
+                    for line in lines:
+                        if y_pos < card_bottom:
+                            break
+                        self.draw_single_line_fit(
+                            c, line, text_margin, y_pos, inner_width,
+                            self.step_title_font, self.section_detail_size,
+                            min_size=7, fill_color=self.body_text
+                        )
+                        y_pos -= 5 * mm
+
         # Other Essentials
         other_essentials = self.extract_other_essentials(recipe_data)
-        if other_essentials:
+        if other_essentials and y_pos > card_bottom + 12 * mm:
             y_pos -= 3 * mm
-            draw_underlined_header("Other Essentials", y_pos)
-            y_pos -= 8 * mm
-            
-            c.setFont(self.section_detail_font, 10)
+            y_pos = draw_icon_header("Other Essentials", 'ingredients', y_pos)
+            y_pos -= 9 * mm
+
             for essential in other_essentials:
-                if y_pos < 20 * mm:
+                if y_pos < card_bottom:
                     break
+
                 if essential.startswith('  '):
-                    c.setFont(self.section_detail_font, 10)
-                    c.drawString(text_margin + 20 * mm, y_pos, essential.strip())
+                    text = essential.strip()
+                    x, width = name_x, name_width
+                elif '	' in essential:
+                    weight, text = essential.split('	', 1)
+                    self.draw_single_line_fit(
+                        c, weight, weight_x, y_pos, 18 * mm,
+                        self.section_detail_font, 10,
+                        min_size=7, fill_color=self.body_text
+                    )
+                    x, width = name_x, name_width
                 else:
-                    c.setFont(self.section_detail_font, 10)
-                    if '\t' in essential:
-                        weight, name = essential.split('\t', 1)
-                        c.drawString(text_margin, y_pos, weight)
-                        c.drawString(text_margin + 20 * mm, y_pos, name)
-                    else:
-                        c.drawString(text_margin, y_pos, essential)
-                y_pos -= 5 * mm
+                    text = essential
+                    x, width = text_margin, inner_width
+
+                for line in self.wrap_text_to_width(
+                    text, width, self.section_detail_font, 10
+                ):
+                    if y_pos < card_bottom:
+                        break
+                    self.draw_single_line_fit(
+                        c, line, x, y_pos, width,
+                        self.section_detail_font, 10,
+                        min_size=7, fill_color=self.body_text
+                    )
+                    y_pos -= 5 * mm
+
     def draw_top_rounded_rect(self, c, x, y, width, height, radius, fill_color):
         """Draw rectangle with only top corners rounded"""
         c.saveState()
@@ -1171,206 +3817,243 @@ class RecipePDFGenerator:
         c.setFillColor(white)
         c.setFont(self.section_detail_font, 8)
         c.drawCentredString(x_pos+5.5*mm, y_pos+2*mm, "I")
-        c.setFillColor(black)
-        c.setFont(self.section_detail_font, 11)
-        c.drawString(x_pos + circle_radius + 6.5*mm, y_pos + 2*mm, induction_power)
+        self.draw_single_line_fit(
+            c, str(induction_power),
+            x_pos + circle_radius + 6.5 * mm, y_pos + 2 * mm,
+            10 * mm,
+            self.section_detail_font, 11,
+            min_size=8, fill_color=black
+        )
         red_circle_x = x_pos + circle_spacing
         c.setFillColor(self.red_color)
         c.circle(red_circle_x+2.5*mm, y_pos+3*mm, circle_radius, fill=1, stroke=0)
         c.setFillColor(white)
         c.setFont(self.section_detail_font, 8)
         c.drawCentredString(red_circle_x+2.5*mm, y_pos+2*mm, "M")
-        c.setFillColor(black)
-        c.setFont(self.section_detail_font, 11)
-        c.drawString(red_circle_x + circle_radius + 3.5*mm, y_pos + 2*mm, magnetron_power)
-
-    def draw_total_output(self, c, x_offset, recipe_data, seconds_per_bar):
-        """Draw the total output at the bottom of the timeline with formatting from the old version."""
-        # Extract the output value using the existing method
-        total_output = self.extract_output(recipe_data)
-        
-        # Set font and color
-        c.setFont(self.section_title_font, 10)
-        c.setFillColor(black)
-        
-        # Calculate center_x as the timeline's vertical center bar position
-        magnetron_x = self.page_width - 15 * mm
-        induction_x = magnetron_x - 23 * mm
-        center_x = (induction_x + magnetron_x) / 2
-        
-        # Calculate timeline bottom position
-        instructions = recipe_data.get('Instruction', [])
-        total_time_sec = sum(int(instr.get('durationInSec', 0)) for instr in instructions)
-        first_duration = safe_int(instructions[0].get('durationInSec', 0)) if instructions else 0
-        extra_bars = 5 if first_duration == 0 else 0
-        time_bars = self.calculate_bar_position_with_rounding(total_time_sec, seconds_per_bar)
-        total_bars = time_bars + extra_bars
-        
-        bar_height = 1 * mm
-        bar_spacing = 1 * mm
-        timeline_start_y = (self.page_height - 30 * mm) - 35 * mm
-        timeline_end_y = timeline_start_y - (total_bars * (bar_height + bar_spacing))
-        
-        # Place output value 8 mm above bottom, "Total Output" 4 mm above it
-        output_y = 8 * mm
-        total_output_y = 12 * mm
-        
-        # Ensure text is below timeline
-        if output_y <= timeline_end_y <= total_output_y:
-            total_output_y = timeline_end_y - 4 * mm
-            output_y = timeline_end_y - 8 * mm
-        
-        # Draw the text
-        c.drawCentredString(center_x, total_output_y, "Total Output:")
-        c.drawCentredString(center_x, output_y, total_output)
-        print("🔍 Drawing total output...")
+        self.draw_single_line_fit(
+            c, str(magnetron_power),
+            red_circle_x + circle_radius + 3.5 * mm, y_pos + 2 * mm,
+            10 * mm,
+            self.section_detail_font, 11,
+            min_size=8, fill_color=black
+        )
 
     def parse_instruction_with_weight(self, instruction_text, recipe_data, current_step=None):
+        """Add ingredient weights to timeline labels without misclassifying
+        ingredient-group names such as 'Mix Sauce & Noodles' as action verbs.
+        """
         instruction_text = clean_time_and_units_text(instruction_text)
+        ingredients = recipe_data.get('Ingredients', [])
+
+        # If the instruction already contains quantities, keep it exactly.
+        if re.search(
+            r'\d+\s*(g|gm|ml|kg|l|number|Nos|inch)\b',
+            instruction_text,
+            re.IGNORECASE
+        ):
+            print(f"🎯 Instruction already contains weights: '{instruction_text}'")
+            return [instruction_text]
+
+        # CRITICAL: exact Ingredients[] match comes BEFORE cooking-action filtering.
+        for ingredient in ingredients:
+            ing_title = str(ingredient.get('title', '') or '').strip()
+            ing_weight = clean_time_and_units_text(
+                str(ingredient.get('weight', '') or '').strip()
+            )
+            if ing_title and ing_title.lower() == instruction_text.strip().lower():
+                if ing_weight:
+                    display = f"{ing_weight} {instruction_text.strip()}"
+                    print(
+                        f"🔍 Using ingredient weight: {ing_weight} for "
+                        f"'{instruction_text.strip()}' (exact match before action filter)"
+                    )
+                    return [display]
+
+        # Real cooking operations should not receive a fake ingredient weight.
         exclude_cooking_actions = [
-            'dum', 'mix', 'marinate', 'stir', 'cook', 'saute', 'heat', 
+            'dum', 'marinate', 'stir', 'cook', 'saute', 'heat',
             'fry', 'boil', 'grill', 'roast', 'bake', 'steam', 'simmer',
             'blend', 'whisk', 'knead', 'rest', 'cool', 'chill', 'freeze',
             'serve', 'garnish', 'season', 'taste', 'adjust', 'cover',
-            'uncover', 'turn', 'flip', 'drain', 'strain', 'filter'
+            'uncover', 'turn', 'flip', 'drain', 'strain', 'filter',
+            'temperature down'
         ]
-        if any(action in instruction_text.lower() for action in exclude_cooking_actions):
+
+        # "mix" is intentionally NOT blanket-excluded here because legitimate
+        # ingredient groups can be called "Mix Sauce & Noodles", "Mix Masala", etc.
+        lower_text = instruction_text.lower().strip()
+        if any(action in lower_text for action in exclude_cooking_actions):
             print(f"🚫 Excluding cooking action: '{instruction_text}' (no weight added)")
             return [instruction_text]
+
         lines = []
-        # If the instruction text already contains weights (from merging), use it as-is
-        if re.search(r'\d+\s*(g|gm|ml|kg|l|number|Nos|inch)\b', instruction_text, re.IGNORECASE):
-            print(f"🎯 Instruction already contains weights: '{instruction_text}'")
-            return [instruction_text]
-        # Fallback: Split instruction and look up weights
+
         if ', ' in instruction_text:
             instruction_parts = instruction_text.split(', ')
         else:
             instruction_parts = [instruction_text]
-        ingredients = recipe_data.get('Ingredients', [])
+
         for instruction in instruction_parts:
             instruction = instruction.strip()
             weight_found = False
             display_line = instruction
+
+            # Prefer current step weight when valid.
             if current_step and current_step.get('Weight'):
-                step_weight = current_step.get('Weight', '').strip()
-                step_weight = clean_time_and_units_text(step_weight)
-                if step_weight:
+                step_weight = clean_time_and_units_text(
+                    str(current_step.get('Weight', '') or '').strip()
+                )
+                qty, _, _ = _parse_amount(step_weight)
+                if step_weight and (qty is None or qty > 0):
                     display_line = f"{step_weight} {instruction}"
                     weight_found = True
                     print(f"🎯 Using step weight: {step_weight} for '{instruction}'")
+
             if not weight_found:
+                # Exact match.
                 for ingredient in ingredients:
-                    ing_title = ingredient.get('title', '').strip()
-                    ing_weight = ingredient.get('weight', '').strip()
-                    ing_weight = clean_time_and_units_text(ing_weight)
-                    if ing_title.lower() == instruction.lower():
-                        if ing_weight:
-                            display_line = f"{ing_weight} {instruction}"
-                            weight_found = True
-                            print(f"🔍 Using ingredient weight: {ing_weight} for '{instruction}' (exact match)")
-                            break
-                if not weight_found:
-                    for ingredient in ingredients:
-                        ing_title = ingredient.get('title', '').strip()
-                        ing_weight = ingredient.get('weight', '').strip()
-                        ing_weight = clean_time_and_units_text(ing_weight)
-                        if ing_title.lower() in instruction.lower():
-                            if ing_weight:
-                                display_line = f"{ing_weight} {instruction}"
-                                weight_found = True
-                                print(f"🔍 Using ingredient weight: {ing_weight} for '{instruction}' (partial match)")
-                                break
+                    ing_title = str(ingredient.get('title', '') or '').strip()
+                    ing_weight = clean_time_and_units_text(
+                        str(ingredient.get('weight', '') or '').strip()
+                    )
+                    if ing_title.lower() == instruction.lower() and ing_weight:
+                        display_line = f"{ing_weight} {instruction}"
+                        weight_found = True
+                        print(
+                            f"🔍 Using ingredient weight: {ing_weight} "
+                            f"for '{instruction}' (exact match)"
+                        )
+                        break
+
             if not weight_found:
-                display_line = instruction
+                # Partial match as a last resort.
+                for ingredient in ingredients:
+                    ing_title = str(ingredient.get('title', '') or '').strip()
+                    ing_weight = clean_time_and_units_text(
+                        str(ingredient.get('weight', '') or '').strip()
+                    )
+                    if ing_title and ing_title.lower() in instruction.lower() and ing_weight:
+                        display_line = f"{ing_weight} {instruction}"
+                        weight_found = True
+                        print(
+                            f"🔍 Using ingredient weight: {ing_weight} "
+                            f"for '{instruction}' (partial match)"
+                        )
+                        break
+
             lines.append(display_line)
+
         return lines
+
     def draw_right_section(self, c, recipe_data, seconds_per_bar):
+        """Right section with non-overlapping labels centered over the real I/M bar halves."""
         print("🔍 === DRAWING RIGHT SECTION ===")
         print(f" QR image available: {self.qr_image is not None}")
-        
+
         x_offset = self.left_section_width + self.left_margin
-        circle_y = self.page_height - 30*mm
+        circle_y = self.page_height - 12 * mm
+
+        # These anchors are the same anchors used by draw_timeline().
+        magnetron_x = self.page_width - 15 * mm
+        induction_x = magnetron_x - 23 * mm
         circle_radius = self.circle_diameter / 2
-        magnetron_x = self.page_width - 15*mm
-        induction_x = magnetron_x - 23*mm
-        
-        # Draw QR code at top-left of right section if available
+
+        # Actual bar span:
+        #   [bar_left .......... center .......... bar_right]
+        #           induction              microwave
+        bar_left = induction_x - circle_radius
+        bar_right = magnetron_x + circle_radius
+        center_x = (bar_left + bar_right) / 2
+
+        induction_col_center = (bar_left + center_x) / 2
+        microwave_col_center = (center_x + bar_right) / 2
+        half_col_width = (bar_right - bar_left) / 2
+
+        # Keep visible space between labels and inside page margins.
+        pill_gap = 2.0 * mm
+        pill_w = max(15 * mm, half_col_width - pill_gap)
+        pill_h = 7 * mm
+
+        c.saveState()
+
+        # INDUCTION — exactly centered on left/orange timeline half.
+        c.setFillColor(self.orange_color)
+        c.roundRect(
+            induction_col_center - pill_w / 2,
+            circle_y - pill_h / 2,
+            pill_w, pill_h, pill_h / 2,
+            stroke=0, fill=1
+        )
+        self.draw_single_line_fit(
+            c, "INDUCTION",
+            induction_col_center - pill_w / 2 + 1 * mm,
+            circle_y - 1.35 * mm,
+            pill_w - 2 * mm,
+            self.section_title_font, 7.7,
+            min_size=6.2, fill_color=white, align='center'
+        )
+
+        # MICROWAVE — exactly centered on right/red timeline half.
+        c.setFillColor(self.red_color)
+        c.roundRect(
+            microwave_col_center - pill_w / 2,
+            circle_y - pill_h / 2,
+            pill_w, pill_h, pill_h / 2,
+            stroke=0, fill=1
+        )
+        self.draw_single_line_fit(
+            c, "MICROWAVE",
+            microwave_col_center - pill_w / 2 + 1 * mm,
+            circle_y - 1.35 * mm,
+            pill_w - 2 * mm,
+            self.section_title_font, 7.7,
+            min_size=6.2, fill_color=white, align='center'
+        )
+
+        c.restoreState()
+
+        # Optional QR code — kept away from timeline headings.
         if self.qr_image:
             print(" Drawing QR code on PDF...")
             try:
-                # Convert PIL image to a temporary file for ReportLab
                 tmp_qr_path = os.path.join(tempfile.gettempdir(), "qr_temp_image.png")
-                print(f"💾 Saving QR to temp file: {tmp_qr_path}")
                 self.qr_image.save(tmp_qr_path)
-                print(f"✅ QR saved to temp file successfully")
-                
-                # Position: top-left of right section
-                qr_margin_x = x_offset + 5*mm
-                qr_margin_y = self.page_height - 5*mm
-
-                qr_size = 24*mm
-                print(f" QR position: x={qr_margin_x/mm:.1f}mm, y={qr_margin_y/mm:.1f}mm, size={qr_size/mm:.1f}mm")
-                
-                c.drawImage(tmp_qr_path, qr_margin_x, qr_margin_y - qr_size,
-                            width=qr_size, height=qr_size, preserveAspectRatio=True, mask='auto')
+                qr_size = 16 * mm
+                qr_x = x_offset + 4 * mm
+                qr_y = self.page_height - 4 * mm - qr_size
+                c.drawImage(
+                    tmp_qr_path, qr_x, qr_y,
+                    width=qr_size, height=qr_size,
+                    preserveAspectRatio=True, mask='auto'
+                )
+                self.draw_single_line_fit(
+                    c, "Scan to download recipe",
+                    qr_x, qr_y - 3 * mm, 34 * mm,
+                    self.section_detail_font, 6.5,
+                    min_size=5.5, fill_color=self.body_text
+                )
                 print("✅ QR code drawn on PDF successfully!")
-                
-                # Add text on the right side of QR code
-                text_x = qr_margin_x + qr_size + 3*mm
-                text_start_y = qr_margin_y - 3*mm
-                
-                # Set font and color for QR text
-                c.setFont(self.section_detail_font, 9)
-                c.setFillColor(black)
-                
-                # Draw the three lines of text
-                line_spacing = 4*mm
-                c.drawString(text_x, text_start_y, "Scan to")
-                c.drawString(text_x, text_start_y - line_spacing, "Download")
-                c.drawString(text_x, text_start_y - (2 * line_spacing), "The Recipe")
-                print("✅ QR text labels drawn successfully!")
-                
             except Exception as e:
                 print(f"❌ QR draw error: {e}")
-                import traceback
-                traceback.print_exc()
-        else:
-            print("ℹ️ No QR image available, skipping QR drawing")
-        
-        print("🔍 Drawing INDUCTION and MICROWAVE circles...")
-        # INDUCTION circle
-        c.setFillColor(self.orange_color)
-        c.circle(induction_x, circle_y, circle_radius, fill=1, stroke=0)
-        c.setFillColor(white)
-        c.setFont(self.section_title_font, 7)
-        c.drawCentredString(induction_x, circle_y - 2, "INDUCTION")
-        
-        # MICROWAVE circle
-        c.setFillColor(self.red_color)
-        c.circle(magnetron_x, circle_y, circle_radius, fill=1, stroke=0)
-        c.setFillColor(white)
-        c.setFont(self.section_title_font, 7)
-        c.drawCentredString(magnetron_x, circle_y - 2, "MICROWAVE")
+
         if self.has_stirrer_activity(recipe_data):
             print("🔍 Stirrer activity detected, drawing stirrer SVG...")
-            # Calculate center position between induction and microwave circles
             stirrer_x = (induction_x + magnetron_x) / 2
-            stirrer_y = circle_y
-            
-            # Draw the stirrer SVG (adjust scale as needed)
-            self.draw_stirrer_svg(c, 
-                                stirrer_x - 2.3*mm,  # Offset to center the SVG
-                                stirrer_y - 10*mm,  # Offset to center the SVG
-                                'Stirrer.svg',      # SVG file path
-                                scale=0.6)          # Scale factor (adjust as needed)
+            self.draw_stirrer_svg(
+                c, stirrer_x - 2.3 * mm,
+                circle_y - 10 * mm,
+                'Stirrer.svg', scale=0.6
+            )
         else:
             print("ℹ️ No stirrer activity detected, skipping stirrer SVG")
-        timeline_start_y = circle_y - 35*mm
+
+        # Position timeline ruler directly under the centered pills.
+        timeline_start_y = circle_y - pill_h / 2 - 22 * mm
         print("🔍 Drawing timeline...")
-        self.draw_timeline(c, x_offset, timeline_start_y, recipe_data, seconds_per_bar)
-        print("🔍 Drawing total output...")
-        self.draw_total_output(c, x_offset, recipe_data, seconds_per_bar)  # Pass parameter
+        self.draw_timeline(
+            c, x_offset, timeline_start_y,
+            recipe_data, seconds_per_bar
+        )
         print("✅ Right section drawing completed!")
 
     def draw_stirrer_speed_bars(self, c, consolidated_steps, center_x, scale_y, total_time_sec, total_bars, extra_bars, seconds_per_bar):
@@ -1604,6 +4287,11 @@ class RecipePDFGenerator:
             print(f"DEBUG: Regex pattern used: r'OUTPUT\s+([^\n\r]+)'")
             return 'n/a'
     def extract_accessories(self, recipe_data):
+        """Parse the ACCESSORIES block for summary display.
+
+        Notes must NOT appear inside the Accessories field, otherwise the UI
+        truncates them with ellipses. So we stop when NOTE / NOTES begins.
+        """
         description = recipe_data.get('description', '')
         accessories = []
         if 'ACCESSORIES' in description.upper():
@@ -1615,9 +4303,13 @@ class RecipePDFGenerator:
                     collecting = True
                     continue
                 elif collecting and line:
-                    if any(keyword in line.upper() for keyword in ['OUTPUT', 'NORMAL', 'COOKING', 'OTHER ESSENTIALS']):
+                    upper = line.upper()
+                    if any(
+                        upper.startswith(keyword)
+                        for keyword in ['OUTPUT', 'FINAL OUTPUT', 'NORMAL', 'COOKING', 'OTHER ESSENTIALS', 'NOTE', 'NOTES']
+                    ):
                         break
-                    accessories.append(line.title())
+                    accessories.append(line)
         return accessories
 
     # Units seen in real recipe data (extend here as new units show up)
