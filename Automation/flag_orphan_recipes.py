@@ -7,7 +7,7 @@ sync_description has already fixed any stale description names, and
 parse_to_json has re-run to pick that up) and flags any recipe still
 orphaned as hidden.
 
-Orphan logic (updated):
+Orphan logic:
 
   The ZIP-stem check is the PRIMARY trigger. The Recipe Name check is a
   CROSS-CHECK, not an independent trigger — a recipe is only auto-hidden
@@ -18,14 +18,7 @@ Orphan logic (updated):
   name mismatch.
 
   1. ZIP-stem check (primary): the recipe's own ZIP is no longer attached
-     to ANY row on Smartsheet at all. This is what catches the common
-     duplicate scenario — a recipe gets re-uploaded under a new ZIP
-     filename (same dish name), a new folder gets extracted for the new
-     stem, but the OLD folder is never deleted. The old folder's internal
-     name still equals the (unchanged) Smartsheet Recipe Name, so the
-     name-based check alone would wave it through as "matched" — two
-     entries, same name, both visible. Comparing zip stems directly closes
-     that gap regardless of what the name says.
+     to ANY row on Smartsheet at all.
 
   2. Recipe Name check (cross-check): the recipe's final Recipe Name has
      no matching row at all. Used to CONFIRM a zip-orphan finding (both
@@ -33,17 +26,40 @@ Orphan logic (updated):
      check can't run), the name check is used alone as a fallback safety
      net.
 
+  3. In-file duplicate check (separate, narrowly scoped): catches the
+     "re-uploaded under a new ZIP, old folder never deleted" scenario —
+     TWO entries with the exact same Recipe Name already sitting side by
+     side in THIS SAME recipes_fix.json. Only fires within such a group.
+     Of the group, whichever entry's zip stem is currently a valid
+     Smartsheet attachment is kept; the other(s) are hidden. If the group
+     is ambiguous (none or more than one member currently valid), nothing
+     is auto-hidden — it's printed as NEEDS MANUAL REVIEW instead.
+
+     IMPORTANT: this check never runs against singleton recipes (only one
+     entry with that name in the file). A previous version of this script
+     compared every recipe's Image-stem against a Smartsheet-wide
+     name→stem map and mass-hid ~200 recipes because that stem comparison
+     is not resilient to minor filename formatting differences unrelated
+     to actual duplication. Do not reintroduce that pattern — any
+     comparison broad enough to span the whole file is too risky to run
+     unattended. Duplicates must be found locally, inside this file, first.
+
 This must run LAST, after sync_description + the final parse_to_json
 re-run — never before. If it ran earlier, a recipe whose description name
 hadn't been synced yet would look like an orphan and get wrongly hidden,
 even though it actually has a Smartsheet match under its corrected name.
 
 Usage:
-  python flag_orphan_recipes.py
+  python flag_orphan_recipes.py             # dry run — prints what WOULD change, writes nothing
+  python flag_orphan_recipes.py --apply      # actually writes hidden/hiddenReason to OUTPUT_JSON
 """
 
+import sys
 import json
+import shutil
+from datetime import datetime
 from pathlib import Path
+from collections import defaultdict
 
 import download_zips
 from parse_txt_to_json import (
@@ -54,6 +70,7 @@ from parse_txt_to_json import (
 )
 
 NO_SMARTSHEET_MATCH_REASON = "not needed anymore"
+DUPLICATE_SUPERSEDED_REASON = "superseded by newer ZIP under same Recipe Name"
 
 
 def _recipe_key_from_image_path(image_path: str) -> str:
@@ -67,21 +84,47 @@ def _recipe_key_from_image_path(image_path: str) -> str:
     return Path(image_path).stem.upper()
 
 
-def flag_orphan_recipes() -> int:
+def _find_in_file_duplicate_groups(recipes):
     """
-    Loads OUTPUT_JSON, flags any recipe as hidden=true /
-    hiddenReason="not needed anymore" if:
+    Groups recipe indices by exact Recipe Name (upper/stripped), restricted
+    to names that appear MORE THAN ONCE in this file. This is a purely
+    local, in-file grouping — no Smartsheet data involved — so it can never
+    mislabel a singleton recipe no matter what naming drift exists on the
+    Smartsheet side.
+    """
+    by_name = defaultdict(list)
+    for i, r in enumerate(recipes):
+        name = r.get("Recipe Name", "").strip().upper()
+        if name:
+            by_name[name].append(i)
+    return {name: idxs for name, idxs in by_name.items() if len(idxs) > 1}
 
+
+def flag_orphan_recipes(apply: bool = False) -> int:
+    """
+    Loads OUTPUT_JSON and identifies recipes to hide via two independent,
+    narrowly-scoped checks. By default this is a DRY RUN: it prints what
+    would change and writes nothing. Pass apply=True (or --apply on the
+    CLI) to actually write hidden/hiddenReason back to OUTPUT_JSON.
+
+    Check A — true orphan (existing logic, unchanged):
       - its own ZIP is no longer attached to any Smartsheet row AND its
         Recipe Name also has no matching row (both must agree), OR
       - it has no Image path at all (zip check can't run) AND its Recipe
-        Name has no matching row (name-only fallback),
+        Name has no matching row (name-only fallback).
 
-    UNLESS it already has a 'hidden' value (manual or previously
-    auto-set), which is left untouched.
+    Check B — in-file stale duplicate (see module docstring):
+      - only considered for names that appear more than once in THIS file
+      - of such a group, the member(s) whose zip stem is NOT a current
+        Smartsheet attachment are hidden, but only if exactly one member
+        of the group IS current (unambiguous winner). Ambiguous groups are
+        printed for manual review and left untouched.
+
+    Recipes that already have a 'hidden' value (manual or previously
+    auto-set) are left untouched by both checks.
 
     Returns:
-        Number of recipes newly flagged this run.
+        Number of recipes that would be (or were) newly flagged this run.
     """
     if not Path(OUTPUT_JSON).exists():
         print(f"⚠ {OUTPUT_JSON} not found — nothing to flag.")
@@ -90,30 +133,42 @@ def flag_orphan_recipes() -> int:
     with open(OUTPUT_JSON, "r", encoding="utf-8") as f:
         recipes = json.load(f)
 
-    stem_to_row_id  = download_zips.get_zip_stem_to_row_id()
-    valid_zip_stems = set(stem_to_row_id.keys())
-    row_id_to_stem  = {v: k for k, v in stem_to_row_id.items()}
-
+    valid_zip_stems  = set(download_zips.get_zip_stem_to_row_id().keys())
     smartsheet_map   = load_smartsheet_data()
     smartsheet_names = set(smartsheet_map.keys())
 
-    # For every Smartsheet row, find the ONE zip stem currently attached to
-    # it. This is the piece the old logic was missing: "does this Recipe
-    # Name exist somewhere in Smartsheet" is a different question from
-    # "does this Recipe Name's row currently own THIS recipe's zip." A
-    # re-uploaded dish keeps the same name on a NEW row/zip, so the old
-    # name-only check always passed for both the stale and current entry.
-    name_to_current_stem = {
-        name: row_id_to_stem[row_data["_row_id"]]
-        for name, row_data in smartsheet_map.items()
-        if row_data.get("_row_id") in row_id_to_stem
-    }
+    duplicate_groups = _find_in_file_duplicate_groups(recipes)
+    if duplicate_groups:
+        print(f"🔎 Found {len(duplicate_groups)} Recipe Name(s) with multiple entries in {OUTPUT_JSON}:")
+        for name, idxs in duplicate_groups.items():
+            stems = [_recipe_key_from_image_path(recipes[i].get("Image", "")) for i in idxs]
+            print(f"   - {name}: {list(zip(stems, idxs))}")
+        print()
 
-    newly_flagged = 0
+    to_hide = {}  # index -> reason
 
-    for recipe in recipes:
-        if "hidden" in recipe:
-            # Already has a hidden value (manual or previously auto-set) — leave it alone.
+    # --- Check B: in-file stale duplicates, resolved only within each group ---
+    for name, idxs in duplicate_groups.items():
+        members = []
+        for i in idxs:
+            if "hidden" in recipes[i]:
+                continue  # already decided, don't touch
+            stem = _recipe_key_from_image_path(recipes[i].get("Image", ""))
+            members.append((i, stem, stem in valid_zip_stems))
+
+        current = [m for m in members if m[2]]
+        stale   = [m for m in members if not m[2]]
+
+        if len(current) == 1 and stale:
+            for i, stem, _ in stale:
+                to_hide[i] = DUPLICATE_SUPERSEDED_REASON
+        elif members:
+            print(f"⚠ NEEDS MANUAL REVIEW — ambiguous duplicate group '{name}': "
+                  f"{[(stem, 'current' if is_cur else 'stale') for _, stem, is_cur in members]}")
+
+    # --- Check A: true orphans (unchanged original logic) ---
+    for i, recipe in enumerate(recipes):
+        if "hidden" in recipe or i in to_hide:
             continue
 
         name = recipe.get("Recipe Name", "").strip().upper()
@@ -123,52 +178,36 @@ def flag_orphan_recipes() -> int:
         zip_is_orphan  = has_image and recipe_key not in valid_zip_stems
         name_is_orphan = name not in smartsheet_names
 
-        current_stem_for_name = name_to_current_stem.get(name)
-        is_stale_duplicate = (
-            has_image
-            and current_stem_for_name is not None
-            and recipe_key != current_stem_for_name
-        )
-
-        should_hide = False
-        reason = ""
-
-        if is_stale_duplicate:
-            # This entry's own zip is not the one currently attached to
-            # this Recipe Name's row anymore — a newer zip superseded it.
-            # Fires even though the Recipe Name still "exists" in Smartsheet.
-            should_hide = True
-            reason = "superseded by a newer ZIP under the same Recipe Name"
-        elif has_image:
-            # ZIP check is the trigger, name check is a cross-check.
-            # Both must agree before we hide anything.
+        if has_image:
             if zip_is_orphan and name_is_orphan:
-                should_hide = True
-                reason = "ZIP gone from Smartsheet + no Recipe Name match"
+                to_hide[i] = "ZIP gone from Smartsheet + no Recipe Name match"
         else:
-            # No image path, so the zip check can't run at all —
-            # fall back to the name check alone as a safety net.
             if name_is_orphan:
-                should_hide = True
-                reason = "no image path, no Recipe Name match"
+                to_hide[i] = "no image path, no Recipe Name match"
 
-        if should_hide:
-            recipe["hidden"] = True
-            recipe["hiddenReason"] = NO_SMARTSHEET_MATCH_REASON
-            newly_flagged += 1
-            print(f"🚫 Auto-hidden ({reason}): {name} [{recipe_key or 'no image path'}]")
+    for i, reason in to_hide.items():
+        name = recipes[i].get("Recipe Name", "")
+        recipe_key = _recipe_key_from_image_path(recipes[i].get("Image", ""))
+        tag = "Would hide" if not apply else "Hiding"
+        print(f"🚫 {tag} ({reason}): {name} [{recipe_key or 'no image path'}]")
+        if apply:
+            recipes[i]["hidden"] = True
+            recipes[i]["hiddenReason"] = NO_SMARTSHEET_MATCH_REASON
 
-    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
-        json.dump(recipes, f, indent=2, ensure_ascii=False)
+    if apply and to_hide:
+        backup_path = f"{OUTPUT_JSON}.bak.{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        shutil.copy2(OUTPUT_JSON, backup_path)
+        print(f"\n💾 Backup written to {backup_path}")
 
-    print(f"\n✅ Orphan check complete: {newly_flagged} recipe(s) newly flagged as hidden")
-    print(f"   (hidden only when BOTH the ZIP-stem check and Recipe Name check agree, "
-          f"or when there's no image path at all)")
-    print(f"   hiddenReason = '{NO_SMARTSHEET_MATCH_REASON}'")
-    print(f"   Recipes with a pre-existing 'hidden' value were left untouched.")
+        with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+            json.dump(recipes, f, indent=2, ensure_ascii=False)
 
-    return newly_flagged
+    verb = "flagged" if apply else "would be flagged"
+    print(f"\n✅ Orphan check complete: {len(to_hide)} recipe(s) {verb} as hidden"
+          + ("" if apply else " (DRY RUN — nothing written; re-run with --apply to commit)"))
+
+    return len(to_hide)
 
 
 if __name__ == "__main__":
-    flag_orphan_recipes()
+    flag_orphan_recipes(apply="--apply" in sys.argv)
