@@ -90,9 +90,24 @@ def flag_orphan_recipes() -> int:
     with open(OUTPUT_JSON, "r", encoding="utf-8") as f:
         recipes = json.load(f)
 
-    valid_zip_stems = set(download_zips.get_zip_stem_to_row_id().keys())
-    smartsheet_map  = load_smartsheet_data()
+    stem_to_row_id  = download_zips.get_zip_stem_to_row_id()
+    valid_zip_stems = set(stem_to_row_id.keys())
+    row_id_to_stem  = {v: k for k, v in stem_to_row_id.items()}
+
+    smartsheet_map   = load_smartsheet_data()
     smartsheet_names = set(smartsheet_map.keys())
+
+    # For every Smartsheet row, find the ONE zip stem currently attached to
+    # it. This is the piece the old logic was missing: "does this Recipe
+    # Name exist somewhere in Smartsheet" is a different question from
+    # "does this Recipe Name's row currently own THIS recipe's zip." A
+    # re-uploaded dish keeps the same name on a NEW row/zip, so the old
+    # name-only check always passed for both the stale and current entry.
+    name_to_current_stem = {
+        name: row_id_to_stem[row_data["_row_id"]]
+        for name, row_data in smartsheet_map.items()
+        if row_data.get("_row_id") in row_id_to_stem
+    }
 
     newly_flagged = 0
 
@@ -108,10 +123,23 @@ def flag_orphan_recipes() -> int:
         zip_is_orphan  = has_image and recipe_key not in valid_zip_stems
         name_is_orphan = name not in smartsheet_names
 
+        current_stem_for_name = name_to_current_stem.get(name)
+        is_stale_duplicate = (
+            has_image
+            and current_stem_for_name is not None
+            and recipe_key != current_stem_for_name
+        )
+
         should_hide = False
         reason = ""
 
-        if has_image:
+        if is_stale_duplicate:
+            # This entry's own zip is not the one currently attached to
+            # this Recipe Name's row anymore — a newer zip superseded it.
+            # Fires even though the Recipe Name still "exists" in Smartsheet.
+            should_hide = True
+            reason = "superseded by a newer ZIP under the same Recipe Name"
+        elif has_image:
             # ZIP check is the trigger, name check is a cross-check.
             # Both must agree before we hide anything.
             if zip_is_orphan and name_is_orphan:

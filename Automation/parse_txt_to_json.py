@@ -264,6 +264,10 @@ def load_smartsheet_data():
         # (no extra column needed) — used by the frontend's "New Recipes"
         # banner to find the most recently changed recipes.
         row_data["Modified"] = row.get("modifiedAt") or row.get("createdAt") or ""
+        # Row ID, so callers can join back to get_zip_stem_to_row_id() and find
+        # which zip stem is *currently* attached to THIS specific row — needed
+        # to detect stale duplicates (see flag_orphan_recipes.py).
+        row_data["_row_id"] = str(row.get("id")) if row.get("id") is not None else ""
 
         if recipe_name:
             lookup[recipe_name] = row_data
