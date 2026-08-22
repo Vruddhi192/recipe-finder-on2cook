@@ -1524,7 +1524,7 @@ class RecipePDFGenerator:
         self.body_muted = HexColor('#343434')      # sub-ingredient / supporting copy
         self.green_time = HexColor('#B9CC32')
         self.gold_step = HexColor('#FFD700')
-        self.line_color = HexColor('#ed1c24')    # New color for underlines
+        self.line_color = HexColor('#ff0000')    # Brand red for underlines
 
         # ---- New design palette (matches the "Aloo Matar Rassa" reference card) ----
         self.page_bg = HexColor('#F7F7F4')       # marble base
@@ -3462,7 +3462,7 @@ class RecipePDFGenerator:
             line_start_y = step_y + 1 * mm
             step_start_time = step.get('start_time', 0)
             
-            c.setStrokeColor(HexColor('#ed1c24'))
+            c.setStrokeColor(HexColor('#ff0000'))
             c.setLineWidth(0.5)
             if step_number == 1 and step.get('durationInSec', 0) == 0:
                 top_timeline_y = scale_y + 1*mm

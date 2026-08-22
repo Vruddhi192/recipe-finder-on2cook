@@ -1,4 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+/* ========== FONTS & BRAND TOKENS ========== */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN-Next';
+  src: url('Fonts/DINMedium.ttf') format('truetype');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DIN-Next';
+  src: url('Fonts/DINBold.ttf') format('truetype');
+  font-weight: 600 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'DIN-Next', 'DIN Next', 'DIN', sans-serif;
+  --brand-red: #ff0000;
+  --brand-red-dark: #cc0000;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+}
 
 * {
   box-sizing: border-box;
@@ -7,9 +47,9 @@
 /* Page background – match index gradient vibe */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #fdfdfd 0%, #e5edf7 60%, #d9e2ec 100%);
-  color: #0f172a;
+  font-family: var(--font-body);
+  background: radial-gradient(circle at top, #ffffff 0%, #f4f4f6 60%, #e8e8ec 100%);
+  color: #000000;
 }
 
 /* Outer container */
@@ -21,11 +61,11 @@ body {
   align-items: center;
 }
 
-/* Top hero (keeps orange band feeling) */
+/* Top hero */
 .top-hero {
   width: 100%;
   max-width: 1120px;
-  color: #111827;
+  color: #000000;
   margin-bottom: 18px;
   padding: 10px 12px 0;
 }
@@ -33,24 +73,25 @@ body {
   margin: 18px 0 0;
   font-size: 2rem;
   font-weight: 700;
-  color: #231f20;   /* was #0f172a */
+  color: #000000;
+  font-family: var(--font-title);
 }
 .top-hero p {
   margin: 4px 0 0;
   font-size: 0.95rem;
   opacity: 0.9;
   color: #6b7280;
+  font-family: var(--font-body);
 }
-
 
 /* Back button – glassy pill */
 #backBtn {
-  background: rgba(15, 23, 42, 0.06);
+  background: rgba(0, 0, 0, 0.06);
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.6);
-  color: #0f172a;
+  color: #000000;
   font-size: 0.92rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   padding: 7px 14px;
   margin-bottom: 10px;
@@ -60,6 +101,7 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.1s ease;
+  font-family: var(--font-title);
 }
 #backBtn::before {
   content: '←';
@@ -67,32 +109,19 @@ body {
 }
 #backBtn:hover {
   background: rgba(248, 250, 252, 0.92);
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.25);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
 
-.top-hero h1 {
-  margin: 18px 0 0;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-.top-hero p {
-  margin: 4px 0 0;
-  font-size: 0.95rem;
-  opacity: 0.9;
-  color: #6b7280;
-}
-
-/* Main glass card – match filters style */
+/* Main glass card */
 .main-card {
   width: 100%;
   max-width: 1120px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.9));
-  border: 1px solid rgba(237, 28, 36, 0.12); /* #ed1c24 tint */
+  border: 1px solid rgba(255, 0, 0, 0.15);
   border-radius: 24px;
   box-shadow:
-    0 26px 70px rgba(15, 23, 42, 0.25),
+    0 26px 70px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.7);
   padding: 26px 28px 30px;
   display: flex;
@@ -120,8 +149,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at top, #fed7d7, #ed1c24 78%);
-  box-shadow: 0 10px 22px rgba(237, 28, 36, 0.5);
+  background: radial-gradient(circle at top, #ffe5e5, #ff0000 78%);
+  box-shadow: 0 10px 22px rgba(255, 0, 0, 0.4);
 }
 
 .input-icon img {
@@ -132,13 +161,15 @@ body {
 .input-title h2 {
   margin: 0;
   font-size: 1.3rem;
-  font-weight: 600;
-  color: #111827;
+  font-weight: 700;
+  color: #000000;
+  font-family: var(--font-title);
 }
 .input-title p {
   margin: 2px 0 0;
   font-size: 0.86rem;
   color: #6b7280;
+  font-family: var(--font-body);
 }
 
 /* Search row */
@@ -185,34 +216,35 @@ body {
   border-radius: 999px;
   padding: 11px 24px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   cursor: pointer;
-  /* ...same as before, but change background + shadow: */
-  background: linear-gradient(135deg, #ed1c24, #f97373);
-  box-shadow: 0 10px 26px rgba(237, 28, 36, 0.55);
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  box-shadow: 0 10px 26px rgba(255, 0, 0, 0.45);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  font-family: var(--font-title);
 }
 #addIngredientBtn:hover {
   filter: brightness(1.05);
   transform: translateY(-1px);
-  box-shadow: 0 14px 32px rgba(248, 113, 113, 0.7);
+  box-shadow: 0 14px 32px rgba(255, 0, 0, 0.6);
 }
 #ingredientTags span {
-  background: #ffe6e6;
-  color: #ed1c24;
+  background: #ffe5e5;
+  color: #ff0000;
   border-radius: 999px;
   padding: 5px 14px;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid #f5b7b7;
-  box-shadow: 0 4px 10px rgba(237, 28, 36, 0.18);
+  border: 1px solid #ffb3b3;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.15);
+  font-family: var(--font-body);
 }
 
 /* Big dashed box */
@@ -234,11 +266,13 @@ body {
   font-size: 0.98rem;
   color: #4b5563;
   font-weight: 500;
+  font-family: var(--font-body);
 }
 .empty-sub {
   margin: 4px 0 0;
   font-size: 0.85rem;
   color: #9ca3af;
+  font-family: var(--font-body);
 }
 
 /* Selected ingredients */
@@ -249,9 +283,11 @@ body {
   right: 18px;
   font-size: 0.85rem;
   color: #4b5563;
+  font-family: var(--font-body);
 }
 .selected-ingredients b {
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-title);
 }
 #selectedIngredientsBox {
   display: none;
@@ -263,17 +299,18 @@ body {
   gap: 8px;
 }
 #ingredientTags span {
-  background: #fff5e9;
-  color: #f97316;
+  background: #ffe5e5;
+  color: #ff0000;
   border-radius: 999px;
   padding: 5px 14px;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid #fed7aa;
-  box-shadow: 0 4px 10px rgba(248, 113, 113, 0.15);
+  border: 1px solid #ffb3b3;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.15);
+  font-family: var(--font-body);
 }
 #ingredientTags span button {
   background: transparent;
@@ -291,9 +328,10 @@ body {
 }
 #recipesCount {
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #231f20; /* darker brand text */
+  font-weight: 700;
+  color: #ff0000;
   margin-bottom: 10px;
+  font-family: var(--font-title);
 }
 
 
@@ -306,9 +344,10 @@ body {
 
 /* Modern recipe card */
 #recipeResults > div {
- background: radial-gradient(circle at top left, #fff0f0, #ffffff 50%, #f0f4ff 110%);  border-radius: 18px;
+  background: radial-gradient(circle at top left, #ffffff, #ffffff 50%, #f4f4f6 110%);
+  border-radius: 18px;
   box-shadow:
-    0 18px 40px rgba(15, 23, 42, 0.12),
+    0 18px 40px rgba(0, 0, 0, 0.08),
     0 0 0 1px rgba(148, 163, 184, 0.18);
   padding: 14px 14px 16px;
   display: flex;
@@ -320,7 +359,7 @@ body {
 #recipeResults > div:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 26px 55px rgba(15, 23, 42, 0.22),
+    0 26px 55px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(148, 163, 184, 0.25);
 }
 #recipeResults > div img {
@@ -334,7 +373,8 @@ body {
 #recipeResults > div > div:nth-child(2) {
   font-size: 1rem;
   font-weight: 700;
-  color: #231f20;
+  color: #000000;
+  font-family: var(--font-title);
 }
 
 
@@ -345,16 +385,11 @@ body {
   flex-wrap: wrap;
   font-size: 0.78rem;
   font-weight: 500;
+  font-family: var(--font-body);
 }
 #recipeResults > div > div:nth-child(3) span:first-child {
-  background: #fee2e2;
-  color: #b91c1c;
-  border-radius: 999px;
-  padding: 4px 10px;
-}
-#recipeResults > div > div:nth-child(3) span:first-child {
-  background: #ffe6e6;
-  color: #ed1c24;
+  background: #ffe5e5;
+  color: #ff0000;
   border-radius: 999px;
   padding: 4px 10px;
 }
@@ -363,10 +398,12 @@ body {
 #recipeResults > div > div:nth-child(4) {
   color: #6b7280;
   font-size: 0.8rem;
+  font-family: var(--font-body);
 }
 #recipeResults > div > div:nth-child(5) {
   color: #9ca3af;
   font-size: 0.78rem;
+  font-family: var(--font-body);
 }
 
 /* Popup */
@@ -374,14 +411,15 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(0, 0, 0, 0.75);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 #popupModal.show {
   display: flex;
-}#popupModal > div {
+}
+#popupModal > div {
   position: relative;
   background: #ffffff;
   border-radius: 20px;
@@ -390,9 +428,9 @@ body {
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.4);
-  align-items: center;          /* center image horizontally */
-  justify-content: center;      /* center image vertically */
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
 }
 
 #popupImage {
@@ -400,26 +438,27 @@ body {
   max-height: 80vh;
   border-radius: 16px;
   margin-top: 26px;
-  object-fit: contain;          /* keep aspect ratio, no crop/stretch */
+  object-fit: contain;
 }
 #popupCloseBtn {
   position: absolute;
   top: 10px;
   right: 14px;
   font-size: 26px;
-  background: transparent;   /* no background */
-  border: none;              /* no border */
-  color: #ed1c24;            /* your brand red */
+  background: transparent;
+  border: none;
+  color: #ff0000;
   cursor: pointer;
   font-weight: 700;
   line-height: 1;
   padding: 0;
   transition: transform 0.12s ease, color 0.18s ease;
+  font-family: var(--font-title);
 }
 
 #popupCloseBtn:hover {
   transform: scale(1.1);
-  color: #b11117;            /* slightly darker red on hover */
+  color: #cc0000;
 }
 
 /* ── Diet Filter Row ── */
@@ -432,9 +471,10 @@ body {
 
 .diet-filter-label {
   font-size: 0.88rem;
-  font-weight: 600;
-  color: #4b5563;
+  font-weight: 700;
+  color: #000000;
   white-space: nowrap;
+  font-family: var(--font-title);
 }
 
 .diet-filter-chips {
@@ -448,8 +488,8 @@ body {
   border-radius: 999px;
   padding: 6px 16px;
   font-size: 0.82rem;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-family: var(--font-title);
   color: #4b5563;
   background: rgba(248, 250, 252, 0.9);
   cursor: pointer;
@@ -458,17 +498,17 @@ body {
 }
 
 .diet-chip:hover {
-  background: rgba(237, 28, 36, 0.06);
-  border-color: rgba(237, 28, 36, 0.4);
-  color: #ed1c24;
+  background: rgba(255, 0, 0, 0.06);
+  border-color: rgba(255, 0, 0, 0.4);
+  color: #ff0000;
   transform: translateY(-1px);
 }
 
 .diet-chip.active {
-  background: linear-gradient(135deg, #ed1c24, #f97373);
+  background: linear-gradient(135deg, #ff0000, #cc0000);
   border-color: transparent;
   color: #fff;
-  box-shadow: 0 6px 18px rgba(237, 28, 36, 0.4);
+  box-shadow: 0 6px 18px rgba(255, 0, 0, 0.4);
 }
 
 .diet-chip.active:hover {
