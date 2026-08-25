@@ -109,7 +109,9 @@
         <div class="radio-grid" id="cuisineRadioGroup"></div>
       </div>
 
-      <!-- Category radios -->
+      <!-- Category radios (values include the normal categories plus
+           "Frozen To Plate" / "Healthy" as two extra selectable tags in
+           this same list -- see getCategoryFilterValues() in script.js) -->
       <div class="filter-group">
         <label>Category</label>
         <div class="radio-grid" id="categoryRadioGroup"></div>
@@ -296,14 +298,40 @@
     <div id="popupLinks" class="popup-links"></div>
     <div class="popup-image-wrapper">
       <img id="popupImage" src="" alt="Recipe Image" class="popup-image" />
-      <iframe id="popupPDF" style="display:none;"></iframe>
+      <iframe id="popupPDF" style="display:none;" title="Recipe PDF"></iframe>
+
+      <!-- Image controls: real pinch/drag zoom, so +/-/reset make sense here -->
       <div class="zoom-controls">
         <button class="zoom-btn zoom-in" title="Zoom In">+</button>
         <button class="zoom-btn zoom-out" title="Zoom Out">-</button>
         <button class="zoom-btn zoom-reset" title="Reset Zoom">↻</button>
       </div>
+
+      <!-- PDF controls: the PDF renders using the browser's own built-in
+           viewer (own zoom/scroll/page controls), so instead of fake
+           +/-/reset buttons we give two things that always work,
+           on desktop and mobile alike -->
+      <div class="pdf-toolbar" id="pdfToolbar">
+        <button id="pdfOpenNewTabBtn" class="pdf-toolbar-btn" title="Open in a new tab">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>Open in New Tab</span>
+        </button>
+        <button id="pdfFullscreenBtn" class="pdf-toolbar-btn" title="Expand">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+            <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+            <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+            <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+          </svg>
+          <span id="pdfFullscreenLabel">Expand</span>
+        </button>
+      </div>
     </div>
-    <div class="zoom-info">
+    <div class="zoom-info" id="zoomInfo">
       <span>Click and drag to pan • Mouse wheel to zoom • Double-click to reset</span>
     </div>
   </div>

@@ -1106,6 +1106,29 @@ input[type="range"]::-moz-range-thumb {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  transition: max-width 0.2s ease, max-height 0.2s ease;
+}
+
+/* Wider stage while viewing a PDF (recipe cards are portrait images, so
+   they keep the narrower default; PDFs get much more room to breathe,
+   especially on desktop/laptop screens). */
+.popup-container.pdf-mode {
+  max-width: 1160px;
+  width: 96vw;
+  max-height: 94vh;
+}
+
+/* Expanded/fullscreen mode, toggled from the "Expand" button in the PDF
+   toolbar -- fills almost the entire viewport for maximum reading room. */
+.popup-container.pdf-fullscreen {
+  width: 98vw;
+  max-width: 98vw;
+  height: 98vh;
+  max-height: 98vh;
+}
+.popup-container.pdf-fullscreen .popup-image-wrapper {
+  height: 100%;
+  flex: 1;
 }
 
 /* Recipe name + download button, shown above the image/PDF */
@@ -1205,6 +1228,15 @@ input[type="range"]::-moz-range-thumb {
   justify-content: center;
 }
 
+/* PDFs get a taller stage too, on top of the wider container above --
+   there's no drag-to-pan on a PDF (the browser's own viewer scrolls it),
+   so a taller box just means less internal scrolling to read a page. */
+.popup-container.pdf-mode .popup-image-wrapper {
+  height: 82vh;
+  max-height: 900px;
+  cursor: default;
+}
+
 .popup-image-wrapper:active {
   cursor: grabbing;
 }
@@ -1222,10 +1254,56 @@ input[type="range"]::-moz-range-thumb {
 #popupPDF {
   width: 100%;
   height: 100%;
-  transition: transform 0.2s ease;
+  border: none;
   user-select: none;
   pointer-events: auto;
   border-radius: 12px;
+  background: #525659; /* matches most native PDF viewers' page backdrop */
+}
+
+/* PDF toolbar: "Open in New Tab" + "Expand" -- replaces the fake +/-/reset
+   buttons for PDFs, which scaled the iframe box without giving any real
+   way to scroll or read the enlarged page. The PDF's own zoom/page
+   controls (built into the browser) do that job correctly instead. */
+.pdf-toolbar {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* toggled to flex from JS only while a PDF is showing */
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 10px;
+  border-radius: 999px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.pdf-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  border: none;
+  padding: 0 16px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-title);
+  white-space: nowrap;
+}
+
+.pdf-toolbar-btn:hover {
+  background: #ff0000;
+  transform: scale(1.03);
+}
+
+.pdf-toolbar-btn:active {
+  transform: scale(0.96);
 }
 
 .zoom-controls {
@@ -1286,9 +1364,28 @@ input[type="range"]::-moz-range-thumb {
     margin: 10px;
     max-width: calc(100vw - 20px);
   }
-  
+
+  .popup-container.pdf-mode {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+    max-height: 96vh;
+    padding: 14px;
+    margin: 6px;
+  }
+  .popup-container.pdf-fullscreen {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+
   .popup-image-wrapper {
     height: 60vh;
+  }
+  .popup-container.pdf-mode .popup-image-wrapper {
+    height: 78vh;
   }
 
   .popup-title {
@@ -1311,6 +1408,21 @@ input[type="range"]::-moz-range-thumb {
     width: 32px;
     height: 32px;
     font-size: 14px;
+  }
+
+  .pdf-toolbar {
+    bottom: 10px;
+    padding: 6px 8px;
+    gap: 6px;
+    max-width: calc(100% - 20px);
+  }
+  .pdf-toolbar-btn {
+    height: 34px;
+    padding: 0 10px;
+    font-size: 0.72rem;
+  }
+  .pdf-toolbar-btn span {
+    display: none; /* icon-only on small screens, like the download button */
   }
 }
 .filter-actions {

@@ -435,6 +435,19 @@ function getUniqueAccessories() {
   return Array.from(s).sort();
 }
 
+// Category filter values = the normal Category list, plus "Frozen To
+// Plate" / "Healthy" tacked on at the end as two extra selectable tags in
+// that SAME list (not a separate filter section). Each is only shown once
+// at least one recipe is actually marked that way in Smartsheet.
+const FROZEN_TAG = 'Frozen To Plate';
+const HEALTHY_TAG = 'Healthy';
+function getCategoryFilterValues() {
+  const values = getUniqueValues('Category');
+  if (getUniqueValues('Frozen To Plate').length) values.push(FROZEN_TAG);
+  if (getUniqueValues('Healthy').length) values.push(HEALTHY_TAG);
+  return values;
+}
+
 function setupSortButtons() {
   sortTimeAsc?.addEventListener('click', () => {
     filterState.sortBy = 'time-asc';
@@ -549,7 +562,7 @@ function populateMobileFilters() {
   setOptions(dietTypeMobile, getUniqueValues('Veg/Non Veg'));
   setOptions(cookingModeMobile, getUniqueValues('Cooking Mode'));
   setOptions(cuisineMobile, getUniqueValues('Cuisine'));
-  setOptions(categoryMobile, getUniqueValues('Category'));
+  setOptions(categoryMobile, getCategoryFilterValues());
   setOptions(accessoryMobile, getUniqueAccessories());
   const flavorMobile = document.getElementById('flavorMobile');
   const consistencyMobile = document.getElementById('consistencyMobile');
@@ -573,7 +586,7 @@ function loadRecipes() {
       buildDietChips(getUniqueValues('Veg/Non Veg'));
       buildRadioGroup(cookingModeRadioGroup, getUniqueValues('Cooking Mode'), 'cookingMode');
       buildRadioGroup(cuisineRadioGroup, getUniqueValues('Cuisine'), 'cuisine');
-      buildRadioGroup(categoryRadioGroup, getUniqueValues('Category'), 'category');
+      buildRadioGroup(categoryRadioGroup, getCategoryFilterValues(), 'category');
       buildRadioGroup(accessoryRadioGroup, getUniqueAccessories(), 'accessory');
       buildMiniChips('flavorChipGroup', getUniqueValues('Flavor Profile'), 'flavorVal', FLAVOUR_CONFIG);
       buildMiniChips('consistencyChipGroup', getUniqueValues('Consistency'), 'consistencyVal', CONSISTENCY_CONFIG);
@@ -722,7 +735,10 @@ function filterRecipes() {
       filterState.cuisineVal === 'All' || r['Cuisine'] === filterState.cuisineVal;
 
     const catOk =
-      filterState.categoryVal === 'All' || r['Category'] === filterState.categoryVal;
+      filterState.categoryVal === 'All'      ? true :
+      filterState.categoryVal === FROZEN_TAG  ? r['Frozen To Plate'] === 'YES' :
+      filterState.categoryVal === HEALTHY_TAG ? r['Healthy'] === 'YES' :
+      r['Category'] === filterState.categoryVal;
 
     const accOk =
       filterState.accessoryVal === 'All' ||
@@ -1236,19 +1252,62 @@ function updateNavArrows() {
 function renderPopupPage() {
   const { src, alt } = popupPages[popupPageIndex];
   const isPDF = src.toLowerCase().endsWith('.pdf');
+  const container = document.querySelector('.popup-container');
+
   if (isPDF) {
     popupImage.style.display = 'none';
     popupPDF.style.display = 'block';
     popupPDF.src = src;
-    resetPDFZoom();
+
+    // Wider stage + PDF toolbar instead of the image's zoom controls (see
+    // pdf-mode/.pdf-toolbar in style.css -- a PDF has its own built-in
+    // zoom/scroll/page controls, so we don't fight it with CSS transforms).
+    container?.classList.add('pdf-mode');
+    if (pdfToolbar) pdfToolbar.style.display = 'flex';
+    if (zoomControlsEl) zoomControlsEl.style.display = 'none';
+    if (zoomInfoEl) zoomInfoEl.style.display = 'none';
   } else {
     popupPDF.style.display = 'none';
+    popupPDF.src = '';
     popupImage.style.display = 'block';
     popupImage.src = src;
     popupImage.alt = alt || 'Recipe Image';
     resetZoom();
+
+    container?.classList.remove('pdf-mode', 'pdf-fullscreen');
+    if (pdfToolbar) pdfToolbar.style.display = 'none';
+    if (zoomControlsEl) zoomControlsEl.style.display = 'flex';
+    if (zoomInfoEl) zoomInfoEl.style.display = 'block';
+    updatePdfFullscreenLabel();
   }
 }
+
+// PDF toolbar elements + handlers
+const pdfToolbar = document.getElementById('pdfToolbar');
+const zoomControlsEl = document.querySelector('.zoom-controls');
+const zoomInfoEl = document.getElementById('zoomInfo');
+const pdfOpenNewTabBtn = document.getElementById('pdfOpenNewTabBtn');
+const pdfFullscreenBtn = document.getElementById('pdfFullscreenBtn');
+const pdfFullscreenLabel = document.getElementById('pdfFullscreenLabel');
+
+function updatePdfFullscreenLabel() {
+  const container = document.querySelector('.popup-container');
+  const isFull = container?.classList.contains('pdf-fullscreen');
+  if (pdfFullscreenLabel) pdfFullscreenLabel.textContent = isFull ? 'Collapse' : 'Expand';
+}
+
+pdfOpenNewTabBtn?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const { src } = popupPages[popupPageIndex] || {};
+  if (src) window.open(src, '_blank', 'noopener');
+});
+
+pdfFullscreenBtn?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const container = document.querySelector('.popup-container');
+  container?.classList.toggle('pdf-fullscreen');
+  updatePdfFullscreenLabel();
+});
 
 // Popup
 let zoomState = {
@@ -1333,6 +1392,7 @@ popupModal.addEventListener('click', e => {
     popupModal.style.display = 'none';
     popupPDF.src = '';
     currentPopupRecipe = null;
+    document.querySelector('.popup-container')?.classList.remove('pdf-mode', 'pdf-fullscreen');
   }
 });
 
@@ -1340,6 +1400,7 @@ popupCloseBtn.addEventListener('click', () => {
   popupModal.style.display = 'none';
   popupPDF.src = '';
   currentPopupRecipe = null;
+  document.querySelector('.popup-container')?.classList.remove('pdf-mode', 'pdf-fullscreen');
 });
 
 function isImageVisible() {
@@ -1349,26 +1410,8 @@ function isPDFVisible() {
   return popupPDF.style.display !== "none";
 }
 
-function updateZoomButtons() {
-  const disabled = !isImageVisible();
-  zoomInBtn.disabled = disabled;
-  zoomOutBtn.disabled = disabled;
-  zoomResetBtn.disabled = disabled;
-}
-let pdfScale = 1;
-
-function zoomPDF(factor) {
-  pdfScale *= factor;
-  popupPDF.style.transform = `scale(${pdfScale})`;
-  popupPDF.style.transformOrigin = "center center";
-}
-
-function resetPDFZoom() {
-  pdfScale = 1;
-  popupPDF.style.transform = "scale(1)";
-}
-
-// Zoom controls
+// Zoom controls (image mode only -- a PDF uses the browser's own built-in
+// zoom/scroll/page controls via the pdf-toolbar instead, see renderPopupPage)
 const zoomInBtn = document.querySelector('.zoom-in');
 const zoomOutBtn = document.querySelector('.zoom-out');
 const zoomResetBtn = document.querySelector('.zoom-reset');
@@ -1376,29 +1419,17 @@ const wrapper = document.querySelector('.popup-image-wrapper');
 
 zoomInBtn.addEventListener("click", (e) => {
   e.stopPropagation();
-  if (isImageVisible()) {
-    zoomImage(1.25);
-  } else if (isPDFVisible()) {
-    zoomPDF(1.25);
-  }
+  if (isImageVisible()) zoomImage(1.25);
 });
 
 zoomOutBtn.addEventListener("click", (e) => {
   e.stopPropagation();
-  if (isImageVisible()) {
-    zoomImage(0.8);
-  } else if (isPDFVisible()) {
-    zoomPDF(0.8);
-  }
+  if (isImageVisible()) zoomImage(0.8);
 });
 
 zoomResetBtn.addEventListener("click", (e) => {
   e.stopPropagation();
-  if (isImageVisible()) {
-    resetZoom();
-  } else if (isPDFVisible()) {
-    resetPDFZoom();
-  }
+  if (isImageVisible()) resetZoom();
 });
 
 // Image interaction events

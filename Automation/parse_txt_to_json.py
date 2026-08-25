@@ -211,7 +211,7 @@ def load_smartsheet_rows_by_id():
 
             if col_name == "Recipe Name":
                 row_data["Recipe Name"] = str(value).strip().upper()
-            elif col_name in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category"]:
+            elif col_name in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Frozen To Plate", "Healthy"]:
                 row_data[col_name] = str(value).strip().upper()
             elif col_name in ["Flavor Profile", "Consistency", "Prerequisite Recipe"]:
                 row_data[col_name] = str(value).strip() if value else ""
@@ -255,7 +255,7 @@ def load_smartsheet_data():
 
             if col_name == "Recipe Name":
                 recipe_name = str(value).strip().upper()
-            elif col_name in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category"]:
+            elif col_name in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Frozen To Plate", "Healthy"]:
                 row_data[col_name] = str(value).strip().upper()
             elif col_name in ["Flavor Profile", "Consistency", "Prerequisite Recipe"]:
                 row_data[col_name] = str(value).strip() if value else ""
@@ -368,6 +368,8 @@ def parse_recipe_txt(txt_path):
         "Cooking Mode": "AUTO",
         "Cuisine": "GLOBAL CUISINE",
         "Category": "MAIN COURSE",
+        "Frozen To Plate": "",
+        "Healthy": "",
         "Flavor Profile": "",
         "Consistency": "",
         "Prerequisite Recipe": "",
@@ -472,7 +474,7 @@ def generate_recipes_json():
 
         # Apply Smartsheet overrides if matched (via either path above)
         if ss:
-            for field in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Flavor Profile", "Consistency", "Prerequisite Recipe"]:
+            for field in ["Veg/Non Veg", "Cooking Mode", "Cuisine", "Category", "Frozen To Plate", "Healthy", "Flavor Profile", "Consistency", "Prerequisite Recipe"]:
                 recipe[field] = ss.get(field, recipe[field])
             # Modified isn't a fallback-able field like the others (recipe
             # dict has no prior value for it) — just take it straight from
@@ -537,6 +539,8 @@ def generate_recipes_json():
     print("   - Cooking Mode")
     print("   - Cuisine")
     print("   - Category")
+    print("   - Frozen To Plate")
+    print("   - Healthy")
     print("   - Flavor Profile")
     print("   - Consistency")
     print("   - Prerequisite Recipe")
