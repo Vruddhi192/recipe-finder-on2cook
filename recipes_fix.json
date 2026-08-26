@@ -162,7 +162,7 @@
     "Cooking Mode": "SAUTEING",
     "Cuisine": "PAN ASIAN",
     "Category": "SIDE DISH",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
@@ -179,7 +179,7 @@
     "Total Output": "8 NOS",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-07T06:56:33Z",
+    "Modified": "2026-08-26T04:49:24Z",
     "IngredientImage": ""
   },
   {
@@ -3593,7 +3593,7 @@
     "Cooking Mode": "STEAMING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "SIDE DISH",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -3609,7 +3609,7 @@
     "Total Output": "20 PCS",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-07T07:44:27Z",
+    "Modified": "2026-08-26T04:49:24Z",
     "IngredientImage": ""
   },
   {
@@ -5235,7 +5235,7 @@
     "Cooking Mode": "STEAMING",
     "Cuisine": "GLOBAL CUISINE",
     "Category": "SIDE DISH",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -5252,7 +5252,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:49:24Z",
     "IngredientImage": ""
   },
   {
@@ -8799,7 +8799,7 @@
     "Cooking Mode": "GRILLING",
     "Cuisine": "ITALIAN",
     "Category": "STARTERS",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -8815,7 +8815,7 @@
     "Total Output": "1 PIZZA",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:51:11Z",
     "IngredientImage": "../ingredient_images/FROZEN PIZZA.png"
   },
   {
@@ -10424,7 +10424,7 @@
     "Cooking Mode": "FRYING",
     "Cuisine": "PAN ASIAN",
     "Category": "SIDE DISH",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
@@ -10440,7 +10440,7 @@
     "Total Output": "8 NOS",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:49:24Z",
     "IngredientImage": "../ingredient_images/FRY MOMO.png"
   },
   {
@@ -12207,7 +12207,7 @@
     "Cooking Mode": "STEAMING",
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -12222,7 +12222,7 @@
     "Total Output": "5PC",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:49:24Z",
     "IngredientImage": ""
   },
   {
@@ -12543,7 +12543,7 @@
     "Cooking Mode": "FRYING",
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -12559,7 +12559,7 @@
     "Total Output": "4 PCS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:51:36Z",
     "IngredientImage": "../ingredient_images/FROZEN SAMOSA.png"
   },
   {
@@ -16608,7 +16608,7 @@
     "Cooking Mode": "FRYING",
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -16624,7 +16624,7 @@
     "Total Output": "5 PIECES",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:49:24Z",
     "IngredientImage": "../ingredient_images/FRIED MOMO.png"
   },
   {
