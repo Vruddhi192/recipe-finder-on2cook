@@ -3,7 +3,7 @@
     "Recipe Name": "MUSHROOM NUGGETS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -22,14 +22,14 @@
     "Total Output": "180 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "5 mins",
-    "Modified": "2026-06-23T10:15:58Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "AMUL HASH BROWN",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "YES",
     "Healthy": "",
@@ -46,7 +46,7 @@
     "Total Output": "8 NOS ( FROZEN 270 G )",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-25T10:24:07Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -294,7 +294,7 @@
     "Recipe Name": "GRILL CHICKEN (NEW GRILL PAN)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "GRILLING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -312,7 +312,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -508,7 +508,7 @@
     "Recipe Name": "CREAM OF CAULIFLOWER SOUP",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -530,7 +530,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CAULIFLOWER SOUP.png"
   },
   {
@@ -751,7 +751,7 @@
     "Recipe Name": "MEXICAN RICE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -769,7 +769,7 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-24T12:17:28Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -801,7 +801,7 @@
     "Recipe Name": "BROCCOLI CHEESE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -824,7 +824,7 @@
     "Total Output": "800 GM",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BROCCOLI CHEESE.png"
   },
   {
@@ -889,7 +889,7 @@
     "Recipe Name": "ROASTED CHICKEN LEG",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "GRILLING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -908,14 +908,14 @@
     "Total Output": "2 PCS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "CHICKEN CACCIATORE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -933,7 +933,7 @@
     "Total Output": "650G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHI CACCIATORE.png"
   },
   {
@@ -968,7 +968,7 @@
     "Recipe Name": "BOILED PASTA (PENNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -986,7 +986,7 @@
     "Total Output": "900G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -1227,7 +1227,7 @@
     "Recipe Name": "VEGETABLE FAJITA QUESADILLA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "GRILLING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -1247,7 +1247,7 @@
     "Total Output": "1 PORTION",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -1337,7 +1337,7 @@
     "Recipe Name": "GRILLED FISH (BASA FISH)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "GRILLING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -1355,7 +1355,7 @@
     "Total Output": "3NOS (80G EACH FISH)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-24T13:13:03Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -1572,7 +1572,7 @@
     "Recipe Name": "CHICKEN SAUSAGE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -1589,7 +1589,7 @@
     "Total Output": "165G (6 NOS)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -1622,7 +1622,7 @@
     "Recipe Name": "PENNE WHITE (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -1641,7 +1641,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-05T12:27:38Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -1861,7 +1861,7 @@
     "Recipe Name": "AMUL PANEER NUGGETS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "YES",
     "Healthy": "",
@@ -1878,7 +1878,7 @@
     "Total Output": "12 NOS (FROZEN 280G)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-25T10:24:07Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -1911,7 +1911,7 @@
     "Recipe Name": "CREAM OF CARROTS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -1933,14 +1933,14 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "MAGGI PREMIX (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -1959,7 +1959,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T12:18:56Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -2045,7 +2045,7 @@
     "Recipe Name": "EGGLESS CAKE (CHOCOLATE CAKE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "STEAMING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2064,7 +2064,7 @@
     "Total Output": "550G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-07-30T05:32:32Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -2148,7 +2148,7 @@
     "Recipe Name": "BRAZILIAN CHICKEN BALLS",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2167,7 +2167,7 @@
     "Total Output": "8 PC",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BRZ CHI BALLS.png"
   },
   {
@@ -2306,7 +2306,7 @@
     "Recipe Name": "MUSHY PEAS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2325,7 +2325,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -2358,7 +2358,7 @@
     "Recipe Name": "STUFFED GRILLED CHICKEN",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "GRILLING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2376,7 +2376,7 @@
     "Total Output": "190 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -2623,7 +2623,7 @@
     "Recipe Name": "FRIED PANEER STRIPS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2641,7 +2641,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/FRIED PNR STRIPS.png"
   },
   {
@@ -2754,7 +2754,7 @@
     "Recipe Name": "ARRABBIATA 1000G (ARRABBIATA BASE SAUCE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2773,7 +2773,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-06T10:57:07Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/ARRABBIATA 1KG.png"
   },
   {
@@ -2966,7 +2966,7 @@
     "Recipe Name": "LEMON THYME CHICKEN RICE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -2984,7 +2984,7 @@
     "Total Output": "950G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3068,7 +3068,7 @@
     "Recipe Name": "CHICKEN CHEESE MAGGI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3090,14 +3090,14 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHICKEN CHEESE M.png"
   },
   {
     "Recipe Name": "MACRONI PASTA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3115,7 +3115,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-23T09:59:38Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3384,7 +3384,7 @@
     "Recipe Name": "SAUTE VEG 500G",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3402,7 +3402,7 @@
     "Total Output": "500G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-26T09:30:24Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3566,7 +3566,7 @@
     "Recipe Name": "BARBECUE PANEER STRIPS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3584,14 +3584,14 @@
     "Total Output": "240 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BBQ PANEER STRIP.png"
   },
   {
     "Recipe Name": "PRASUMA CHICKEN MOMO (FROZEN - 20 PCS)",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "YES",
     "Healthy": "",
@@ -3609,7 +3609,7 @@
     "Total Output": "20 PCS",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-26T04:49:24Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3643,7 +3643,7 @@
     "Recipe Name": "FRIED DRUMSTICKS",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3661,7 +3661,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-05T08:49:47Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3768,7 +3768,7 @@
     "Recipe Name": "PENNE PASTA 300G (ALFREDO SAUCE - WHITE SAUCE PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3787,7 +3787,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-07T07:41:00Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3869,7 +3869,7 @@
     "Recipe Name": "PENNE RED SAUCE (WITH FRESH ARRABIATA SAUCE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3888,14 +3888,14 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-07T07:42:57Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "ROSE PISTA CAKE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3914,7 +3914,7 @@
     "Total Output": "500G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-18T11:22:15Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -3971,7 +3971,7 @@
     "Recipe Name": "CHICKEN MAGGI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -3992,14 +3992,14 @@
     "Total Output": "450",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHICKEN MAGGI.png"
   },
   {
     "Recipe Name": "BBQ CHICKEN WINGS",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -4017,7 +4017,7 @@
     "Total Output": "240 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BBQ CHI WINGS.png"
   },
   {
@@ -4283,7 +4283,7 @@
     "Recipe Name": "CLASSIC VELOUTE SAUCE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -4302,7 +4302,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CLASSIC VELOUTE.png"
   },
   {
@@ -4441,7 +4441,7 @@
     "Recipe Name": "CHICKEN STROGANOFF",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -4462,7 +4462,7 @@
     "Total Output": "600 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-07T07:11:40Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHICKEN STROG.png"
   },
   {
@@ -4710,7 +4710,7 @@
     "Recipe Name": "VEGETABLE OMELETTE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -4729,7 +4729,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -4922,7 +4922,7 @@
     "Recipe Name": "PENNE PINK SAUCE (PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -4941,7 +4941,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-08-07T07:43:30Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -4974,7 +4974,7 @@
     "Recipe Name": "FRESH STEAM MOMO",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -4993,7 +4993,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -5156,7 +5156,7 @@
     "Recipe Name": "CARAMELIZED ONION (WITH PTFE PAN BOWL)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -5173,7 +5173,7 @@
     "Total Output": "300G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-07-03T11:18:18Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CARAMELIZED ONION.png"
   },
   {
@@ -5233,7 +5233,7 @@
     "Recipe Name": "STEAM MOMO UAE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "STEAMING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "YES",
     "Healthy": "",
@@ -5252,7 +5252,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-26T04:49:24Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -5283,7 +5283,7 @@
     "Recipe Name": "POTATO WEDGES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -5301,7 +5301,7 @@
     "Total Output": "140 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -5362,7 +5362,7 @@
     "Recipe Name": "CHICKEN FAJITA QUESADILLA",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "GRILLING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -5382,7 +5382,7 @@
     "Total Output": "1 PORTION",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHI QUESADILLA.png"
   },
   {
@@ -5520,7 +5520,7 @@
     "Recipe Name": "MEXICAN CURRY",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -5540,7 +5540,7 @@
     "Total Output": "400G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-24T12:17:28Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -5629,7 +5629,7 @@
     "Recipe Name": "PAELLA RICE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING + STEAMING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -5650,7 +5650,7 @@
     "Total Output": "900 GM",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "22 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -5891,7 +5891,7 @@
     "Recipe Name": "CREAM OF SPINACH",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -5913,7 +5913,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T08:49:47Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CREAM OF SPINACH.png"
   },
   {
@@ -6031,7 +6031,7 @@
     "Recipe Name": "POPCORN",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -6048,7 +6048,7 @@
     "Total Output": "100G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -6306,7 +6306,7 @@
     "Recipe Name": "EGGLESS BROWNIE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -6325,14 +6325,14 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-18T11:04:02Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/EGGLESS BROWNIE.png"
   },
   {
     "Recipe Name": "SAUTE VEGETABLES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -6351,7 +6351,7 @@
     "Total Output": "200G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -6602,7 +6602,7 @@
     "Recipe Name": "CHEESE OMELETTE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -6622,7 +6622,7 @@
     "Total Output": "120 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHEESE OMELETTE.png"
   },
   {
@@ -6868,7 +6868,7 @@
     "Recipe Name": "PENNE PESTO 300G (WITH FRESH BASIL PESTO)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -6888,7 +6888,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -6952,7 +6952,7 @@
     "Recipe Name": "WHITE SAUCE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -6971,7 +6971,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-23T08:14:20Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7004,7 +7004,7 @@
     "Recipe Name": "RED SAUCE 300G (PENNE PASTA WITH FRESH TOMATO PUREE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7023,7 +7023,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-07T07:43:41Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7057,7 +7057,7 @@
     "Recipe Name": "TORTILLA SOUP",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7077,7 +7077,7 @@
     "Total Output": "850G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-07T07:30:15Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7112,7 +7112,7 @@
     "Recipe Name": "SAUTE VEGETABLES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7131,7 +7131,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7217,7 +7217,7 @@
     "Recipe Name": "POTATO FRITTATA",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7237,14 +7237,14 @@
     "Total Output": "8 PORTION",
     "On2Cook Cooking Time": "11",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "ESPAGNOLE SAUCE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7264,7 +7264,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/ESPAGNOLE SAUCE.png"
   },
   {
@@ -7439,7 +7439,7 @@
     "Recipe Name": "PEPPER QUINOA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7460,7 +7460,7 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7548,7 +7548,7 @@
     "Recipe Name": "BEEF CHILI SMALL",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7565,7 +7565,7 @@
     "Total Output": "1300G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "1 hour",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BEEF CHILI SMALL.png"
   },
   {
@@ -7598,7 +7598,7 @@
     "Recipe Name": "PENNE PESTO  (WITH FRESH BASIL PESTO)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7610,7 +7610,7 @@
     "PopupImage": "../final_recipe_pdfs/PENNE PESTO.pdf",
     "Ingredients": [
       "Mix Maida 20 g, Butter 30 g, Chopped Garlic 15 g, Milk 200 g, Raw Penne Pasta 100 g 365 gm",
-      "Diced Cut Vegetables & Mix Sauce  256 gm",
+      "Diced Cut Vegetables & Mix Sauce  254 gm",
       "Auto Water (Auto) 900 ml",
       "Blender  Pesto Recipe (Blender) 200 gm"
     ],
@@ -7618,7 +7618,7 @@
     "Total Output": "600 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7677,7 +7677,7 @@
     "Recipe Name": "QUINOA BOILED",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7696,7 +7696,7 @@
     "Total Output": "2850 G",
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7783,7 +7783,7 @@
     "Recipe Name": "CREAM OF MUSHROOM",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7805,7 +7805,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T08:49:47Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -7949,7 +7949,7 @@
     "Recipe Name": "SAUTE CARROT (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7966,14 +7966,14 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "MINESTRONE SOUP",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -7993,7 +7993,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -8223,7 +8223,7 @@
     "Recipe Name": "BROWN HERB RICE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -8244,7 +8244,7 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -8499,7 +8499,7 @@
     "Recipe Name": "MAC AND CHEESE (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -8519,7 +8519,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T08:45:58Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -8718,7 +8718,7 @@
     "Recipe Name": "AMUL POPPONS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "YES",
     "Healthy": "",
@@ -8735,7 +8735,7 @@
     "Total Output": "12 NOS ( FROZEN 250 G )",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-25T10:24:07Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/AMUL POPPONS.png"
   },
   {
@@ -8872,7 +8872,7 @@
     "Recipe Name": "RED SAUCE PASTA (PENNE PASTA WITH FRESH TOMATO PUREE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -8891,7 +8891,7 @@
     "Total Output": "800 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-08-07T07:43:09Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -8923,7 +8923,7 @@
     "Recipe Name": "MASHED POTATOES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -8941,7 +8941,7 @@
     "Total Output": "1100 G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-08-06T07:18:10Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -9187,7 +9187,7 @@
     "Recipe Name": "HERB RICE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -9205,7 +9205,7 @@
     "Total Output": "500 GM",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -9269,7 +9269,7 @@
     "Recipe Name": "SAUTE BROCCOLI (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -9286,7 +9286,7 @@
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BROCCOLI  ANTUNES.png"
   },
   {
@@ -9608,7 +9608,7 @@
     "Recipe Name": "BRAZILIAN CHEESE BALLS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -9627,7 +9627,7 @@
     "Total Output": "8 PC",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BRZ CHEESE BALLS.png"
   },
   {
@@ -9954,7 +9954,7 @@
     "Recipe Name": "TUSCAN CHICKEN",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -9972,7 +9972,7 @@
     "Total Output": "600G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -10061,7 +10061,7 @@
     "Recipe Name": "AMUL VEG STIX",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "YES",
     "Healthy": "",
@@ -10078,7 +10078,7 @@
     "Total Output": "8 NOS ( FROZEN 270 G )",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-25T10:24:07Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/AMUL VEG STIX.png"
   },
   {
@@ -10193,7 +10193,7 @@
     "Recipe Name": "BEEF CHILLI BIG",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -10210,14 +10210,14 @@
     "Total Output": "2500G",
     "On2Cook Cooking Time": "28",
     "Normal Cooking Time": "1.5 hours",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BEEF CHILLI BIG.png"
   },
   {
     "Recipe Name": "CHEESE MAGGI",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -10238,7 +10238,7 @@
     "Total Output": "300G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-06T11:21:24Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHEESE MAGGI.png"
   },
   {
@@ -10397,7 +10397,7 @@
     "Recipe Name": "MOZZARELLA STICKS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -10415,7 +10415,7 @@
     "Total Output": "6 PCS",
     "On2Cook Cooking Time": "1",
     "Normal Cooking Time": "4 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -10682,7 +10682,7 @@
     "Recipe Name": "CREAM OF VEGGIES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -10704,7 +10704,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -10970,7 +10970,7 @@
     "Recipe Name": "MASALA OMELETTE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -10989,7 +10989,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -11021,7 +11021,7 @@
     "Recipe Name": "FRENCH ONION SOUP",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -11039,14 +11039,14 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/FRENCH ONION SOUP.png"
   },
   {
     "Recipe Name": "PENNE ALFREDO (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -11066,7 +11066,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -11367,7 +11367,7 @@
     "Recipe Name": "CREAM OF BROCCOLI SOUP",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -11389,7 +11389,7 @@
     "Total Output": "600 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CRM BROCCOLI SP.png"
   },
   {
@@ -11453,7 +11453,7 @@
     "Recipe Name": "MUSHROOM OMELETTE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -11472,7 +11472,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -11668,7 +11668,7 @@
     "Recipe Name": "SPINACH OMELETTE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -11687,7 +11687,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -12178,7 +12178,7 @@
     "Recipe Name": "CACIO E PEPE CHICKEN",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12198,7 +12198,7 @@
     "Total Output": "600 G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CACIO PEPE CHI.png"
   },
   {
@@ -12229,7 +12229,7 @@
     "Recipe Name": "VEG CLUB SANDWICH (WITH NEW GRILL PAN)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "GRILLING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12247,14 +12247,14 @@
     "Total Output": "1 NOS (3 LAYER S/W)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-14T06:30:44Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "VEGGIE MAC & CHEESE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12273,7 +12273,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -12304,9 +12304,9 @@
     "Recipe Name": "VEG BURGER PATTY",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -12322,14 +12322,14 @@
     "Total Output": "4 PCS",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "4 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "GOLDEN STOCK MUTTON",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12349,7 +12349,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "30",
     "Normal Cooking Time": "4 hours",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -12405,7 +12405,7 @@
     "Recipe Name": "CAJUN CHICKEN RICE",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12424,7 +12424,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "55 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CAJUN CHI RICE.png"
   },
   {
@@ -12802,7 +12802,7 @@
     "Recipe Name": "SAUTE POTATOES (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12819,7 +12819,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -12926,7 +12926,7 @@
     "Recipe Name": "STICKY BDW CAKE (BANANA DATES WALNUT CAKE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -12945,7 +12945,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-18T11:24:50Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -13299,7 +13299,7 @@
     "Recipe Name": "CREAM OF TOMATO",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -13321,7 +13321,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -13563,7 +13563,7 @@
     "Recipe Name": "CHICKEN SPAGHETTI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -13583,7 +13583,7 @@
     "Total Output": "800 G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CHICKEN SPAGHETTI.png"
   },
   {
@@ -13617,7 +13617,7 @@
     "Recipe Name": "BREAKFAST EGG PIE",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -13634,7 +13634,7 @@
     "Total Output": "8 PORTION",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BREAKFAST EGG.png"
   },
   {
@@ -13769,7 +13769,7 @@
     "Recipe Name": "MAGGI RED SAUCE (PENNE MAGGI RED SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -13788,7 +13788,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T12:59:15Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -13977,7 +13977,7 @@
     "Recipe Name": "CORIANDER CHICKEN",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -13996,7 +13996,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CORIANDER CHI.png"
   },
   {
@@ -14168,7 +14168,7 @@
     "Recipe Name": "EGG SHAKSHUKA",
     "Veg/Non Veg": "EGG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14189,7 +14189,7 @@
     "Total Output": "3 PORTIONS",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/EGG SHAKSHUKA.png"
   },
   {
@@ -14249,7 +14249,7 @@
     "Recipe Name": "PENNE ALFREDO (ALFREDO SAUCE - WHITE SAUCE PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14268,7 +14268,7 @@
     "Total Output": "800 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-07T07:41:00Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -14379,7 +14379,7 @@
     "Recipe Name": "RED SAUCE MAGGI (PENNE MAGGI RED SAUCE PREMIX PASTA)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14398,14 +14398,14 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "",
-    "Modified": "2026-06-05T12:38:12Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "PENNE ARRABIATA (MAGGI PREMIX)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14425,7 +14425,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -14459,7 +14459,7 @@
     "Recipe Name": "JHOL MOMO",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14479,14 +14479,14 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-07T07:30:15Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "BRIGADEIRO",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14504,7 +14504,7 @@
     "Total Output": "900 GMS",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-19T09:45:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/BRIGADEIRO.png"
   },
   {
@@ -14668,7 +14668,7 @@
     "Recipe Name": "PENNE AL DENTE (PASTA ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14686,7 +14686,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-06-05T08:49:47Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -14720,7 +14720,7 @@
     "Recipe Name": "MUSHROOM RISSOTO",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14738,7 +14738,7 @@
     "Total Output": "800 G",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -14774,7 +14774,7 @@
     "Recipe Name": "PIPEPABLE DARK CHOCOLATE GANACHE (5:3)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14792,14 +14792,14 @@
     "Total Output": "2400G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "PENNE RED (RED SAUCE PASTA ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14817,7 +14817,7 @@
     "Total Output": "3000 G",
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "50 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -14849,7 +14849,7 @@
     "Recipe Name": "CHICKEN POPCORN",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14867,14 +14867,14 @@
     "Total Output": "180 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "5 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "CREAM OF PEAS",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -14896,7 +14896,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CREAM OF PEAS.png"
   },
   {
@@ -14986,7 +14986,7 @@
     "Recipe Name": "BROWN STOCK MUTTON",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -15006,7 +15006,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "33",
     "Normal Cooking Time": "23 hours",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -15065,7 +15065,7 @@
     "Recipe Name": "LCA TEA CAKE (LEMON CRANBERRY ALMOND CAKE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -15084,7 +15084,7 @@
     "Total Output": "600G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-18T11:24:50Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -15199,7 +15199,7 @@
     "Recipe Name": "FRIED CHICKEN STRIPS",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -15217,7 +15217,7 @@
     "Total Output": "180 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "6 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/FRIED CHI STRIPS.png"
   },
   {
@@ -15384,7 +15384,7 @@
     "Recipe Name": "CHICKEN THUKPA SOUP",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -15403,7 +15403,7 @@
     "Total Output": "750G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -15721,7 +15721,7 @@
     "Recipe Name": "ARRABBIATA SAUCE",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BASE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -15739,7 +15739,7 @@
     "Total Output": "1500 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/ARRABBIATA SAUCE.png"
   },
   {
@@ -16286,7 +16286,7 @@
     "Recipe Name": "CHICKEN SAN DIEGO",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -16306,7 +16306,7 @@
     "Total Output": "500GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -16500,7 +16500,7 @@
     "Recipe Name": "CREAM OF CORN",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BOILING + SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -16522,14 +16522,14 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
     "Recipe Name": "IDLI SAKSHUKA",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "BAKING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -16550,7 +16550,7 @@
     "Total Output": "3 PORTIONS",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -16581,9 +16581,9 @@
     "Recipe Name": "FRENCH FRIES",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "FRYING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "STARTERS",
-    "Frozen To Plate": "",
+    "Frozen To Plate": "YES",
     "Healthy": "",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
@@ -16599,7 +16599,7 @@
     "Total Output": "100 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "5 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/FRENCH FRIES.png"
   },
   {
@@ -16656,7 +16656,7 @@
     "Recipe Name": "KHOW SUEY",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -16676,7 +16676,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-07-01T08:46:35Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": ""
   },
   {
@@ -16889,7 +16889,7 @@
     "Recipe Name": "CACIO E PEPE MUSHROOM",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
-    "Cuisine": "GLOBAL CUISINE",
+    "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
@@ -16909,7 +16909,7 @@
     "Total Output": "600 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-26T04:58:53Z",
     "IngredientImage": "../ingredient_images/CACIO E PEPE.png"
   }
 ]
