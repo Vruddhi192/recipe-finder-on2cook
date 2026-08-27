@@ -216,7 +216,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -232,7 +232,7 @@
     "Total Output": "800G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-19T10:13:14Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/BATHUA SUBZI.png"
   },
   {
@@ -272,7 +272,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -287,7 +287,7 @@
     "Total Output": "200G (CHICKEN TIKKI 50G PER PCS)",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHICKEN KEBAB.png"
   },
   {
@@ -460,7 +460,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "TANDOORI MARINADE",
@@ -475,7 +475,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-07T07:41:37Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -511,7 +511,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -530,7 +530,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CAULIFLOWER SOUP.png"
   },
   {
@@ -804,7 +804,7 @@
     "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -824,7 +824,7 @@
     "Total Output": "800 GM",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/BROCCOLI CHEESE.png"
   },
   {
@@ -1021,7 +1021,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -1038,7 +1038,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/EGG SOUP.png"
   },
   {
@@ -1126,7 +1126,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -1142,7 +1142,7 @@
     "Total Output": "350G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHICKEN SATAY.png"
   },
   {
@@ -1340,7 +1340,7 @@
     "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -1355,7 +1355,7 @@
     "Total Output": "3NOS (80G EACH FISH)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -1472,7 +1472,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -1486,7 +1486,7 @@
     "Total Output": "110 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-07-07T05:01:04Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -1575,7 +1575,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -1589,7 +1589,7 @@
     "Total Output": "165G (6 NOS)",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -1599,7 +1599,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -1615,7 +1615,7 @@
     "Total Output": "500G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -1756,7 +1756,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -1770,7 +1770,7 @@
     "Total Output": "1NOS (60G)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "7 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -1914,7 +1914,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -1933,7 +1933,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -1969,7 +1969,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -1985,7 +1985,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -2098,7 +2098,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
@@ -2115,7 +2115,7 @@
     "Total Output": "250 G",
     "On2Cook Cooking Time": "34",
     "Normal Cooking Time": "65 mins",
-    "Modified": "2026-06-12T13:04:21Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -2309,7 +2309,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -2325,7 +2325,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -2438,7 +2438,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -2452,7 +2452,7 @@
     "Total Output": "BOILED CHICKPEA 700 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
-    "Modified": "2026-08-06T06:27:17Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHICKPEA BOILED.png"
   },
   {
@@ -3387,7 +3387,7 @@
     "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -3402,7 +3402,7 @@
     "Total Output": "500G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -3719,7 +3719,7 @@
     "Cuisine": "GUJARATI",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -3736,7 +3736,7 @@
     "Total Output": "400 G (200 G * 2 PCS)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -4027,7 +4027,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -4043,7 +4043,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -4368,7 +4368,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -4384,7 +4384,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-23T07:44:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -4713,7 +4713,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -4729,7 +4729,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -5055,7 +5055,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -5071,7 +5071,7 @@
     "Total Output": "500G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -5894,7 +5894,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -5913,7 +5913,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CREAM OF SPINACH.png"
   },
   {
@@ -6005,7 +6005,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sour",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -6024,7 +6024,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -6058,7 +6058,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sweet",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -6072,7 +6072,7 @@
     "Total Output": "300G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -6131,7 +6131,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -6147,7 +6147,7 @@
     "Total Output": "5 SKEWERS",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -6283,7 +6283,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -6299,7 +6299,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -6335,7 +6335,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -6351,7 +6351,7 @@
     "Total Output": "200G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -6578,7 +6578,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sour",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -6595,7 +6595,7 @@
     "Total Output": "300 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -6605,7 +6605,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -6622,7 +6622,7 @@
     "Total Output": "120 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHEESE OMELETTE.png"
   },
   {
@@ -6682,7 +6682,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sweet",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
@@ -6696,7 +6696,7 @@
     "Total Output": "600G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7115,7 +7115,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -7131,7 +7131,7 @@
     "Total Output": "",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7442,7 +7442,7 @@
     "Cuisine": "GLOBAL",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -7460,7 +7460,7 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7523,7 +7523,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
@@ -7541,7 +7541,7 @@
     "Total Output": "900 G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7680,7 +7680,7 @@
     "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -7696,7 +7696,7 @@
     "Total Output": "2850 G",
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7786,7 +7786,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -7805,7 +7805,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7952,7 +7952,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -7966,7 +7966,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -7976,7 +7976,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -7993,7 +7993,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -8003,7 +8003,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -8018,7 +8018,7 @@
     "Total Output": "200G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHICKEN SHAMMI.png"
   },
   {
@@ -8170,7 +8170,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -8187,7 +8187,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -8226,7 +8226,7 @@
     "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -8244,7 +8244,7 @@
     "Total Output": "400 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -8447,7 +8447,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -8465,7 +8465,7 @@
     "Total Output": "2000GM",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -8951,7 +8951,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "TANDOORI MARINADE",
@@ -8966,7 +8966,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-07T07:41:37Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9030,7 +9030,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -9047,7 +9047,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9057,7 +9057,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -9074,7 +9074,7 @@
     "Total Output": "700G",
     "On2Cook Cooking Time": "11",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9135,7 +9135,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -9152,7 +9152,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9272,7 +9272,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -9286,7 +9286,7 @@
     "Total Output": "2000 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/BROCCOLI  ANTUNES.png"
   },
   {
@@ -9296,7 +9296,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "TANDOORI MARINADE",
@@ -9311,7 +9311,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-07T07:41:37Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9748,7 +9748,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -9762,7 +9762,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "",
-    "Modified": "2026-08-06T07:16:23Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9957,7 +9957,7 @@
     "Cuisine": "GLOBAL",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -9972,7 +9972,7 @@
     "Total Output": "600G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -9982,7 +9982,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -10001,7 +10001,7 @@
     "Total Output": "250 GM",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/EGG BHURJI.png"
   },
   {
@@ -10273,7 +10273,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -10289,7 +10289,7 @@
     "Total Output": "800G",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/BONE AND VEG SP.png"
   },
   {
@@ -10299,7 +10299,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -10315,7 +10315,7 @@
     "Total Output": "1KG",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -10375,7 +10375,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sweet",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
@@ -10390,7 +10390,7 @@
     "Total Output": "700G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -10450,7 +10450,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "TANDOORI MARINADE",
@@ -10465,7 +10465,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-07T07:41:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -10792,7 +10792,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
@@ -10807,7 +10807,7 @@
     "Total Output": "2500 G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -10817,7 +10817,7 @@
     "Cuisine": "INDIAN",
     "Category": "BEVERAGES",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -10834,7 +10834,7 @@
     "Total Output": "650 G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-26T10:19:58Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -10973,7 +10973,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -10989,7 +10989,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -11024,7 +11024,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -11039,7 +11039,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/FRENCH ONION SOUP.png"
   },
   {
@@ -11076,7 +11076,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -11092,7 +11092,7 @@
     "Total Output": "250 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHI DARBARI DRY.png"
   },
   {
@@ -11370,7 +11370,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -11389,7 +11389,7 @@
     "Total Output": "600 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CRM BROCCOLI SP.png"
   },
   {
@@ -11456,7 +11456,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -11472,7 +11472,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -11535,7 +11535,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -11550,7 +11550,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHAPLI KEBAB.png"
   },
   {
@@ -11671,7 +11671,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -11687,7 +11687,7 @@
     "Total Output": "120G",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -11723,7 +11723,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -11738,7 +11738,7 @@
     "Total Output": "9 NOS",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -12491,7 +12491,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -12506,7 +12506,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -12516,7 +12516,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -12534,7 +12534,7 @@
     "Total Output": "250G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "12 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -13057,7 +13057,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -13072,7 +13072,7 @@
     "Total Output": "700 G",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -13409,7 +13409,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -13424,7 +13424,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-14T06:30:44Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -13620,7 +13620,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -13634,7 +13634,7 @@
     "Total Output": "8 PORTION",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/BREAKFAST EGG.png"
   },
   {
@@ -13670,7 +13670,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -13685,7 +13685,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -14227,7 +14227,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sweet",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
@@ -14242,7 +14242,7 @@
     "Total Output": "500G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-06-05T08:52:39Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -14331,7 +14331,7 @@
     "Cuisine": "INDIAN",
     "Category": "DESSERTS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Sweet",
     "Consistency": "Semi - Gravy",
     "Prerequisite Recipe": "",
@@ -14347,7 +14347,7 @@
     "Total Output": "700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -14357,7 +14357,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -14372,7 +14372,7 @@
     "Total Output": "350 G",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -14594,7 +14594,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -14608,7 +14608,7 @@
     "Total Output": "1NOS (60G)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "7 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -14877,7 +14877,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -14896,7 +14896,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CREAM OF PEAS.png"
   },
   {
@@ -15227,7 +15227,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -15243,7 +15243,7 @@
     "Total Output": "6 NOS",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CABBAGE ROLL.png"
   },
   {
@@ -15359,7 +15359,7 @@
     "Cuisine": "INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -15377,7 +15377,7 @@
     "Total Output": "300 GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -15673,7 +15673,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -15688,7 +15688,7 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -15828,7 +15828,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -15842,7 +15842,7 @@
     "Total Output": "1000 G",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "",
-    "Modified": "2026-08-05T06:41:17Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -15909,7 +15909,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -15925,7 +15925,7 @@
     "Total Output": "500 G",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16070,7 +16070,7 @@
     "Cuisine": "PAN ASIAN",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "UDON NOODLES BOILING",
@@ -16089,7 +16089,7 @@
     "Total Output": "300 GM",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-07T07:30:15Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16152,7 +16152,7 @@
     "Cuisine": "INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Gravy",
     "Prerequisite Recipe": "",
@@ -16169,7 +16169,7 @@
     "Total Output": "3000G",
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "40 mins",
-    "Modified": "2026-08-14T06:27:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16206,7 +16206,7 @@
     "Cuisine": "SOUTH INDIAN",
     "Category": "MAIN COURSE",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -16224,7 +16224,7 @@
     "Total Output": "480GM",
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "35 mins",
-    "Modified": "2026-06-10T11:58:51Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16316,7 +16316,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -16331,7 +16331,7 @@
     "Total Output": "350 GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-22T13:19:36Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": "../ingredient_images/CHICKEN TIKKA.png"
   },
   {
@@ -16341,7 +16341,7 @@
     "Cuisine": "INDIAN",
     "Category": "STARTERS",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Medium Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -16356,7 +16356,7 @@
     "Total Output": "350 GM",
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-08-06T10:57:07Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16503,7 +16503,7 @@
     "Cuisine": "GLOBAL",
     "Category": "SOUP",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Liquid",
     "Prerequisite Recipe": "",
@@ -16522,7 +16522,7 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16532,7 +16532,7 @@
     "Cuisine": "GLOBAL",
     "Category": "BREAKFAST",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Semi-Dry",
     "Prerequisite Recipe": "",
@@ -16550,7 +16550,7 @@
     "Total Output": "3 PORTIONS",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-08-26T04:58:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
@@ -16686,7 +16686,7 @@
     "Cuisine": "INDIAN",
     "Category": "SIDE DISH",
     "Frozen To Plate": "",
-    "Healthy": "",
+    "Healthy": "YES",
     "Flavor Profile": "Less Spicy",
     "Consistency": "Dry",
     "Prerequisite Recipe": "",
@@ -16700,7 +16700,7 @@
     "Total Output": "910 NOS (EACH PCS 60 G)",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
-    "Modified": "2026-06-05T09:04:53Z",
+    "Modified": "2026-08-27T06:12:30Z",
     "IngredientImage": ""
   },
   {
