@@ -389,6 +389,81 @@ def parse_recipe_txt(txt_path):
 
 
 # ===============================
+# DEDUPLICATION
+# ===============================
+#
+# Two different ZIP-stem folders in updated_extracted/ can both resolve to
+# the exact same Smartsheet Recipe Name (e.g. a ZIP got re-uploaded under a
+# new attachment/file name for the same row, or two rows share a typed-in
+# name). Nothing upstream of this point checks for that, so without this
+# step the same recipe can be written into recipes_fix.json twice.
+#
+# Rule is intentionally narrow and exact: two entries are "the same recipe"
+# ONLY if their Recipe Name is identical after trimming + uppercasing.
+# No fuzzy/partial matching, ever — that's how you accidentally collapse
+# two genuinely different recipes into one and silently lose one of them.
+# Every entry that goes in also comes back out, one way or another; nothing
+# is dropped without being named in the printed report below.
+
+def _dedupe_score(recipe):
+    """
+    Higher score wins when two entries share a Recipe Name. Two criteria,
+    checked in order:
+      1. Does the Image filename exactly match the Recipe Name? (the
+         "correct" image for a recipe is almost always named after it —
+         a mismatch usually means a stray/mistaken upload)
+      2. Most recently Modified (Smartsheet's own row timestamp) wins ties.
+    """
+    name = (recipe.get("Recipe Name", "") or "").strip().upper()
+    image_stem = os.path.splitext(os.path.basename(recipe.get("Image", "") or ""))[0].strip().upper()
+    name_matches_image = 1 if image_stem == name else 0
+    modified = recipe.get("Modified", "") or ""
+    return (name_matches_image, modified)
+
+
+def dedupe_recipes(recipes):
+    """
+    Collapses recipes sharing an exact (trimmed, uppercased) Recipe Name
+    down to a single entry, keeping the highest-scoring one per
+    _dedupe_score. Prints exactly what was kept vs. dropped so a run is
+    always auditable from the console log — never a silent drop.
+    """
+    groups = {}
+    order = []  # preserve first-seen order of each distinct name
+    for recipe in recipes:
+        key = (recipe.get("Recipe Name", "") or "").strip().upper()
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(recipe)
+
+    deduped = []
+    dropped_total = 0
+    for key in order:
+        items = groups[key]
+        if len(items) == 1:
+            deduped.append(items[0])
+            continue
+
+        winner = max(items, key=_dedupe_score)
+        deduped.append(winner)
+        dropped_total += len(items) - 1
+
+        print(f"\n⚠ DUPLICATE Recipe Name found: '{key}' ({len(items)} entries) — keeping 1, dropping {len(items)-1}")
+        for item in items:
+            tag = "✅ KEPT" if item is winner else "❌ dropped"
+            print(f"    {tag} — Image: {item.get('Image','')} | Modified: {item.get('Modified','')}")
+
+    if dropped_total:
+        print(f"\n🧹 Deduplication: {len(recipes)} parsed → {len(deduped)} written "
+              f"({dropped_total} duplicate row(s) removed, exact-name matches only)")
+    else:
+        print(f"\n🧹 Deduplication: no duplicate Recipe Names found ({len(recipes)} recipes, all unique)")
+
+    return deduped
+
+
+# ===============================
 # MAIN GENERATOR
 # ===============================
 
@@ -526,6 +601,8 @@ def generate_recipes_json():
 
         recipes.append(recipe)
         print(f"🍽 Parsed: {recipe['Recipe Name']}")
+
+    recipes = dedupe_recipes(recipes)
 
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(recipes, f, indent=2, ensure_ascii=False)
