@@ -21,6 +21,7 @@ Usage:
 """
 
 import os
+import time
 import requests
 from pathlib import Path
 
@@ -34,6 +35,82 @@ SMARTSHEET_HEADERS  = {
 
 ZIP_ROOT = "../zips"
 
+# Status codes worth retrying: 403 (Smartsheet has historically returned this
+# for transient/rate-limit conditions, not just real permission denials —
+# see errorCode 4003), 429 (explicit rate limit), and 5xx (their servers,
+# not our request, temporarily broken). A 401 is NOT retried — that means
+# the token itself is malformed/missing, which retrying can't fix.
+_RETRYABLE_STATUSES = {403, 429, 500, 502, 503, 504}
+_MAX_ATTEMPTS = 4
+_BACKOFF_BASE_SECONDS = 3  # 3s, 6s, 12s between attempts
+
+
+def _smartsheet_get(url: str, **kwargs) -> requests.Response:
+    """
+    requests.get wrapper for Smartsheet API calls with automatic retry on
+    transient-looking failures (403/429/5xx). Returns the LAST response
+    either way — a final failing response after all retries is returned
+    as-is (not raised), so callers keep their existing
+    `if resp.status_code != 200:` checks and error messages unchanged.
+
+    This exists because a 403 from Smartsheet isn't reliably "permanent
+    access denied" — it has also been observed for transient conditions.
+    Retrying costs a few seconds; not retrying costs a whole pipeline run
+    for something that would've worked seconds later.
+    """
+    kwargs.setdefault("timeout", 30)
+    resp = None
+    for attempt in range(1, _MAX_ATTEMPTS + 1):
+        resp = requests.get(url, **kwargs)
+        if resp.status_code == 200:
+            return resp
+        if resp.status_code not in _RETRYABLE_STATUSES or attempt == _MAX_ATTEMPTS:
+            return resp
+        wait = _BACKOFF_BASE_SECONDS * (2 ** (attempt - 1))
+        print(f"   ⚠ {resp.status_code} from Smartsheet (attempt {attempt}/{_MAX_ATTEMPTS}) "
+              f"— retrying in {wait}s...")
+        time.sleep(wait)
+    return resp
+
+
+def _describe_403(resp) -> str:
+    """
+    On a 403, ask Smartsheet who this token actually belongs to
+    (/2.0/users/me) so the error tells you WHICH account was denied,
+    instead of just that a denial happened. errorCode 4003 specifically
+    means "this user is not a collaborator on this sheet" — so the
+    account below is the one that needs to be re-shared on the sheet
+    (Sheet > Share), or the one whose token needs regenerating if it's
+    missing/deactivated entirely.
+    Never raises — this is best-effort context for the real error above.
+    """
+    if resp.status_code != 403:
+        return ""
+    try:
+        who = requests.get(
+            "https://api.smartsheet.com/2.0/users/me",
+            headers=SMARTSHEET_HEADERS,
+            timeout=10,
+        )
+        if who.status_code == 200:
+            info = who.json()
+            return (
+                f"\n    ↳ SMARTSHEET_TOKEN belongs to: {info.get('email', '?')} "
+                f"(account status: {info.get('status', '?')}). "
+                f"If errorCode is 4003, add this account as a collaborator "
+                f"on the sheet (Share in Smartsheet). If this call ALSO "
+                f"fails, the token itself is invalid/revoked — generate a "
+                f"new one under Account > Personal Settings > API Access."
+            )
+        return (
+            f"\n    ↳ Could not identify the token's own account either "
+            f"({who.status_code}) — the token itself is likely invalid, "
+            f"expired, or revoked. Generate a new one under Account > "
+            f"Personal Settings > API Access."
+        )
+    except requests.RequestException:
+        return ""
+
 
 def get_sheet_modified_map() -> dict:
     """
@@ -46,12 +123,15 @@ def get_sheet_modified_map() -> dict:
     with `updated_stems` everywhere else in the pipeline.
     """
     print("📡 Fetching Smartsheet row-modified timestamps...")
-    resp = requests.get(
+    resp = _smartsheet_get(
         f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}",
         headers=SMARTSHEET_HEADERS,
     )
     if resp.status_code != 200:
-        raise RuntimeError(f"Sheet fetch failed: {resp.status_code} – {resp.text}")
+        raise RuntimeError(
+            f"Sheet fetch failed: {resp.status_code} – {resp.text}"
+            f"{_describe_403(resp)}"
+        )
 
     sheet = resp.json()
     row_modified = {
@@ -59,13 +139,16 @@ def get_sheet_modified_map() -> dict:
         for row in sheet["rows"]
     }
 
-    resp = requests.get(
+    resp = _smartsheet_get(
         f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments",
         headers=SMARTSHEET_HEADERS,
         params={"includeAll": "true"},
     )
     if resp.status_code != 200:
-        raise RuntimeError(f"Attachments fetch failed: {resp.status_code} – {resp.text}")
+        raise RuntimeError(
+            f"Attachments fetch failed: {resp.status_code} – {resp.text}"
+            f"{_describe_403(resp)}"
+        )
 
     stem_modified = {}
     for att in resp.json().get("data", []):
@@ -101,13 +184,16 @@ def get_zip_stem_to_row_id() -> dict:
     column.
     """
     print("📡 Fetching ZIP attachments to build stem → row ID map...")
-    resp = requests.get(
+    resp = _smartsheet_get(
         f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments",
         headers=SMARTSHEET_HEADERS,
         params={"includeAll": "true"},
     )
     if resp.status_code != 200:
-        raise RuntimeError(f"Attachments fetch failed: {resp.status_code} – {resp.text}")
+        raise RuntimeError(
+            f"Attachments fetch failed: {resp.status_code} – {resp.text}"
+            f"{_describe_403(resp)}"
+        )
 
     stem_to_row_id = {}
     for att in resp.json().get("data", []):
@@ -165,13 +251,16 @@ def download_all_zips(stale_stems: set = None) -> set:
 
     # Single call: fetch ALL row-level attachments at once.
     print("📡 Fetching all attachments (single API call)...")
-    resp = requests.get(
+    resp = _smartsheet_get(
         f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments",
         headers=SMARTSHEET_HEADERS,
         params={"includeAll": "true"},
     )
     if resp.status_code != 200:
-        raise RuntimeError(f"Attachments fetch failed: {resp.status_code} – {resp.text}")
+        raise RuntimeError(
+            f"Attachments fetch failed: {resp.status_code} – {resp.text}"
+            f"{_describe_403(resp)}"
+        )
 
     all_attachments = [
         a for a in resp.json().get("data", [])
@@ -201,7 +290,7 @@ def download_all_zips(stale_stems: set = None) -> set:
         print(f"[{i}/{len(all_attachments)}] {att_name} — downloading ({reason})")
 
         # Fetch full details to get a fresh download URL
-        detail_resp = requests.get(
+        detail_resp = _smartsheet_get(
             f"https://api.smartsheet.com/2.0/sheets/{SMARTSHEET_SHEET_ID}/attachments/{att_id}",
             headers=SMARTSHEET_HEADERS,
         )
