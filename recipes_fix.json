@@ -1502,6 +1502,35 @@
     "IngredientImage": ""
   },
   {
+    "Recipe Name": "TOMATO GRAVY 2100",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "BASE",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Gravy",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 18,
+    "Image": "../test_images/TOMATO GRAVY 2100.jpg",
+    "PopupImage": "../final_recipe_pdfs/TOMATO GRAVY 2100.pdf",
+    "Ingredients": [
+      "Take Oil 300 gm",
+      "Take Whole Spices  35 number",
+      "Masala  Indian Masala 130 gm",
+      "Paste Gravy Paste 1600 gm",
+      "Paste Nuts Paste  650 gm",
+      "Powder Garnish 10 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "2100 GM (ACTUAL 2135 GM)",
+    "On2Cook Cooking Time": "18",
+    "Normal Cooking Time": "60 mins",
+    "Modified": "2026-09-08T13:16:41Z",
+    "IngredientImage": ""
+  },
+  {
     "Recipe Name": "FRIED DRUMSTICKS",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "FRYING",
@@ -6339,6 +6368,30 @@
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-06T10:57:07Z",
     "IngredientImage": "../ingredient_images/KORI GASSI 2200.png"
+  },
+  {
+    "Recipe Name": "PATRA TADKA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "GUJARATI",
+    "Category": "BASE",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 2,
+    "Image": "../test_images/PATRA TADKA.jpg",
+    "PopupImage": "../final_recipe_pdfs/PATRA TADKA.pdf",
+    "Ingredients": [
+      "Tempering  Tempering  100 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "100 GM",
+    "On2Cook Cooking Time": "2",
+    "Normal Cooking Time": "5 mins",
+    "Modified": "2026-09-08T10:45:47Z",
+    "IngredientImage": ""
   },
   {
     "Recipe Name": "PRAWN MOILEE",
@@ -11601,13 +11654,13 @@
   {
     "Recipe Name": "TOMATO GRAVY 3K",
     "Veg/Non Veg": "VEG",
-    "Cooking Mode": "SAUTEING",
-    "Cuisine": "INDIAN",
-    "Category": "BASE",
+    "Cooking Mode": "AUTO",
+    "Cuisine": "GLOBAL CUISINE",
+    "Category": "MAIN COURSE",
     "Frozen To Plate": "",
     "Healthy": "",
-    "Flavor Profile": "Less Spicy",
-    "Consistency": "Gravy",
+    "Flavor Profile": "",
+    "Consistency": "",
     "Prerequisite Recipe": "",
     "Cooking Time": 18,
     "Image": "../test_images/TOMATO GRAVY 3K.jpg",
@@ -11624,7 +11677,6 @@
     "Total Output": "3K",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "Modified": "2026-07-06T12:51:22Z",
     "IngredientImage": ""
   },
   {
@@ -12540,6 +12592,32 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-08-06T07:16:23Z",
+    "IngredientImage": ""
+  },
+  {
+    "Recipe Name": "PATRA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING + SAUTEING",
+    "Cuisine": "GUJARATI",
+    "Category": "BREAKFAST",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "PATRA TADKA",
+    "Cooking Time": 8,
+    "Image": "../test_images/PATRA.jpg",
+    "PopupImage": "../final_recipe_pdfs/PATRA.pdf",
+    "Ingredients": [
+      "Take Batter 364 gm",
+      "Manually  Water (Manually) 400 gm",
+      "Tempering  Tempering  100 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Momo Kit",
+    "Total Output": "360 GM",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "20 mins",
+    "Modified": "2026-09-08T10:45:47Z",
     "IngredientImage": ""
   },
   {
