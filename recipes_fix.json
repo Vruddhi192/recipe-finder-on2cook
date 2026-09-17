@@ -76,7 +76,7 @@
     "On2Cook Cooking Time": "11",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/POTATO FRITTATA.png"
   },
   {
     "Recipe Name": "GRILL CHICKEN (NEW GRILL PAN)",
@@ -236,7 +236,7 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MURGIR JHOL.png"
   },
   {
     "Recipe Name": "THAI GREEN PASTE",
@@ -262,7 +262,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THAI GREEN PASTE.png"
   },
   {
     "Recipe Name": "PANEER TIKKA OLD (WITH SKEWERS & MP MAT OLD RECIPE)",
@@ -439,7 +439,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TANDOORI BROCCOLI TIKKA.png"
   },
   {
     "Recipe Name": "ALOO MATAR RASSA",
@@ -604,7 +604,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/STIR FRY FISH.png"
   },
   {
     "Recipe Name": "TOOR DAL RAW",
@@ -629,7 +629,7 @@
     "On2Cook Cooking Time": "30",
     "Normal Cooking Time": "",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOOR DAL RAW.png"
   },
   {
     "Recipe Name": "CHEESE CORN SAMOSA",
@@ -785,9 +785,9 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
-    "IngredientImage": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "IngredientImage": "../ingredient_images/VEG GRAVY 1KG.png",
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
@@ -867,7 +867,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-05T08:52:39Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THAI PASTE GREEN.png"
   },
   {
     "Recipe Name": "FISH MASALA CURRY (MACHER JHOL)",
@@ -998,7 +998,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG BIRYANI 2000.png"
   },
   {
     "Recipe Name": "JAMA FRIED PANEER",
@@ -1049,7 +1049,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOM KHA GAI SOUP.png"
   },
   {
     "Recipe Name": "SUJI HALWA 2000G",
@@ -1075,7 +1075,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": "",
+    "IngredientImage": "../ingredient_images/SUJI HALWA 2K.png",
     "hidden": true
   },
   {
@@ -1313,7 +1313,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-08-26T04:49:24Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/STEAMED MOMOS.png"
   },
   {
     "Recipe Name": "CHOLAR DAL",
@@ -1473,7 +1473,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEGETABLE MAGGI.png"
   },
   {
     "Recipe Name": "VALOR PAPDI SHAK",
@@ -1499,7 +1499,7 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VALOR PAPDI SHAK.png"
   },
   {
     "Recipe Name": "TOMATO GRAVY 2100",
@@ -1581,7 +1581,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PRAWNS MAPPAS.png"
   },
   {
     "Recipe Name": "MALAI MUSHROOM TIKKA",
@@ -1762,7 +1762,7 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PNR MAKHANI 2KG.png"
   },
   {
     "Recipe Name": "TORTILLA SOUP",
@@ -1842,7 +1842,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-08-07T07:11:40Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/CHINESE FRIED FISH.png"
   },
   {
     "Recipe Name": "MASALA MAC PASTA",
@@ -1896,7 +1896,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THAI NOODLES SOUP.png"
   },
   {
     "Recipe Name": "TOOR DAL SOAKED",
@@ -1921,7 +1921,7 @@
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOOR DAL SOAKED.png"
   },
   {
     "Recipe Name": "VEG MANCHOW SOUP",
@@ -1948,7 +1948,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG MANCHOW SOUP.png"
   },
   {
     "Recipe Name": "VEG CLUB SANDWICH (WITH NEW GRILL PAN)",
@@ -1973,7 +1973,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG CLUB SANDWICH.png"
   },
   {
     "Recipe Name": "KAJU MASALA",
@@ -2168,7 +2168,7 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/XACUTI CHICKEN.png"
   },
   {
     "Recipe Name": "CHINESE CLEAR STIR FRY SAUCE",
@@ -2246,7 +2246,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SHAHI PANEER KOR.png"
   },
   {
     "Recipe Name": "CHICKEN HANDI",
@@ -2299,7 +2299,7 @@
     "On2Cook Cooking Time": "25",
     "Normal Cooking Time": "50 mins",
     "Modified": "2026-08-14T06:28:01Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PAV BHAJI GN.png"
   },
   {
     "Recipe Name": "PRAWN DIM SUM",
@@ -2615,7 +2615,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-07T07:39:41Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PINDI CHOLE.png"
   },
   {
     "Recipe Name": "CARROT BEANS PORIYAL",
@@ -2668,7 +2668,7 @@
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-05T08:52:39Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MOOLI KI SUBZI.png"
   },
   {
     "Recipe Name": "PENNE PASTA 300G (ALFREDO SAUCE - WHITE SAUCE PASTA)",
@@ -2694,7 +2694,7 @@
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PENNE PASTA 300G.png"
   },
   {
     "Recipe Name": "BESAN LADOO",
@@ -2774,7 +2774,7 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PANCHKUTIYU SHAK.png"
   },
   {
     "Recipe Name": "MANCHURIAN SAUCE",
@@ -2800,7 +2800,7 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-23T07:57:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MANCHURIAN SAUCE.png"
   },
   {
     "Recipe Name": "CHICKEN FAJITA QUESADILLA",
@@ -2854,7 +2854,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-05T09:38:39Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/RAJMA MASALA.png"
   },
   {
     "Recipe Name": "CURD RICE",
@@ -3164,7 +3164,7 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PRASUMA CHI MOMO.png"
   },
   {
     "Recipe Name": "MASALA CHAI CAKE",
@@ -3510,9 +3510,9 @@
     "Total Output": "1000G",
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
-    "IngredientImage": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "IngredientImage": "../ingredient_images/TIKKA GRAVY 1KG.png",
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL CHEESE POPPONS",
@@ -3536,7 +3536,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-08-25T10:24:26Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/AMUL CHEESE POPPONS.png"
   },
   {
     "Recipe Name": "PINEAPPLE SHEERA",
@@ -3849,7 +3849,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "12 mins",
     "Modified": "2026-08-07T06:51:38Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG CHILLI GAR N.png"
   },
   {
     "Recipe Name": "MAKHANI GRAVY1K",
@@ -3876,8 +3876,8 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/MAKHANI GRAVY1K.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "VEG BIRYANI 3200G",
@@ -3904,7 +3904,7 @@
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG BIRYANI 3200.png"
   },
   {
     "Recipe Name": "VEG KOLHAPURI",
@@ -3956,7 +3956,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/ZEEBA BIRYANI 1KG.png"
   },
   {
     "Recipe Name": "ALOO MUTTER 2000G",
@@ -3974,8 +3974,8 @@
     "PopupImage": "../final_recipe_pdfs/ALOO MUTTER 2000G.pdf",
     "Ingredients": [
       "Paste Oil 120g, Tomato Paste 300g, Onion Paste 100g 520 gm",
-      "Take Raw Potatoes & Spices  1174 liter",
-      "Auto Water (Auto) 990 ml"
+      "Take Raw Potatoes & Spices  1174 gm",
+      "Auto Water (Auto) 1090 ml"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "2000G",
@@ -4010,7 +4010,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SEV TAMETA.png"
   },
   {
     "Recipe Name": "IDLI SAKSHUKA",
@@ -4144,7 +4144,7 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-07-31T06:55:56Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MUTTON KHEEMA MS.png"
   },
   {
     "Recipe Name": "ALOO MUTTER 1000G",
@@ -4325,7 +4325,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/ROASTED CHICKEN.png"
   },
   {
     "Recipe Name": "CHICKEN BIRYANI 2800G",
@@ -4433,7 +4433,7 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PEPPER CHICKEN.png"
   },
   {
     "Recipe Name": "MEXICAN RICE",
@@ -4550,7 +4550,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "12 mins",
     "Modified": "2026-08-06T06:49:05Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MUSHROOM CHILLI.png"
   },
   {
     "Recipe Name": "PANEER MANCHURIAN DRY",
@@ -4764,7 +4764,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOM YUM SOUP.png"
   },
   {
     "Recipe Name": "CHEESE MAGGI",
@@ -4944,7 +4944,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/STEAM MOMO UAE.png"
   },
   {
     "Recipe Name": "MISO SOUP",
@@ -5025,7 +5025,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEGETABLE KURMA.png"
   },
   {
     "Recipe Name": "CHANA MADRA",
@@ -5188,7 +5188,7 @@
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-07-10T10:24:00Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/CHOPPED MASALA 1300G.png"
   },
   {
     "Recipe Name": "MUSHROOM CHILLI DRY",
@@ -5267,7 +5267,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-23T07:44:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG POHA 1KG.png"
   },
   {
     "Recipe Name": "RED SAUCE MAGGI (PENNE MAGGI RED SAUCE PREMIX PASTA)",
@@ -5318,7 +5318,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "4 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG BURGER PATTY.png"
   },
   {
     "Recipe Name": "ZEEBA VEG 3400G (VEG BIRYANI)",
@@ -5345,7 +5345,7 @@
     "On2Cook Cooking Time": "25",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-08-27T12:16:13Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/ZEEBA VEG 3400G.png"
   },
   {
     "Recipe Name": "CHI SCHZ RICE (CHICKEN SCHEZWAN FRIED RICE)",
@@ -5471,7 +5471,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TALOD KHICHU.png"
   },
   {
     "Recipe Name": "PODI IDLI",
@@ -5529,8 +5529,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/BUTTER CHICKEN.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "ASIAN STIR FRY CHICKEN",
@@ -5556,7 +5556,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/STIR FRY CHICKEN.png"
   },
   {
     "Recipe Name": "KOTHMIR VADI FRY",
@@ -5660,8 +5660,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/PEAS PULAO.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MUSHROOM RISSOTO",
@@ -5816,7 +5816,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MALAI PANEER T.png"
   },
   {
     "Recipe Name": "CRISPY CHICKEN FRY",
@@ -5865,7 +5865,7 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-14T06:30:44Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG MAGGI 2KG.png"
   },
   {
     "Recipe Name": "CHICKEN STIR FRY NOODLES",
@@ -5918,7 +5918,7 @@
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG MAC CHEESE.png"
   },
   {
     "Recipe Name": "BHUNA BESAN",
@@ -6074,7 +6074,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/STIR FRY PRAWN.png"
   },
   {
     "Recipe Name": "ARRABBIATA 1000G (ARRABBIATA BASE SAUCE)",
@@ -6418,7 +6418,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PRAWN MOILEE.png"
   },
   {
     "Recipe Name": "MALAI GOBI TIKKA",
@@ -6443,7 +6443,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MALAI GOBI TIKKA.png"
   },
   {
     "Recipe Name": "EGG CURRY",
@@ -6496,7 +6496,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VIETNAMESE SOUP.png"
   },
   {
     "Recipe Name": "CHICKEN DARBARI TIKKA",
@@ -6547,7 +6547,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEGETABLE UPMA.png"
   },
   {
     "Recipe Name": "MASALA MAGGI",
@@ -6655,7 +6655,7 @@
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "50 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/ONION GRAVY 2KG.png"
   },
   {
     "Recipe Name": "BUTTER CHICKEN 1000G",
@@ -6683,7 +6683,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-08-06T11:45:52Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/BUTTER CHICKEN 1000G.png"
   },
   {
     "Recipe Name": "PENNE PESTO  (WITH FRESH BASIL PESTO)",
@@ -6701,7 +6701,7 @@
     "PopupImage": "../final_recipe_pdfs/PENNE PESTO.pdf",
     "Ingredients": [
       "Mix Maida 20 g, Butter 30 g, Chopped Garlic 15 g, Milk 200 g, Raw Penne Pasta 100 g 365 gm",
-      "Diced Cut Vegetables & Mix Sauce  256 gm",
+      "Diced Cut Vegetables & Mix Sauce  254 gm",
       "Auto Water (Auto) 900 ml",
       "Blender  Pesto Recipe (Blender) 200 gm"
     ],
@@ -6736,7 +6736,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "",
     "Modified": "2026-08-07T07:30:15Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOMATO NOODLE SP.png"
   },
   {
     "Recipe Name": "CHICKEN CHETTINAD",
@@ -6870,8 +6870,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/KADAI GRAVY 1200.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "THAI GREEN CURRY CHICKEN",
@@ -6925,7 +6925,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/RAVA UPMA.png"
   },
   {
     "Recipe Name": "GOLDEN STOCK MUTTON",
@@ -7026,7 +7026,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-07T06:51:38Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PAKODA FOR KADHI.png"
   },
   {
     "Recipe Name": "DHABA MUTTON",
@@ -7182,7 +7182,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SHORSHE ILISH.png"
   },
   {
     "Recipe Name": "BROWN STOCK MUTTON",
@@ -7310,7 +7310,7 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-26T09:36:21Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TARIWALA KUKKAD.png"
   },
   {
     "Recipe Name": "DAL MAKHANI 1000G (WITH BOILED DAL)",
@@ -7564,7 +7564,7 @@
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG BIRYANI 2800.png"
   },
   {
     "Recipe Name": "CARROT CAKE",
@@ -7644,7 +7644,7 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SOAJI PANEER.png"
   },
   {
     "Recipe Name": "VEG SCHEZWAN NOODLES",
@@ -7670,7 +7670,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "12 mins",
     "Modified": "2026-08-07T06:56:33Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG SCHEZWAN N.png"
   },
   {
     "Recipe Name": "UTTAPAM",
@@ -7859,7 +7859,7 @@
     "On2Cook Cooking Time": "25",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/ZEEBA BIRYANI 3K.png"
   },
   {
     "Recipe Name": "CORN SALT & PEPPER",
@@ -7938,7 +7938,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PEAS PULAO 1000G.png"
   },
   {
     "Recipe Name": "AVIAL",
@@ -7991,7 +7991,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TALOD KHAMAN.png"
   },
   {
     "Recipe Name": "MAGGI PREMIX (PENNE MAGGI WHITE SAUCE PREMIX PASTA)",
@@ -8332,7 +8332,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-07T07:18:06Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MIRCHI PAKODA.png"
   },
   {
     "Recipe Name": "THECHA PASTE",
@@ -8357,7 +8357,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "5 mins",
     "Modified": "2026-08-05T06:49:19Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THECHA PASTE.png"
   },
   {
     "Recipe Name": "CHOPPED MASALA",
@@ -8493,7 +8493,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SFD CHI MAKHANI.png"
   },
   {
     "Recipe Name": "BHARELA KARELA",
@@ -8730,8 +8730,8 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "IngredientImage": "../ingredient_images/SUJI HALWA.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "STEAM RICE 2000G",
@@ -8809,7 +8809,7 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "50 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PENNE AL DENTE.png"
   },
   {
     "Recipe Name": "GINGER TEA",
@@ -8865,7 +8865,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/STIR FRY VEG.png"
   },
   {
     "Recipe Name": "ANDHRA PANEER CURRY",
@@ -8945,7 +8945,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/GULAB JAMUN.png"
   },
   {
     "Recipe Name": "SAOJI CHICKEN",
@@ -8973,7 +8973,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SOAJI CHICKEN.png"
   },
   {
     "Recipe Name": "ALOO MUTTER",
@@ -9054,7 +9054,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOM KHA SOUP.png"
   },
   {
     "Recipe Name": "MATAR PANEER",
@@ -9275,7 +9275,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PEAS PULAO 3000G.png"
   },
   {
     "Recipe Name": "PANEER SUKKA MASALA",
@@ -9301,7 +9301,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "12 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PANEER SUKKA.png"
   },
   {
     "Recipe Name": "CHICKEN POT BIRYANI",
@@ -9354,7 +9354,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG CHILI GARLIC.png"
   },
   {
     "Recipe Name": "TUNDAY KEBAB",
@@ -9431,7 +9431,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MOONG DAL HALWA1.png"
   },
   {
     "Recipe Name": "GRILLED FISH (BASA FISH)",
@@ -9482,7 +9482,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MALAI BROCCOLI TIKKA.png"
   },
   {
     "Recipe Name": "EGG CHILLI GARLIC FRIED RICE",
@@ -9526,16 +9526,15 @@
     "Image": "../test_images/VEG CHILI G RICE.jpg",
     "PopupImage": "../final_recipe_pdfs/VEG CHILI G RICE.pdf",
     "Ingredients": [
-      "Take Oil 20 gm",
-      "Chopped  Vegetables 92 gm",
-      "Take Rice & Mix Sauce  358 gm"
+      "Take Oil & Vegetables  120 gm",
+      "Take Rice & Mix Sauce  365 gm"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Rice Stirrer",
     "Total Output": "450 G",
     "On2Cook Cooking Time": "3",
-    "Normal Cooking Time": "12 mins",
+    "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG CHILI G RICE.png"
   },
   {
     "Recipe Name": "RAGI MILLET CAKE (FINGER MILLET CAKE)",
@@ -9718,7 +9717,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MUSHROOM TIKKA.png"
   },
   {
     "Recipe Name": "CHICKEN SHAMMI KEBAB",
@@ -9768,7 +9767,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PAPAD KEBAB.png"
   },
   {
     "Recipe Name": "CHAPLI KEBAB",
@@ -9845,7 +9844,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-07T07:41:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TANDOORI CHICKEN.png"
   },
   {
     "Recipe Name": "MOONG DAL SOAKED",
@@ -9980,7 +9979,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOMATO GRAVY 1KG.png"
   },
   {
     "Recipe Name": "SCHEZWAN MOMO (CHICKEN)",
@@ -10032,7 +10031,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MASALA OMELETTE.png"
   },
   {
     "Recipe Name": "MUSHROOM OMELETTE",
@@ -10241,7 +10240,7 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-08-14T06:30:44Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/WHITE GRAVY GN.png"
   },
   {
     "Recipe Name": "SAUTE VEGETABLES",
@@ -10267,7 +10266,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SAUTE VEGETABLES.png"
   },
   {
     "Recipe Name": "GOBI ALOO",
@@ -10561,7 +10560,7 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "22 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SHIMLA MIRCH ALOO.png"
   },
   {
     "Recipe Name": "PUNJABI KADHI 1000G",
@@ -10670,7 +10669,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SABUDANA KHICHDI.png"
   },
   {
     "Recipe Name": "MYSORE PAK 1000G",
@@ -10751,7 +10750,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG BIRYANI 1000G.png"
   },
   {
     "Recipe Name": "PALLIPALAYAM CHICKEN",
@@ -10801,9 +10800,9 @@
     "Total Output": "1700G",
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
-    "IngredientImage": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "IngredientImage": "../ingredient_images/WHITE GRAVY 1700.png",
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "BBQ CHICKEN WINGS",
@@ -10995,7 +10994,7 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-07T07:34:58Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/BUTTER CHICKEN 700G.png"
   },
   {
     "Recipe Name": "FRIED PANEER STRIPS",
@@ -11124,7 +11123,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SAUTE POTATOES A.png"
   },
   {
     "Recipe Name": "PENNE RED (RED SAUCE PASTA ANTUNE)",
@@ -11277,7 +11276,7 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-14T06:28:01Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PINDI CHOLE MS.png"
   },
   {
     "Recipe Name": "KADAI CHICKEN",
@@ -11334,7 +11333,7 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "22 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SPANISH PAELLA.png"
   },
   {
     "Recipe Name": "RED MACRONI PASTA (MAGGI PREMIX)",
@@ -11361,7 +11360,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/RED MAC MAG.png"
   },
   {
     "Recipe Name": "VEG HAKKA NOODLES",
@@ -11386,7 +11385,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "12 mins",
     "Modified": "2026-08-07T06:45:18Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG HAKKA NOODLE.png"
   },
   {
     "Recipe Name": "YELLOW GRAVY GN",
@@ -11413,7 +11412,7 @@
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-08-03T07:16:26Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/YELLOW GRAVY GN.png"
   },
   {
     "Recipe Name": "ALOO POSTO",
@@ -11547,7 +11546,7 @@
     "On2Cook Cooking Time": "22",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VADA FRY DMRC.png"
   },
   {
     "Recipe Name": "ALMOND KHEER",
@@ -11649,7 +11648,7 @@
     "On2Cook Cooking Time": "15",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PENNE PINK SAUCE.png"
   },
   {
     "Recipe Name": "TOMATO GRAVY 3K",
@@ -11677,7 +11676,7 @@
     "Total Output": "3K",
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOMATO GRAVY 3K.png"
   },
   {
     "Recipe Name": "BEEF CHILI SMALL",
@@ -11732,8 +11731,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
     "IngredientImage": "../ingredient_images/CHICKEN CURRY.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "KESARI BHAAT",
@@ -11819,7 +11818,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-10T11:58:51Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MSH GHEE ROAST.png"
   },
   {
     "Recipe Name": "VEGETABLE OMELETTE",
@@ -11845,7 +11844,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEGETABLE OMELETTE.png"
   },
   {
     "Recipe Name": "CHICKEN SPAGHETTI",
@@ -12139,7 +12138,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MINESTRONE SOUP.png"
   },
   {
     "Recipe Name": "CHICKEN SALT & PEPPERS",
@@ -12191,7 +12190,7 @@
     "On2Cook Cooking Time": "11",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/JEERA RICE 1000G.png"
   },
   {
     "Recipe Name": "SCHEZWAN CHICKEN",
@@ -12404,7 +12403,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-06T06:49:05Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PANEER MANCHURIA.png"
   },
   {
     "Recipe Name": "TOMATO GRAVY",
@@ -12433,8 +12432,8 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "PARUPPU PAYASAM",
@@ -13097,7 +13096,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "8 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG QUESADILLA.png"
   },
   {
     "Recipe Name": "PANEER BHURJI",
@@ -13178,7 +13177,7 @@
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-14T06:30:44Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/RAJMA MASALA GN.png"
   },
   {
     "Recipe Name": "CHICKEN TIKKA (WITH SKEWERS & MP MAT OLD RECIPE)",
@@ -13203,7 +13202,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-19T10:50:48Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/CHICKEN TIKKA S.png"
   },
   {
     "Recipe Name": "FRENCH ONION SOUP",
@@ -13335,7 +13334,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-18T09:49:56Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MYSORE PAK 300G.png"
   },
   {
     "Recipe Name": "AMUL POPPONS",
@@ -13410,7 +13409,7 @@
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VADA FRY.png"
   },
   {
     "Recipe Name": "CHICKEN HAKKA NOODLES",
@@ -13489,7 +13488,7 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEGETABLE STEW.png"
   },
   {
     "Recipe Name": "SUJI HALWA 300G",
@@ -13569,7 +13568,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/RAJASTHANI CHI.png"
   },
   {
     "Recipe Name": "DAHI KE KEBAB",
@@ -13783,7 +13782,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SWEET CORN SOUP.png"
   },
   {
     "Recipe Name": "HANDVO",
@@ -13995,7 +13994,7 @@
     "On2Cook Cooking Time": "20",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/YELLOW GRAVY.png"
   },
   {
     "Recipe Name": "RABDI BASE",
@@ -14074,7 +14073,7 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/UDUPI SAMBER.png"
   },
   {
     "Recipe Name": "MUTTON KEEMA",
@@ -14177,7 +14176,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MILLET CHILLA.png"
   },
   {
     "Recipe Name": "VEG DIWANI HANDI",
@@ -14194,19 +14193,15 @@
     "Image": "../test_images/VEG DIWANI HANDI.jpg",
     "PopupImage": "../final_recipe_pdfs/VEG DIWANI HANDI.pdf",
     "Ingredients": [
-      "Take Oil 30 ml",
-      "Take Cumin Seeds    2 gm",
-      "Puree Raw Gravy Paste 315 gm",
-      "Take Cream Mix 38 gm",
-      "Finely Chop Chopped Vegetables 21 gm",
-      "Diamond Cut Cut Vegetables 200 gm"
+      "Take Gravy & Spices 606 ml",
+      "Auto Water (Auto) 250 ml"
     ],
-    "Accessories": "Pan Honeycomb (Non-Stick), Silicone Stirrer",
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
     "Total Output": "550 GM",
     "On2Cook Cooking Time": "7",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-06-23T08:22:42Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG DIWANI HANDI.png"
   },
   {
     "Recipe Name": "MALAI KULFI",
@@ -14230,7 +14225,7 @@
     "On2Cook Cooking Time": "17",
     "Normal Cooking Time": "50 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MALAI KULFI.png"
   },
   {
     "Recipe Name": "VEG FRIED RICE",
@@ -14255,7 +14250,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-07-01T05:13:20Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG FRIED RICE.png"
   },
   {
     "Recipe Name": "ULIWADA",
@@ -14383,7 +14378,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PANEER SAMOSA.png"
   },
   {
     "Recipe Name": "BENGALI PULAO",
@@ -14466,7 +14461,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "7 mins",
     "Modified": "2026-08-07T06:55:33Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SCHEZWAN RICE.png"
   },
   {
     "Recipe Name": "VEG MANCHURIAN GRAVY",
@@ -14495,7 +14490,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-08-06T06:49:05Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG MANCHURIAN G.png"
   },
   {
     "Recipe Name": "CORIANDER CHICKEN",
@@ -14633,7 +14628,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG JAIPURI.png"
   },
   {
     "Recipe Name": "KESAR PEDA",
@@ -14944,7 +14939,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-05T09:04:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SOAJI MUSHROOM.png"
   },
   {
     "Recipe Name": "THAI RED PASTE 1000G",
@@ -14971,7 +14966,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THAI RED PASTE1K.png"
   },
   {
     "Recipe Name": "PRAWNS CURRY",
@@ -15048,7 +15043,7 @@
       "Take Whole Spices  35 number",
       "Masala  Indian Masala 280 gm",
       "Paste Gravy Paste 2100 gm",
-      "Paste Nuts Paste  550 gm",
+      "Paste Nuts Paste  650 gm",
       "Powder Garnish 10 gm"
     ],
     "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
@@ -15056,7 +15051,7 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
     "Modified": "2026-07-06T12:51:22Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/ONION TOMATO 3KG.png"
   },
   {
     "Recipe Name": "BAINGAN BHARTA",
@@ -15107,9 +15102,9 @@
     "Total Output": "700 GM",
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
-    "IngredientImage": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "IngredientImage": "../ingredient_images/MYSORE PAK.png",
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "GUJARATI DAL 3000G",
@@ -15320,7 +15315,7 @@
     "On2Cook Cooking Time": "16",
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-06T10:57:07Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MIRCHI SALAN2500.png"
   },
   {
     "Recipe Name": "UDON NOODLES BOILING",
@@ -15501,7 +15496,7 @@
     "On2Cook Cooking Time": "3",
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-23T08:04:41Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/VEG MANCHURIAN D.png"
   },
   {
     "Recipe Name": "THAI CHILLI BASIL FRIED RICE",
@@ -15553,7 +15548,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-07T07:30:15Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THAI GREEN CURRY.png"
   },
   {
     "Recipe Name": "SEMIYA PAYASAM",
@@ -15579,7 +15574,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SEMIYA PAYASAM.png"
   },
   {
     "Recipe Name": "CHICKEN HANDI POT BIRYANI",
@@ -15710,7 +15705,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "25 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/EGGLESS CAKE.png"
   },
   {
     "Recipe Name": "THAI RED PASTE",
@@ -15737,7 +15732,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THAI RED PASTE.png"
   },
   {
     "Recipe Name": "MUMBAI BHAJI",
@@ -15816,8 +15811,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/BHUNA GRAVY 1500.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN TIKKA MASALA",
@@ -15922,7 +15917,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-08-26T04:58:53Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/THUKPA SOUP.png"
   },
   {
     "Recipe Name": "SHAHI DAHI HALWA",
@@ -15949,7 +15944,7 @@
     "On2Cook Cooking Time": "5",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SHAHI DAHI HALWA.png"
   },
   {
     "Recipe Name": "GUJARATI KADHI",
@@ -16129,7 +16124,7 @@
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "7 mins",
     "Modified": "2026-08-27T06:12:30Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MOONG DAL CHILLA.png"
   },
   {
     "Recipe Name": "SCHEZWAN PULAO",
@@ -16154,7 +16149,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-14T06:30:44Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/SCHEZWAN PULAO.png"
   },
   {
     "Recipe Name": "PENNE PESTO 300G (WITH FRESH BASIL PESTO)",
@@ -16210,7 +16205,7 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-08-07T06:14:00Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/MASALA ALOO.png"
   },
   {
     "Recipe Name": "MUGHLAI PANEER",
@@ -16264,7 +16259,7 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "30 mins",
     "Modified": "2026-08-07T06:22:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/PANEER T MASALA.png"
   },
   {
     "Recipe Name": "CHICKEN CURRY 1000G",
@@ -16730,7 +16725,7 @@
     "On2Cook Cooking Time": "10",
     "Normal Cooking Time": "35 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/TOMATO RASAM.png"
   },
   {
     "Recipe Name": "GUJARATI KADHI GN (GUJARATI KADHI GANDHINAGAR)",
@@ -16756,7 +16751,7 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "40 mins",
     "Modified": "2026-08-14T06:27:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/GUJARATI KADHI GN.png"
   },
   {
     "Recipe Name": "PENNE ALFREDO (ALFREDO SAUCE - WHITE SAUCE PASTA)",
@@ -16862,7 +16857,7 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "120 mins",
     "Modified": "2026-06-22T13:19:36Z",
-    "IngredientImage": ""
+    "IngredientImage": "../ingredient_images/WHITE GRAVY.png"
   },
   {
     "Recipe Name": "CREAM OF CORN",
