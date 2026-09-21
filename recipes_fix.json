@@ -786,8 +786,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/VEG GRAVY 1KG.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
@@ -3537,8 +3537,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/TIKKA GRAVY 1KG.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "AMUL CHEESE POPPONS",
@@ -3803,6 +3803,31 @@
     "IngredientImage": "../ingredient_images/PAO BHAJI MASALA.png"
   },
   {
+    "Recipe Name": "YELLOW DHOKLA JAGDISH",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "GUJARATI",
+    "Category": "BREAKFAST",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 8,
+    "Image": "../test_images/YELLOW DHOKLA JAGDISH.jpg",
+    "PopupImage": "../final_recipe_pdfs/YELLOW DHOKLA JAGDISH.pdf",
+    "Ingredients": [
+      "Batter Yellow Dhokla Premix  500 gm",
+      "Tempering  Tempering  70 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit",
+    "Total Output": "500 GM",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-09-21T13:06:23Z",
+    "IngredientImage": ""
+  },
+  {
     "Recipe Name": "SAUTE BROCCOLI (ANTUNE)",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -3902,8 +3927,8 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/MAKHANI GRAVY1K.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "VEG BIRYANI 3200G",
@@ -5581,8 +5606,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/BUTTER CHICKEN.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "ASIAN STIR FRY CHICKEN",
@@ -5712,8 +5737,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/PEAS PULAO.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "MUSHROOM RISSOTO",
@@ -6922,8 +6947,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/KADAI GRAVY 1200.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "THAI GREEN CURRY CHICKEN",
@@ -7441,6 +7466,31 @@
     "Normal Cooking Time": "45 mins",
     "Modified": "2026-08-06T10:57:07Z",
     "IngredientImage": "../ingredient_images/DAL FRY 1KG.png"
+  },
+  {
+    "Recipe Name": "WHITE DHOKLA",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "GUJARATI",
+    "Category": "BREAKFAST",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 8,
+    "Image": "../test_images/WHITE DHOKLA.jpg",
+    "PopupImage": "../final_recipe_pdfs/WHITE DHOKLA.pdf",
+    "Ingredients": [
+      "Grinding  Dhokla Batter 450 gm",
+      "Tempering  Tempering  70 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit",
+    "Total Output": "500 GM",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-09-21T13:04:46Z",
+    "IngredientImage": ""
   },
   {
     "Recipe Name": "SAUTE VEG 500G",
@@ -8782,8 +8832,8 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "IngredientImage": "../ingredient_images/SUJI HALWA.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "STEAM RICE 2000G",
@@ -10879,8 +10929,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "../ingredient_images/WHITE GRAVY 1700.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "BBQ CHICKEN WINGS",
@@ -11809,8 +11859,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
     "IngredientImage": "../ingredient_images/CHICKEN CURRY.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "KESARI BHAAT",
@@ -12510,8 +12560,8 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "PARUPPU PAYASAM",
@@ -15210,8 +15260,8 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
     "IngredientImage": "../ingredient_images/MYSORE PAK.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "GUJARATI DAL 3000G",
@@ -15918,8 +15968,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/BHUNA GRAVY 1500.png",
-    "hiddenReason": "not needed anymore",
-    "hidden": true
+    "hidden": true,
+    "hiddenReason": "not needed anymore"
   },
   {
     "Recipe Name": "CHICKEN TIKKA MASALA",
@@ -16078,6 +16128,31 @@
     "Normal Cooking Time": "20 mins",
     "Modified": "2026-06-23T06:38:46Z",
     "IngredientImage": "../ingredient_images/GUJARATI KADHI.png"
+  },
+  {
+    "Recipe Name": "WHITE DHOKLA JAGDISH",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING",
+    "Cuisine": "GUJARATI",
+    "Category": "BREAKFAST",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Less Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 8,
+    "Image": "../test_images/WHITE DHOKLA JAGDISH.jpg",
+    "PopupImage": "../final_recipe_pdfs/WHITE DHOKLA JAGDISH.pdf",
+    "Ingredients": [
+      "Batter White Dhokla Premix  500 gm",
+      "Tempering  Tempering  70 gm"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Cake Kit",
+    "Total Output": "500 GM",
+    "On2Cook Cooking Time": "8",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-09-21T13:05:29Z",
+    "IngredientImage": ""
   },
   {
     "Recipe Name": "CREAM OF TOMATO",
