@@ -786,8 +786,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/VEG GRAVY 1KG.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "APPLE CINNAMON CAKE",
@@ -3091,6 +3091,32 @@
     "IngredientImage": "../ingredient_images/ALOO PARATHA.png"
   },
   {
+    "Recipe Name": "GOAN FISH CURRY",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "SAUTEING",
+    "Cuisine": "INDIAN",
+    "Category": "MAIN COURSE",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Gravy",
+    "Prerequisite Recipe": "KING FISH FRY",
+    "Cooking Time": 6,
+    "Image": "../test_images/GOAN FISH CURRY.jpg",
+    "PopupImage": "../final_recipe_pdfs/GOAN FISH CURRY.pdf",
+    "Ingredients": [
+      "Marination  Marinated Grilled Fish 261 gm",
+      "Paste Gravy Paste   310 gm",
+      "Auto Water (Auto) 250 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss), Silicone Stirrer",
+    "Total Output": "500 GM",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-09-21T06:50:27Z",
+    "IngredientImage": ""
+  },
+  {
     "Recipe Name": "GAJAR HALWA 500",
     "Veg/Non Veg": "VEG",
     "Cooking Mode": "SAUTEING",
@@ -3511,8 +3537,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/TIKKA GRAVY 1KG.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "AMUL CHEESE POPPONS",
@@ -3876,8 +3902,8 @@
     "On2Cook Cooking Time": "13",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/MAKHANI GRAVY1K.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "VEG BIRYANI 3200G",
@@ -5373,6 +5399,32 @@
     "IngredientImage": "../ingredient_images/CHI SCHZ RICE.png"
   },
   {
+    "Recipe Name": "TALOD HANDVA 750G",
+    "Veg/Non Veg": "VEG",
+    "Cooking Mode": "STEAMING + SAUTEING",
+    "Cuisine": "GUJARATI",
+    "Category": "BREAKFAST",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "TALOD HANDVA PREMIX",
+    "Cooking Time": 12,
+    "Image": "../test_images/TALOD HANDVA 750G.jpg",
+    "PopupImage": "../final_recipe_pdfs/TALOD HANDVA 750G.pdf",
+    "Ingredients": [
+      "Take Oil & Tadka 33 gm",
+      "Batter Handva Batter 902 gm",
+      "Auto Water (Auto) 40 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "750G",
+    "On2Cook Cooking Time": "12",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-09-21T09:26:43Z",
+    "IngredientImage": ""
+  },
+  {
     "Recipe Name": "DADDU CHICKEN BIRYANI",
     "Veg/Non Veg": "NON VEG",
     "Cooking Mode": "SAUTEING",
@@ -5529,8 +5581,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/BUTTER CHICKEN.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "ASIAN STIR FRY CHICKEN",
@@ -5660,8 +5712,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "",
     "IngredientImage": "../ingredient_images/PEAS PULAO.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "MUSHROOM RISSOTO",
@@ -6390,7 +6442,7 @@
     "Total Output": "100 GM",
     "On2Cook Cooking Time": "2",
     "Normal Cooking Time": "5 mins",
-    "Modified": "2026-09-08T10:45:47Z",
+    "Modified": "2026-09-21T06:50:27Z",
     "IngredientImage": ""
   },
   {
@@ -6870,8 +6922,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/KADAI GRAVY 1200.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "THAI GREEN CURRY CHICKEN",
@@ -8730,8 +8782,8 @@
     "On2Cook Cooking Time": "6",
     "Normal Cooking Time": "20 mins",
     "IngredientImage": "../ingredient_images/SUJI HALWA.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "STEAM RICE 2000G",
@@ -8866,6 +8918,31 @@
     "Normal Cooking Time": "10 mins",
     "Modified": "2026-06-22T13:19:36Z",
     "IngredientImage": "../ingredient_images/STIR FRY VEG.png"
+  },
+  {
+    "Recipe Name": "POMFRET GRILL FISH",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 6,
+    "Image": "../test_images/POMFRET GRILL FISH.jpg",
+    "PopupImage": "../final_recipe_pdfs/POMFRET GRILL FISH.pdf",
+    "Ingredients": [
+      "Marinade  Pomfret Marination  547 gm",
+      "Take Oil  30 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "400 GM",
+    "On2Cook Cooking Time": "6",
+    "Normal Cooking Time": "15 mins",
+    "Modified": "2026-09-21T06:50:27Z",
+    "IngredientImage": ""
   },
   {
     "Recipe Name": "ANDHRA PANEER CURRY",
@@ -10802,8 +10879,8 @@
     "On2Cook Cooking Time": "12",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "../ingredient_images/WHITE GRAVY 1700.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "BBQ CHICKEN WINGS",
@@ -11732,8 +11809,8 @@
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "40 mins",
     "IngredientImage": "../ingredient_images/CHICKEN CURRY.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "KESARI BHAAT",
@@ -12433,8 +12510,8 @@
     "On2Cook Cooking Time": "18",
     "Normal Cooking Time": "60 mins",
     "IngredientImage": "",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "PARUPPU PAYASAM",
@@ -12617,7 +12694,7 @@
     "Total Output": "360 GM",
     "On2Cook Cooking Time": "8",
     "Normal Cooking Time": "20 mins",
-    "Modified": "2026-09-08T10:45:47Z",
+    "Modified": "2026-09-21T06:50:27Z",
     "IngredientImage": ""
   },
   {
@@ -13595,6 +13672,31 @@
     "Normal Cooking Time": "15 mins",
     "Modified": "2026-06-10T11:58:51Z",
     "IngredientImage": "../ingredient_images/DAHI KE KEBAB.png"
+  },
+  {
+    "Recipe Name": "KING FISH FRY",
+    "Veg/Non Veg": "NON VEG",
+    "Cooking Mode": "GRILLING",
+    "Cuisine": "INDIAN",
+    "Category": "STARTERS",
+    "Frozen To Plate": "",
+    "Healthy": "",
+    "Flavor Profile": "Medium Spicy",
+    "Consistency": "Dry",
+    "Prerequisite Recipe": "",
+    "Cooking Time": 4,
+    "Image": "../test_images/KING FISH FRY.jpg",
+    "PopupImage": "../final_recipe_pdfs/KING FISH FRY.pdf",
+    "Ingredients": [
+      "Marinade  King Fish Marination  261 gm",
+      "Take Oil 30 ml"
+    ],
+    "Accessories": "Pan Non-Coated (Ss)",
+    "Total Output": "200 GM",
+    "On2Cook Cooking Time": "4",
+    "Normal Cooking Time": "25 mins",
+    "Modified": "2026-09-21T06:50:27Z",
+    "IngredientImage": ""
   },
   {
     "Recipe Name": "FRIED MOMO",
@@ -15108,8 +15210,8 @@
     "On2Cook Cooking Time": "9",
     "Normal Cooking Time": "42 mins",
     "IngredientImage": "../ingredient_images/MYSORE PAK.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "GUJARATI DAL 3000G",
@@ -15816,8 +15918,8 @@
     "On2Cook Cooking Time": "14",
     "Normal Cooking Time": "45 mins",
     "IngredientImage": "../ingredient_images/BHUNA GRAVY 1500.png",
-    "hidden": true,
-    "hiddenReason": "not needed anymore"
+    "hiddenReason": "not needed anymore",
+    "hidden": true
   },
   {
     "Recipe Name": "CHICKEN TIKKA MASALA",
@@ -16650,7 +16752,7 @@
     "Total Output": "125 GM",
     "On2Cook Cooking Time": "4",
     "Normal Cooking Time": "25 mins",
-    "Modified": "2026-09-09T05:15:50Z",
+    "Modified": "2026-09-21T06:50:27Z",
     "IngredientImage": ""
   },
   {
